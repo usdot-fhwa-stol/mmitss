@@ -1,0 +1,329 @@
+// generated from rosidl_generator_c/resource/idl__functions.h.em
+// with input from carma_msgs:srv/RequestIndicatorControl.idl
+// generated code does not contain a copyright notice
+
+#ifndef CARMA_MSGS__SRV__DETAIL__REQUEST_INDICATOR_CONTROL__FUNCTIONS_H_
+#define CARMA_MSGS__SRV__DETAIL__REQUEST_INDICATOR_CONTROL__FUNCTIONS_H_
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#include <stdbool.h>
+#include <stdlib.h>
+
+#include "rosidl_runtime_c/visibility_control.h"
+#include "carma_msgs/msg/rosidl_generator_c__visibility_control.h"
+
+#include "carma_msgs/srv/detail/request_indicator_control__struct.h"
+
+/// Initialize srv/RequestIndicatorControl message.
+/**
+ * If the init function is called twice for the same message without
+ * calling fini inbetween previously allocated memory will be leaked.
+ * \param[in,out] msg The previously allocated message pointer.
+ * Fields without a default value will not be initialized by this function.
+ * You might want to call memset(msg, 0, sizeof(
+ * carma_msgs__srv__RequestIndicatorControl_Request
+ * )) before or use
+ * carma_msgs__srv__RequestIndicatorControl_Request__create()
+ * to allocate and initialize the message.
+ * \return true if initialization was successful, otherwise false
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Request__init(carma_msgs__srv__RequestIndicatorControl_Request * msg);
+
+/// Finalize srv/RequestIndicatorControl message.
+/**
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+void
+carma_msgs__srv__RequestIndicatorControl_Request__fini(carma_msgs__srv__RequestIndicatorControl_Request * msg);
+
+/// Create srv/RequestIndicatorControl message.
+/**
+ * It allocates the memory for the message, sets the memory to zero, and
+ * calls
+ * carma_msgs__srv__RequestIndicatorControl_Request__init().
+ * \return The pointer to the initialized message if successful,
+ * otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+carma_msgs__srv__RequestIndicatorControl_Request *
+carma_msgs__srv__RequestIndicatorControl_Request__create();
+
+/// Destroy srv/RequestIndicatorControl message.
+/**
+ * It calls
+ * carma_msgs__srv__RequestIndicatorControl_Request__fini()
+ * and frees the memory of the message.
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+void
+carma_msgs__srv__RequestIndicatorControl_Request__destroy(carma_msgs__srv__RequestIndicatorControl_Request * msg);
+
+/// Check for srv/RequestIndicatorControl message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Request__are_equal(const carma_msgs__srv__RequestIndicatorControl_Request * lhs, const carma_msgs__srv__RequestIndicatorControl_Request * rhs);
+
+/// Copy a srv/RequestIndicatorControl message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Request__copy(
+  const carma_msgs__srv__RequestIndicatorControl_Request * input,
+  carma_msgs__srv__RequestIndicatorControl_Request * output);
+
+/// Initialize array of srv/RequestIndicatorControl messages.
+/**
+ * It allocates the memory for the number of elements and calls
+ * carma_msgs__srv__RequestIndicatorControl_Request__init()
+ * for each element of the array.
+ * \param[in,out] array The allocated array pointer.
+ * \param[in] size The size / capacity of the array.
+ * \return true if initialization was successful, otherwise false
+ * If the array pointer is valid and the size is zero it is guaranteed
+ # to return true.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Request__Sequence__init(carma_msgs__srv__RequestIndicatorControl_Request__Sequence * array, size_t size);
+
+/// Finalize array of srv/RequestIndicatorControl messages.
+/**
+ * It calls
+ * carma_msgs__srv__RequestIndicatorControl_Request__fini()
+ * for each element of the array and frees the memory for the number of
+ * elements.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+void
+carma_msgs__srv__RequestIndicatorControl_Request__Sequence__fini(carma_msgs__srv__RequestIndicatorControl_Request__Sequence * array);
+
+/// Create array of srv/RequestIndicatorControl messages.
+/**
+ * It allocates the memory for the array and calls
+ * carma_msgs__srv__RequestIndicatorControl_Request__Sequence__init().
+ * \param[in] size The size / capacity of the array.
+ * \return The pointer to the initialized array if successful, otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+carma_msgs__srv__RequestIndicatorControl_Request__Sequence *
+carma_msgs__srv__RequestIndicatorControl_Request__Sequence__create(size_t size);
+
+/// Destroy array of srv/RequestIndicatorControl messages.
+/**
+ * It calls
+ * carma_msgs__srv__RequestIndicatorControl_Request__Sequence__fini()
+ * on the array,
+ * and frees the memory of the array.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+void
+carma_msgs__srv__RequestIndicatorControl_Request__Sequence__destroy(carma_msgs__srv__RequestIndicatorControl_Request__Sequence * array);
+
+/// Check for srv/RequestIndicatorControl message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Request__Sequence__are_equal(const carma_msgs__srv__RequestIndicatorControl_Request__Sequence * lhs, const carma_msgs__srv__RequestIndicatorControl_Request__Sequence * rhs);
+
+/// Copy an array of srv/RequestIndicatorControl messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Request__Sequence__copy(
+  const carma_msgs__srv__RequestIndicatorControl_Request__Sequence * input,
+  carma_msgs__srv__RequestIndicatorControl_Request__Sequence * output);
+
+/// Initialize srv/RequestIndicatorControl message.
+/**
+ * If the init function is called twice for the same message without
+ * calling fini inbetween previously allocated memory will be leaked.
+ * \param[in,out] msg The previously allocated message pointer.
+ * Fields without a default value will not be initialized by this function.
+ * You might want to call memset(msg, 0, sizeof(
+ * carma_msgs__srv__RequestIndicatorControl_Response
+ * )) before or use
+ * carma_msgs__srv__RequestIndicatorControl_Response__create()
+ * to allocate and initialize the message.
+ * \return true if initialization was successful, otherwise false
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Response__init(carma_msgs__srv__RequestIndicatorControl_Response * msg);
+
+/// Finalize srv/RequestIndicatorControl message.
+/**
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+void
+carma_msgs__srv__RequestIndicatorControl_Response__fini(carma_msgs__srv__RequestIndicatorControl_Response * msg);
+
+/// Create srv/RequestIndicatorControl message.
+/**
+ * It allocates the memory for the message, sets the memory to zero, and
+ * calls
+ * carma_msgs__srv__RequestIndicatorControl_Response__init().
+ * \return The pointer to the initialized message if successful,
+ * otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+carma_msgs__srv__RequestIndicatorControl_Response *
+carma_msgs__srv__RequestIndicatorControl_Response__create();
+
+/// Destroy srv/RequestIndicatorControl message.
+/**
+ * It calls
+ * carma_msgs__srv__RequestIndicatorControl_Response__fini()
+ * and frees the memory of the message.
+ * \param[in,out] msg The allocated message pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+void
+carma_msgs__srv__RequestIndicatorControl_Response__destroy(carma_msgs__srv__RequestIndicatorControl_Response * msg);
+
+/// Check for srv/RequestIndicatorControl message equality.
+/**
+ * \param[in] lhs The message on the left hand size of the equality operator.
+ * \param[in] rhs The message on the right hand size of the equality operator.
+ * \return true if messages are equal, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Response__are_equal(const carma_msgs__srv__RequestIndicatorControl_Response * lhs, const carma_msgs__srv__RequestIndicatorControl_Response * rhs);
+
+/// Copy a srv/RequestIndicatorControl message.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source message pointer.
+ * \param[out] output The target message pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer is null
+ *   or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Response__copy(
+  const carma_msgs__srv__RequestIndicatorControl_Response * input,
+  carma_msgs__srv__RequestIndicatorControl_Response * output);
+
+/// Initialize array of srv/RequestIndicatorControl messages.
+/**
+ * It allocates the memory for the number of elements and calls
+ * carma_msgs__srv__RequestIndicatorControl_Response__init()
+ * for each element of the array.
+ * \param[in,out] array The allocated array pointer.
+ * \param[in] size The size / capacity of the array.
+ * \return true if initialization was successful, otherwise false
+ * If the array pointer is valid and the size is zero it is guaranteed
+ # to return true.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Response__Sequence__init(carma_msgs__srv__RequestIndicatorControl_Response__Sequence * array, size_t size);
+
+/// Finalize array of srv/RequestIndicatorControl messages.
+/**
+ * It calls
+ * carma_msgs__srv__RequestIndicatorControl_Response__fini()
+ * for each element of the array and frees the memory for the number of
+ * elements.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+void
+carma_msgs__srv__RequestIndicatorControl_Response__Sequence__fini(carma_msgs__srv__RequestIndicatorControl_Response__Sequence * array);
+
+/// Create array of srv/RequestIndicatorControl messages.
+/**
+ * It allocates the memory for the array and calls
+ * carma_msgs__srv__RequestIndicatorControl_Response__Sequence__init().
+ * \param[in] size The size / capacity of the array.
+ * \return The pointer to the initialized array if successful, otherwise NULL
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+carma_msgs__srv__RequestIndicatorControl_Response__Sequence *
+carma_msgs__srv__RequestIndicatorControl_Response__Sequence__create(size_t size);
+
+/// Destroy array of srv/RequestIndicatorControl messages.
+/**
+ * It calls
+ * carma_msgs__srv__RequestIndicatorControl_Response__Sequence__fini()
+ * on the array,
+ * and frees the memory of the array.
+ * \param[in,out] array The initialized array pointer.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+void
+carma_msgs__srv__RequestIndicatorControl_Response__Sequence__destroy(carma_msgs__srv__RequestIndicatorControl_Response__Sequence * array);
+
+/// Check for srv/RequestIndicatorControl message array equality.
+/**
+ * \param[in] lhs The message array on the left hand size of the equality operator.
+ * \param[in] rhs The message array on the right hand size of the equality operator.
+ * \return true if message arrays are equal in size and content, otherwise false.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Response__Sequence__are_equal(const carma_msgs__srv__RequestIndicatorControl_Response__Sequence * lhs, const carma_msgs__srv__RequestIndicatorControl_Response__Sequence * rhs);
+
+/// Copy an array of srv/RequestIndicatorControl messages.
+/**
+ * This functions performs a deep copy, as opposed to the shallow copy that
+ * plain assignment yields.
+ *
+ * \param[in] input The source array pointer.
+ * \param[out] output The target array pointer, which must
+ *   have been initialized before calling this function.
+ * \return true if successful, or false if either pointer
+ *   is null or memory allocation fails.
+ */
+ROSIDL_GENERATOR_C_PUBLIC_carma_msgs
+bool
+carma_msgs__srv__RequestIndicatorControl_Response__Sequence__copy(
+  const carma_msgs__srv__RequestIndicatorControl_Response__Sequence * input,
+  carma_msgs__srv__RequestIndicatorControl_Response__Sequence * output);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // CARMA_MSGS__SRV__DETAIL__REQUEST_INDICATOR_CONTROL__FUNCTIONS_H_

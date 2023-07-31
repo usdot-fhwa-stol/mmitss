@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/MobilityReason.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module MobilityReason_Constants {
+      const uint8 UNKNOWN = 0;
+      const uint8 ACCEPTED = 1;
+      const uint8 SAFETY_VIOLATION = 2;
+      const uint8 INSUFFICIENT_TIME = 3;
+      const uint8 PLAN_CONFLICT = 4;
+      const uint8 OTHERWISE_ENGAGED = 5;
+      const uint8 INSUFFICIENT_URGENCY = 6;
+      const uint8 PLAN_UNCLEAR = 7;
+      const uint8 OTHER = 8;
+    };
+    @verbatim (language="comment", text=
+      " MobilityReason.msg")
+    struct MobilityReason {
+      @verbatim (language="comment", text=
+        " Variable which can be used to store a specific reason value.")
+      uint8 reason;
+    };
+  };
+};

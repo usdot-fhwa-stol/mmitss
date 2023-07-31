@@ -1,0 +1,7 @@
+/usr/bin/ld: cannot find -llocAware
+/usr/bin/ld: cannot find -ldsrc
+/usr/bin/ld: cannot find -lasn
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:186: M_CarmaMsgDecoder] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/M_CarmaMsgDecoder.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,30 @@
+[0.028s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs
+[0.111s] -- The C compiler identification is GNU 9.4.0
+[0.198s] -- The CXX compiler identification is GNU 9.4.0
+[0.205s] -- Check for working C compiler: /usr/bin/cc
+[0.308s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.309s] -- Detecting C compiler ABI info
+[0.453s] -- Detecting C compiler ABI info - done
+[0.508s] -- Detecting C compile features
+[0.509s] -- Detecting C compile features - done
+[0.513s] -- Check for working CXX compiler: /usr/bin/c++
+[0.762s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.764s] -- Detecting CXX compiler ABI info
+[0.906s] -- Detecting CXX compiler ABI info - done
+[0.958s] -- Detecting CXX compile features
+[0.959s] -- Detecting CXX compile features - done
+[0.961s] -- Found carma_cmake_common: 0.1.0 (/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake)
+[0.969s] -- Found ros_environment: 2.5.1 (/opt/ros/foxy/share/ros_environment/cmake)
+[0.969s] Skipping build of carma_debug_msgs as only ROS 1 is supported. Detected version is ROS 2
+[0.969s] -- Configuring done
+[0.970s] -- Generating done
+[0.971s] CMake Warning:
+[0.971s]   Manually-specified variables were not used by the project:
+[0.971s] 
+[0.971s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[0.971s] 
+[0.971s] 
+[0.971s] -- Build files have been written to: /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs
+[0.975s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs' returned '0': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs
+[0.979s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs -- -j8 -l8
+[1.081s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs' returned '0': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs -- -j8 -l8

@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/TrajectoryPlan.msg
+// generated code does not contain a copyright notice
+
+#include "carma_planning_msgs/msg/TrajectoryPlanPoint.idl"
+#include "std_msgs/msg/Header.idl"
+
+module carma_planning_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " TrajectoryPlan.msg")
+    struct TrajectoryPlan {
+      @verbatim (language="comment", text=
+        " This message describes a trajectory planned by one or more plugins" "\n"
+        " Each trajectory plan contains an unique ID and a list of trajectory plan points" "\n"
+        " standard ROS header")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " The unique GUID of this trajectory")
+      string trajectory_id;
+
+      @verbatim (language="comment", text=
+        " The vehicle's longitudinal velocity in m/s at the first point in the trajectory_points")
+      double initial_longitudinal_velocity;
+
+      @verbatim (language="comment", text=
+        " A list of trajectory plan points describe the detailed trajectory plan")
+      sequence<carma_planning_msgs::msg::TrajectoryPlanPoint> trajectory_points;
+    };
+  };
+};

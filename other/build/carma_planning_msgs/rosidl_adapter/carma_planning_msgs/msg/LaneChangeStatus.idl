@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/LaneChangeStatus.msg
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module msg {
+    module LaneChangeStatus_Constants {
+      const uint8 PLAN_SENT = 1;
+      const uint8 REQUEST_RECEIVED = 2;
+      const uint8 REQUEST_ACCEPTED = 3;
+      const uint8 REQUEST_REJECTED = 4;
+      const uint8 RESPONSE_SENT = 5;
+      const uint8 ACCEPTANCE_RECEIVED = 6;
+      const uint8 REJECTION_RECEIVED = 7;
+      const uint8 OTHER_RECEIVED = 8;
+      const uint8 PLANNING_SUCCESS = 9;
+      const uint8 TIMED_OUT = 10;
+    };
+    @verbatim (language="comment", text=
+      " LaneChangeStatus.msg" "\n"
+      "" "\n"
+      " Announces the status of planning of a lane change maneuver, which may or may not involve other vehicles." "\n"
+      " If no other vehicle is involved then it should transition from PLAN_SENT to TIMED_OUT.")
+    struct LaneChangeStatus {
+      uint8 status;
+
+      @verbatim (language="comment", text=
+        " Description of the status of the lane change stages. Will be filled at each step by involved plugins.")
+      string description;
+    };
+  };
+};

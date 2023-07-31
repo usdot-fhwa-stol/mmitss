@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/UpcomingLaneChangeStatus.msg
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module msg {
+    module UpcomingLaneChangeStatus_Constants {
+      const uint8 NONE = 0;
+      const uint8 LEFT = 1;
+      const uint8 RIGHT = 2;
+    };
+    @verbatim (language="comment", text=
+      " UpcomingLaneChangeStatus.msg")
+    struct UpcomingLaneChangeStatus {
+      @verbatim (language="comment", text=
+        " downtrack until next lanechange")
+      double downtrack_until_lanechange;
+
+      @verbatim (language="comment", text=
+        " choice for lane change")
+      uint8 lane_change;
+    };
+  };
+};

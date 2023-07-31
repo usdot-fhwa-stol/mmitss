@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/DetectedObstacleData.msg
+// generated code does not contain a copyright notice
+
+#include "j3224_v2x_msgs/msg/ObstacleSize.idl"
+#include "j3224_v2x_msgs/msg/ObstacleSizeConfidence.idl"
+
+module j3224_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " DetectedObstacleData.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct DetectedObstacleData {
+      @verbatim (language="comment", text=
+        " DetectedObstacleData::= SEQUENCE {" "\n"
+        "    obstSize ObstacleSize," "\n"
+        "    obstSizeConfidence ObstacleSizeConfidence" "\n"
+        " }")
+      j3224_v2x_msgs::msg::ObstacleSize obst_size;
+
+      j3224_v2x_msgs::msg::ObstacleSizeConfidence obst_size_confidence;
+    };
+  };
+};

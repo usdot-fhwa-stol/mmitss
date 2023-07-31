@@ -1,0 +1,9 @@
+{
+  "package_name": "carma_debug_ros2_msgs",
+  "non_idl_tuples": [
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_ros2_msgs:msg/LaneletIdRegulatoryElementPair.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_ros2_msgs:msg/MapUpdateReadable.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_ros2_msgs:msg/RegulatoryElement.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_ros2_msgs:msg/TrajectoryCurvatureSpeeds.msg"
+  ]
+}

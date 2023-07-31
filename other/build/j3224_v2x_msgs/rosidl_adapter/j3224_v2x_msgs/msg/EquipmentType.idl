@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/EquipmentType.msg
+// generated code does not contain a copyright notice
+
+
+module j3224_v2x_msgs {
+  module msg {
+    module EquipmentType_Constants {
+      const uint8 UNKNOWN = 0;
+      const uint8 RSU = 1;
+      const uint8 OBU = 2;
+      const uint8 VRU = 3;
+    };
+    @verbatim (language="comment", text=
+      " EquipmentType.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct EquipmentType {
+      @verbatim (language="comment", text=
+        " EquipmentType ::= ENUMERATED{" "\n"
+        "   unknown (0)," "\n"
+        "   rsu (1)," "\n"
+        "   obu (2)," "\n"
+        "   vru (3)," "\n"
+        "   ..." "\n"
+        " }")
+      uint8 equipment_type;
+    };
+  };
+};

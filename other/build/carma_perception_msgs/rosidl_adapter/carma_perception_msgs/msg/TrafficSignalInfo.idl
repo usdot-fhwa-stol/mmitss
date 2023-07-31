@@ -1,0 +1,46 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_perception_msgs/msg/TrafficSignalInfo.msg
+// generated code does not contain a copyright notice
+
+
+module carma_perception_msgs {
+  module msg {
+    module TrafficSignalInfo_Constants {
+      const uint8 UNLIT = 0;
+      const uint8 GREEN = 1;
+      const uint8 YELLOW = 2;
+      const uint8 RED = 3;
+      const uint8 FLASHING_GREEN = 4;
+      const uint8 FLASHING_YELLOW = 5;
+      const uint8 FLASHING_RED = 6;
+    };
+    @verbatim (language="comment", text=
+      " TrafficSignalInfo.msg" "\n"
+      "" "\n"
+      " Message Format for UI's Traffic Signal Plugin" "\n"
+      "" "\n"
+      " @author Mae Fromm" "\n"
+      " @version 0.1")
+    struct TrafficSignalInfo {
+      @verbatim (language="comment", text=
+        " IntersectionID that is unique within that region")
+      uint16 intersection_id;
+
+      @verbatim (language="comment", text=
+        " Outcome of carma_v2x_msgs/MovementState signal_state")
+      uint8 state;
+
+      @verbatim (language="comment", text=
+        " remaining time in seconds of the current state")
+      uint16 remaining_time;
+
+      @verbatim (language="comment", text=
+        " lane id when passing thru the intersection")
+      uint16 lane_id;
+
+      @verbatim (language="comment", text=
+        " remaining distance in meters of the intersection")
+      float remaining_distance;
+    };
+  };
+};

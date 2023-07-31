@@ -1,0 +1,7 @@
+Skipping build of j3224_msgs as only ROS 1 is supported. Detected version is ROS 2
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CATKIN_INSTALL_INTO_PREFIX_ROOT
+
+

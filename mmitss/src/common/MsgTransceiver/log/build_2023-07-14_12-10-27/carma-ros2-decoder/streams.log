@@ -1,0 +1,34 @@
+[0.015s] Invoking command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder -- -j8 -l8
+[0.043s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.067s] -- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+[0.260s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[0.354s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.357s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.450s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.496s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.498s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.724s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.733s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.747s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.748s] -- Configured cppcheck include dirs: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/common;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/libj2735;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/glpk/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/net-snmp;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/jsoncpp
+[0.748s] -- Configured cppcheck exclude dirs and/or files: 
+[0.761s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.761s] -- Configured cpplint exclude dirs and/or files: 
+[0.763s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.767s] -- Added test 'lint_cmake' to check CMake code style
+[0.769s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.781s] -- Added test 'uncrustify' to check C / C++ code style
+[0.781s] -- Configured uncrustify additional arguments: 
+[0.783s] -- Added test 'xmllint' to check XML markup files
+[0.786s] -- Configuring done
+[0.798s] -- Generating done
+[0.800s] -- Build files have been written to: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder
+[0.846s] [ 20%] [32m[1mLinking CXX executable M_CarmaMsgDecoder[0m
+[0.955s] /usr/bin/ld: cannot find -llocAware
+[0.955s] /usr/bin/ld: cannot find -ldsrc
+[0.955s] /usr/bin/ld: cannot find -lasn
+[0.958s] collect2: error: ld returned 1 exit status
+[0.959s] make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:186: M_CarmaMsgDecoder] Error 1
+[0.959s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/M_CarmaMsgDecoder.dir/all] Error 2
+[0.959s] make: *** [Makefile:141: all] Error 2
+[0.961s] Invoked command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder -- -j8 -l8

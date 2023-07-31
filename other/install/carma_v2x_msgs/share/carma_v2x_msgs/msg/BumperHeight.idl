@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/BumperHeight.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module BumperHeight_Constants {
+      const float BUMPER_HEIGHT_MIN = 0.0;
+      const float BUMPER_HEIGHT_MAX = 1.27;
+    };
+    @verbatim (language="comment", text=
+      " BumperHeight.msg" "\n"
+      "" "\n"
+      " Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.")
+    struct BumperHeight {
+      @verbatim (language="comment", text=
+        " BumperHeight in meters in range of meters")
+      @unit (value="0..1.27")
+      float bumper_height;
+    };
+  };
+};

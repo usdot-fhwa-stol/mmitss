@@ -1,0 +1,52 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/OffsetAxis.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module OffsetAxis_Constants {
+      const uint8 SMALL = 0;
+      const uint8 LARGE = 1;
+    };
+    @verbatim (language="comment", text=
+      " OffsetXaxis.msg" "\n"
+      "" "\n"
+      " J2735 2016 message format." "\n"
+      "" "\n"
+      " @author Mae Fromm" "\n"
+      " @version 0.1" "\n"
+      "" "\n"
+      "  -- A path offset value along the X or Y axis for translations of the" "\n"
+      "  -- path's points when creating translated lanes." "\n"
+      "  -- The values found in the reference lane are" "\n"
+      "  -- all offset based on the X and Y values from" "\n"
+      "  -- the coordinates of the reference lane's" "\n"
+      "  -- initial path point." "\n"
+      " offsetXaxis CHOICE {" "\n"
+      "   small DrivenLineOffsetSm," "\n"
+      "   large DrivenLineOffsetLg" "\n"
+      "   },")
+    struct OffsetAxis {
+      uint8 choice;
+
+      @verbatim (language="comment", text=
+        " Deviates from J2735 standard:" "\n"
+        " DrivenLineOffsetSm in this message are conveyed as m rather than cm to avoid redundant unnecessary conversion by subscribers" "\n"
+        " The DrivenLineOffsetSmall data element is a value expressing the offset in a defined axis from a reference" "\n"
+        " lane number from which a computed lane is offset." "\n"
+        " DrivenLineOffsetSm ::= INTEGER (-20.47-20.47)" "\n"
+        " -- units are m.")
+      float small;
+
+      @verbatim (language="comment", text=
+        " Deviates from J2735 standard:" "\n"
+        " DrivenLineOffsetLg in this message are conveyed as m rather than cm to avoid redundant unnecessary conversion by subscribers" "\n"
+        " The DrivenLineOffsetLg data element is a value expressing the offset in a defined axis from a" "\n"
+        " reference lane number from which a computed lane is offset." "\n"
+        " DrivenLineOffsetLg ::= INTEGER (-327.67-327.67)" "\n"
+        " -- units are m.")
+      float large;
+    };
+  };
+};

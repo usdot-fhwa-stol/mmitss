@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/ObstacleDistance.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module ObstacleDistance_Constants {
+      const float DISTANCE_MIN = 0.0;
+      const float DISTANCE_MAX = 32767.0;
+    };
+    @verbatim (language="comment", text=
+      " ObstacleDistance.msg" "\n"
+      "" "\n"
+      " Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.")
+    struct ObstacleDistance {
+      @verbatim (language="comment", text=
+        " ObstacleDistance in meters in range meters")
+      @unit (value="0..32767")
+      float distance;
+    };
+  };
+};

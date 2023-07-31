@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/ComputePlanCost.srv
+// generated code does not contain a copyright notice
+
+#include "carma_planning_msgs/msg/ManeuverPlan.idl"
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " ComputePlanCost.srv" "\n"
+      "" "\n"
+      " Provided by the cost plugin node. Returns a final cost of a given maneuver plan." "\n"
+      "" "\n"
+      " @author Fang Zhou" "\n"
+      " @version 0.1")
+    struct ComputePlanCost_Request {
+      @verbatim (language="comment", text=
+        " Request")
+      carma_planning_msgs::msg::ManeuverPlan maneuver_plan;
+    };
+    @verbatim (language="comment", text=
+      " Response")
+    struct ComputePlanCost_Response {
+      double plan_cost;
+    };
+  };
+};

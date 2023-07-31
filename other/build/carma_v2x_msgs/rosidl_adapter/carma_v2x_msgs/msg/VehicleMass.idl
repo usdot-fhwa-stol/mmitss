@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/VehicleMass.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module VehicleMass_Constants {
+      const uint32 MASS_MIN = 0;
+      const uint32 MASS_MAX = 170000;
+    };
+    @verbatim (language="comment", text=
+      " VehicleMass.msg" "\n"
+      "" "\n"
+      " Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.")
+    struct VehicleMass {
+      @verbatim (language="comment", text=
+        " VehicleMass ::= INTEGER (0..255)" "\n"
+        "     -- Values 000 to 080 in steps of 50kg" "\n"
+        "     -- Values 081 to 200 in steps of 500kg" "\n"
+        "     -- Values 201 to 253 in steps of 2000kg" "\n"
+        "     -- The Value 254 shall be used for weights above 170000 kg" "\n"
+        "     -- The Value 255 shall be used when the value is unknown or unavailable" "\n"
+        "     -- Encoded such that the values:" "\n"
+        "     --  81 represents   4500 kg" "\n"
+        "     -- 181 represents  54500 kg" "\n"
+        "     -- 253 represents 170000 kg")
+      uint32 vehicle_mass;
+
+      @verbatim (language="comment", text=
+        " If true the vehicle mass is unset")
+      boolean unavailable;
+    };
+  };
+};

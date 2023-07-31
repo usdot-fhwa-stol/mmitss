@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/ObjectID.msg
+// generated code does not contain a copyright notice
+
+
+module j3224_v2x_msgs {
+  module msg {
+    module ObjectID_Constants {
+      const uint16 MIN_OBJECT_ID = 0;
+      const uint16 MAX_OBJECT_ID = 65535;
+    };
+    @verbatim (language="comment", text=
+      " ObjectID.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct ObjectID {
+      @verbatim (language="comment", text=
+        " ObjectID ::= INTEGER (0..65535)")
+      uint16 object_id;
+    };
+  };
+};

@@ -1,0 +1,8 @@
+msg/LaneletIdRegulatoryElementPair.idl
+msg/LaneletIdRegulatoryElementPair.msg
+msg/MapUpdateReadable.idl
+msg/MapUpdateReadable.msg
+msg/RegulatoryElement.idl
+msg/RegulatoryElement.msg
+msg/TrajectoryCurvatureSpeeds.idl
+msg/TrajectoryCurvatureSpeeds.msg

@@ -1,0 +1,14 @@
+{
+  "package_name": "carma_perception_msgs",
+  "non_idl_tuples": [
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs:msg/CheckActiveGeofence.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs:msg/ConnectedVehicleType.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs:msg/ExternalObject.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs:msg/ExternalObjectList.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs:msg/PredictedState.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs:msg/RoadwayObstacle.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs:msg/RoadwayObstacleList.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs:msg/TrafficSignalInfo.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs:msg/TrafficSignalInfoList.msg"
+  ]
+}

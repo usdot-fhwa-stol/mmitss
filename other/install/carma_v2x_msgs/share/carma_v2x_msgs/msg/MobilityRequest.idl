@@ -1,0 +1,55 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/MobilityRequest.msg
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/LocationECEF.idl"
+#include "carma_v2x_msgs/msg/MobilityHeader.idl"
+#include "carma_v2x_msgs/msg/PlanType.idl"
+#include "carma_v2x_msgs/msg/Trajectory.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " MobilityRequest.msg")
+    struct MobilityRequest {
+      @verbatim (language="comment", text=
+        " This is the message a CAV will use to send out its request to the other CAVs" "\n"
+        " when a coordinated behavior is required. It will require responses from" "\n"
+        " CAVs. If the request is boardcast, then no response means positive response;" "\n"
+        " if the request is only sent to one CAV, then no response means negative response" "\n"
+        " standard header for all mobility messages")
+      carma_v2x_msgs::msg::MobilityHeader m_header;
+
+      @verbatim (language="comment", text=
+        " strategy string to indicate which strategy type this message is used for" "\n"
+        " Example: \"Carma/Platooning\"")
+      string strategy;
+
+      @verbatim (language="comment", text=
+        " type of the proposal being suggested to neighbors")
+      carma_v2x_msgs::msg::PlanType plan_type;
+
+      @verbatim (language="comment", text=
+        " urgency of the current plan from 0 to 1000" "\n"
+        " 0 means no urgency specified and 1000 means the highest urgency")
+      uint16 urgency;
+
+      @verbatim (language="comment", text=
+        " current location in ECEF frame")
+      carma_v2x_msgs::msg::LocationECEF location;
+
+      @verbatim (language="comment", text=
+        " strategy parameters specified by each individual plugin/component" "\n"
+        " the maximum length of this string is 100")
+      string strategy_params;
+
+      @verbatim (language="comment", text=
+        " proposed trajectory")
+      carma_v2x_msgs::msg::Trajectory trajectory;
+
+      @verbatim (language="comment", text=
+        " time when this message is expired")
+      uint64 expiration;
+    };
+  };
+};

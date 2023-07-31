@@ -1,0 +1,62 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/PlanManeuvers.srv
+// generated code does not contain a copyright notice
+
+#include "carma_planning_msgs/msg/ManeuverPlan.idl"
+#include "std_msgs/msg/Header.idl"
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " PlanManeuvers.srv" "\n"
+      "" "\n"
+      " Service used to request a maneuver plan from a plugin")
+    struct PlanManeuvers_Request {
+      @verbatim (language="comment", text=
+        "request" "\n"
+        " Header" "\n"
+        " Stamp for the header should match time that vehicle state was computed.")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " Maneuvers planned prior to the current planning request." "\n"
+        " These maneuvers must not be modified by this process")
+      carma_planning_msgs::msg::ManeuverPlan prior_plan;
+
+      @verbatim (language="comment", text=
+        "## Vehicle Initial State" "\n"
+        " The following vehicle state values represent the state of the vehicle at the time specified by header" "\n"
+        " These values should match the start conditions for the first maneuver in prior_plan" "\n"
+        " Therefore for planners called after prior_plan is populated these fields should be ignored" "\n"
+        " Instead the end conditions of the last maneuver in prior_plan should fill this role" "\n"
+        "##" "\n"
+        " Vehicle initial 2d position in the frame specified by header at the time specified by header" "\n"
+        " Position reports the front bumper position of the vehicle" "\n"
+        " Units: m")
+      double veh_x;
+
+      double veh_y;
+
+      @verbatim (language="comment", text=
+        " Vehicle initial position in the route frame. This must match the veh_x, veh_y values." "\n"
+        " Downtrack is calculated using the front bumper position of the vehicle" "\n"
+        " Units: m")
+      double veh_downtrack;
+
+      @verbatim (language="comment", text=
+        " Vehicle initial logitudinal velocity" "\n"
+        " Units: m/s")
+      double veh_logitudinal_velocity;
+
+      @verbatim (language="comment", text=
+        " Vehicle initial lane id")
+      string veh_lane_id;
+    };
+    struct PlanManeuvers_Response {
+      @verbatim (language="comment", text=
+        "response" "\n"
+        " The returned maneuver plan, must be a strict superset of prior plan")
+      carma_planning_msgs::msg::ManeuverPlan new_plan;
+    };
+  };
+};

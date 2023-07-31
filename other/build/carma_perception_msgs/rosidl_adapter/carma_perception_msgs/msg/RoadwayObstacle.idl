@@ -1,0 +1,64 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_perception_msgs/msg/RoadwayObstacle.msg
+// generated code does not contain a copyright notice
+
+#include "carma_perception_msgs/msg/ConnectedVehicleType.idl"
+#include "carma_perception_msgs/msg/ExternalObject.idl"
+
+module carma_perception_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " RoadwayObstacle.msg" "\n"
+      "" "\n"
+      " The frame is a FRD frame located on the uptrack waypoint of a segment." "\n"
+      " With +x pointing along the segment and +y pointing to the right" "\n"
+      "" "\n"
+      " @author Michael McConnell" "\n"
+      " @version 0.1")
+    struct RoadwayObstacle {
+      @verbatim (language="comment", text=
+        " The geometry of the vehicle")
+      carma_perception_msgs::msg::ExternalObject object;
+
+      @verbatim (language="comment", text=
+        " Enum describing the type of communication this vehicle is capable of")
+      carma_perception_msgs::msg::ConnectedVehicleType connected_vehicle_type;
+
+      @verbatim (language="comment", text=
+        " id of the lanelet this obstacle occupies")
+      int64 lanelet_id;
+
+      @verbatim (language="comment", text=
+        " Cross-track distance of obstacle along lanelet")
+      double cross_track;
+
+      @verbatim (language="comment", text=
+        " Down-track distance of obstacle along lanelet")
+      double down_track;
+
+      @verbatim (language="comment", text=
+        " predicted id of the lanelets this obstacle will occupy")
+      sequence<int64> predicted_lanelet_ids;
+
+      @verbatim (language="comment", text=
+        " Prediction Confidence [0,1]")
+      sequence<double> predicted_lanelet_id_confidences;
+
+      @verbatim (language="comment", text=
+        " Predicted Cross-track distance of obstacle along lanelets")
+      sequence<double> predicted_cross_tracks;
+
+      @verbatim (language="comment", text=
+        " Prediction Confidence [0,1]")
+      sequence<double> predicted_cross_track_confidences;
+
+      @verbatim (language="comment", text=
+        " Predicted Down-track distance of obstacle along lanelets")
+      sequence<double> predicted_down_tracks;
+
+      @verbatim (language="comment", text=
+        " Prediction Confidence [0,1]")
+      sequence<double> predicted_down_track_confidences;
+    };
+  };
+};

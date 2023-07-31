@@ -1,0 +1,62 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_debug_ros2_msgs/msg/RegulatoryElement.msg
+// generated code does not contain a copyright notice
+
+
+module carma_debug_ros2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " RegulatoryElement.msg")
+    struct RegulatoryElement {
+      @verbatim (language="comment", text=
+        " This is a debug message which contains all the fields of the various Lanelet2 Regulatory Element's used by carma_wm")
+      string rule_name;
+
+      @verbatim (language="comment", text=
+        " Pariticpant list if applicable")
+      sequence<string> participants;
+
+      boolean unsupported_type;
+
+      @verbatim (language="comment", text=
+        "#" "\n"
+        " digital_minimum_gap" "\n"
+        "#")
+      double min_gap;
+
+      @verbatim (language="comment", text=
+        " Uses participants" "\n"
+        " Uses refers_ids" "\n"
+        "#" "\n"
+        " digital_speed_limit" "\n"
+        "#")
+      double speed_limit;
+
+      @verbatim (language="comment", text=
+        " Uses participants" "\n"
+        " Uses refers_ids" "\n"
+        "#" "\n"
+        " direction_of_travel" "\n"
+        "#")
+      string direction;
+
+      @verbatim (language="comment", text=
+        " Uses participants" "\n"
+        " Uses refers_ids" "\n"
+        "#" "\n"
+        " passing_control_line" "\n"
+        "#" "\n"
+        " First value is the participant type, second value is the passing direction for that participant")
+      sequence<string> left_participants;
+
+      sequence<string> right_participants;
+
+      @verbatim (language="comment", text=
+        " Uses reference_line_ids" "\n"
+        "#" "\n"
+        " region_access_rule" "\n"
+        "#")
+      string reason;
+    };
+  };
+};

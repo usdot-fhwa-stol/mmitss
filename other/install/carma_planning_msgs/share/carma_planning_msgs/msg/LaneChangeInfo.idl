@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/LaneChangeInfo.msg
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module msg {
+    module LaneChangeInfo_Constants {
+      const uint8 TOLEFT = 0;
+      const uint8 TORIGHT = 1;
+    };
+    @verbatim (language="comment", text=
+      " LaneChangeInfo.msg" "\n"
+      "" "\n"
+      " The details of the lane change information" "\n"
+      "" "\n"
+      " @author Saina Ramyar" "\n"
+      " @version 0.1")
+    struct LaneChangeInfo {
+      @verbatim (language="comment", text=
+        " Lane Change Direction")
+      uint8 direction;
+
+      @verbatim (language="comment", text=
+        " downtrack distance to start of the lane change")
+      float distance_to_lanechange;
+    };
+  };
+};

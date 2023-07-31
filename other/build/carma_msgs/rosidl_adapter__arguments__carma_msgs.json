@@ -1,0 +1,14 @@
+{
+  "package_name": "carma_msgs",
+  "non_idl_tuples": [
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs:msg/CarlaEnabled.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs:msg/LightBarCDAType.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs:msg/LightBarIndicator.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs:msg/LightBarIndicatorControllers.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs:msg/SystemAlert.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs:msg/UIInstructions.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs:srv/ReleaseIndicatorControl.srv",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs:srv/RequestIndicatorControl.srv",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs:srv/SetTrafficEvent.srv"
+  ]
+}

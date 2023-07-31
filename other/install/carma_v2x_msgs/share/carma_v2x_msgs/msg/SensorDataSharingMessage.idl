@@ -1,0 +1,69 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/SensorDataSharingMessage.msg
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/DetectedObjectList.idl"
+#include "carma_v2x_msgs/msg/Position3D.idl"
+#include "carma_v2x_msgs/msg/PositionalAccuracy.idl"
+#include "j2735_v2x_msgs/msg/DDateTime.idl"
+#include "j2735_v2x_msgs/msg/ElevationConfidence.idl"
+#include "j2735_v2x_msgs/msg/MsgCount.idl"
+#include "j2735_v2x_msgs/msg/TemporaryID.idl"
+#include "j3224_v2x_msgs/msg/EquipmentType.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    module SensorDataSharingMessage_Constants {
+      const uint8 HAS_REF_POS_XY_CONF = 1;
+    };
+    @verbatim (language="comment", text=
+      " SensorDataSharingMessage.msg" "\n"
+      "" "\n"
+      " Modified J3224 2020 message format, adjusted to use base SI units (m,s, etc) in most case." "\n"
+      "" "\n"
+      " Parsed description of SensorDataSharingMessage from the SAE J3224 2020 specification." "\n"
+      " For further usage details consult the specification. See note on SI units above.")
+    struct SensorDataSharingMessage {
+      @verbatim (language="comment", text=
+        " SensorDataSharingMessage ::= SEQUENCE {" "\n"
+        "   msgCnt MsgCount," "\n"
+        "   -- Sequence number" "\n"
+        "   sourceID TemporaryID," "\n"
+        "   -- temporary vehicle ID / RSU ID. SDSM source." "\n"
+        "   equipmentType EquipmentType," "\n"
+        "   -- Sender type" "\n"
+        "   sDSMTimeStamp DDateTime," "\n"
+        "   -- SDSM transmission time" "\n"
+        "   refPos Position3D," "\n"
+        "   -- Sender reference position" "\n"
+        "   refPosXYConf PositionalAccuracy," "\n"
+        "   refPosElConf ElevationConfidence OPTIONAL," "\n"
+        "   objects DetectedObjectList" "\n"
+        "   -- detected objects" "\n"
+        " }")
+      j2735_v2x_msgs::msg::MsgCount msg_cnt;
+
+      j2735_v2x_msgs::msg::TemporaryID source_id;
+
+      j3224_v2x_msgs::msg::EquipmentType equipment_type;
+
+      j2735_v2x_msgs::msg::DDateTime sdsm_time_stamp;
+
+      carma_v2x_msgs::msg::Position3D ref_pos;
+
+      carma_v2x_msgs::msg::PositionalAccuracy ref_pos_xy_conf;
+
+      carma_v2x_msgs::msg::DetectedObjectList objects;
+
+      @verbatim (language="comment", text=
+        " A BIT STRING defining the presence of optional fields." "\n"
+        " Compare with bitwise-and" "\n"
+        " if (presence_vector & HAS_REF_POS_XY_CONF) etc." "\n"
+        " Create with bitwise-or" "\n"
+        " presence_vector = presence_vector | HAS_REF_POS_XY_CONF")
+      uint8 presence_vector;
+
+      j2735_v2x_msgs::msg::ElevationConfidence ref_pos_el_conf;
+    };
+  };
+};

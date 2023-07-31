@@ -1,0 +1,46 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/StopAndWaitManeuver.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+#include "carma_planning_msgs/msg/ManeuverParameters.idl"
+
+module carma_planning_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " StopAndWaitManeuver.msg" "\n"
+      "" "\n"
+      " Message defining a Stop and Wait Maneuver for use in CARMA planning.")
+    struct StopAndWaitManeuver {
+      @verbatim (language="comment", text=
+        " The common parameters of this maneuver")
+      carma_planning_msgs::msg::ManeuverParameters parameters;
+
+      @verbatim (language="comment", text=
+        " Approximate starting state of the maneuver" "\n"
+        " downtrack distance in m")
+      double start_dist;
+
+      @verbatim (language="comment", text=
+        " vehicle speed in m/s")
+      double start_speed;
+
+      builtin_interfaces::msg::Time start_time;
+
+      @verbatim (language="comment", text=
+        " Approximate ending state of the maneuver")
+      double end_dist;
+
+      builtin_interfaces::msg::Time end_time;
+
+      @verbatim (language="comment", text=
+        " The end speed is always zero" "\n"
+        " GUID of the starting lane of this maneuver")
+      string starting_lane_id;
+
+      @verbatim (language="comment", text=
+        " GUID of the ending lane of this maneuver")
+      string ending_lane_id;
+    };
+  };
+};

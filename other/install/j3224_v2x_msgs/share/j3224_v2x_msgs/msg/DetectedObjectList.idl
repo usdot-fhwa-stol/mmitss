@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/DetectedObjectList.msg
+// generated code does not contain a copyright notice
+
+#include "j3224_v2x_msgs/msg/DetectedObjectData.idl"
+
+module j3224_v2x_msgs {
+  module msg {
+    module DetectedObjectList_Constants {
+      const uint16 DETECTED_OBJECT_DATA_MIN_SIZE = 1;
+      const uint16 DETECTED_OBJECT_DATA_MAX_SIZE = 256;
+    };
+    @verbatim (language="comment", text=
+      " DetectedObjectList.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct DetectedObjectList {
+      @verbatim (language="comment", text=
+        " DetectedObjectList::= SEQUENCE (SIZE(1..256)) OF DetectedObjectData")
+      sequence<j3224_v2x_msgs::msg::DetectedObjectData> detected_object_data;
+    };
+  };
+};

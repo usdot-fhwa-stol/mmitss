@@ -1,0 +1,203 @@
+# generated from rosidl_generator_py/resource/_idl.py.em
+# with input from j3224_v2x_msgs:msg/ObstacleSizeConfidence.idl
+# generated code does not contain a copyright notice
+
+
+# Import statements for member types
+
+import rosidl_parser.definition  # noqa: E402, I100
+
+
+class Metaclass_ObstacleSizeConfidence(type):
+    """Metaclass of message 'ObstacleSizeConfidence'."""
+
+    _CREATE_ROS_MESSAGE = None
+    _CONVERT_FROM_PY = None
+    _CONVERT_TO_PY = None
+    _DESTROY_ROS_MESSAGE = None
+    _TYPE_SUPPORT = None
+
+    __constants = {
+        'HAS_HEIGHT_CONFIDENCE': 1,
+    }
+
+    @classmethod
+    def __import_type_support__(cls):
+        try:
+            from rosidl_generator_py import import_type_support
+            module = import_type_support('j3224_v2x_msgs')
+        except ImportError:
+            import logging
+            import traceback
+            logger = logging.getLogger(
+                'j3224_v2x_msgs.msg.ObstacleSizeConfidence')
+            logger.debug(
+                'Failed to import needed modules for type support:\n' +
+                traceback.format_exc())
+        else:
+            cls._CREATE_ROS_MESSAGE = module.create_ros_message_msg__msg__obstacle_size_confidence
+            cls._CONVERT_FROM_PY = module.convert_from_py_msg__msg__obstacle_size_confidence
+            cls._CONVERT_TO_PY = module.convert_to_py_msg__msg__obstacle_size_confidence
+            cls._TYPE_SUPPORT = module.type_support_msg__msg__obstacle_size_confidence
+            cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__obstacle_size_confidence
+
+            from j3224_v2x_msgs.msg import SizeValueConfidence
+            if SizeValueConfidence.__class__._TYPE_SUPPORT is None:
+                SizeValueConfidence.__class__.__import_type_support__()
+
+    @classmethod
+    def __prepare__(cls, name, bases, **kwargs):
+        # list constant names here so that they appear in the help text of
+        # the message class under "Data and other attributes defined here:"
+        # as well as populate each message instance
+        return {
+            'HAS_HEIGHT_CONFIDENCE': cls.__constants['HAS_HEIGHT_CONFIDENCE'],
+        }
+
+    @property
+    def HAS_HEIGHT_CONFIDENCE(self):
+        """Message constant 'HAS_HEIGHT_CONFIDENCE'."""
+        return Metaclass_ObstacleSizeConfidence.__constants['HAS_HEIGHT_CONFIDENCE']
+
+
+class ObstacleSizeConfidence(metaclass=Metaclass_ObstacleSizeConfidence):
+    """
+    Message class 'ObstacleSizeConfidence'.
+
+    Constants:
+      HAS_HEIGHT_CONFIDENCE
+    """
+
+    __slots__ = [
+        '_width_confidence',
+        '_length_confidence',
+        '_presence_vector',
+        '_height_confidence',
+    ]
+
+    _fields_and_field_types = {
+        'width_confidence': 'j3224_v2x_msgs/SizeValueConfidence',
+        'length_confidence': 'j3224_v2x_msgs/SizeValueConfidence',
+        'presence_vector': 'uint8',
+        'height_confidence': 'j3224_v2x_msgs/SizeValueConfidence',
+    }
+
+    SLOT_TYPES = (
+        rosidl_parser.definition.NamespacedType(['j3224_v2x_msgs', 'msg'], 'SizeValueConfidence'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['j3224_v2x_msgs', 'msg'], 'SizeValueConfidence'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['j3224_v2x_msgs', 'msg'], 'SizeValueConfidence'),  # noqa: E501
+    )
+
+    def __init__(self, **kwargs):
+        assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
+            'Invalid arguments passed to constructor: %s' % \
+            ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        from j3224_v2x_msgs.msg import SizeValueConfidence
+        self.width_confidence = kwargs.get('width_confidence', SizeValueConfidence())
+        from j3224_v2x_msgs.msg import SizeValueConfidence
+        self.length_confidence = kwargs.get('length_confidence', SizeValueConfidence())
+        self.presence_vector = kwargs.get('presence_vector', int())
+        from j3224_v2x_msgs.msg import SizeValueConfidence
+        self.height_confidence = kwargs.get('height_confidence', SizeValueConfidence())
+
+    def __repr__(self):
+        typename = self.__class__.__module__.split('.')
+        typename.pop()
+        typename.append(self.__class__.__name__)
+        args = []
+        for s, t in zip(self.__slots__, self.SLOT_TYPES):
+            field = getattr(self, s)
+            fieldstr = repr(field)
+            # We use Python array type for fields that can be directly stored
+            # in them, and "normal" sequences for everything else.  If it is
+            # a type that we store in an array, strip off the 'array' portion.
+            if (
+                isinstance(t, rosidl_parser.definition.AbstractSequence) and
+                isinstance(t.value_type, rosidl_parser.definition.BasicType) and
+                t.value_type.typename in ['float', 'double', 'int8', 'uint8', 'int16', 'uint16', 'int32', 'uint32', 'int64', 'uint64']
+            ):
+                if len(field) == 0:
+                    fieldstr = '[]'
+                else:
+                    assert fieldstr.startswith('array(')
+                    prefix = "array('X', "
+                    suffix = ')'
+                    fieldstr = fieldstr[len(prefix):-len(suffix)]
+            args.append(s[1:] + '=' + fieldstr)
+        return '%s(%s)' % ('.'.join(typename), ', '.join(args))
+
+    def __eq__(self, other):
+        if not isinstance(other, self.__class__):
+            return False
+        if self.width_confidence != other.width_confidence:
+            return False
+        if self.length_confidence != other.length_confidence:
+            return False
+        if self.presence_vector != other.presence_vector:
+            return False
+        if self.height_confidence != other.height_confidence:
+            return False
+        return True
+
+    @classmethod
+    def get_fields_and_field_types(cls):
+        from copy import copy
+        return copy(cls._fields_and_field_types)
+
+    @property
+    def width_confidence(self):
+        """Message field 'width_confidence'."""
+        return self._width_confidence
+
+    @width_confidence.setter
+    def width_confidence(self, value):
+        if __debug__:
+            from j3224_v2x_msgs.msg import SizeValueConfidence
+            assert \
+                isinstance(value, SizeValueConfidence), \
+                "The 'width_confidence' field must be a sub message of type 'SizeValueConfidence'"
+        self._width_confidence = value
+
+    @property
+    def length_confidence(self):
+        """Message field 'length_confidence'."""
+        return self._length_confidence
+
+    @length_confidence.setter
+    def length_confidence(self, value):
+        if __debug__:
+            from j3224_v2x_msgs.msg import SizeValueConfidence
+            assert \
+                isinstance(value, SizeValueConfidence), \
+                "The 'length_confidence' field must be a sub message of type 'SizeValueConfidence'"
+        self._length_confidence = value
+
+    @property
+    def presence_vector(self):
+        """Message field 'presence_vector'."""
+        return self._presence_vector
+
+    @presence_vector.setter
+    def presence_vector(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'presence_vector' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'presence_vector' field must be an unsigned integer in [0, 255]"
+        self._presence_vector = value
+
+    @property
+    def height_confidence(self):
+        """Message field 'height_confidence'."""
+        return self._height_confidence
+
+    @height_confidence.setter
+    def height_confidence(self, value):
+        if __debug__:
+            from j3224_v2x_msgs.msg import SizeValueConfidence
+            assert \
+                isinstance(value, SizeValueConfidence), \
+                "The 'height_confidence' field must be a sub message of type 'SizeValueConfidence'"
+        self._height_confidence = value

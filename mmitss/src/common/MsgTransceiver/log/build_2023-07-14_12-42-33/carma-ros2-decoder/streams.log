@@ -1,0 +1,22 @@
+[0.044s] Invoking command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder -- -j8 -l8
+[0.236s] [100%] Built target M_CarmaMsgDecoder
+[0.252s] Invoked command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder -- -j8 -l8
+[0.316s] Invoking command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder
+[0.326s] -- Install configuration: ""
+[0.327s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/bin/M_CarmaMsgDecoder
+[0.328s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/ament_index/resource_index/package_run_dependencies/carma-ros2-decoder
+[0.328s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/ament_index/resource_index/parent_prefix_path/carma-ros2-decoder
+[0.328s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/environment/ament_prefix_path.sh
+[0.329s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/environment/ament_prefix_path.dsv
+[0.329s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/environment/path.sh
+[0.329s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/environment/path.dsv
+[0.329s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/local_setup.bash
+[0.329s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/local_setup.sh
+[0.329s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/local_setup.zsh
+[0.329s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/local_setup.dsv
+[0.330s] -- Installing: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/package.dsv
+[0.330s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/ament_index/resource_index/packages/carma-ros2-decoder
+[0.330s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/cmake/carma-ros2-decoderConfig.cmake
+[0.330s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/cmake/carma-ros2-decoderConfig-version.cmake
+[0.330s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder/share/carma-ros2-decoder/package.xml
+[0.332s] Invoked command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder

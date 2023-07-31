@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/GetAvailableRoutes.srv
+// generated code does not contain a copyright notice
+
+#include "carma_planning_msgs/msg/Route.idl"
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " GetAvailableRoutes.srv" "\n"
+      "" "\n"
+      " Provided by the route manager node. Returns a list of available routes." "\n"
+      "" "\n"
+      " @author Michael McConnell" "\n"
+      " @version 0.1")
+    struct GetAvailableRoutes_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      " Response")
+    struct GetAvailableRoutes_Response {
+      @verbatim (language="comment", text=
+        " A list of available routes" "\n"
+        " For efficiency the routes provided in this list contain only an empty list segments")
+      sequence<carma_planning_msgs::msg::Route> available_routes;
+    };
+  };
+};

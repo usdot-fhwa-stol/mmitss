@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_perception_msgs/msg/RoadwayObstacleList.msg
+// generated code does not contain a copyright notice
+
+#include "carma_perception_msgs/msg/RoadwayObstacle.idl"
+
+module carma_perception_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " RoadwayObstacleList.msg" "\n"
+      "" "\n"
+      " A list of RoadwayObstacle" "\n"
+      "" "\n"
+      " @author Michael McConnell" "\n"
+      " @version 0.1")
+    struct RoadwayObstacleList {
+      @verbatim (language="comment", text=
+        " A list of other vehicle obstacles on the roadway")
+      sequence<carma_perception_msgs::msg::RoadwayObstacle> roadway_obstacles;
+    };
+  };
+};

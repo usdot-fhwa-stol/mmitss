@@ -1,0 +1,90 @@
+[0.014s] Invoking command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder -- -j8 -l8
+[0.042s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.068s] -- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+[0.268s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[0.366s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.369s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.464s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.509s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.511s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.741s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.755s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.768s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.769s] -- Configured cppcheck include dirs: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/common;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/libj2735;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/glpk/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/net-snmp;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/jsoncpp
+[0.769s] -- Configured cppcheck exclude dirs and/or files: 
+[0.782s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.782s] -- Configured cpplint exclude dirs and/or files: 
+[0.784s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.788s] -- Added test 'lint_cmake' to check CMake code style
+[0.790s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.804s] -- Added test 'uncrustify' to check C / C++ code style
+[0.804s] -- Configured uncrustify additional arguments: 
+[0.806s] -- Added test 'xmllint' to check XML markup files
+[0.809s] -- Configuring done
+[0.823s] -- Generating done
+[0.825s] -- Build files have been written to: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder
+[0.852s] [35m[1mScanning dependencies of target M_CarmaMsgDecoder[0m
+[0.876s] [ 20%] [32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o[0m
+[0.877s] [ 40%] [32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-msg-decoder.cpp.o[0m
+[0.878s] [ 60%] [32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o[0m
+[0.881s] [ 80%] [32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-outbound-listener.cpp.o[0m
+[1.222s] In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcBSM.h:12[m[K,
+[1.223s]                  from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcFrame.h:12[m[K,
+[1.223s]                  from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/AsnJ2735Lib.h:14[m[K,
+[1.223s]                  from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:10[m[K:
+[1.223s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/msgEnum.h:71:3:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.223s]    71 |  }[01;35m[K;[m[K
+[1.223s]       |   [01;35m[K^[m[K
+[1.242s] In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:10[m[K:
+[1.243s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/AsnJ2735Lib.h:21:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.243s]    21 | }[01;35m[K;[m[K
+[1.243s]       |  [01;35m[K^[m[K
+[1.279s] In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/geoUtils.h:15[m[K,
+[1.280s]                  from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/mapDataStruct.h:16[m[K,
+[1.280s]                  from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/locAware.h:15[m[K,
+[1.280s]                  from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:11[m[K:
+[1.280s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:30:28:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.280s]    30 |   {return(d / rad2degree);}[01;35m[K;[m[K
+[1.280s]       |                            [01;35m[K^[m[K
+[1.280s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:32:28:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.280s]    32 |   {return(d * rad2degree);}[01;35m[K;[m[K
+[1.281s]       |                            [01;35m[K^[m[K
+[1.281s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:35:45:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.281s]    35 |   {return(static_cast<double>(d) / damega);}[01;35m[K;[m[K
+[1.281s]       |                                             [01;35m[K^[m[K
+[1.281s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:38:47:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.281s]    38 |   {return(static_cast<T>(round(d * damega)));}[01;35m[K;[m[K
+[1.281s]       |                                               [01;35m[K^[m[K
+[1.281s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:41:44:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.282s]    41 |   {return(static_cast<double>(d) / hecto);}[01;35m[K;[m[K
+[1.282s]       |                                            [01;35m[K^[m[K
+[1.282s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:44:46:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.282s]    44 |   {return(static_cast<T>(round(d * hecto)));}[01;35m[K;[m[K
+[1.282s]       |                                              [01;35m[K^[m[K
+[1.282s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:78:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.282s]    78 | }[01;35m[K;[m[K
+[1.282s]       |  [01;35m[K^[m[K
+[1.286s] In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/mapDataStruct.h:16[m[K,
+[1.286s]                  from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/locAware.h:15[m[K,
+[1.286s]                  from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:11[m[K:
+[1.286s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/geoUtils.h:285:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.286s]   285 | }[01;35m[K;[m[K
+[1.286s]       |  [01;35m[K^[m[K
+[1.301s] In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/locAware.h:15[m[K,
+[1.301s]                  from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:11[m[K:
+[1.301s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/mapDataStruct.h:127:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+[1.301s]   127 | }[01;35m[K;[m[K
+[1.301s]       |  [01;35m[K^[m[K
+[4.937s] [100%] [32m[1mLinking CXX executable M_CarmaMsgDecoder[0m
+[5.056s] /usr/bin/ld: cannot find -llocAware
+[5.056s] /usr/bin/ld: cannot find -ldsrc
+[5.056s] /usr/bin/ld: cannot find -lasn
+[5.056s] /usr/bin/ld: cannot find -lroscpp
+[5.056s] /usr/bin/ld: cannot find -lrostime
+[5.056s] /usr/bin/ld: cannot find -lrosconsole
+[5.056s] /usr/bin/ld: cannot find -lroscpp_serialization
+[5.056s] collect2: error: ld returned 1 exit status
+[5.057s] make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:186: M_CarmaMsgDecoder] Error 1
+[5.057s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/M_CarmaMsgDecoder.dir/all] Error 2
+[5.057s] make: *** [Makefile:141: all] Error 2
+[5.059s] Invoked command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder -- -j8 -l8

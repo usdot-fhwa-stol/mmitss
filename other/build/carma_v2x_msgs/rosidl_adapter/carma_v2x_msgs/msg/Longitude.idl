@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/Longitude.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module Longitude_Constants {
+      const float MIN = -179.9999999;
+      const float MAX = 180.0;
+    };
+    @verbatim (language="comment", text=
+      " Longitude.msg" "\n"
+      "" "\n"
+      " Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case." "\n"
+      "" "\n"
+      " Parsed description of Longitude from the SAE J2735 2016 specification." "\n"
+      " For further usage details consult the specification. See note on SI units above." "\n"
+      "" "\n"
+      " Longitude in degrees in range (-179.9999999..180.000000)")
+    struct Longitude {
+      double longitude;
+
+      @verbatim (language="comment", text=
+        " True if longitude is unavailable")
+      boolean unavailable;
+    };
+  };
+};

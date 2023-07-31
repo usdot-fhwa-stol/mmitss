@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/RollRate.msg
+// generated code does not contain a copyright notice
+
+
+module j3224_v2x_msgs {
+  module msg {
+    module RollRate_Constants {
+      const int16 MIN_ROLL_RATE = -32767;
+      const int16 MAX_ROLL_RATE = 32766;
+      const int16 UNAVAILABLE = 32767;
+    };
+    @verbatim (language="comment", text=
+      " RollRate.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct RollRate {
+      @verbatim (language="comment", text=
+        " RollRate ::= INTEGER (-32767..32767)" "\n"
+        "   -- LSB units of 0.01 degrees per second (signed)" "\n"
+        "   -- unavailable (32767)")
+      int16 roll_rate;
+    };
+  };
+};

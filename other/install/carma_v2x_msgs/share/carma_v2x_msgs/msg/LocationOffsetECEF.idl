@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/LocationOffsetECEF.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " LocationOffsetECEF.msg")
+    struct LocationOffsetECEF {
+      @verbatim (language="comment", text=
+        " Location offset is used to describe a trajectory based on" "\n"
+        " the combination of start location and a list of offsets." "\n"
+        " Each offset indicates the offset from last offset/location in" "\n"
+        " centimeters. The time interval between each pair of neighbor" "\n"
+        " points should be 0.1 second. So the length of trajectory" "\n"
+        " will depend on the vehicle current speed." "\n"
+        " offset in X coordinate of ECEF frame" "\n"
+        " the x, y, z range is in [-500, 501] and 501 means offset unavailable")
+      int16 offset_x;
+
+      @verbatim (language="comment", text=
+        " offset in Y coordinate of ECEF frame")
+      int16 offset_y;
+
+      @verbatim (language="comment", text=
+        " offset in Z coordinate of ECEF frame")
+      int16 offset_z;
+    };
+  };
+};

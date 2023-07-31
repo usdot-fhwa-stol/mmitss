@@ -1,0 +1,59 @@
+[0.021s] Invoking command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2 -DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder
+[0.037s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.064s] -- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+[0.291s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[0.392s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.395s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.496s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.540s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.543s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.797s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.818s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.828s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.829s] -- Configured cppcheck include dirs: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../include/common;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../include/libj2735;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../3rdparty/asn1j2735/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../3rdparty/glpk/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../3rdparty/mapengine/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../3rdparty/net-snmp
+[0.829s] -- Configured cppcheck exclude dirs and/or files: 
+[0.836s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.837s] -- Configured cpplint exclude dirs and/or files: 
+[0.838s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.840s] -- Added test 'lint_cmake' to check CMake code style
+[0.841s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.847s] -- Added test 'uncrustify' to check C / C++ code style
+[0.847s] -- Configured uncrustify additional arguments: 
+[0.849s] -- Added test 'xmllint' to check XML markup files
+[0.854s] -- Configuring done
+[0.868s] -- Generating done
+[0.871s] -- Build files have been written to: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder
+[0.877s] Invoked command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2 -DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/install/carma-ros2-decoder
+[0.880s] Invoking command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder -- -j8 -l8
+[0.933s] [35m[1mScanning dependencies of target M_CarmaMsgDecoder[0m
+[1.029s] [ 20%] [32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o[0m
+[1.042s] [ 60%] [32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-msg-decoder.cpp.o[0m
+[1.042s] [ 60%] [32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o[0m
+[1.043s] [ 80%] [32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-outbound-listener.cpp.o[0m
+[1.091s] In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-inbound-listener.cpp:1[m[K:
+[1.092s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-inbound-listener.h:4:10:[m[K [01;31m[Kfatal error: [m[KUdpSocket.h: No such file or directory
+[1.092s]     4 | #include [01;31m[K"UdpSocket.h"[m[K
+[1.092s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[1.092s] compilation terminated.
+[1.093s] make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:63: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o] Error 1
+[1.093s] make[2]: *** Waiting for unfinished jobs....
+[1.104s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:10:10:[m[K [01;31m[Kfatal error: [m[KAsnJ2735Lib.h: No such file or directory
+[1.105s]    10 | #include [01;31m[K"AsnJ2735Lib.h"[m[K
+[1.105s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.105s] compilation terminated.
+[1.105s] make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:102: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o] Error 1
+[1.108s] In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-outbound-listener.cpp:1[m[K:
+[1.108s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-outbound-listener.h:3:10:[m[K [01;31m[Kfatal error: [m[KUdpSocket.h: No such file or directory
+[1.109s]     3 | #include [01;31m[K<UdpSocket.h>[m[K
+[1.109s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[1.109s] compilation terminated.
+[1.109s] make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:89: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-outbound-listener.cpp.o] Error 1
+[1.273s] In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-msg-decoder.cpp:3[m[K:
+[1.273s] [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-outbound-listener.h:3:10:[m[K [01;31m[Kfatal error: [m[KUdpSocket.h: No such file or directory
+[1.273s]     3 | #include [01;31m[K<UdpSocket.h>[m[K
+[1.273s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[1.273s] compilation terminated.
+[1.275s] make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:76: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-msg-decoder.cpp.o] Error 1
+[1.275s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/M_CarmaMsgDecoder.dir/all] Error 2
+[1.275s] make: *** [Makefile:141: all] Error 2
+[1.277s] Invoked command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder -- -j8 -l8

@@ -1,0 +1,6 @@
+{
+  "package_name": "carma_localization_msgs",
+  "non_idl_tuples": [
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_localization_msgs:msg/LocalizationStatusReport.msg"
+  ]
+}

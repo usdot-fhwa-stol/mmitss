@@ -1,0 +1,39 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/DetectedObjectOptionalData.msg
+// generated code does not contain a copyright notice
+
+#include "j3224_v2x_msgs/msg/DetectedObstacleData.idl"
+#include "j3224_v2x_msgs/msg/DetectedVRUData.idl"
+#include "j3224_v2x_msgs/msg/DetectedVehicleData.idl"
+
+module j3224_v2x_msgs {
+  module msg {
+    module DetectedObjectOptionalData_Constants {
+      const uint8 DET_VEH = 0;
+      const uint8 DET_VRU = 1;
+      const uint8 DET_OBST = 2;
+    };
+    @verbatim (language="comment", text=
+      " DetectedObjectOptionalData.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct DetectedObjectOptionalData {
+      @verbatim (language="comment", text=
+        " DetectedObjectOptionalData ::= CHOICE {" "\n"
+        "    detVeh DetectedVehicleData," "\n"
+        "    -- Detected vehicle data" "\n"
+        "    detVRU DetectedVRUData," "\n"
+        "    -- Detected VRU data" "\n"
+        "    detObst DetectedObstacleData" "\n"
+        "    -- Detected obstacle data" "\n"
+        " }")
+      uint8 choice;
+
+      j3224_v2x_msgs::msg::DetectedVehicleData det_veh;
+
+      j3224_v2x_msgs::msg::DetectedVRUData det_vru;
+
+      j3224_v2x_msgs::msg::DetectedObstacleData det_obst;
+    };
+  };
+};

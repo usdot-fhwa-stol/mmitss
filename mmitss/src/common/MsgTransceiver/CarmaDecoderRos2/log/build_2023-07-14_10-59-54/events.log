@@ -1,0 +1,618 @@
+[0.000000] (-) TimerEvent: {}
+[0.000772] (carma-ros2-decoder) JobQueued: {'identifier': 'carma-ros2-decoder', 'dependencies': OrderedDict()}
+[0.001339] (carma-ros2-decoder) JobStarted: {'identifier': 'carma-ros2-decoder'}
+[0.020914] (carma-ros2-decoder) JobProgress: {'identifier': 'carma-ros2-decoder', 'progress': 'cmake'}
+[0.022074] (carma-ros2-decoder) JobProgress: {'identifier': 'carma-ros2-decoder', 'progress': 'build'}
+[0.023206] (carma-ros2-decoder) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder', '--', '-j8', '-l8'], 'cwd': '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en_US'), ('USER', 'mmitss'), ('MMITSS_NETWORK_ADAPTER', 'eno2'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1785'), ('ROS_PACKAGE_PATH', '/opt/ros/noetic/share'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('ROS_ETC_DIR', '/opt/ros/noetic/etc/ros'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/noetic/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ibm/ILOG/CPLEX_Studio221/cplex/lib/x86-64_linux:/opt/ibm/ILOG/CPLEX_Studio221/concert/lib/x86-64_linux'), ('QT4_IM_MODULE', 'ibus'), ('HOME', '/home/mmitss'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('MIBS', 'ALL'), ('MANAGERPID', '1701'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=adaab56d5436905fe8f125cb64b0eeba'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('UBUNTU_MENUPROXY', '1'), ('MANDATORY_PATH', '/usr/share/gconf/mate.mandatory.path'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/install:/home/mmitss/Documents/cda-mmitss/other/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'mmitss'), ('WINDOWID', '81788934'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('JOURNAL_STREAM', '9:41105'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/noetic/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/mate.default.path'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/noetic/bin:/opt/ros/foxy/bin:/home/mmitss/anaconda3/bin:/home/mmitss/anaconda3/condabin:/home/mmitss/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/MFieldC:@/tmp/.ICE-unix/1713,unix/MFieldC:/tmp/.ICE-unix/1713'), ('GDM_LANG', 'en_US'), ('INVOCATION_ID', '1ad915cad06046d896e16f8258aac9f8'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('MMITSS_ROOT', '/home/mmitss/Documents/cda-mmitss/mmitss/build/scripts/../../..'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('XMODIFIERS', '@im=ibus'), ('ROSLISP_PACKAGE_DIRECTORIES', ''), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/mmitss/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/noetic/share/ros'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/mmitss'), ('AMENT_PREFIX_PATH', '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/mmitss/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '7'), ('PWD', '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('CONDA_EXE', '/home/mmitss/anaconda3/bin/conda'), ('PROCESSOR', 'x86'), ('CLUTTER_IM_MODULE', 'ibus'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=adaab56d5436905fe8f125cb64b0eeba'), ('XDG_DATA_DIRS', '/usr/share/mate:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/noetic/lib/python3/dist-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('CONDA_PREFIX', '/home/mmitss/anaconda3'), ('CPATH', '/opt/ibm/ILOG/CPLEX_Studio221/cplex/include:/opt/ibm/ILOG/CPLEX_Studio221/concert/include'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy:/opt/ros/noetic:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs')]), 'shell': False}
+[0.053745] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.077799] (carma-ros2-decoder) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3\n'}
+[0.099748] (-) TimerEvent: {}
+[0.200124] (-) TimerEvent: {}
+[0.291018] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)\n'}
+[0.300231] (-) TimerEvent: {}
+[0.386818] (carma-ros2-decoder) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.390177] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.400353] (-) TimerEvent: {}
+[0.484985] (carma-ros2-decoder) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500447] (-) TimerEvent: {}
+[0.527658] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.529776] (carma-ros2-decoder) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.600570] (-) TimerEvent: {}
+[0.700869] (-) TimerEvent: {}
+[0.754661] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[0.764700] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.775616] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.777305] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/common;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/common/json;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/libj2735;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/glpk/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/net-snmp;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/jsoncpp\n'}
+[0.777455] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.787729] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[0.787884] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[0.789678] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.792704] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.794602] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[0.800966] (-) TimerEvent: {}
+[0.805011] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.805139] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.807016] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.810124] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.822831] (carma-ros2-decoder) StdoutLine: {'line': b'-- Generating done\n'}
+[0.824737] (carma-ros2-decoder) StdoutLine: {'line': b'-- Build files have been written to: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder\n'}
+[0.852953] (carma-ros2-decoder) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target M_CarmaMsgDecoder\x1b[0m\n'}
+[0.872815] (carma-ros2-decoder) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-outbound-listener.cpp.o\x1b[0m\n'}
+[0.873136] (carma-ros2-decoder) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o\x1b[0m\n'}
+[0.873325] (carma-ros2-decoder) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o\x1b[0m\n'}
+[0.875143] (carma-ros2-decoder) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-msg-decoder.cpp.o\x1b[0m\n'}
+[0.901108] (-) TimerEvent: {}
+[1.001444] (-) TimerEvent: {}
+[1.101807] (-) TimerEvent: {}
+[1.202206] (-) TimerEvent: {}
+[1.227007] (carma-ros2-decoder) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcBSM.h:12\x1b[m\x1b[K,\n'}
+[1.227330] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcFrame.h:12\x1b[m\x1b[K,\n'}
+[1.227478] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/AsnJ2735Lib.h:14\x1b[m\x1b[K,\n'}
+[1.227602] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:10\x1b[m\x1b[K:\n'}
+[1.227730] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/msgEnum.h:71:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.227850] (carma-ros2-decoder) StderrLine: {'line': b'   71 |  }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.227971] (carma-ros2-decoder) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.250337] (carma-ros2-decoder) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:10\x1b[m\x1b[K:\n'}
+[1.250654] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/AsnJ2735Lib.h:21:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.250801] (carma-ros2-decoder) StderrLine: {'line': b'   21 | }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.250941] (carma-ros2-decoder) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.284566] (carma-ros2-decoder) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/geoUtils.h:15\x1b[m\x1b[K,\n'}
+[1.285252] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/mapDataStruct.h:16\x1b[m\x1b[K,\n'}
+[1.285392] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/locAware.h:15\x1b[m\x1b[K,\n'}
+[1.285524] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:11\x1b[m\x1b[K:\n'}
+[1.285647] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:30:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.285774] (carma-ros2-decoder) StderrLine: {'line': b'   30 |   {return(d / rad2degree);}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.285917] (carma-ros2-decoder) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.286044] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:32:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.286170] (carma-ros2-decoder) StderrLine: {'line': b'   32 |   {return(d * rad2degree);}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.286289] (carma-ros2-decoder) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.286411] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:35:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.286534] (carma-ros2-decoder) StderrLine: {'line': b'   35 |   {return(static_cast<double>(d) / damega);}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.286652] (carma-ros2-decoder) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.286772] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:38:47:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.286895] (carma-ros2-decoder) StderrLine: {'line': b'   38 |   {return(static_cast<T>(round(d * damega)));}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.287025] (carma-ros2-decoder) StderrLine: {'line': b'      |                                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.287140] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:41:44:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.287263] (carma-ros2-decoder) StderrLine: {'line': b'   41 |   {return(static_cast<double>(d) / hecto);}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.287379] (carma-ros2-decoder) StderrLine: {'line': b'      |                                            \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.287494] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:44:46:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.287636] (carma-ros2-decoder) StderrLine: {'line': b'   44 |   {return(static_cast<T>(round(d * hecto)));}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.287749] (carma-ros2-decoder) StderrLine: {'line': b'      |                                              \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.287860] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:78:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.287974] (carma-ros2-decoder) StderrLine: {'line': b'   78 | }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.288085] (carma-ros2-decoder) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.290928] (carma-ros2-decoder) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/mapDataStruct.h:16\x1b[m\x1b[K,\n'}
+[1.291168] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/locAware.h:15\x1b[m\x1b[K,\n'}
+[1.291303] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:11\x1b[m\x1b[K:\n'}
+[1.291434] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/geoUtils.h:285:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.291555] (carma-ros2-decoder) StderrLine: {'line': b'  285 | }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.291672] (carma-ros2-decoder) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.302313] (-) TimerEvent: {}
+[1.303986] (carma-ros2-decoder) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/locAware.h:15\x1b[m\x1b[K,\n'}
+[1.304213] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:11\x1b[m\x1b[K:\n'}
+[1.304342] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/mapDataStruct.h:127:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.304476] (carma-ros2-decoder) StderrLine: {'line': b'  127 | }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.304594] (carma-ros2-decoder) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.402420] (-) TimerEvent: {}
+[1.502771] (-) TimerEvent: {}
+[1.603133] (-) TimerEvent: {}
+[1.703503] (-) TimerEvent: {}
+[1.803833] (-) TimerEvent: {}
+[1.904198] (-) TimerEvent: {}
+[2.004549] (-) TimerEvent: {}
+[2.104904] (-) TimerEvent: {}
+[2.205232] (-) TimerEvent: {}
+[2.305570] (-) TimerEvent: {}
+[2.405934] (-) TimerEvent: {}
+[2.506259] (-) TimerEvent: {}
+[2.606573] (-) TimerEvent: {}
+[2.706892] (-) TimerEvent: {}
+[2.807217] (-) TimerEvent: {}
+[2.907577] (-) TimerEvent: {}
+[3.007911] (-) TimerEvent: {}
+[3.108254] (-) TimerEvent: {}
+[3.208580] (-) TimerEvent: {}
+[3.308894] (-) TimerEvent: {}
+[3.409219] (-) TimerEvent: {}
+[3.509572] (-) TimerEvent: {}
+[3.609910] (-) TimerEvent: {}
+[3.710210] (-) TimerEvent: {}
+[3.810562] (-) TimerEvent: {}
+[3.910878] (-) TimerEvent: {}
+[4.011240] (-) TimerEvent: {}
+[4.111578] (-) TimerEvent: {}
+[4.211890] (-) TimerEvent: {}
+[4.312221] (-) TimerEvent: {}
+[4.412510] (-) TimerEvent: {}
+[4.512834] (-) TimerEvent: {}
+[4.613126] (-) TimerEvent: {}
+[4.713414] (-) TimerEvent: {}
+[4.813807] (-) TimerEvent: {}
+[4.902973] (carma-ros2-decoder) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable M_CarmaMsgDecoder\x1b[0m\n'}
+[4.913936] (-) TimerEvent: {}
+[5.014229] (-) TimerEvent: {}
+[5.114643] (-) TimerEvent: {}
+[5.137612] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o: in function `InboundMsgListener::InboundMsgListener()':\n"}
+[5.137850] (carma-ros2-decoder) StderrLine: {'line': b"carma-inbound-listener.cpp:(.text+0x3a): undefined reference to `Json::Value::Value(Json::ValueType)'\n"}
+[5.138179] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x50): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.138419] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x69): undefined reference to `Json::Value::asString[abi:cxx11]() const'\n"}
+[5.138561] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x7f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.138697] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x98): undefined reference to `Json::Value::asString[abi:cxx11]() const'\n"}
+[5.138821] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0xae): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.138942] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0xc7): undefined reference to `Json::Value::asString[abi:cxx11]() const'\n"}
+[5.139078] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0xdd): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.139200] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0xe5): undefined reference to `Json::Value::asBool() const'\n"}
+[5.139322] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x108): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.139467] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x117): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.139599] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x11f): undefined reference to `Json::Value::asInt() const'\n"}
+[5.139731] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x142): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.139851] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x151): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.139983] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x159): undefined reference to `Json::Value::asInt() const'\n"}
+[5.140107] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x17c): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.140236] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x18b): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.140356] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x193): undefined reference to `Json::Value::asInt() const'\n"}
+[5.140534] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x1b6): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.140653] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x1c5): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.140836] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x1cd): undefined reference to `Json::Value::asInt() const'\n"}
+[5.140953] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x295): undefined reference to `Json::CharReaderBuilder::CharReaderBuilder()'\n"}
+[5.141074] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x2a4): undefined reference to `Json::CharReaderBuilder::newCharReader() const'\n"}
+[5.141185] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x35e): undefined reference to `Json::CharReaderBuilder::~CharReaderBuilder()'\n"}
+[5.141306] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x3db): undefined reference to `Json::CharReaderBuilder::~CharReaderBuilder()'\n"}
+[5.141427] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x46e): undefined reference to `Json::Value::~Value()'\n"}
+[5.141533] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o: in function `InboundMsgListener::~InboundMsgListener()':\n"}
+[5.141666] (carma-ros2-decoder) StderrLine: {'line': b"carma-inbound-listener.cpp:(.text+0x4d8): undefined reference to `Json::Value::~Value()'\n"}
+[5.141770] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o: in function `InboundMsgListener::inboundMsgCallback(std::shared_ptr<carma_driver_msgs::msg::ByteArray_<std::allocator<void> > >)':\n"}
+[5.141923] (carma-ros2-decoder) StderrLine: {'line': b"carma-inbound-listener.cpp:(.text+0x52e): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.142066] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x53d): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.142185] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x54c): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.142321] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x554): undefined reference to `Json::Value::asInt() const'\n"}
+[5.142471] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x568): undefined reference to `UdpSocket::UdpSocket(unsigned short)'\n"}
+[5.142587] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x6d3): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'\n"}
+[5.142718] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x7ee): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'\n"}
+[5.142832] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x8b1): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'\n"}
+[5.142958] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0x937): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'\n"}
+[5.143075] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-inbound-listener.cpp:(.text+0xa59): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'\n"}
+[5.143191] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o:carma-inbound-listener.cpp:(.text+0xb83): more undefined references to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)' follow\n"}
+[5.143320] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o: in function `InboundMsgListener::inboundMsgCallback(std::shared_ptr<carma_driver_msgs::msg::ByteArray_<std::allocator<void> > >)':\n"}
+[5.143438] (carma-ros2-decoder) StderrLine: {'line': b"carma-inbound-listener.cpp:(.text+0xfb8): undefined reference to `UdpSocket::closeSocket()'\n"}
+[5.143553] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-msg-decoder.cpp.o: in function `InboundMsgListener::InboundMsgListener(InboundMsgListener const&)':\n"}
+[5.143682] (carma-ros2-decoder) StderrLine: {'line': b"carma-msg-decoder.cpp:(.text._ZN18InboundMsgListenerC2ERKS_[_ZN18InboundMsgListenerC5ERKS_]+0x24): undefined reference to `Json::Value::Value(Json::Value const&)'\n"}
+[5.143800] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-msg-decoder.cpp:(.text._ZN18InboundMsgListenerC2ERKS_[_ZN18InboundMsgListenerC5ERKS_]+0x121): undefined reference to `Json::Value::~Value()'\n"}
+[5.143926] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-msg-decoder.cpp.o: in function `OutboundMsgListener::OutboundMsgListener(OutboundMsgListener const&)':\n"}
+[5.144042] (carma-ros2-decoder) StderrLine: {'line': b"carma-msg-decoder.cpp:(.text._ZN19OutboundMsgListenerC2ERKS_[_ZN19OutboundMsgListenerC5ERKS_]+0x5b): undefined reference to `Json::Value::Value(Json::Value const&)'\n"}
+[5.144172] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-outbound-listener.cpp.o: in function `OutboundMsgListener::OutboundMsgListener()':\n"}
+[5.144288] (carma-ros2-decoder) StderrLine: {'line': b"carma-outbound-listener.cpp:(.text+0x40): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.144404] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x55): undefined reference to `Json::Value::asString[abi:cxx11]() const'\n"}
+[5.144531] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x6f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.144646] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x7e): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.144753] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x86): undefined reference to `Json::Value::asInt() const'\n"}
+[5.144869] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0xaa): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.144973] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0xb9): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.145095] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0xc1): undefined reference to `Json::Value::asInt() const'\n"}
+[5.145210] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0xe3): undefined reference to `Json::Value::Value(Json::ValueType)'\n"}
+[5.145329] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x19e): undefined reference to `Json::CharReaderBuilder::CharReaderBuilder()'\n"}
+[5.145455] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x1ad): undefined reference to `Json::CharReaderBuilder::newCharReader() const'\n"}
+[5.145573] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x27d): undefined reference to `Json::CharReaderBuilder::~CharReaderBuilder()'\n"}
+[5.145698] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x2fa): undefined reference to `Json::CharReaderBuilder::~CharReaderBuilder()'\n"}
+[5.145823] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x33d): undefined reference to `Json::Value::~Value()'\n"}
+[5.145958] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-outbound-listener.cpp.o: in function `OutboundMsgListener::~OutboundMsgListener()':\n"}
+[5.146084] (carma-ros2-decoder) StderrLine: {'line': b"carma-outbound-listener.cpp:(.text+0x394): undefined reference to `Json::Value::~Value()'\n"}
+[5.146200] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-outbound-listener.cpp.o: in function `OutboundMsgListener::outboundMsgCallback(std::shared_ptr<carma_driver_msgs::msg::ByteArray_<std::allocator<void> > >)':\n"}
+[5.146326] (carma-ros2-decoder) StderrLine: {'line': b"carma-outbound-listener.cpp:(.text+0x3fa): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.146441] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x409): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.146558] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x411): undefined reference to `Json::Value::asInt() const'\n"}
+[5.146702] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x425): undefined reference to `UdpSocket::UdpSocket(unsigned short)'\n"}
+[5.146817] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x55a): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'\n"}
+[5.146936] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x5d9): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'\n"}
+[5.147103] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x6a2): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'\n"}
+[5.147243] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-outbound-listener.cpp:(.text+0x6fc): undefined reference to `UdpSocket::closeSocket()'\n"}
+[5.147358] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::TransceiverDecoder()':\n"}
+[5.147486] (carma-ros2-decoder) StderrLine: {'line': b"carma-transceiver-decoder.cpp:(.text+0x2d7): undefined reference to `Json::Value::Value(Json::ValueType)'\n"}
+[5.147608] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x37f): undefined reference to `Json::CharReaderBuilder::CharReaderBuilder()'\n"}
+[5.147735] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x38e): undefined reference to `Json::CharReaderBuilder::newCharReader() const'\n"}
+[5.147851] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x43f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.147969] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x454): undefined reference to `Json::Value::asString[abi:cxx11]() const'\n"}
+[5.148088] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x499): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.148204] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4ae): undefined reference to `Json::Value::asString[abi:cxx11]() const'\n"}
+[5.148319] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4f3): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.148435] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4fb): undefined reference to `Json::Value::asDouble() const'\n"}
+[5.148561] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x564): undefined reference to `Json::CharReaderBuilder::~CharReaderBuilder()'\n"}
+[5.148667] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x591): undefined reference to `Json::Value::~Value()'\n"}
+[5.148796] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x6bc): undefined reference to `Json::CharReaderBuilder::~CharReaderBuilder()'\n"}
+[5.148912] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x6fb): undefined reference to `Json::Value::~Value()'\n"}
+[5.149028] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::createJsonStringOfMapPayload(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':\n"}
+[5.149146] (carma-ros2-decoder) StderrLine: {'line': b"carma-transceiver-decoder.cpp:(.text+0xaa5): undefined reference to `Json::Value::Value(Json::ValueType)'\n"}
+[5.149261] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xb4d): undefined reference to `Json::CharReaderBuilder::CharReaderBuilder()'\n"}
+[5.149386] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xb5c): undefined reference to `Json::CharReaderBuilder::newCharReader() const'\n"}
+[5.149502] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xc0b): undefined reference to `Json::Value::Value(Json::ValueType)'\n"}
+[5.149618] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xc1a): undefined reference to `Json::StreamWriterBuilder::StreamWriterBuilder()'\n"}
+[5.149743] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xc30): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.149874] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xc75): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.149988] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xc8a): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.150114] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xcb7): undefined reference to `Json::Value::~Value()'\n"}
+[5.150231] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xccd): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.150356] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xd12): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.150473] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xd27): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.150588] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xd54): undefined reference to `Json::Value::~Value()'\n"}
+[5.150704] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xe3d): undefined reference to `LocAware::LocAware(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)'\n"}
+[5.150820] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xe5d): undefined reference to `LocAware::getIntersectionIdByName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const'\n"}
+[5.150947] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xee4): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.151064] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xefa): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.151188] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xf0f): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.151304] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xf1e): undefined reference to `Json::Value::~Value()'\n"}
+[5.151421] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xf37): undefined reference to `Json::Value::Value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.151546] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xf4d): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.151663] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xf62): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.151788] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xf71): undefined reference to `Json::Value::~Value()'\n"}
+[5.151904] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xf8a): undefined reference to `Json::Value::Value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.152020] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xfa0): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.152137] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xfb5): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.152264] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xfc4): undefined reference to `Json::Value::~Value()'\n"}
+[5.152376] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xfdb): undefined reference to `Json::Value::Value(int)'\n"}
+[5.152494] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xff1): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.152620] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1006): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.152736] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1015): undefined reference to `Json::Value::~Value()'\n"}
+[5.152860] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1035): undefined reference to `Json::writeString[abi:cxx11](Json::StreamWriter::Factory const&, Json::Value const&)'\n"}
+[5.152976] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1088): undefined reference to `LocAware::~LocAware()'\n"}
+[5.153101] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x10c2): undefined reference to `Json::StreamWriterBuilder::~StreamWriterBuilder()'\n"}
+[5.153218] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x10d1): undefined reference to `Json::Value::~Value()'\n"}
+[5.153343] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x10ef): undefined reference to `Json::CharReaderBuilder::~CharReaderBuilder()'\n"}
+[5.153459] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x111c): undefined reference to `Json::Value::~Value()'\n"}
+[5.153615] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x11f3): undefined reference to `Json::Value::~Value()'\n"}
+[5.153749] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1235): undefined reference to `Json::Value::~Value()'\n"}
+[5.153897] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1281): undefined reference to `Json::Value::~Value()'\n"}
+[5.154017] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1299): undefined reference to `Json::Value::~Value()'\n"}
+[5.154133] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o:carma-transceiver-decoder.cpp:(.text+0x12b1): more undefined references to `Json::Value::~Value()' follow\n"}
+[5.154264] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::createJsonStringOfMapPayload(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':\n"}
+[5.154382] (carma-ros2-decoder) StderrLine: {'line': b"carma-transceiver-decoder.cpp:(.text+0x12e1): undefined reference to `Json::StreamWriterBuilder::~StreamWriterBuilder()'\n"}
+[5.154507] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x12f9): undefined reference to `Json::Value::~Value()'\n"}
+[5.154623] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1329): undefined reference to `Json::CharReaderBuilder::~CharReaderBuilder()'\n"}
+[5.154748] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1368): undefined reference to `Json::Value::~Value()'\n"}
+[5.154868] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::bsmDecoder[abi:cxx11](std::vector<unsigned char, std::allocator<unsigned char> >)':\n"}
+[5.155050] (carma-ros2-decoder) StderrLine: {'line': b"carma-transceiver-decoder.cpp:(.text+0x1431): undefined reference to `BasicVehicle::BasicVehicle()'\n"}
+[5.155175] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x149a): undefined reference to `AsnJ2735Lib::decode_msgFrame(unsigned char const*, unsigned long, Frame_element_t&)'\n"}
+[5.155293] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x14f1): undefined reference to `BasicVehicle::setTemporaryID(int)'\n"}
+[5.155410] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x151e): undefined reference to `BasicVehicle::setSecMark_Second(double)'\n"}
+[5.155526] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1586): undefined reference to `BasicVehicle::setPosition(double, double, double)'\n"}
+[5.155643] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x15b9): undefined reference to `BasicVehicle::setSpeed_MeterPerSecond(double)'\n"}
+[5.155759] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x15e0): undefined reference to `BasicVehicle::setHeading_Degree(double)'\n"}
+[5.155884] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1625): undefined reference to `BasicVehicle::setType(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'\n"}
+[5.156002] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1662): undefined reference to `BasicVehicle::setLength_cm(int)'\n"}
+[5.156118] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1681): undefined reference to `BasicVehicle::setWidth_cm(int)'\n"}
+[5.156234] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x169a): undefined reference to `BasicVehicle::basicVehicle2Json[abi:cxx11]()'\n"}
+[5.156359] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x16fe): undefined reference to `BasicVehicle::~BasicVehicle()'\n"}
+[5.156474] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1774): undefined reference to `BasicVehicle::~BasicVehicle()'\n"}
+[5.156590] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::srmDecoder[abi:cxx11](std::vector<unsigned char, std::allocator<unsigned char> >)':\n"}
+[5.156707] (carma-ros2-decoder) StderrLine: {'line': b"carma-transceiver-decoder.cpp:(.text+0x17d9): undefined reference to `SignalRequest::SignalRequest()'\n"}
+[5.156823] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1842): undefined reference to `AsnJ2735Lib::decode_msgFrame(unsigned char const*, unsigned long, Frame_element_t&)'\n"}
+[5.156938] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x189b): undefined reference to `SignalRequest::setMsgCount(int)'\n"}
+[5.157051] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x18b7): undefined reference to `SignalRequest::setMinuteOfYear(int)'\n"}
+[5.157177] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x18d6): undefined reference to `SignalRequest::setMsOfMinute(int)'\n"}
+[5.157293] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x18f5): undefined reference to `SignalRequest::setRegionalID(int)'\n"}
+[5.157410] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1914): undefined reference to `SignalRequest::setIntersectionID(int)'\n"}
+[5.157537] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1933): undefined reference to `SignalRequest::setRequestID(int)'\n"}
+[5.157651] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1952): undefined reference to `SignalRequest::setPriorityRequestType(int)'\n"}
+[5.157805] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x197f): undefined reference to `SignalRequest::setInBoundLaneIntersectionAccessPoint(int, int)'\n"}
+[5.157950] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x19b6): undefined reference to `SignalRequest::setETA(int, int, int)'\n"}
+[5.158069] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x19d3): undefined reference to `SignalRequest::setTemporaryVechileID(int)'\n"}
+[5.158186] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x19f2): undefined reference to `SignalRequest::setBasicVehicleRole(int)'\n"}
+[5.158301] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1a5a): undefined reference to `SignalRequest::setPosition(double, double, double)'\n"}
+[5.158420] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1a81): undefined reference to `SignalRequest::setHeading_Degree(double)'\n"}
+[5.158546] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1ab4): undefined reference to `SignalRequest::setSpeed_MeterPerSecond(double)'\n"}
+[5.158687] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1acd): undefined reference to `SignalRequest::signalRequest2Json[abi:cxx11]()'\n"}
+[5.158839] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1b14): undefined reference to `SignalRequest::~SignalRequest()'\n"}
+[5.158958] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1b5a): undefined reference to `SignalRequest::~SignalRequest()'\n"}
+[5.159085] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::ssmDecoder[abi:cxx11](std::vector<unsigned char, std::allocator<unsigned char> >)':\n"}
+[5.159203] (carma-ros2-decoder) StderrLine: {'line': b"carma-transceiver-decoder.cpp:(.text+0x1bbf): undefined reference to `SignalStatus::SignalStatus()'\n"}
+[5.159319] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1c37): undefined reference to `AsnJ2735Lib::decode_msgFrame(unsigned char const*, unsigned long, Frame_element_t&)'\n"}
+[5.159449] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1c8d): undefined reference to `SignalStatus::setMinuteOfYear(int)'\n"}
+[5.159566] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1cac): undefined reference to `SignalStatus::setMsOfMinute(int)'\n"}
+[5.159691] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1ccb): undefined reference to `SignalStatus::setSequenceNumber(int)'\n"}
+[5.159808] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1cea): undefined reference to `SignalStatus::setUpdateCount(int)'\n"}
+[5.159923] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1d09): undefined reference to `SignalStatus::setRegionalID(int)'\n"}
+[5.160038] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1d28): undefined reference to `SignalStatus::setIntersectionID(int)'\n"}
+[5.160164] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1d4e): undefined reference to `SignalStatus::setNoOfRequest(int)'\n"}
+[5.160280] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1f86): undefined reference to `SignalStatus::setTemporaryVechileID(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'\n"}
+[5.160396] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1fc7): undefined reference to `SignalStatus::setRequestID(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'\n"}
+[5.160522] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2008): undefined reference to `SignalStatus::setMsgCount(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'\n"}
+[5.160637] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2049): undefined reference to `SignalStatus::setBasicVehicleRole(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'\n"}
+[5.160754] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x208a): undefined reference to `SignalStatus::setInBoundLaneIntersectionAccessPoint(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'\n"}
+[5.160879] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x20cb): undefined reference to `SignalStatus::setETA(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'\n"}
+[5.160995] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x210c): undefined reference to `SignalStatus::setPriorityRequestStatus(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'\n"}
+[5.161111] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2154): undefined reference to `SignalStatus::signalStatus2Json[abi:cxx11](std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'\n"}
+[5.161228] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x21d6): undefined reference to `SignalStatus::~SignalStatus()'\n"}
+[5.161343] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x22f8): undefined reference to `SignalStatus::~SignalStatus()'\n"}
+[5.161468] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::spatDecoder[abi:cxx11](std::vector<unsigned char, std::allocator<unsigned char> >)':\n"}
+[5.161586] (carma-ros2-decoder) StderrLine: {'line': b"carma-transceiver-decoder.cpp:(.text+0x23b7): undefined reference to `AsnJ2735Lib::decode_msgFrame(unsigned char const*, unsigned long, Frame_element_t&)'\n"}
+[5.161702] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2403): undefined reference to `Json::Value::Value(Json::ValueType)'\n"}
+[5.161831] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2412): undefined reference to `Json::StreamWriterBuilder::StreamWriterBuilder()'\n"}
+[5.162009] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2428): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.162129] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x246d): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.162247] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2482): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.162373] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x24af): undefined reference to `Json::Value::~Value()'\n"}
+[5.162490] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x24c5): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.162606] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x250a): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.162732] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x251f): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.162849] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x254c): undefined reference to `Json::Value::~Value()'\n"}
+[5.162965] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2576): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.163091] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x258c): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.163207] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x25a1): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.163322] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x25b0): undefined reference to `Json::Value::~Value()'\n"}
+[5.163446] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x25bf): undefined reference to `getVerboseTimestamp[abi:cxx11]()'\n"}
+[5.163561] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x25d8): undefined reference to `Json::Value::Value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.163679] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x25ee): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.163794] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2603): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.163918] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2612): undefined reference to `Json::Value::~Value()'\n"}
+[5.164034] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2630): undefined reference to `getVerboseTimestamp[abi:cxx11]()'\n"}
+[5.164195] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2649): undefined reference to `Json::Value::Value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.164314] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x265f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.164440] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2674): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.164556] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2683): undefined reference to `Json::Value::~Value()'\n"}
+[5.164686] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x26b0): undefined reference to `Json::Value::Value(int)'\n"}
+[5.164810] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x26c6): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.164928] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x26d5): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.165043] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x26e4): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.165158] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x26f9): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.165282] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2708): undefined reference to `Json::Value::~Value()'\n"}
+[5.165396] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2727): undefined reference to `Json::Value::Value(int)'\n"}
+[5.165508] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x273d): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.165645] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x274c): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.165757] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x275b): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.165879] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2770): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.166003] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x277f): undefined reference to `Json::Value::~Value()'\n"}
+[5.166119] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x279e): undefined reference to `Json::Value::Value(unsigned int)'\n"}
+[5.166230] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x27b4): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.166350] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x27c3): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.166460] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x27d8): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.166574] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x27e7): undefined reference to `Json::Value::~Value()'\n"}
+[5.166711] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2802): undefined reference to `Json::Value::Value(unsigned int)'\n"}
+[5.166849] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2818): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.166978] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2827): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.167104] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x283c): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.167241] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x284b): undefined reference to `Json::Value::~Value()'\n"}
+[5.167368] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x286a): undefined reference to `Json::Value::Value(int)'\n"}
+[5.167494] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2880): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.167648] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x288f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.167763] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x28a4): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.167880] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x28b3): undefined reference to `Json::Value::~Value()'\n"}
+[5.168005] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x28e9): undefined reference to `Json::Value::Value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.168120] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x28ff): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.168234] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x290e): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.168359] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2923): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.168475] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2932): undefined reference to `Json::Value::~Value()'\n"}
+[5.168589] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x29cb): undefined reference to `Json::Value::Value(int)'\n"}
+[5.168712] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x29e1): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.168825] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x29f0): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.168939] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2a03): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.169054] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2a12): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.169176] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2a27): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.169292] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2a36): undefined reference to `Json::Value::~Value()'\n"}
+[5.169406] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2a55): undefined reference to `Json::Value::Value(int)'\n"}
+[5.169530] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2a6b): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.169657] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2a7a): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.169768] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2a8d): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.169897] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2a9c): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.170010] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2ab1): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.170122] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2ac0): undefined reference to `Json::Value::~Value()'\n"}
+[5.170243] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2adf): undefined reference to `Json::Value::Value(int)'\n"}
+[5.170355] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2af5): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.170468] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2b04): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.170591] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2b17): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.170732] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2b26): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.170858] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2b3b): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.170993] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2b4a): undefined reference to `Json::Value::~Value()'\n"}
+[5.171122] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2b69): undefined reference to `Json::Value::Value(int)'\n"}
+[5.171248] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2b7f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.171384] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2b8e): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.171511] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2ba1): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.171635] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2bb0): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.171776] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2bc5): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.171898] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2bd4): undefined reference to `Json::Value::~Value()'\n"}
+[5.172021] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2be8): undefined reference to `Json::Value::Value(int)'\n"}
+[5.172143] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2bfe): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.172256] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2c0d): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.172368] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2c20): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.172479] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2c2f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.172604] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2c44): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.172729] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2c53): undefined reference to `Json::Value::~Value()'\n"}
+[5.172842] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2c89): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.172963] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2c9f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.173075] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2cae): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.173186] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2cc1): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.173299] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2cd0): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.173411] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2ce5): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.173533] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2cf4): undefined reference to `Json::Value::~Value()'\n"}
+[5.173663] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2d1c): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.173781] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2d32): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.173910] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2d41): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.174026] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2d54): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.174154] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2d63): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.174263] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2d78): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.174386] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2d87): undefined reference to `Json::Value::~Value()'\n"}
+[5.174511] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2daf): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.174643] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2dc5): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.174755] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2dd4): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.174876] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2de7): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.174987] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2df6): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.175099] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2e0b): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.175220] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2e1a): undefined reference to `Json::Value::~Value()'\n"}
+[5.175331] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2e42): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.175454] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2e58): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.175566] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2e67): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.175680] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2e7a): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.175793] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2e89): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.175914] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2e9e): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.176028] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2ead): undefined reference to `Json::Value::~Value()'\n"}
+[5.176140] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2fdc): undefined reference to `Json::Value::Value(int)'\n"}
+[5.176252] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2ff2): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.176364] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3001): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.176476] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3014): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.176602] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3023): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.176735] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3038): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.176857] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3047): undefined reference to `Json::Value::~Value()'\n"}
+[5.176978] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3066): undefined reference to `Json::Value::Value(int)'\n"}
+[5.177099] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x307c): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.177221] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x308b): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.177342] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x309e): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.177473] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x30ad): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.177595] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x30c2): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.177726] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x30d1): undefined reference to `Json::Value::~Value()'\n"}
+[5.177852] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x30f0): undefined reference to `Json::Value::Value(int)'\n"}
+[5.177984] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3106): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.178102] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3115): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.178221] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3128): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.178350] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3137): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.178469] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x314c): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.178587] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x315b): undefined reference to `Json::Value::~Value()'\n"}
+[5.178724] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x317a): undefined reference to `Json::Value::Value(int)'\n"}
+[5.178849] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3190): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.178978] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x319f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.179097] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x31b2): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.179214] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x31c1): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.179330] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x31d6): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.179462] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x31e5): undefined reference to `Json::Value::~Value()'\n"}
+[5.179582] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x31f9): undefined reference to `Json::Value::Value(int)'\n"}
+[5.179703] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x320f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.179831] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x321e): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.179949] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3231): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.180067] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3240): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.180194] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3255): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.180312] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3264): undefined reference to `Json::Value::~Value()'\n"}
+[5.180431] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x329a): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.180559] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x32b0): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.180677] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x32bf): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.180795] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x32d2): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.180952] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x32e1): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.181073] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x32f6): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.181201] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3305): undefined reference to `Json::Value::~Value()'\n"}
+[5.181320] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x332d): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.181438] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3343): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.181556] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3352): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.181697] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3365): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.181811] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3374): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.181935] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3389): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.182061] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3398): undefined reference to `Json::Value::~Value()'\n"}
+[5.182174] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x33c0): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.182422] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x33d6): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.182627] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x33e5): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.182814] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x33f8): undefined reference to `Json::Value::operator[](int)'\n"}
+[5.182931] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3407): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.183076] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x341c): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.183142] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x342b): undefined reference to `Json::Value::~Value()'\n"}
+[5.183201] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x345e): undefined reference to `Json::writeString[abi:cxx11](Json::StreamWriter::Factory const&, Json::Value const&)'\n"}
+[5.183266] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x34b2): undefined reference to `Json::StreamWriterBuilder::~StreamWriterBuilder()'\n"}
+[5.183326] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x34c1): undefined reference to `Json::Value::~Value()'\n"}
+[5.183399] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3527): undefined reference to `Json::Value::~Value()'\n"}
+[5.183458] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3569): undefined reference to `Json::Value::~Value()'\n"}
+[5.183520] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3584): undefined reference to `Json::Value::~Value()'\n"}
+[5.183594] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x359f): undefined reference to `Json::Value::~Value()'\n"}
+[5.183650] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o:carma-transceiver-decoder.cpp:(.text+0x35d2): more undefined references to `Json::Value::~Value()' follow\n"}
+[5.183711] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::spatDecoder[abi:cxx11](std::vector<unsigned char, std::allocator<unsigned char> >)':\n"}
+[5.183769] (carma-ros2-decoder) StderrLine: {'line': b"carma-transceiver-decoder.cpp:(.text+0x3878): undefined reference to `Json::StreamWriterBuilder::~StreamWriterBuilder()'\n"}
+[5.183827] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3890): undefined reference to `Json::Value::~Value()'\n"}
+[5.183884] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::createJsonStringForSystemPerformanceDataLog(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':\n"}
+[5.183945] (carma-ros2-decoder) StderrLine: {'line': b"carma-transceiver-decoder.cpp:(.text+0x39c1): undefined reference to `Json::Value::Value(Json::ValueType)'\n"}
+[5.184017] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x39cd): undefined reference to `Json::StreamWriterBuilder::StreamWriterBuilder()'\n"}
+[5.184105] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x39e3): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.184165] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3a1f): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.184227] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3a34): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.184307] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3a5e): undefined reference to `Json::Value::~Value()'\n"}
+[5.184370] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3a74): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.184476] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3ab0): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.184621] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3ac5): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.184689] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3aef): undefined reference to `Json::Value::~Value()'\n"}
+[5.184751] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3b27): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.184811] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3b3d): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.184871] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3b52): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.184941] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3b61): undefined reference to `Json::Value::~Value()'\n"}
+[5.184999] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3b83): undefined reference to `Json::Value::Value(double)'\n"}
+[5.185055] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3b99): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.185111] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3ba8): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.185168] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3bbd): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.185224] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3bcc): undefined reference to `Json::Value::~Value()'\n"}
+[5.185280] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3bd1): undefined reference to `getPosixTimestamp()'\n"}
+[5.185341] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3be0): undefined reference to `Json::Value::Value(double)'\n"}
+[5.185397] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3bf6): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.185458] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c05): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.185514] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c1a): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.185570] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c29): undefined reference to `Json::Value::~Value()'\n"}
+[5.185806] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c35): undefined reference to `getVerboseTimestamp[abi:cxx11]()'\n"}
+[5.186046] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c4b): undefined reference to `Json::Value::Value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.186371] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c61): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.186495] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c70): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.186827] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c85): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.187991] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c94): undefined reference to `Json::Value::~Value()'\n"}
+[5.188073] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3cb9): undefined reference to `Json::Value::Value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.188482] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3ccf): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.188929] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3cde): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.188990] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3cf3): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.189050] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3d02): undefined reference to `Json::Value::~Value()'\n"}
+[5.189109] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3d46): undefined reference to `Json::Value::Value(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'\n"}
+[5.189172] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3d5c): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.189235] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3d6b): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.189294] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3d80): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.189352] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3d8f): undefined reference to `Json::Value::~Value()'\n"}
+[5.189410] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3da5): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.189469] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3dbb): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.189529] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3dca): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.189600] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3ddf): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.189656] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3dee): undefined reference to `Json::Value::~Value()'\n"}
+[5.189712] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3e04): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.189768] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3e1a): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.189822] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3e29): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.189895] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3e3e): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.189957] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3e4d): undefined reference to `Json::Value::~Value()'\n"}
+[5.190013] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3e85): undefined reference to `Json::Value::Value(char const*)'\n"}
+[5.190068] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3e9b): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.190131] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3eaa): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.190190] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3ebf): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.190246] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3ece): undefined reference to `Json::Value::~Value()'\n"}
+[5.190303] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3f06): undefined reference to `Json::Value::Value(int)'\n"}
+[5.190358] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3f1c): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.190413] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3f2b): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.190467] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3f40): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.190526] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3f4f): undefined reference to `Json::Value::~Value()'\n"}
+[5.190581] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3f9d): undefined reference to `Json::Value::Value(int)'\n"}
+[5.190636] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3fb3): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.190691] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3fc2): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.190746] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3fd7): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.190800] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3fe6): undefined reference to `Json::Value::~Value()'\n"}
+[5.190854] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4034): undefined reference to `Json::Value::Value(int)'\n"}
+[5.190909] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x404a): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.190964] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4059): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.191020] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x406e): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.191078] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x407d): undefined reference to `Json::Value::~Value()'\n"}
+[5.191135] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x40cb): undefined reference to `Json::Value::Value(int)'\n"}
+[5.191190] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x40e1): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.191251] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x40f0): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.191306] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4105): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.191361] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4114): undefined reference to `Json::Value::~Value()'\n"}
+[5.191416] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4162): undefined reference to `Json::Value::Value(int)'\n"}
+[5.191471] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4178): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.191527] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4187): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.191583] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x419c): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.191653] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x41ab): undefined reference to `Json::Value::~Value()'\n"}
+[5.191711] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x41f9): undefined reference to `Json::Value::Value(int)'\n"}
+[5.191769] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x420f): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.191827] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x421e): undefined reference to `Json::Value::operator[](char const*)'\n"}
+[5.191884] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4233): undefined reference to `Json::Value::operator=(Json::Value&&)'\n"}
+[5.191943] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4242): undefined reference to `Json::Value::~Value()'\n"}
+[5.192006] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x426d): undefined reference to `Json::writeString[abi:cxx11](Json::StreamWriter::Factory const&, Json::Value const&)'\n"}
+[5.192065] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x42b2): undefined reference to `Json::StreamWriterBuilder::~StreamWriterBuilder()'\n"}
+[5.192129] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x42c1): undefined reference to `Json::Value::~Value()'\n"}
+[5.192186] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4314): undefined reference to `Json::Value::~Value()'\n"}
+[5.192243] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4353): undefined reference to `Json::Value::~Value()'\n"}
+[5.192300] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x436e): undefined reference to `Json::Value::~Value()'\n"}
+[5.192358] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x4389): undefined reference to `Json::Value::~Value()'\n"}
+[5.192415] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o:carma-transceiver-decoder.cpp:(.text+0x43a4): more undefined references to `Json::Value::~Value()' follow\n"}
+[5.192473] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::createJsonStringForSystemPerformanceDataLog(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':\n"}
+[5.192542] (carma-ros2-decoder) StderrLine: {'line': b"carma-transceiver-decoder.cpp:(.text+0x4503): undefined reference to `Json::StreamWriterBuilder::~StreamWriterBuilder()'\n"}
+[5.192600] (carma-ros2-decoder) StderrLine: {'line': b"/usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x451b): undefined reference to `Json::Value::~Value()'\n"}
+[5.192658] (carma-ros2-decoder) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[5.192716] (carma-ros2-decoder) StderrLine: {'line': b'make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:186: M_CarmaMsgDecoder] Error 1\n'}
+[5.192773] (carma-ros2-decoder) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/M_CarmaMsgDecoder.dir/all] Error 2\n'}
+[5.192835] (carma-ros2-decoder) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[5.192901] (carma-ros2-decoder) CommandEnded: {'returncode': 2}
+[5.214752] (-) TimerEvent: {}
+[5.237445] (carma-ros2-decoder) JobEnded: {'identifier': 'carma-ros2-decoder', 'rc': 2}
+[5.248593] (-) EventReactorShutdown: {}

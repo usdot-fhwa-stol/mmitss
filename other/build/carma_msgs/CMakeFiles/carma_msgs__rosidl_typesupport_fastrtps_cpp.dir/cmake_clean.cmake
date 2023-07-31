@@ -1,0 +1,36 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/carma_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/carla_enabled__type_support.cpp.o"
+  "CMakeFiles/carma_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/light_bar_cda_type__type_support.cpp.o"
+  "CMakeFiles/carma_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/light_bar_indicator__type_support.cpp.o"
+  "CMakeFiles/carma_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/light_bar_indicator_controllers__type_support.cpp.o"
+  "CMakeFiles/carma_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/system_alert__type_support.cpp.o"
+  "CMakeFiles/carma_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/ui_instructions__type_support.cpp.o"
+  "CMakeFiles/carma_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_msgs/srv/detail/dds_fastrtps/release_indicator_control__type_support.cpp.o"
+  "CMakeFiles/carma_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_msgs/srv/detail/dds_fastrtps/request_indicator_control__type_support.cpp.o"
+  "CMakeFiles/carma_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_msgs/srv/detail/dds_fastrtps/set_traffic_event__type_support.cpp.o"
+  "libcarma_msgs__rosidl_typesupport_fastrtps_cpp.pdb"
+  "libcarma_msgs__rosidl_typesupport_fastrtps_cpp.so"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/carla_enabled__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/carla_enabled__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/light_bar_cda_type__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/light_bar_indicator__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/light_bar_indicator_controllers__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/system_alert__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/dds_fastrtps/ui_instructions__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/light_bar_cda_type__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/light_bar_indicator__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/light_bar_indicator_controllers__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/system_alert__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/msg/detail/ui_instructions__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/srv/detail/dds_fastrtps/release_indicator_control__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/srv/detail/dds_fastrtps/request_indicator_control__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/srv/detail/dds_fastrtps/set_traffic_event__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/srv/detail/release_indicator_control__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/srv/detail/request_indicator_control__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_msgs/srv/detail/set_traffic_event__rosidl_typesupport_fastrtps_cpp.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/carma_msgs__rosidl_typesupport_fastrtps_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

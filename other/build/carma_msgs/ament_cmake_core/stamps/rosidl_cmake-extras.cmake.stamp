@@ -1,0 +1,4 @@
+# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
+
+set(carma_msgs_IDL_FILES "msg/CarlaEnabled.idl;msg/LightBarCDAType.idl;msg/LightBarIndicator.idl;msg/LightBarIndicatorControllers.idl;msg/SystemAlert.idl;msg/UIInstructions.idl;srv/ReleaseIndicatorControl.idl;srv/RequestIndicatorControl.idl;srv/SetTrafficEvent.idl")
+set(carma_msgs_INTERFACE_FILES "msg/CarlaEnabled.msg;msg/LightBarCDAType.msg;msg/LightBarIndicator.msg;msg/LightBarIndicatorControllers.msg;msg/SystemAlert.msg;msg/UIInstructions.msg;srv/ReleaseIndicatorControl.srv;srv/ReleaseIndicatorControl_Request.msg;srv/ReleaseIndicatorControl_Response.msg;srv/RequestIndicatorControl.srv;srv/RequestIndicatorControl_Request.msg;srv/RequestIndicatorControl_Response.msg;srv/SetTrafficEvent.srv;srv/SetTrafficEvent_Request.msg;srv/SetTrafficEvent_Response.msg")

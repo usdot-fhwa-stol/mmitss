@@ -1,0 +1,162 @@
+// generated from rosidl_generator_cpp/resource/idl__struct.hpp.em
+// with input from j3224_v2x_msgs:msg/RollRateConfidence.idl
+// generated code does not contain a copyright notice
+
+#ifndef J3224_V2X_MSGS__MSG__DETAIL__ROLL_RATE_CONFIDENCE__STRUCT_HPP_
+#define J3224_V2X_MSGS__MSG__DETAIL__ROLL_RATE_CONFIDENCE__STRUCT_HPP_
+
+#include <rosidl_runtime_cpp/bounded_vector.hpp>
+#include <rosidl_runtime_cpp/message_initialization.hpp>
+#include <algorithm>
+#include <array>
+#include <memory>
+#include <string>
+#include <vector>
+
+
+#ifndef _WIN32
+# define DEPRECATED__j3224_v2x_msgs__msg__RollRateConfidence __attribute__((deprecated))
+#else
+# define DEPRECATED__j3224_v2x_msgs__msg__RollRateConfidence __declspec(deprecated)
+#endif
+
+namespace j3224_v2x_msgs
+{
+
+namespace msg
+{
+
+// message struct
+template<class ContainerAllocator>
+struct RollRateConfidence_
+{
+  using Type = RollRateConfidence_<ContainerAllocator>;
+
+  explicit RollRateConfidence_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  {
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->roll_rate_confidence = 0;
+    }
+  }
+
+  explicit RollRateConfidence_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  {
+    (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->roll_rate_confidence = 0;
+    }
+  }
+
+  // field types and members
+  using _roll_rate_confidence_type =
+    uint8_t;
+  _roll_rate_confidence_type roll_rate_confidence;
+
+  // setters for named parameter idiom
+  Type & set__roll_rate_confidence(
+    const uint8_t & _arg)
+  {
+    this->roll_rate_confidence = _arg;
+    return *this;
+  }
+
+  // constant declarations
+  static constexpr uint8_t UNAVAILABLE =
+    0u;
+  static constexpr uint8_t DEG_SEC_100_0 =
+    1u;
+  static constexpr uint8_t DEG_SEC_010_00 =
+    2u;
+  static constexpr uint8_t DEG_SEC_005_00 =
+    3u;
+  static constexpr uint8_t DEG_SEC_001_00 =
+    4u;
+  static constexpr uint8_t DEG_SEC_000_10 =
+    5u;
+  static constexpr uint8_t DEG_SEC_000_05 =
+    6u;
+  static constexpr uint8_t DEG_SEC_000_01 =
+    7u;
+
+  // pointer types
+  using RawPtr =
+    j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator> *;
+  using ConstRawPtr =
+    const j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator> *;
+  using SharedPtr =
+    std::shared_ptr<j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator>>;
+  using ConstSharedPtr =
+    std::shared_ptr<j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator> const>;
+
+  template<typename Deleter = std::default_delete<
+      j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator>>>
+  using UniquePtrWithDeleter =
+    std::unique_ptr<j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator>, Deleter>;
+
+  using UniquePtr = UniquePtrWithDeleter<>;
+
+  template<typename Deleter = std::default_delete<
+      j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator>>>
+  using ConstUniquePtrWithDeleter =
+    std::unique_ptr<j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator> const, Deleter>;
+  using ConstUniquePtr = ConstUniquePtrWithDeleter<>;
+
+  using WeakPtr =
+    std::weak_ptr<j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator>>;
+  using ConstWeakPtr =
+    std::weak_ptr<j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator> const>;
+
+  // pointer types similar to ROS 1, use SharedPtr / ConstSharedPtr instead
+  // NOTE: Can't use 'using' here because GNU C++ can't parse attributes properly
+  typedef DEPRECATED__j3224_v2x_msgs__msg__RollRateConfidence
+    std::shared_ptr<j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator>>
+    Ptr;
+  typedef DEPRECATED__j3224_v2x_msgs__msg__RollRateConfidence
+    std::shared_ptr<j3224_v2x_msgs::msg::RollRateConfidence_<ContainerAllocator> const>
+    ConstPtr;
+
+  // comparison operators
+  bool operator==(const RollRateConfidence_ & other) const
+  {
+    if (this->roll_rate_confidence != other.roll_rate_confidence) {
+      return false;
+    }
+    return true;
+  }
+  bool operator!=(const RollRateConfidence_ & other) const
+  {
+    return !this->operator==(other);
+  }
+};  // struct RollRateConfidence_
+
+// alias to use template instance with default allocator
+using RollRateConfidence =
+  j3224_v2x_msgs::msg::RollRateConfidence_<std::allocator<void>>;
+
+// constant definitions
+template<typename ContainerAllocator>
+constexpr uint8_t RollRateConfidence_<ContainerAllocator>::UNAVAILABLE;
+template<typename ContainerAllocator>
+constexpr uint8_t RollRateConfidence_<ContainerAllocator>::DEG_SEC_100_0;
+template<typename ContainerAllocator>
+constexpr uint8_t RollRateConfidence_<ContainerAllocator>::DEG_SEC_010_00;
+template<typename ContainerAllocator>
+constexpr uint8_t RollRateConfidence_<ContainerAllocator>::DEG_SEC_005_00;
+template<typename ContainerAllocator>
+constexpr uint8_t RollRateConfidence_<ContainerAllocator>::DEG_SEC_001_00;
+template<typename ContainerAllocator>
+constexpr uint8_t RollRateConfidence_<ContainerAllocator>::DEG_SEC_000_10;
+template<typename ContainerAllocator>
+constexpr uint8_t RollRateConfidence_<ContainerAllocator>::DEG_SEC_000_05;
+template<typename ContainerAllocator>
+constexpr uint8_t RollRateConfidence_<ContainerAllocator>::DEG_SEC_000_01;
+
+}  // namespace msg
+
+}  // namespace j3224_v2x_msgs
+
+#endif  // J3224_V2X_MSGS__MSG__DETAIL__ROLL_RATE_CONFIDENCE__STRUCT_HPP_

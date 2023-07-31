@@ -1,0 +1,62 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/ManeuverParameters.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module carma_planning_msgs {
+  module msg {
+    module ManeuverParameters_Constants {
+      const uint8 NO_NEGOTIATION = 0;
+      const uint8 GENERAL_NEGOTIATION = 1;
+      const uint8 PLATOONING = 2;
+      const uint16 HAS_TACTICAL_PLUGIN = 1;
+      const uint16 HAS_BOOL_META_DATA = 2;
+      const uint16 HAS_INT_META_DATA = 4;
+      const uint16 HAS_FLOAT_META_DATA = 8;
+      const uint16 HAS_STRING_META_DATA = 16;
+      const uint16 HAS_TIME_META_DATA = 32;
+    };
+    @verbatim (language="comment", text=
+      " ManeuverParameters.msg" "\n"
+      "" "\n"
+      " Message defining shared parameters of Maneuvers in the CARMA platform")
+    struct ManeuverParameters {
+      @verbatim (language="comment", text=
+        " The unique GUID of this maneuver" "\n"
+        " The maneuver ID assigns a unique ID to the physical maneuver being performed not the ros message or code object" "\n"
+        " Therefore maneuver ID is independant of the message and can persit across maneuver plans")
+      string maneuver_id;
+
+      @verbatim (language="comment", text=
+        " Enum indicating the type of negotiation this maneuver is involved in")
+      uint8 negotiation_type;
+
+      @verbatim (language="comment", text=
+        " Remaining enum values reserved for future use" "\n"
+        " The strategic plugin which planned this maneuver")
+      string planning_strategic_plugin;
+
+      @verbatim (language="comment", text=
+        " Optional Fields" "\n"
+        " Maneuver parameters presense vector")
+      uint16 presence_vector;
+
+      @verbatim (language="comment", text=
+        " The tactical plugin which planned this maneuver")
+      string planning_tactical_plugin;
+
+      @verbatim (language="comment", text=
+        " Optional meta data arrays which can be used to store additional information in the maneuver")
+      sequence<boolean> bool_valued_meta_data;
+
+      sequence<int64> int_valued_meta_data;
+
+      sequence<double> float_valued_meta_data;
+
+      sequence<string> string_valued_meta_data;
+
+      sequence<builtin_interfaces::msg::Time> time_valued_meta_data;
+    };
+  };
+};

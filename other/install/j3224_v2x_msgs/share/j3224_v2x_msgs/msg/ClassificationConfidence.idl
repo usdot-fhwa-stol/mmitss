@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/ClassificationConfidence.msg
+// generated code does not contain a copyright notice
+
+
+module j3224_v2x_msgs {
+  module msg {
+    module ClassificationConfidence_Constants {
+      const uint8 MIN_CLASSIFICATION_CONFIDENCE = 0;
+      const uint8 MAX_CLASSIFICATION_CONFIDENCE = 101;
+    };
+    @verbatim (language="comment", text=
+      " ClassificationConfidence.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct ClassificationConfidence {
+      @verbatim (language="comment", text=
+        " ClassificationConfidence ::= INTEGER (0..101)")
+      uint8 classification_confidence;
+    };
+  };
+};

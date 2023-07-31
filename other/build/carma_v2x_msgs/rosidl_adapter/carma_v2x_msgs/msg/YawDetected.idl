@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/YawDetected.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module YawDetected_Constants {
+      const float MIN_YAW_DETECTED = -180.0;
+      const float MAX_YAW_DETECTED = 180.0;
+    };
+    @verbatim (language="comment", text=
+      " YawDetected.msg" "\n"
+      "" "\n"
+      " Modified J3224 2020 message format, adjusted to use base SI units (m,s, etc) in most case." "\n"
+      "" "\n"
+      " Parsed description of YawDetected from the SAE J3224 2020 specification." "\n"
+      " For further usage details consult the specification. See note on SI units above.")
+    struct YawDetected {
+      @verbatim (language="comment", text=
+        " YawDetected in degrees in range (-180.0..180.0)")
+      float yaw_detected;
+    };
+  };
+};

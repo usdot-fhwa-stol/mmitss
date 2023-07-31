@@ -1,0 +1,50 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/SetActiveRoute.srv
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/Position3D.idl"
+
+module carma_planning_msgs {
+  module srv {
+    module SetActiveRoute_Request_Constants {
+      const uint8 ROUTE_ID = 0;
+      const uint8 DESTINATION_POINTS_ARRAY = 1;
+    };
+    @verbatim (language="comment", text=
+      " SetActiveRoute.srv" "\n"
+      "" "\n"
+      " Service provided by RouteManager node. Sets a route with the" "\n"
+      " specified id as the active route." "\n"
+      "" "\n"
+      " @author Michael McConnell" "\n"
+      " @version 0.1")
+    struct SetActiveRoute_Request {
+      @verbatim (language="comment", text=
+        " Request" "\n"
+        " Enumeration values for the method being used to provide the route destination points")
+      uint8 choice;
+
+      @verbatim (language="comment", text=
+        " The id of the route to select")
+      string route_id;
+
+      @verbatim (language="comment", text=
+        " The array of destination points to be used for route generation")
+      sequence<carma_v2x_msgs::msg::Position3D> destination_points;
+    };
+    module SetActiveRoute_Response_Constants {
+      const uint8 NO_ERROR = 0;
+      const uint8 NO_ROUTE = 1;
+      const uint8 ALREADY_FOLLOWING_ROUTE = 2;
+      const uint8 ROUTE_FILE_ERROR = 3;
+      const uint8 ROUTING_FAILURE = 4;
+      const uint8 TRANSFORM_ERROR = 5;
+    };
+    @verbatim (language="comment", text=
+      " Response" "\n"
+      " An enumeration representing a service execution error as defined in the route design document.")
+    struct SetActiveRoute_Response {
+      uint8 error_status;
+    };
+  };
+};

@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/SizeValue.msg
+// generated code does not contain a copyright notice
+
+
+module j3224_v2x_msgs {
+  module msg {
+    module SizeValue_Constants {
+      const uint16 MIN_SIZE_VALUE = 0;
+      const uint16 MAX_SIZE_VALUE = 1023;
+    };
+    @verbatim (language="comment", text=
+      " SizeValue.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct SizeValue {
+      @verbatim (language="comment", text=
+        " SizeValue ::= INTEGER (0..1023) -- LSB units are 10 cm with a range of >100 meters")
+      uint16 size_value;
+    };
+  };
+};

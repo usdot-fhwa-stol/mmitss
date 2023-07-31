@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/PluginStatus.msg
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module msg {
+    module PluginStatus_Constants {
+      const uint8 DISABLED = 0;
+      const uint8 ENABLED = 1;
+      const uint8 AVAILABLE = 2;
+      const uint8 FAULT = 3;
+    };
+    @verbatim (language="comment", text=
+      " PluginStatus.msg" "\n"
+      "" "\n"
+      " Announces the status and category of plugin publishing this message")
+    struct PluginStatus {
+      @verbatim (language="comment", text=
+        " Plugin name is the ROS name of the plugin node")
+      string name;
+
+      @verbatim (language="comment", text=
+        " status indicates the operational state of the plugin," "\n"
+        " and is an enumerated value.")
+      uint8 status;
+
+      @verbatim (language="comment", text=
+        "     <other values reserved for future expansion>" "\n"
+        " Possible plugin catagories")
+      boolean is_strategic_plugin;
+
+      boolean is_tactical_plugin;
+
+      boolean is_control_plugin;
+    };
+  };
+};

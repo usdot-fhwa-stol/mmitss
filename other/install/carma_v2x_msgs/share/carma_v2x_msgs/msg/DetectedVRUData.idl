@@ -1,0 +1,49 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/DetectedVRUData.msg
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/AttachmentRadius.idl"
+#include "j2735_v2x_msgs/msg/Attachment.idl"
+#include "j2735_v2x_msgs/msg/PersonalDeviceUserType.idl"
+#include "j2735_v2x_msgs/msg/PropelledInformation.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    module DetectedVRUData_Constants {
+      const uint8 HAS_BASIC_TYPE = 1;
+      const uint8 HAS_PROPULSION = 2;
+      const uint8 HAS_ATTACHMENT = 4;
+      const uint8 HAS_RADIUS = 8;
+    };
+    @verbatim (language="comment", text=
+      " DetectedVRUData.msg" "\n"
+      "" "\n"
+      " Modified J3224 2020 message format, adjusted to use base SI units (m,s, etc) in most case." "\n"
+      "" "\n"
+      " Parsed description of DetectedVRUData from the SAE J3224 2020 specification." "\n"
+      " For further usage details consult the specification. See note on SI units above.")
+    struct DetectedVRUData {
+      @verbatim (language="comment", text=
+        " DetectedVRUData::= SEQUENCE {" "\n"
+        "    basicType PersonalDeviceUserType OPTIONAL," "\n"
+        "    propulsion PropelledInformation OPTIONAL," "\n"
+        "    attachment Attachment OPTIONAL," "\n"
+        "    radius AttachmentRadius OPTIONAL" "\n"
+        " }" "\n"
+        " A BIT STRING defining the presence of optional fields." "\n"
+        " Compare with bitwise-and" "\n"
+        " if (presence_vector & HAS_BASIC_TYPE) etc." "\n"
+        " Create with bitwise-or" "\n"
+        " presence_vector = presence_vector | HAS_BASIC_TYPE")
+      uint8 presence_vector;
+
+      j2735_v2x_msgs::msg::PersonalDeviceUserType basic_type;
+
+      j2735_v2x_msgs::msg::PropelledInformation propulsion;
+
+      j2735_v2x_msgs::msg::Attachment attachment;
+
+      carma_v2x_msgs::msg::AttachmentRadius radius;
+    };
+  };
+};

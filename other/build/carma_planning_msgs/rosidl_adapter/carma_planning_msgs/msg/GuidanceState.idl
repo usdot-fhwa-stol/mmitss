@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/GuidanceState.msg
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module msg {
+    module GuidanceState_Constants {
+      const uint8 STARTUP = 1;
+      const uint8 DRIVERS_READY = 2;
+      const uint8 ACTIVE = 3;
+      const uint8 ENGAGED = 4;
+      const uint8 INACTIVE = 5;
+      const uint8 ENTER_PARK = 6;
+      const uint8 SHUTDOWN = 0;
+    };
+    @verbatim (language="comment", text=
+      " Guidance State Message" "\n"
+      "" "\n"
+      " The indicator of current guidance state" "\n"
+      "" "\n"
+      " @author Shuwei Qiang" "\n"
+      " @version 0.1")
+    struct GuidanceState {
+      uint8 state;
+    };
+  };
+};

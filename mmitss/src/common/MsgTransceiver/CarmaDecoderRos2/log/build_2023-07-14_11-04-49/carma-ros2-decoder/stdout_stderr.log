@@ -1,0 +1,18 @@
+-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+-- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+CMake Error at CMakeLists.txt:67 (target_link_libraries):
+  Cannot specify link libraries for target "M_CarmaMsgDecoder" which is not
+  built by this project.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder/CMakeFiles/CMakeOutput.log".
+See also "/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder/CMakeFiles/CMakeError.log".
+make: *** [Makefile:356: cmake_check_build_system] Error 1

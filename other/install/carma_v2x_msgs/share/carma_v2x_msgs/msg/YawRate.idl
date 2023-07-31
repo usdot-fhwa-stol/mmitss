@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/YawRate.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module YawRate_Constants {
+      const float MIN_YAW_RATE = -327.67;
+      const float MAX_YAW_RATE = 327.67;
+    };
+    @verbatim (language="comment", text=
+      " YawRate.msg" "\n"
+      "" "\n"
+      " Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.")
+    struct YawRate {
+      @verbatim (language="comment", text=
+        " YawRate in degrees per second in range (-327.67..327.67)")
+      float yaw_rate;
+    };
+  };
+};

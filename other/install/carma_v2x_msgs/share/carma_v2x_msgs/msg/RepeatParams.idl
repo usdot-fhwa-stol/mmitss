@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/RepeatParams.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Duration.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " RepeatParams.msg" "\n"
+      "" "\n"
+      " Part of the CARMA Cloud geo-fence specification for vehicle internal use." "\n"
+      "" "\n"
+      " @author Misheel Bayartsengel" "\n"
+      " @version 0.1" "\n"
+      "" "\n"
+      " Description" "\n"
+      " ...")
+    struct RepeatParams {
+      @verbatim (language="comment", text=
+        " Offset" "\n"
+        " shift repetition start relative to midnight local time")
+      builtin_interfaces::msg::Duration offset;
+
+      @verbatim (language="comment", text=
+        " Period" "\n"
+        " minutes between successive time spans")
+      builtin_interfaces::msg::Duration period;
+
+      @verbatim (language="comment", text=
+        " Span" "\n"
+        " number of minutes schedule is active, must be less than the period")
+      builtin_interfaces::msg::Duration span;
+    };
+  };
+};

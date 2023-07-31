@@ -1,0 +1,21 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__type_support_c.cpp.o"
+  "CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/map_update_readable__type_support_c.cpp.o"
+  "CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/regulatory_element__type_support_c.cpp.o"
+  "CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__type_support_c.cpp.o"
+  "libcarma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.pdb"
+  "libcarma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/map_update_readable__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/map_update_readable__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/regulatory_element__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/regulatory_element__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

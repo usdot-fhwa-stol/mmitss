@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/Attitude.msg
+// generated code does not contain a copyright notice
+
+#include "j3224_v2x_msgs/msg/PitchDetected.idl"
+#include "j3224_v2x_msgs/msg/RollDetected.idl"
+#include "j3224_v2x_msgs/msg/YawDetected.idl"
+
+module j3224_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Attitude.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct Attitude {
+      @verbatim (language="comment", text=
+        " Attitude ::= SEQUENCE {" "\n"
+        "   pitch PitchDetected," "\n"
+        "   roll RollDetected," "\n"
+        "   yaw YawDetected" "\n"
+        " }")
+      j3224_v2x_msgs::msg::PitchDetected pitch;
+
+      j3224_v2x_msgs::msg::RollDetected roll;
+
+      j3224_v2x_msgs::msg::YawDetected yaw;
+    };
+  };
+};

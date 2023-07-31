@@ -1,0 +1,319 @@
+[0.017s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_ros2_msgs -DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs
+[0.068s] -- The C compiler identification is GNU 9.4.0
+[0.121s] -- The CXX compiler identification is GNU 9.4.0
+[0.126s] -- Check for working C compiler: /usr/bin/cc
+[0.196s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.197s] -- Detecting C compiler ABI info
+[0.268s] -- Detecting C compiler ABI info - done
+[0.279s] -- Detecting C compile features
+[0.279s] -- Detecting C compile features - done
+[0.281s] -- Check for working CXX compiler: /usr/bin/c++
+[0.363s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.364s] -- Detecting CXX compiler ABI info
+[0.439s] -- Detecting CXX compiler ABI info - done
+[0.450s] -- Detecting CXX compile features
+[0.450s] -- Detecting CXX compile features - done
+[0.451s] -- Found carma_cmake_common: 0.1.0 (/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake)
+[0.453s] -- Found ros_environment: 2.5.1 (/opt/ros/foxy/share/ros_environment/cmake)
+[0.453s] -- Setting build type to Release as none was specified.
+[0.455s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.456s] -- Found ament_cmake_core: 0.9.12 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[0.480s] -- Found PythonInterp: /home/mmitss/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3") 
+[0.480s] -- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+[0.714s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.722s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.830s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.849s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.923s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.951s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[0.985s] -- Found carma_planning_msgs: 1.0.0 (/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/share/carma_planning_msgs/cmake)
+[1.619s] -- Found PythonInterp: /home/mmitss/anaconda3/bin/python3 (found version "3.8.8") 
+[2.211s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[3.744s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.816s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.849s] -- Found PythonInterp: /home/mmitss/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3.5") 
+[4.850s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[4.877s] -- Found PythonLibs: /home/mmitss/anaconda3/lib/libpython3.8.so (found suitable version "3.8.8", minimum required is "3.5") 
+[4.877s] -- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+[4.877s] -- Using PYTHON_INCLUDE_DIRS: /home/mmitss/anaconda3/include/python3.8
+[4.877s] -- Using PYTHON_LIBRARIES: /home/mmitss/anaconda3/lib/libpython3.8.so
+[4.902s] -- Found PythonExtra: .so  
+[5.662s] -- Using numpy include directory: /home/mmitss/anaconda3/lib/python3.8/site-packages/numpy/core/include
+[5.686s] -- Configuring done
+[5.772s] CMake Warning at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:235 (add_library):
+[5.772s]   Cannot generate a safe runtime search path for target
+[5.772s]   carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c__pyext because files
+[5.772s]   in some directories may conflict with libraries in implicit directories:
+[5.772s] 
+[5.772s]     runtime library [libssl.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+[5.772s]       /home/mmitss/anaconda3/lib
+[5.773s]     runtime library [libcrypto.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+[5.773s]       /home/mmitss/anaconda3/lib
+[5.773s] 
+[5.773s]   Some of these libraries may not be found correctly.
+[5.773s] Call Stack (most recent call first):
+[5.773s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[5.773s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[5.773s]   CMakeLists.txt:39 (rosidl_generate_interfaces)
+[5.773s] 
+[5.774s] 
+[5.871s] -- Generating done
+[5.874s] -- Build files have been written to: /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs
+[5.888s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs' returned '0': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_ros2_msgs -DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs
+[5.891s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs -- -j8 -l8
+[5.935s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__cpp[0m
+[5.940s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[5.954s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[6.955s] [  3%] Built target carma_debug_ros2_msgs__cpp
+[6.978s] [  5%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[6.984s] [  7%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[6.986s] [  9%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[7.039s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__rosidl_generator_c[0m
+[7.067s] [ 10%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__functions.c.o[0m
+[7.068s] [ 14%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__functions.c.o[0m
+[7.068s] [ 14%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_debug_ros2_msgs/msg/detail/map_update_readable__functions.c.o[0m
+[7.070s] [ 16%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_debug_ros2_msgs/msg/detail/regulatory_element__functions.c.o[0m
+[7.240s] [ 18%] [32m[1mLinking C shared library libcarma_debug_ros2_msgs__rosidl_generator_c.so[0m
+[7.310s] [ 18%] Built target carma_debug_ros2_msgs__rosidl_generator_c
+[7.332s] [ 20%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[7.334s] [ 21%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[8.152s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[8.186s] [ 23%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/lanelet_id_regulatory_element_pair__type_support.cpp.o[0m
+[8.188s] [ 25%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/map_update_readable__type_support.cpp.o[0m
+[8.188s] [ 27%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/regulatory_element__type_support.cpp.o[0m
+[8.197s] [ 29%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/trajectory_curvature_speeds__type_support.cpp.o[0m
+[8.670s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__rosidl_typesupport_cpp[0m
+[8.748s] [ 30%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_debug_ros2_msgs/msg/lanelet_id_regulatory_element_pair__type_support.cpp.o[0m
+[8.748s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__rosidl_typesupport_c[0m
+[8.822s] [ 32%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_debug_ros2_msgs/msg/lanelet_id_regulatory_element_pair__type_support.cpp.o[0m
+[8.978s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__rosidl_typesupport_introspection_cpp[0m
+[9.000s] [ 34%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_debug_ros2_msgs/msg/map_update_readable__type_support.cpp.o[0m
+[9.008s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__rosidl_typesupport_introspection_c[0m
+[9.056s] [ 36%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__type_support.cpp.o[0m
+[9.104s] [ 38%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_debug_ros2_msgs/msg/regulatory_element__type_support.cpp.o[0m
+[9.151s] [ 40%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__type_support.c.o[0m
+[9.216s] [ 41%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_debug_ros2_msgs/msg/trajectory_curvature_speeds__type_support.cpp.o[0m
+[9.290s] [ 43%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_debug_ros2_msgs/msg/detail/map_update_readable__type_support.c.o[0m
+[9.348s] [ 45%] [32m[1mLinking CXX shared library libcarma_debug_ros2_msgs__rosidl_typesupport_c.so[0m
+[9.403s] [ 47%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_debug_ros2_msgs/msg/detail/regulatory_element__type_support.c.o[0m
+[9.472s] [ 49%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__type_support.c.o[0m
+[9.513s] [ 49%] Built target carma_debug_ros2_msgs__rosidl_typesupport_c
+[9.516s] [ 50%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_debug_ros2_msgs/msg/map_update_readable__type_support.cpp.o[0m
+[9.539s] [ 52%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_debug_ros2_msgs/msg/detail/map_update_readable__type_support.cpp.o[0m
+[9.581s] [ 54%] [32m[1mLinking C shared library libcarma_debug_ros2_msgs__rosidl_typesupport_introspection_c.so[0m
+[9.633s] [ 56%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_debug_ros2_msgs/msg/detail/regulatory_element__type_support.cpp.o[0m
+[9.662s] [ 58%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_debug_ros2_msgs/msg/regulatory_element__type_support.cpp.o[0m
+[9.667s] [ 58%] Built target carma_debug_ros2_msgs__rosidl_typesupport_introspection_c
+[9.685s] [ 60%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_debug_ros2_msgs/msg/trajectory_curvature_speeds__type_support.cpp.o[0m
+[9.784s] [ 61%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__type_support.cpp.o[0m
+[9.923s] [ 63%] [32m[1mLinking CXX shared library libcarma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[10.152s] [ 63%] Built target carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp
+[10.186s] [ 65%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[10.264s] [ 67%] [32m[1mLinking CXX shared library libcarma_debug_ros2_msgs__rosidl_typesupport_cpp.so[0m
+[10.345s] [ 67%] Built target carma_debug_ros2_msgs__rosidl_typesupport_cpp
+[10.516s] [ 69%] [32m[1mLinking CXX shared library libcarma_debug_ros2_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[10.647s] [ 69%] Built target carma_debug_ros2_msgs__rosidl_typesupport_introspection_cpp
+[11.223s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c[0m
+[11.253s] [ 70%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/map_update_readable__type_support_c.cpp.o[0m
+[11.255s] [ 72%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__type_support_c.cpp.o[0m
+[11.256s] [ 74%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/regulatory_element__type_support_c.cpp.o[0m
+[11.256s] [ 76%] [32mBuilding CXX object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__type_support_c.cpp.o[0m
+[11.861s] [ 78%] [32m[1mLinking CXX shared library libcarma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[12.006s] [ 78%] Built target carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c
+[12.021s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs[0m
+[12.036s] [ 78%] Built target carma_debug_ros2_msgs
+[12.051s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__py[0m
+[12.072s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[14.031s] [ 80%] Built target carma_debug_ros2_msgs__py
+[14.042s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__python[0m
+[14.070s] [ 83%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__python.dir/rosidl_generator_py/carma_debug_ros2_msgs/msg/_lanelet_id_regulatory_element_pair_s.c.o[0m
+[14.070s] [ 83%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__python.dir/rosidl_generator_py/carma_debug_ros2_msgs/msg/_map_update_readable_s.c.o[0m
+[14.070s] [ 85%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__python.dir/rosidl_generator_py/carma_debug_ros2_msgs/msg/_regulatory_element_s.c.o[0m
+[14.070s] [ 87%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__python.dir/rosidl_generator_py/carma_debug_ros2_msgs/msg/_trajectory_curvature_speeds_s.c.o[0m
+[14.403s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/carma_debug_ros2_msgs/libcarma_debug_ros2_msgs__python.so[0m
+[14.467s] [ 89%] Built target carma_debug_ros2_msgs__python
+[14.482s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[14.482s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__rosidl_typesupport_c__pyext[0m
+[14.484s] [35m[1mScanning dependencies of target carma_debug_ros2_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[14.510s] [ 90%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/carma_debug_ros2_msgs/_carma_debug_ros2_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[14.510s] [ 92%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/carma_debug_ros2_msgs/_carma_debug_ros2_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[14.511s] [ 94%] [32mBuilding C object CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/carma_debug_ros2_msgs/_carma_debug_ros2_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[14.691s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/carma_debug_ros2_msgs/carma_debug_ros2_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[14.699s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/carma_debug_ros2_msgs/carma_debug_ros2_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[14.709s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/carma_debug_ros2_msgs/carma_debug_ros2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[14.764s] [100%] Built target carma_debug_ros2_msgs__rosidl_typesupport_introspection_c__pyext
+[14.774s] [100%] Built target carma_debug_ros2_msgs__rosidl_typesupport_c__pyext
+[14.821s] [100%] Built target carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c__pyext
+[14.835s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs' returned '0': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs -- -j8 -l8
+[14.941s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs
+[14.951s] -- Install configuration: "Release"
+[14.951s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/ament_index/resource_index/rosidl_interfaces/carma_debug_ros2_msgs
+[14.952s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs
+[14.952s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg
+[14.952s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/rosidl_generator_c__visibility_control.h
+[14.952s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/regulatory_element.h
+[14.952s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/trajectory_curvature_speeds.h
+[14.952s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/lanelet_id_regulatory_element_pair.h
+[14.952s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/map_update_readable.h
+[14.952s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail
+[14.952s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__functions.h
+[14.952s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__struct.h
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__type_support.h
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__struct.h
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__functions.h
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__functions.c
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__functions.c
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__functions.c
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__struct.h
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__functions.h
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__type_support.h
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__type_support.h
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__struct.h
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__functions.c
+[14.953s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__type_support.h
+[14.954s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__functions.h
+[14.954s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/environment/library_path.sh
+[14.954s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/environment/library_path.dsv
+[14.954s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_generator_c.so
+[14.955s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_generator_c.so" to ""
+[14.955s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs
+[14.955s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg
+[14.955s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[14.955s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail
+[14.955s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__rosidl_typesupport_fastrtps_c.h
+[14.955s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__rosidl_typesupport_fastrtps_c.h
+[14.955s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__rosidl_typesupport_fastrtps_c.h
+[14.956s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__rosidl_typesupport_fastrtps_c.h
+[14.956s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.so
+[14.956s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[14.956s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs
+[14.957s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg
+[14.957s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[14.957s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail
+[14.957s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__rosidl_typesupport_fastrtps_cpp.hpp
+[14.957s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__rosidl_typesupport_fastrtps_cpp.hpp
+[14.957s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__rosidl_typesupport_fastrtps_cpp.hpp
+[14.957s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__rosidl_typesupport_fastrtps_cpp.hpp
+[14.957s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/dds_fastrtps
+[14.957s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.so
+[14.958s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[14.958s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs
+[14.958s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg
+[14.958s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[14.958s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail
+[14.958s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__type_support.c
+[14.958s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__type_support.c
+[14.958s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__rosidl_typesupport_introspection_c.h
+[14.958s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__rosidl_typesupport_introspection_c.h
+[14.959s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__rosidl_typesupport_introspection_c.h
+[14.959s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__type_support.c
+[14.959s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__type_support.c
+[14.959s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__rosidl_typesupport_introspection_c.h
+[14.959s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_introspection_c.so
+[14.959s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_introspection_c.so" to ""
+[14.959s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_c.so
+[14.960s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_c.so" to ""
+[14.960s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs
+[14.960s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg
+[14.960s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/map_update_readable.hpp
+[14.960s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[14.960s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/trajectory_curvature_speeds.hpp
+[14.961s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/regulatory_element.hpp
+[14.961s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/lanelet_id_regulatory_element_pair.hpp
+[14.961s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail
+[14.961s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__type_support.hpp
+[14.961s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__struct.hpp
+[14.961s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__struct.hpp
+[14.961s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__builder.hpp
+[14.961s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__traits.hpp
+[14.961s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__traits.hpp
+[14.961s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__builder.hpp
+[14.962s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__builder.hpp
+[14.962s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__traits.hpp
+[14.962s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__type_support.hpp
+[14.962s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__traits.hpp
+[14.962s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__struct.hpp
+[14.962s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__struct.hpp
+[14.962s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__type_support.hpp
+[14.962s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__builder.hpp
+[14.962s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__type_support.hpp
+[14.963s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs
+[14.963s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg
+[14.963s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail
+[14.963s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__type_support.cpp
+[14.963s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__rosidl_typesupport_introspection_cpp.hpp
+[14.963s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__rosidl_typesupport_introspection_cpp.hpp
+[14.963s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__rosidl_typesupport_introspection_cpp.hpp
+[14.963s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__rosidl_typesupport_introspection_cpp.hpp
+[14.964s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/regulatory_element__type_support.cpp
+[14.964s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__type_support.cpp
+[14.964s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/include/carma_debug_ros2_msgs/msg/detail/map_update_readable__type_support.cpp
+[14.964s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_introspection_cpp.so
+[14.964s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[14.965s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_cpp.so
+[14.965s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__rosidl_typesupport_cpp.so" to ""
+[14.965s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/environment/pythonpath.sh
+[14.965s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/environment/pythonpath.dsv
+[14.966s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/__init__.py
+[15.004s] Compiling '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/__init__.py'...
+[15.009s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/msg
+[15.009s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/msg/_lanelet_id_regulatory_element_pair.py
+[15.009s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/msg/_map_update_readable.py
+[15.009s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/msg/_trajectory_curvature_speeds.py
+[15.009s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/msg/_lanelet_id_regulatory_element_pair_s.c
+[15.009s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/msg/_map_update_readable_s.c
+[15.009s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/msg/_trajectory_curvature_speeds_s.c
+[15.009s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/msg/_regulatory_element.py
+[15.009s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/msg/_regulatory_element_s.c
+[15.009s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/msg/__init__.py
+[15.010s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/carma_debug_ros2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[15.010s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/carma_debug_ros2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[15.010s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/carma_debug_ros2_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[15.011s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/carma_debug_ros2_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[15.011s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/carma_debug_ros2_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[15.012s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages/carma_debug_ros2_msgs/carma_debug_ros2_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[15.012s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__python.so
+[15.012s] -- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/libcarma_debug_ros2_msgs__python.so" to ""
+[15.012s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/msg/LaneletIdRegulatoryElementPair.idl
+[15.013s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/msg/MapUpdateReadable.idl
+[15.013s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/msg/RegulatoryElement.idl
+[15.013s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/msg/TrajectoryCurvatureSpeeds.idl
+[15.013s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/msg/LaneletIdRegulatoryElementPair.msg
+[15.013s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/msg/MapUpdateReadable.msg
+[15.013s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/msg/RegulatoryElement.msg
+[15.013s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/msg/TrajectoryCurvatureSpeeds.msg
+[15.014s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/ament_index/resource_index/package_run_dependencies/carma_debug_ros2_msgs
+[15.014s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/ament_index/resource_index/parent_prefix_path/carma_debug_ros2_msgs
+[15.014s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/environment/ament_prefix_path.sh
+[15.014s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/environment/ament_prefix_path.dsv
+[15.014s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/environment/path.sh
+[15.014s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/environment/path.dsv
+[15.014s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/local_setup.bash
+[15.014s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/local_setup.sh
+[15.014s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/local_setup.zsh
+[15.015s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/local_setup.dsv
+[15.015s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/package.dsv
+[15.015s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/ament_index/resource_index/packages/carma_debug_ros2_msgs
+[15.015s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_generator_cExport.cmake
+[15.015s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_generator_cExport-release.cmake
+[15.015s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_typesupport_introspection_cExport.cmake
+[15.016s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_typesupport_introspection_cExport-release.cmake
+[15.016s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_typesupport_cExport.cmake
+[15.016s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_typesupport_cExport-release.cmake
+[15.016s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_generator_cppExport.cmake
+[15.016s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[15.016s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_typesupport_introspection_cppExport-release.cmake
+[15.017s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_typesupport_cppExport.cmake
+[15.017s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgs__rosidl_typesupport_cppExport-release.cmake
+[15.017s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/rosidl_cmake-extras.cmake
+[15.017s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[15.017s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[15.017s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[15.017s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.018s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[15.018s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[15.018s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgsConfig.cmake
+[15.018s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/cmake/carma_debug_ros2_msgsConfig-version.cmake
+[15.018s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/package.xml
+[15.018s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/share/carma_debug_ros2_msgs/rule.yml
+[15.023s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs' returned '0': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs

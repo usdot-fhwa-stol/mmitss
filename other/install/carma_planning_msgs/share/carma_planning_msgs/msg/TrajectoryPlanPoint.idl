@@ -1,0 +1,43 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/TrajectoryPlanPoint.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module carma_planning_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " TrajectoryPlanPoint.msg")
+    struct TrajectoryPlanPoint {
+      @verbatim (language="comment", text=
+        " This message describes a 2D point on plugin's trajectory plan" "\n"
+        " It is assmued that this point is in the MAP frame" "\n"
+        " X coordinate of the trajectory plan point; unit: meter")
+      double x;
+
+      @verbatim (language="comment", text=
+        " Y coordinate of the trajectory plan point; unit: meter")
+      double y;
+
+      @verbatim (language="comment", text=
+        " Vehicle orientation described as a right handed rotation around the +Z-Axis in radians.")
+      double yaw;
+
+      @verbatim (language="comment", text=
+        " Target UTC time when the host vehicle reaches the trajectory plan point")
+      builtin_interfaces::msg::Time target_time;
+
+      @verbatim (language="comment", text=
+        " Lane Id of the trajectory plan point based on HD map lane descriptions")
+      string lane_id;
+
+      @verbatim (language="comment", text=
+        " Controller plugin name required by the trajectory plan point")
+      string controller_plugin_name;
+
+      @verbatim (language="comment", text=
+        " Planner plugin name of the trajectory plan point")
+      string planner_plugin_name;
+    };
+  };
+};

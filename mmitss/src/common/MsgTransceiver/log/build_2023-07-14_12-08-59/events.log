@@ -1,0 +1,149 @@
+[0.000000] (-) TimerEvent: {}
+[0.000101] (-) JobUnselected: {'identifier': 'carma-ros2-encoder'}
+[0.000129] (carma-ros2-decoder) JobQueued: {'identifier': 'carma-ros2-decoder', 'dependencies': OrderedDict()}
+[0.000153] (carma-ros2-decoder) JobStarted: {'identifier': 'carma-ros2-decoder'}
+[0.012169] (carma-ros2-decoder) JobProgress: {'identifier': 'carma-ros2-decoder', 'progress': 'cmake'}
+[0.012922] (carma-ros2-decoder) JobProgress: {'identifier': 'carma-ros2-decoder', 'progress': 'build'}
+[0.013515] (carma-ros2-decoder) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder', '--', '-j8', '-l8'], 'cwd': '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en_US'), ('USER', 'mmitss'), ('MMITSS_NETWORK_ADAPTER', 'eno2'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1785'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ibm/ILOG/CPLEX_Studio221/cplex/lib/x86-64_linux:/opt/ibm/ILOG/CPLEX_Studio221/concert/lib/x86-64_linux'), ('QT4_IM_MODULE', 'ibus'), ('HOME', '/home/mmitss'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/mmitss/Documents/cda-mmitss/mmitss/src/common'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('MIBS', 'ALL'), ('MANAGERPID', '1701'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=adaab56d5436905fe8f125cb64b0eeba'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('UBUNTU_MENUPROXY', '1'), ('MANDATORY_PATH', '/usr/share/gconf/mate.mandatory.path'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/mmitss/Documents/cda-mmitss/other/install'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'mmitss'), ('WINDOWID', '50331654'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('JOURNAL_STREAM', '9:41105'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/mate.default.path'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/home/mmitss/anaconda3/bin:/home/mmitss/anaconda3/condabin:/home/mmitss/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/MFieldC:@/tmp/.ICE-unix/1713,unix/MFieldC:/tmp/.ICE-unix/1713'), ('GDM_LANG', 'en_US'), ('INVOCATION_ID', '1ad915cad06046d896e16f8258aac9f8'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('MMITSS_ROOT', '/home/mmitss/Documents/cda-mmitss/mmitss/build/scripts/../../..'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/mmitss/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/mmitss'), ('AMENT_PREFIX_PATH', '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/mmitss/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '7'), ('PWD', '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('CONDA_EXE', '/home/mmitss/anaconda3/bin/conda'), ('PROCESSOR', 'x86'), ('CLUTTER_IM_MODULE', 'ibus'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=adaab56d5436905fe8f125cb64b0eeba'), ('XDG_DATA_DIRS', '/usr/share/mate:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('CONDA_PREFIX', '/home/mmitss/anaconda3'), ('CPATH', '/opt/ibm/ILOG/CPLEX_Studio221/cplex/include:/opt/ibm/ILOG/CPLEX_Studio221/concert/include'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy')]), 'shell': False}
+[0.042218] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.068078] (carma-ros2-decoder) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3\n'}
+[0.099199] (-) TimerEvent: {}
+[0.199567] (-) TimerEvent: {}
+[0.268101] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)\n'}
+[0.299649] (-) TimerEvent: {}
+[0.365849] (carma-ros2-decoder) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.368709] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.399772] (-) TimerEvent: {}
+[0.464135] (carma-ros2-decoder) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.499882] (-) TimerEvent: {}
+[0.509178] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.511458] (carma-ros2-decoder) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.599998] (-) TimerEvent: {}
+[0.700296] (-) TimerEvent: {}
+[0.741426] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[0.755022] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.768371] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.769307] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/common;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/libj2735;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/glpk/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/net-snmp;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/jsoncpp\n'}
+[0.769457] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.782014] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[0.782125] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[0.784361] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.788136] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.790415] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[0.800397] (-) TimerEvent: {}
+[0.803866] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.804009] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.805959] (carma-ros2-decoder) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.808931] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.823271] (carma-ros2-decoder) StdoutLine: {'line': b'-- Generating done\n'}
+[0.824759] (carma-ros2-decoder) StdoutLine: {'line': b'-- Build files have been written to: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/build/carma-ros2-decoder\n'}
+[0.851772] (carma-ros2-decoder) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target M_CarmaMsgDecoder\x1b[0m\n'}
+[0.875995] (carma-ros2-decoder) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o\x1b[0m\n'}
+[0.876912] (carma-ros2-decoder) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-msg-decoder.cpp.o\x1b[0m\n'}
+[0.877834] (carma-ros2-decoder) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o\x1b[0m\n'}
+[0.880531] (carma-ros2-decoder) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-outbound-listener.cpp.o\x1b[0m\n'}
+[0.900517] (-) TimerEvent: {}
+[1.000854] (-) TimerEvent: {}
+[1.101211] (-) TimerEvent: {}
+[1.201587] (-) TimerEvent: {}
+[1.222375] (carma-ros2-decoder) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcBSM.h:12\x1b[m\x1b[K,\n'}
+[1.222702] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcFrame.h:12\x1b[m\x1b[K,\n'}
+[1.222827] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/AsnJ2735Lib.h:14\x1b[m\x1b[K,\n'}
+[1.222940] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:10\x1b[m\x1b[K:\n'}
+[1.223043] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/msgEnum.h:71:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.223147] (carma-ros2-decoder) StderrLine: {'line': b'   71 |  }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.223248] (carma-ros2-decoder) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.242379] (carma-ros2-decoder) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:10\x1b[m\x1b[K:\n'}
+[1.242729] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/AsnJ2735Lib.h:21:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.242895] (carma-ros2-decoder) StderrLine: {'line': b'   21 | }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.243003] (carma-ros2-decoder) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.279262] (carma-ros2-decoder) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/geoUtils.h:15\x1b[m\x1b[K,\n'}
+[1.279691] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/mapDataStruct.h:16\x1b[m\x1b[K,\n'}
+[1.279870] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/locAware.h:15\x1b[m\x1b[K,\n'}
+[1.279984] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:11\x1b[m\x1b[K:\n'}
+[1.280090] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:30:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.280197] (carma-ros2-decoder) StderrLine: {'line': b'   30 |   {return(d / rad2degree);}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.280298] (carma-ros2-decoder) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.280402] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:32:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.280530] (carma-ros2-decoder) StderrLine: {'line': b'   32 |   {return(d * rad2degree);}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.280652] (carma-ros2-decoder) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.280770] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:35:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.280888] (carma-ros2-decoder) StderrLine: {'line': b'   35 |   {return(static_cast<double>(d) / damega);}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.281006] (carma-ros2-decoder) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.281120] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:38:47:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.281241] (carma-ros2-decoder) StderrLine: {'line': b'   38 |   {return(static_cast<T>(round(d * damega)));}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.281363] (carma-ros2-decoder) StderrLine: {'line': b'      |                                               \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.281473] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:41:44:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.281599] (carma-ros2-decoder) StderrLine: {'line': b'   41 |   {return(static_cast<double>(d) / hecto);}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.281715] (carma-ros2-decoder) StderrLine: {'line': b'      |                                            \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.281819] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:44:46:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.281942] (carma-ros2-decoder) StderrLine: {'line': b'   44 |   {return(static_cast<T>(round(d * hecto)));}\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.282040] (carma-ros2-decoder) StderrLine: {'line': b'      |                                              \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.282163] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include/dsrcConsts.h:78:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.282268] (carma-ros2-decoder) StderrLine: {'line': b'   78 | }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.282367] (carma-ros2-decoder) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.285721] (carma-ros2-decoder) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/mapDataStruct.h:16\x1b[m\x1b[K,\n'}
+[1.285935] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/locAware.h:15\x1b[m\x1b[K,\n'}
+[1.286057] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:11\x1b[m\x1b[K:\n'}
+[1.286178] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/geoUtils.h:285:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.286296] (carma-ros2-decoder) StderrLine: {'line': b'  285 | }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.286397] (carma-ros2-decoder) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.300674] (carma-ros2-decoder) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/locAware.h:15\x1b[m\x1b[K,\n'}
+[1.300914] (carma-ros2-decoder) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:11\x1b[m\x1b[K:\n'}
+[1.301035] (carma-ros2-decoder) StderrLine: {'line': b'\x1b[01m\x1b[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include/mapDataStruct.h:127:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[1.301144] (carma-ros2-decoder) StderrLine: {'line': b'  127 | }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[1.301244] (carma-ros2-decoder) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.301650] (-) TimerEvent: {}
+[1.401898] (-) TimerEvent: {}
+[1.502322] (-) TimerEvent: {}
+[1.602724] (-) TimerEvent: {}
+[1.703040] (-) TimerEvent: {}
+[1.803349] (-) TimerEvent: {}
+[1.903619] (-) TimerEvent: {}
+[2.004012] (-) TimerEvent: {}
+[2.104339] (-) TimerEvent: {}
+[2.204647] (-) TimerEvent: {}
+[2.304951] (-) TimerEvent: {}
+[2.405271] (-) TimerEvent: {}
+[2.505664] (-) TimerEvent: {}
+[2.606026] (-) TimerEvent: {}
+[2.706305] (-) TimerEvent: {}
+[2.806588] (-) TimerEvent: {}
+[2.906909] (-) TimerEvent: {}
+[3.007205] (-) TimerEvent: {}
+[3.107506] (-) TimerEvent: {}
+[3.207864] (-) TimerEvent: {}
+[3.308260] (-) TimerEvent: {}
+[3.408559] (-) TimerEvent: {}
+[3.508856] (-) TimerEvent: {}
+[3.609164] (-) TimerEvent: {}
+[3.709489] (-) TimerEvent: {}
+[3.809790] (-) TimerEvent: {}
+[3.910054] (-) TimerEvent: {}
+[4.010387] (-) TimerEvent: {}
+[4.110668] (-) TimerEvent: {}
+[4.210949] (-) TimerEvent: {}
+[4.311284] (-) TimerEvent: {}
+[4.411592] (-) TimerEvent: {}
+[4.511954] (-) TimerEvent: {}
+[4.612275] (-) TimerEvent: {}
+[4.712577] (-) TimerEvent: {}
+[4.812834] (-) TimerEvent: {}
+[4.913161] (-) TimerEvent: {}
+[4.937301] (carma-ros2-decoder) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable M_CarmaMsgDecoder\x1b[0m\n'}
+[5.013259] (-) TimerEvent: {}
+[5.055739] (carma-ros2-decoder) StderrLine: {'line': b'/usr/bin/ld: cannot find -llocAware\n'}
+[5.056007] (carma-ros2-decoder) StderrLine: {'line': b'/usr/bin/ld: cannot find -ldsrc\n'}
+[5.056106] (carma-ros2-decoder) StderrLine: {'line': b'/usr/bin/ld: cannot find -lasn\n'}
+[5.056198] (carma-ros2-decoder) StderrLine: {'line': b'/usr/bin/ld: cannot find -lroscpp\n'}
+[5.056287] (carma-ros2-decoder) StderrLine: {'line': b'/usr/bin/ld: cannot find -lrostime\n'}
+[5.056386] (carma-ros2-decoder) StderrLine: {'line': b'/usr/bin/ld: cannot find -lrosconsole\n'}
+[5.056477] (carma-ros2-decoder) StderrLine: {'line': b'/usr/bin/ld: cannot find -lroscpp_serialization\n'}
+[5.056565] (carma-ros2-decoder) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[5.057009] (carma-ros2-decoder) StderrLine: {'line': b'make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:186: M_CarmaMsgDecoder] Error 1\n'}
+[5.057236] (carma-ros2-decoder) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/M_CarmaMsgDecoder.dir/all] Error 2\n'}
+[5.057383] (carma-ros2-decoder) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[5.058916] (carma-ros2-decoder) CommandEnded: {'returncode': 2}
+[5.110851] (carma-ros2-decoder) JobEnded: {'identifier': 'carma-ros2-decoder', 'rc': 2}
+[5.113320] (-) TimerEvent: {}
+[5.122504] (-) EventReactorShutdown: {}

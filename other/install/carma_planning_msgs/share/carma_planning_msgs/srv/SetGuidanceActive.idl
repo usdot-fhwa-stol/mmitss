@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/SetGuidanceActive.srv
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " Guidance Activate Service Message" "\n"
+      "" "\n"
+      " A command from the user to activate or deactivate the Guidance component" "\n"
+      "" "\n"
+      " @author Kyle Rush" "\n"
+      " @version 0.1")
+    struct SetGuidanceActive_Request {
+      @verbatim (language="comment", text=
+        " activate or deactivate the Guidance component")
+      boolean guidance_active;
+    };
+    @verbatim (language="comment", text=
+      " Response")
+    struct SetGuidanceActive_Response {
+      boolean guidance_status;
+    };
+  };
+};

@@ -1,0 +1,4 @@
+source;share/carma_cmake_common/local_setup.bash
+source;share/carma_cmake_common/local_setup.dsv
+source;share/carma_cmake_common/local_setup.sh
+source;share/carma_cmake_common/local_setup.zsh
