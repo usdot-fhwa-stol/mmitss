@@ -22,7 +22,7 @@ linux: $(TARGET)
 
 #the executable depends on the .o's so we link
 $(TARGET): $(OBJECTS)
-	$(CPP) -o $(TARGET) $(OBJECTS) $(LIBS) $(LDFLAGS) $(LDLIBS)
+	$(CPP) -g -o $(TARGET) $(OBJECTS) $(LIBS) $(LDFLAGS) $(LDLIBS)
 
 .PHONY : clean
 clean:

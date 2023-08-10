@@ -12,36 +12,27 @@
 
 class Publisher : public rclcpp::Node
 {
-  public:
-    Publisher(Json::Value jsonObject_config): Node("mmitss_carma_publisher")
+  
+   public:
+    
+    
+    Publisher(Json::Value jsonObject_config_): Node("mmitss_carma_publisher")
     {
-      
-      encoderSocket = new UdpSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
+      jsonObject_config = jsonObject_config_;
+      publisher_ = this->create_publisher<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/outbound_binary_message", 1000);
+      timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&Publisher::timer_callback,this));
       LOCALHOST = jsonObject_config["HostIp"].asString();
       sourceDsrcDevicePort = jsonObject_config["PortNumber"]["DsrcImmediateForwarder"].asInt();
       dataCollectorPortNo = static_cast<short unsigned int>(jsonObject_config["PortNumber"]["DataCollector"].asInt());
-      publisher_ = this->create_publisher<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/outbound_binary_message", 1000);
-      timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&Publisher::timer_callback,this));
-      
     }
-   
-    int msgType{};
-    std::vector<uint8_t> encodedMsg;
-    UdpSocket* encoderSocket;
-    TransceiverEncoder encoder;
-    string applicationPlatform = encoder.getApplicationPlatform();
-    int mapMsgCount{};
-    Json::Value jsonObject_config;
-    string LOCALHOST ;
-    int sourceDsrcDevicePort ;
-    int dataCollectorPortNo ;
-    char receiveBuffer[5120];
-
-  private:
+    
+    
+  
     void timer_callback()
     {
+        UdpSocket encoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
         carma_driver_msgs::msg::ByteArray msg;
-        encoderSocket->receiveData(receiveBuffer, sizeof(receiveBuffer));
+        encoderSocket.receiveData(receiveBuffer, sizeof(receiveBuffer));
         string receivedMsgString(receiveBuffer);
 
         //if not a MAP message. Map messages are already UPER encooded, the other type are JSON
@@ -99,20 +90,21 @@ class Publisher : public rclcpp::Node
             if (applicationPlatform == "roadside")
             {
                 encoder.setMapMsgCount(mapMsgCount);
-                encoderSocket->sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SSM"));
-                encoderSocket->sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("MAP"));
-                encoderSocket->sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SPaT"));
+                encoderSocket.sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SSM"));
+                encoderSocket.sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("MAP"));
+                encoderSocket.sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SPaT"));
                 mapMsgCount = 0;
             }
 
             else if (applicationPlatform == "vehicle")
             {
-                encoderSocket->sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SRM"));
+                encoderSocket.sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SRM"));
             }
         }
 
         if (encoder.sendSystemPerformanceDataLog() == true)
-            encoderSocket->sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SRM"));
+            encoderSocket.sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SRM"));
+        encoderSocket.closeSocket();
     }
         
         //message.data = "Hello, world! " + std::to_string(count_++);
@@ -122,19 +114,32 @@ class Publisher : public rclcpp::Node
     
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<carma_driver_msgs::msg::ByteArray>::SharedPtr publisher_;
-  
+    char receiveBuffer[5120];
+    int msgType{};
+    int mapMsgCount{};
     size_t count_;
+    Json::Value jsonObject_config;
+    string LOCALHOST;
+    int sourceDsrcDevicePort;
+    int dataCollectorPortNo;
+    TransceiverEncoder encoder;
+    std::vector<uint8_t> encodedMsg;
+    string applicationPlatform = encoder.getApplicationPlatform();
+    
+    
+    
     
     //Create Json related objects for local communication  
-
-
+  
+ 
+  
 };
 
 
 
 int main(int argc, char **argv)
 {
-    
+    std::cout<<"here";
     Json::Value jsonObject_config;
     std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
     string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
@@ -144,12 +149,11 @@ int main(int argc, char **argv)
     reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);
     delete reader;
 
-    UdpSocket encoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
+
+
     
     
-    
-    
-    
+
     rclcpp::init(argc, argv);
     rclcpp::spin(std::make_shared<Publisher>(jsonObject_config));
     
