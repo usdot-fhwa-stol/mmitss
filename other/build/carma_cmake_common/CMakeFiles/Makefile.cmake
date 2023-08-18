@@ -66,13 +66,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/foxy/share/ament_cmake_python/cmake/ament_python_install_package.cmake"
   "/opt/ros/foxy/share/ros_environment/cmake/ros_environmentConfig-version.cmake"
   "/opt/ros/foxy/share/ros_environment/cmake/ros_environmentConfig.cmake"
-  "/usr/share/cmake-3.16/Modules/CMakeDetermineSystem.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake"
-  "/usr/share/cmake-3.16/Modules/CMakeSystem.cmake.in"
   "/usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/usr/share/cmake-3.16/Modules/CMakeUnixFindMake.cmake"
   "/usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.16/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.16/Modules/FindPythonInterp.cmake"
@@ -88,7 +85,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.16.3/CMakeSystem.cmake"
   "ament_cmake_core/stamps/templates_2_cmake.py.stamp"
   "ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake"
   "ament_cmake_core/stamps/package.xml.stamp"

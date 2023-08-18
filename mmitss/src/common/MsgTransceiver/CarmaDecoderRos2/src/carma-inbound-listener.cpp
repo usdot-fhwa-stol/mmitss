@@ -4,7 +4,7 @@
 
 InboundMsgListener::InboundMsgListener()
 {
-    std::cout<<"inbound constructor";
+    
     std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
     string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
     Json::CharReaderBuilder builder;
@@ -25,7 +25,7 @@ void InboundMsgListener::inboundMsgCallback(const carma_driver_msgs::msg::ByteAr
     UdpSocket decoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageDecoder"].asInt())); 
 
     std::string msgType = msg->message_type;
-
+    std::cout<<"here inbound callback"<<std::endl;
     if (msgType == "MAP")
     {
         //string mapString = decoder.convertMapUperToHexString(msg->content);

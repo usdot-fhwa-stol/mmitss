@@ -1,0 +1,29 @@
+[0.017s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common -- -j8 -l8
+[0.086s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common -- -j8 -l8
+[0.119s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common
+[0.129s] -- Install configuration: ""
+[0.129s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/ament_index/resource_index/package_run_dependencies/carma_cmake_common
+[0.129s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/ament_index/resource_index/parent_prefix_path/carma_cmake_common
+[0.129s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/environment/ament_prefix_path.sh
+[0.129s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/environment/ament_prefix_path.dsv
+[0.129s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/environment/path.sh
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/environment/path.dsv
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/local_setup.bash
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/local_setup.sh
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/local_setup.zsh
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/local_setup.dsv
+[0.130s] -- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.dsv
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/ament_index/resource_index/packages/carma_cmake_common
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_check_ros_version.cmake
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_package.cmake
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_define_ament_library.cmake
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_define_ament_executable.cmake
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_cmake_commonConfig.cmake
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_cmake_commonConfig-version.cmake
+[0.130s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.xml
+[0.131s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake
+[0.131s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_package.cmake
+[0.131s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_define_ament_library.cmake
+[0.131s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_check_ros_version.cmake
+[0.131s] -- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_define_ament_executable.cmake
+[0.133s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common

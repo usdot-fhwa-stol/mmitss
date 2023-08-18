@@ -1,0 +1,32 @@
+-- Found ros_environment: 2.5.1 (/opt/ros/foxy/share/ros_environment/cmake)
+-- Found ament_cmake_core: 0.9.12 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+-- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+-- Found ament_cmake_python: 0.9.12 (/opt/ros/foxy/share/ament_cmake_python/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common
+-- Install configuration: ""
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/ament_index/resource_index/package_run_dependencies/carma_cmake_common
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/ament_index/resource_index/parent_prefix_path/carma_cmake_common
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/environment/ament_prefix_path.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/environment/ament_prefix_path.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/environment/path.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/environment/path.dsv
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/local_setup.bash
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/local_setup.sh
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/local_setup.zsh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/local_setup.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.dsv
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/ament_index/resource_index/packages/carma_cmake_common
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_check_ros_version.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_package.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_define_ament_library.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_define_ament_executable.cmake
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_cmake_commonConfig.cmake
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_cmake_commonConfig-version.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.xml
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_package.cmake
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_define_ament_library.cmake
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_check_ros_version.cmake
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake/carma_define_ament_executable.cmake

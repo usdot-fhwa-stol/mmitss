@@ -13,24 +13,23 @@
 class Publisher : public rclcpp::Node
 {
   
-   public:
-    
-    
-    Publisher(Json::Value jsonObject_config_): Node("mmitss_carma_publisher")
+    public:
+    Publisher(Json::Value jsonObject_config_): Node("mmitss_carma_publisher"),encoderSocket(static_cast<short unsigned int>(jsonObject_config_["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()))
     {
       jsonObject_config = jsonObject_config_;
-      publisher_ = this->create_publisher<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/outbound_binary_message", 1000);
-      timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&Publisher::timer_callback,this));
       LOCALHOST = jsonObject_config["HostIp"].asString();
       sourceDsrcDevicePort = jsonObject_config["PortNumber"]["DsrcImmediateForwarder"].asInt();
       dataCollectorPortNo = static_cast<short unsigned int>(jsonObject_config["PortNumber"]["DataCollector"].asInt());
+      publisher_ = this->create_publisher<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/outbound_binary_message", 1000);
+      timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&Publisher::timer_callback,this));
+      
     }
     
     
   
     void timer_callback()
     {
-        UdpSocket encoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
+        // UdpSocket encoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
         carma_driver_msgs::msg::ByteArray msg;
         encoderSocket.receiveData(receiveBuffer, sizeof(receiveBuffer));
         string receivedMsgString(receiveBuffer);
@@ -111,7 +110,6 @@ class Publisher : public rclcpp::Node
         //RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
         // publisher_->publish(message);
 
-    
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<carma_driver_msgs::msg::ByteArray>::SharedPtr publisher_;
     char receiveBuffer[5120];
@@ -124,14 +122,9 @@ class Publisher : public rclcpp::Node
     int dataCollectorPortNo;
     TransceiverEncoder encoder;
     std::vector<uint8_t> encodedMsg;
+    UdpSocket encoderSocket;
     string applicationPlatform = encoder.getApplicationPlatform();
-    
-    
-    
-    
     //Create Json related objects for local communication  
-  
- 
   
 };
 
@@ -149,10 +142,16 @@ int main(int argc, char **argv)
     reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);
     delete reader;
 
-
-
-    
-    
+    // UdpSocket encoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
+    // TransceiverEncoder encoder;
+    // std::vector<uint8_t> encodedMsg;
+    // char receiveBuffer[5120];
+    // const string LOCALHOST = jsonObject_config["HostIp"].asString();
+    // const int sourceDsrcDevicePort = jsonObject_config["PortNumber"]["DsrcImmediateForwarder"].asInt();
+    // const int dataCollectorPortNo = static_cast<short unsigned int>(jsonObject_config["PortNumber"]["DataCollector"].asInt());
+    // int mapMsgCount{};
+    // string applicationPlatform = encoder.getApplicationPlatform();
+    // int msgType{};
 
     rclcpp::init(argc, argv);
     rclcpp::spin(std::make_shared<Publisher>(jsonObject_config));

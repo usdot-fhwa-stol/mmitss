@@ -30,7 +30,6 @@ const int WALK = 6;
 TransceiverDecoder::TransceiverDecoder()
 {
     std::ofstream outputfile;
-    std::cout<<"here";
     Json::Value jsonObject;
     std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
     string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());

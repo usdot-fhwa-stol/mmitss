@@ -5,15 +5,15 @@
 
 OutboundMsgListener::OutboundMsgListener()
 {
-    std::cout<<"in outbound listener";
     std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
     string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
     Json::CharReaderBuilder builder;
     Json::CharReader *reader = builder.newCharReader();
     string errors{};
     reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);
+    int data = jsonObject_config["PortNumber"]["HostBsmDecoder"].asInt();
     delete reader;
-    std::cout<<"initialized outbound listener";
+    
 }
 
 OutboundMsgListener::~OutboundMsgListener()
@@ -22,16 +22,20 @@ OutboundMsgListener::~OutboundMsgListener()
 
 void OutboundMsgListener::outboundMsgCallback(const carma_driver_msgs::msg::ByteArray::SharedPtr msg)
 {
+    
     TransceiverDecoder decoder;
+    std::cout<<"here outbound callback"<<std::endl;
+    int data = jsonObject_config["PortNumber"]["HostBsmDecoder"].asInt();
     UdpSocket decoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["HostBsmDecoder"].asInt()));
-
+    std::cout<<jsonObject_config["PortNumber"]["HostBsmDecoder"].asUInt()<<std::endl;
+    // UdpSocket decoderSocket(jsonObject_config["PortNumber"]["HostBsmDecoder"].asUInt());
     std::string msgType = msg->message_type;
-
+  
     if (msgType == "BSM")
     {
-
+        std::cout<<"sending bsm"<< std::endl;
         string bsmJsonString = decoder.bsmDecoder(msg->content);
-
+        
 #ifdef DEBUG_DECODED_MSG
         std::cout << "Local BSM -- " << bsmJsonString << std::endl;
 #endif
@@ -43,4 +47,5 @@ void OutboundMsgListener::outboundMsgCallback(const carma_driver_msgs::msg::Byte
     }
 
     decoderSocket.closeSocket();
+    std::cout<<"closed socket"<<std::endl;
 }

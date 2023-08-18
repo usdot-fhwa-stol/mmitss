@@ -10,7 +10,6 @@ class Subscriber : public rclcpp::Node
 
     Subscriber(InboundMsgListener inListener,OutboundMsgListener outListener): Node("mmitss_carma_listener")
     {
-      std::cout<<"here in subscriber";
       subscriptionInbound = this->create_subscription<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/inbound_binary_msg",1000, std::bind(&InboundMsgListener::inboundMsgCallback,&inListener,std::placeholders::_1));
       subscriptionOutbound = this->create_subscription<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/outbound_binary_msg",1000, std::bind(&OutboundMsgListener::outboundMsgCallback,&outListener,std::placeholders::_1));
     }
@@ -25,9 +24,7 @@ class Subscriber : public rclcpp::Node
 
 int main(int argc, char * argv[])
 {
-    std::cout<<"wow";
     InboundMsgListener inListener;
-    std::cout<<"initialized in listener";
     OutboundMsgListener outListener;
 
     rclcpp::init(argc, argv);
