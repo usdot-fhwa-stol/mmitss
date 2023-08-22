@@ -10,8 +10,9 @@ OutboundMsgListener::OutboundMsgListener()
     Json::CharReaderBuilder builder;
     Json::CharReader *reader = builder.newCharReader();
     string errors{};
-    reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);
-    int data = jsonObject_config["PortNumber"]["HostBsmDecoder"].asInt();
+    Json::Value* rawJsonObject = jsonObject_config_test.get();
+    // reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);
+    reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), rawJsonObject, &errors);
     delete reader;
     
 }
