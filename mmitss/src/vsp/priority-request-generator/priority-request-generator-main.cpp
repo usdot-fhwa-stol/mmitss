@@ -37,7 +37,8 @@ int main()
     SignalRequest signalRequest;
 
     //Socket Communication
-    UdpSocket priorityRequestGeneratorSocket(static_cast<short unsigned int>(jsonObject["PortNumber"]["PriorityRequestGenerator"].asInt()));
+    const int receivingPort = (jsonObject["PortNumber"]["PriorityRequestGenerator"].asInt());
+    UdpSocket priorityRequestGeneratorSocket(static_cast<short unsigned int>(receivingPort));
     const string HostIP = jsonObject["HostIp"].asString();
     const string HMIControllerIP = jsonObject["HMIControllerIP"].asString();
     const int dataCollectorPort = static_cast<short unsigned int>(jsonObject["PortNumber"]["DataCollector"].asInt());

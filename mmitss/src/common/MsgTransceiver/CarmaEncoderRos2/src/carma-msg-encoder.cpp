@@ -14,12 +14,8 @@ class Publisher : public rclcpp::Node
 {
   
     public:
-    Publisher(Json::Value jsonObject_config_): Node("mmitss_carma_publisher"),encoderSocket(static_cast<short unsigned int>(jsonObject_config_["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()))
+    Publisher(): Node("mmitss_carma_publisher")
     {
-      jsonObject_config = jsonObject_config_;
-      LOCALHOST = jsonObject_config["HostIp"].asString();
-      sourceDsrcDevicePort = jsonObject_config["PortNumber"]["DsrcImmediateForwarder"].asInt();
-      dataCollectorPortNo = static_cast<short unsigned int>(jsonObject_config["PortNumber"]["DataCollector"].asInt());
       publisher_ = this->create_publisher<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/outbound_binary_message", 1000);
       timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&Publisher::timer_callback,this));
       
@@ -29,14 +25,33 @@ class Publisher : public rclcpp::Node
   
     void timer_callback()
     {
-        // UdpSocket encoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
+       Json::Value jsonObject_config;
+        std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
+        string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
+        Json::CharReaderBuilder builder;
+        Json::Reader reader2;
+        reader2.parse(configJsonString.c_str(), jsonObject_config);
+        
+        std::cout<<jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()<<std::endl;
+        UdpSocket encoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
+        TransceiverEncoder encoder;
+        std::vector<uint8_t> encodedMsg;
+        char receiveBuffer[5120];
+        const string LOCALHOST = jsonObject_config["HostIp"].asString();
+        const int sourceDsrcDevicePort = jsonObject_config["PortNumber"]["DsrcImmediateForwarder"].asInt();
+        const int dataCollectorPortNo = static_cast<short unsigned int>(jsonObject_config["PortNumber"]["DataCollector"].asInt());
+        int mapMsgCount{};
+        string applicationPlatform = encoder.getApplicationPlatform();
+        int msgType{};
+
         carma_driver_msgs::msg::ByteArray msg;
+
         encoderSocket.receiveData(receiveBuffer, sizeof(receiveBuffer));
         string receivedMsgString(receiveBuffer);
-
         //if not a MAP message. Map messages are already UPER encooded, the other type are JSON
         if(receivedMsgString.substr(0,4) != "0012")
         {
+            
             msgType = encoder.getMessageType(receivedMsgString);
             
 
@@ -112,18 +127,7 @@ class Publisher : public rclcpp::Node
 
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<carma_driver_msgs::msg::ByteArray>::SharedPtr publisher_;
-    char receiveBuffer[5120];
-    int msgType{};
-    int mapMsgCount{};
-    size_t count_;
-    Json::Value jsonObject_config;
-    string LOCALHOST;
-    int sourceDsrcDevicePort;
-    int dataCollectorPortNo;
-    TransceiverEncoder encoder;
-    std::vector<uint8_t> encodedMsg;
-    UdpSocket encoderSocket;
-    string applicationPlatform = encoder.getApplicationPlatform();
+    
     //Create Json related objects for local communication  
   
 };
@@ -132,30 +136,10 @@ class Publisher : public rclcpp::Node
 
 int main(int argc, char **argv)
 {
-    std::cout<<"here";
-    Json::Value jsonObject_config;
-    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
-    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
-    Json::CharReaderBuilder builder;
-    Json::CharReader *reader = builder.newCharReader();
-    string errors{};
-    reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);
-    delete reader;
-
-    // UdpSocket encoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
-    // TransceiverEncoder encoder;
-    // std::vector<uint8_t> encodedMsg;
-    // char receiveBuffer[5120];
-    // const string LOCALHOST = jsonObject_config["HostIp"].asString();
-    // const int sourceDsrcDevicePort = jsonObject_config["PortNumber"]["DsrcImmediateForwarder"].asInt();
-    // const int dataCollectorPortNo = static_cast<short unsigned int>(jsonObject_config["PortNumber"]["DataCollector"].asInt());
-    // int mapMsgCount{};
-    // string applicationPlatform = encoder.getApplicationPlatform();
-    // int msgType{};
+   
 
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<Publisher>(jsonObject_config));
-    
+    rclcpp::spin(std::make_shared<Publisher>());
     rclcpp::shutdown();
    
     return 0;

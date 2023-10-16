@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}",              
+                "/home/mmitss/Documents/cda-mmitss/mmitss/include/common/",
+                "/home/mmitss/Documents/cda-mmitss/mmitss/3rdparty/mapengine/include/",
+                "/home/mmitss/Documents/cda-mmitss/mmitss/3rdparty/asn1j2735/include/",
+                "/opt/ros/noetic/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14"
+        }
+    ],
+    "version": 4
+}

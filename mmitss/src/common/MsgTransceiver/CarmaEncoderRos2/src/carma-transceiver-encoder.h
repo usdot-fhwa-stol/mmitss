@@ -28,7 +28,6 @@ class TransceiverEncoder
     public:
         TransceiverEncoder();
         ~TransceiverEncoder();
-        
         int getMessageType(std::string jsonString);
         //std::string BSMEncoder(std::string jsonString);
         std::vector<uint8_t> SRMEncoder(std::string jsonString);

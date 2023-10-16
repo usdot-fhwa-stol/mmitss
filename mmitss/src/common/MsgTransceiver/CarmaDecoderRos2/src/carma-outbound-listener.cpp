@@ -2,33 +2,54 @@
 #include "carma-transceiver-decoder.h"
 
 #define DEBUG_DECODED_MSG
+// JsonStorage::JsonStorage()
+// {}
+// JsonStorage::~JsonStorage()
+// {}
+// JsonStorage::JsonStorage(Json::Value* value)
+// {
+//     LOCALHOST = (*value)["HostIp"].asString();
+//     dataCollectorPortNo = ((*value)["PortNumber"]["DataCollector"]).asInt();
+//     bsmReceiverPortNo = ((*value)["PortNumber"]["PriorityRequestGenerator"]).asInt();
+// }
+
 
 OutboundMsgListener::OutboundMsgListener()
-{
-    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
-    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
-    Json::CharReaderBuilder builder;
-    Json::CharReader *reader = builder.newCharReader();
-    string errors{};
-    Json::Value* rawJsonObject = jsonObject_config_test.get();
+{       
+    // std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
+    // string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
+    // Json::CharReaderBuilder builder;
+    // Json::CharReader *reader = builder.newCharReader();
+    // string errors{};
     // reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);
-    reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), rawJsonObject, &errors);
-    delete reader;
-    
+    // delete reader;
 }
 
 OutboundMsgListener::~OutboundMsgListener()
 {
 }
-
 void OutboundMsgListener::outboundMsgCallback(const carma_driver_msgs::msg::ByteArray::SharedPtr msg)
 {
     
+    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
+    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
+    Json::CharReaderBuilder builder;
+    Json::CharReader *reader = builder.newCharReader();
+    delete reader;
+    string errors{};
+    Json::Reader reader2;
+    Json::Value jsonObject_config;
+    
+    // reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);
+    // reader->parse(configJsonString.c_str(), &jsonObject_config);
+    reader2.parse(configJsonString.c_str(), jsonObject_config);
+    const string LOCALHOST = jsonObject_config["HostIp"].asString();
+    const int dataCollectorPortNo = (jsonObject_config["PortNumber"]["DataCollector"]).asInt();
+    const int bsmReceiverPortNo = (jsonObject_config["PortNumber"]["PriorityRequestGenerator"]).asInt();
+    
     TransceiverDecoder decoder;
-    std::cout<<"here outbound callback"<<std::endl;
-    int data = jsonObject_config["PortNumber"]["HostBsmDecoder"].asInt();
     UdpSocket decoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["HostBsmDecoder"].asInt()));
-    std::cout<<jsonObject_config["PortNumber"]["HostBsmDecoder"].asUInt()<<std::endl;
+    
     // UdpSocket decoderSocket(jsonObject_config["PortNumber"]["HostBsmDecoder"].asUInt());
     std::string msgType = msg->message_type;
   
@@ -49,4 +70,5 @@ void OutboundMsgListener::outboundMsgCallback(const carma_driver_msgs::msg::Byte
 
     decoderSocket.closeSocket();
     std::cout<<"closed socket"<<std::endl;
+    
 }

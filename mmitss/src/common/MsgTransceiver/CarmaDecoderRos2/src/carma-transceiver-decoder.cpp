@@ -56,8 +56,8 @@ std::string TransceiverDecoder::convertMapUperToHexString(std::vector<uint8_t> m
     ss << std::hex;
 
     for (size_t i = 0; i < mapPayload.size(); i++)
-        ss << std::uppercase << std::setw(2) << std::setfill('0') << static_cast<unsigned int>(mapPayload.at(i));
-
+        // ss << std::uppercase << std::setfill('0') << std::setw(2)  << static_cast<unsigned int>(mapPayload.at(i));
+        ss << std::setfill('0') << std::setw(2)  << static_cast<unsigned int>(mapPayload.at(i));
     payload = ss.str();
 
     return payload;
@@ -124,7 +124,7 @@ string TransceiverDecoder::bsmDecoder(std::vector<uint8_t> bsmPayload)
 
     /// dsrcFrameOut to store UPER decoding result
     Frame_element_t dsrcFrameOut;
-   
+    
     size_t payload_size = bsmPayload.size();
     if (payload_size > 0 && (AsnJ2735Lib::decode_msgFrame(bsmPayload.data(), payload_size, dsrcFrameOut) > 0) && (dsrcFrameOut.dsrcMsgId == MsgEnum::DSRCmsgID_bsm))
     {

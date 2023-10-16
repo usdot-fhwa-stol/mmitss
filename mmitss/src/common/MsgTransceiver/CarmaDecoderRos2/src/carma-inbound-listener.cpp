@@ -4,15 +4,14 @@
 
 InboundMsgListener::InboundMsgListener()
 {
+    // std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
+    // string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
+    // Json::CharReaderBuilder builder;
+    // Json::CharReader *reader = builder.newCharReader();
+    // string errors{};
+    // reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);  
+    // delete reader;
     
-    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
-    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
-    Json::CharReaderBuilder builder;
-    Json::CharReader *reader = builder.newCharReader();
-    string errors{};
-    reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);
-    delete reader;
-
 }
 
 InboundMsgListener::~InboundMsgListener()
@@ -21,6 +20,28 @@ InboundMsgListener::~InboundMsgListener()
 
 void InboundMsgListener::inboundMsgCallback(const carma_driver_msgs::msg::ByteArray::SharedPtr msg)
 {
+    
+    Json::Value jsonObject_config;
+   
+    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
+    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
+    Json::CharReaderBuilder builder;
+    Json::CharReader *reader = builder.newCharReader();
+    Json::Reader reader2;
+    delete reader;
+    string errors{};
+    // reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);
+    reader2.parse(configJsonString.c_str(), jsonObject_config);
+    const string LOCALHOST = jsonObject_config["HostIp"].asString();
+    const string HMIControllerIP = jsonObject_config["HMIControllerIP"].asString();
+    const string messageDistributorIP = jsonObject_config["MessageDistributorIP"].asString();
+    const bool peerDataDecoding = jsonObject_config["PeerDataDecoding"].asBool();
+    const int dataCollectorPortNo = (jsonObject_config["PortNumber"]["DataCollector"]).asInt();
+    const int priorityReqGenPortNo = (jsonObject_config["PortNumber"]["PriorityRequestGenerator"]).asInt();
+    const int vehicleHmiPortNo = (jsonObject_config["PortNumber"]["HMIController"]).asInt();
+    const int messageDistributorPort = (jsonObject_config["PortNumber"]["MessageDistributor"]).asInt();
+
+    std::cout<<jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageDecoder"].asInt()<<std::endl;
     TransceiverDecoder decoder;
     UdpSocket decoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageDecoder"].asInt())); 
 
@@ -28,9 +49,9 @@ void InboundMsgListener::inboundMsgCallback(const carma_driver_msgs::msg::ByteAr
     std::cout<<"here inbound callback"<<std::endl;
     if (msgType == "MAP")
     {
-        //string mapString = decoder.convertMapUperToHexString(msg->content);
+        string mapString = decoder.convertMapUperToHexString(msg->content);
 
-        string mapString = "0012813e38023020304bda094cdcf8713d4dc41a118602dc0514f8396008a000001c000c3b33bd0075057982edb6f0d0282875567daaf1e4ff4028297a5587c813ec3d5ec85475d68b69241a000192088000c908200062c03340000038001d6e7b5888141436b4ade86e756f58dc8cd831c175b64386eb8c4722270d0e544eea5e455c9004fb12422000212044001090640008180442000002000016c415f68141436009f70b0155000000e000819dc643e337bd0186802a6b8d7313d81ad1eb083606d6416cc7a2001414b4e3ce4c0a0a5a66622c05052d0ecf690282892050000490420002484200010c03310000010000033fe4e1867549e08c0111000001000003b083835788f75281414580ee800000700008e3dd5e05cbd2b7c04fb0e61775f24824000224090001120c4000830110400000400000e77f5325c946b6604fb0";
+        // string mapString = "0012813e38023020304bda094cdcf8713d4dc41a118602dc0514f8396008a000001c000c3b33bd0075057982edb6f0d0282875567daaf1e4ff4028297a5587c813ec3d5ec85475d68b69241a000192088000c908200062c03340000038001d6e7b5888141436b4ade86e756f58dc8cd831c175b64386eb8c4722270d0e544eea5e455c9004fb12422000212044001090640008180442000002000016c415f68141436009f70b0155000000e000819dc643e337bd0186802a6b8d7313d81ad1eb083606d6416cc7a2001414b4e3ce4c0a0a5a66622c05052d0ecf690282892050000490420002484200010c03310000010000033fe4e1867549e08c0111000001000003b083835788f75281414580ee800000700008e3dd5e05cbd2b7c04fb0e61775f24824000224090001120c4000830110400000400000e77f5325c946b6604fb0";
 
         string mapJsonString = decoder.createJsonStringOfMapPayload(mapString);
 
@@ -96,4 +117,6 @@ void InboundMsgListener::inboundMsgCallback(const carma_driver_msgs::msg::ByteAr
     }
 
     decoderSocket.closeSocket();
+    
+    
 }

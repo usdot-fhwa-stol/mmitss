@@ -26,12 +26,11 @@ int main(int argc, char * argv[])
 {
     InboundMsgListener inListener;
     OutboundMsgListener outListener;
-
+    
     rclcpp::init(argc, argv);
-
     rclcpp::spin(std::make_shared<Subscriber>(inListener,outListener));
-
     rclcpp::shutdown();
+    
     return 0;
 }
 
