@@ -21,21 +21,17 @@ class Publisher : public rclcpp::Node
       
     }
     
-    
-  
     void timer_callback()
     {
-       Json::Value jsonObject_config;
+        Json::Value jsonObject_config;
         std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
         string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
         Json::CharReaderBuilder builder;
-        Json::Reader reader2;
-        reader2.parse(configJsonString.c_str(), jsonObject_config);
-        
-        std::cout<<jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()<<std::endl;
+        Json::Reader reader;
+        reader.parse(configJsonString.c_str(), jsonObject_config);
         UdpSocket encoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
         TransceiverEncoder encoder;
-        std::vector<uint8_t> encodedMsg;
+        
         char receiveBuffer[5120];
         const string LOCALHOST = jsonObject_config["HostIp"].asString();
         const int sourceDsrcDevicePort = jsonObject_config["PortNumber"]["DsrcImmediateForwarder"].asInt();
@@ -43,84 +39,62 @@ class Publisher : public rclcpp::Node
         int mapMsgCount{};
         string applicationPlatform = encoder.getApplicationPlatform();
         int msgType{};
-
         carma_driver_msgs::msg::ByteArray msg;
-
         encoderSocket.receiveData(receiveBuffer, sizeof(receiveBuffer));
         string receivedMsgString(receiveBuffer);
-        //if not a MAP message. Map messages are already UPER encooded, the other type are JSON
-        if(receivedMsgString.substr(0,4) != "0012")
-        {
-            
-            msgType = encoder.getMessageType(receivedMsgString);
-            
-
-            if (msgType == MsgEnum::DSRCmsgID_srm)
-            {
-
-                encodedMsg = encoder.SRMEncoder(receivedMsgString);
-                msg.message_type = "SRM";
-                msg.content = encodedMsg;
-                publisher_->publish(msg);
-
-                //ROS_INFO("%s", msg.message_type);
-                //ROS_INFO("%u", msg.content);
-
-                //cout << "[" << fixed << showpoint << setprecision(2) << currentTime << "] Encoded SRM and sent to RSU" << endl;
-            }
-
-            else if (msgType == MsgEnum::DSRCmsgID_spat)
-            {
-                encodedMsg = encoder.SPaTEncoder(receivedMsgString);
-                msg.message_type = "SPAT";
-                msg.content = encodedMsg;
-                publisher_->publish(msg);                
-                //cout << "[" << fixed << showpoint << setprecision(2) << currentTime << "] Encoded SPAT and sent to RSU" << endl;
-            }
-
-            else if (msgType == MsgEnum::DSRCmsgID_ssm)
-            {
-                encodedMsg = encoder.SSMEncoder(receivedMsgString);
-                msg.message_type = "SSM";
-                msg.content = encodedMsg;
-                publisher_->publish(msg);
-                //cout << "[" << fixed << showpoint << setprecision(2) << currentTime << "] Encoded SSM and sent to RSU" << endl;
-            }
-
-        }
-        else
-        {
-            //msgToRsu = rsuMsgPacket.getMsgPacket(receivedMsgString);
-
-            msg.message_type = "MAP";
-            msg.content = encodedMsg;
-            publisher_->publish(msg);
-
-            //cout << "[" << fixed << showpoint << setprecision(2) << currentTime << "] Sent MAP to RSU" << endl;
-            mapMsgCount = mapMsgCount + 1;
-        }
+        msgType = evalMessageType(receivedMsgString,msgType);
+        msg = encodeMsg(receivedMsgString,msgType,msg);
+        publisher_->publish(msg);
+        
         if (encoder.sendSystemPerformanceDataLog()== true)
         {
-            if (applicationPlatform == "roadside")
-            {
-                encoder.setMapMsgCount(mapMsgCount);
-                encoderSocket.sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SSM"));
-                encoderSocket.sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("MAP"));
-                encoderSocket.sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SPaT"));
-                mapMsgCount = 0;
-            }
-
-            else if (applicationPlatform == "vehicle")
+        
+            if (applicationPlatform == "vehicle")
             {
                 encoderSocket.sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SRM"));
             }
         }
 
-        if (encoder.sendSystemPerformanceDataLog() == true)
-            encoderSocket.sendData(LOCALHOST, static_cast<short unsigned int>(dataCollectorPortNo), encoder.createJsonStringForSystemPerformanceDataLog("SRM"));
         encoderSocket.closeSocket();
     }
-        
+
+    int evalMessageType(std::string receivedMsgString, int msgType)
+    {
+        TransceiverEncoder encoder;
+        msgType = encoder.getMessageType(receivedMsgString);
+        return msgType;
+    }
+    carma_driver_msgs::msg::ByteArray encodeMsg(std::string receivedMsgString,int msgType,carma_driver_msgs::msg::ByteArray msg)
+    {
+        std::vector<uint8_t> encodedMsg;
+        TransceiverEncoder encoder;
+        if (msgType == MsgEnum::DSRCmsgID_srm)
+        {
+
+            encodedMsg = encoder.SRMEncoder(receivedMsgString);
+            msg.message_type = "SRM";
+            msg.content = encodedMsg;
+        }
+
+        else if (msgType == MsgEnum::DSRCmsgID_spat)
+        {
+            encodedMsg = encoder.SPaTEncoder(receivedMsgString);
+            msg.message_type = "SPAT";
+            msg.content = encodedMsg;
+        }
+
+        else if (msgType == MsgEnum::DSRCmsgID_ssm)
+        {
+            encodedMsg = encoder.SSMEncoder(receivedMsgString);
+            msg.message_type = "SSM";
+            msg.content = encodedMsg;
+        }
+
+        return msg;
+    }
+
+    
+
         //message.data = "Hello, world! " + std::to_string(count_++);
         //RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
         // publisher_->publish(message);
@@ -128,8 +102,6 @@ class Publisher : public rclcpp::Node
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<carma_driver_msgs::msg::ByteArray>::SharedPtr publisher_;
     
-    //Create Json related objects for local communication  
-  
 };
 
 

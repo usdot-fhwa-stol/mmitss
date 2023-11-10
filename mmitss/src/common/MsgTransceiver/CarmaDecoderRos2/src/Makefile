@@ -21,7 +21,7 @@ TARGET = M_CarmaMsgDecoder
 
 # list the .o's corresponding to .cpp's
 # see: https://www.gnu.org/software/make/manual/html_node/Text-Functions.html
-OBJECTS = $(patsubst %.cpp, %.o, $(SRC))
+OBJECTS = $(patsubst %.cpp, %.o,$(SRC))
 
 include $(MAKE_ROOT)/newrules.mk
 

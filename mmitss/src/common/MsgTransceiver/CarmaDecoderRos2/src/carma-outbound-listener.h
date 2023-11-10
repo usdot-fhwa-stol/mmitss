@@ -24,5 +24,8 @@ public:
     OutboundMsgListener();
     ~OutboundMsgListener();
     void outboundMsgCallback(const carma_driver_msgs::msg::ByteArray::SharedPtr msg);
+    std::string getIP(std::string msgType);
+    short unsigned int getPort(std::string msgType);
+    std::string decodeType(std::vector<uint8_t> msgContent,std::string msgType);
     
 };
