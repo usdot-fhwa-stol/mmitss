@@ -49,13 +49,9 @@ std::string OutboundMsgListener::getIP(std::string msgType)
     const string HMIControllerIP = jsonObject_config["HMIControllerIP"].asString();
     const string messageDistributorIP = jsonObject_config["MessageDistributorIP"].asString();
 
-    if (msgType == "MAP"||msgType=="SRM"||msgType == "SSM")
+    if (msgType == "MAP"||msgType=="SRM"||msgType == "SSM"||msgType =="BSM")
     { 
         return LOCALHOST;
-    }
-    else if (msgType =="BSM")
-    {
-        return HMIControllerIP;
     }
     
 }

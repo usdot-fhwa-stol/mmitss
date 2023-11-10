@@ -15,29 +15,26 @@ import datetime
 import time
 
 
-# def test_listenToRos():
-    
-#     rclpy.init()
-#     node = rclpy.create_node("list_nodes_example")
-#     try:
-#         subscribers = ros2node.api.get_subscriber_names_and_types_by_node("mmitss_carma_listener","")
-#         for pair in subscribers:
-#             if "/hardware_interface/comms/outbound_binary_msg" in pair[0]:
-#                 for msgType in pair[1]:
-#                     assert('carma_driver_msgs/msg/ByteArray'in msgType)
+def test_listenToRos():
+    try:    
+        rclpy.init()
+    except:
+        pass
+    node = rclpy.create_node("list_nodes_example")
+    try:
+        subscribers = ros2node.api.get_subscriber_names_and_types_by_node("mmitss_carma_listener","")
+        for pair in subscribers:
+            if "/hardware_interface/comms/outbound_binary_msg" in pair[0]:
+                for msgType in pair[1]:
+                    assert('carma_driver_msgs/msg/ByteArray'in msgType)
                 
-#     except:
-#         print("listener node not found")
-#     node.destroy_node()
-#     rclpy.shutdown()
+    except:
+        print("listener node not found")
+    node.destroy_node()
+    rclpy.shutdown()
 
 def test_countBsm():
-    #read Json with bsm
-    fileName = "bsm.json"
-    f = open(fileName, 'r')
-    data = f.read().encode() 
-    f.close()
-
+   
     #set bsmReceiver in the same port that the MMITSS-ROS2 Receiver sends the json formatted hostBSM 
 
     configFile = open("/nojournal/bin/mmitss-phase3-master-config.json", 'r')
@@ -51,26 +48,29 @@ def test_countBsm():
 
     #create ROS2 Byte Array message and broadcast 
     msg = ByteArray()
-    msg.content = data
+    msg.content = [0, 20, 37, 0, 29, 108, 103, 203, 144, 188, 166, 110, 65, 87, 158, 166, 245, 67, 136, 0, 127, 255, 255, 255, 143, 255, 240, 128, 253, 250, 31, 161, 0, 88, 39, 128, 0, 125, 15, 160]
     msg.message_type = "BSM"
     numMsgs = 5
     
     #initialize ROS2 and set up publisher
-    rclpy.init()
+    try:
+        #initialize roscore in case it is not initialized. 
+        rclpy.init()
+        
+    except:
+        pass
     node = rclpy.create_node("myPublisher")
     publisher = node.create_publisher(ByteArray,"/hardware_interface/comms/outbound_binary_msg",10)
     
     hostBSMReceived = 0
     for i in range(numMsgs):
         publisher.publish(msg)
-        # rclpy.spin_once(node)
-        print("here")
         data, address = s.recvfrom(10240)
         data = data.decode()
         receivedMessage = json.loads(data)
         hostBSMReceived +=1 
     assert(numMsgs == hostBSMReceived)
-print("here")
+
 test_countBsm()
 
 # def main():
