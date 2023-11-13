@@ -1,6 +1,7 @@
 import subprocess
 import threading
 from carma_driver_msgs.msg import ByteArray
+import select
 import socket
 import json
 import datetime
@@ -24,15 +25,15 @@ def test_countSRM():
     configFile.close()
 
     # initialize sockets for MAP and BSM broadcasting
-
     hostIp = config["HostIp"]
-    portBSM = config["PortNumber"]["PriorityRequestGenerator"]
+    portBSM = config["PortNumber"]["HostBsmDecoder"]
     socketBSM = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     socketBSM.bind((hostIp,portBSM))
     portMAP = config["PortNumber"]["MessageTransceiver"]["MessageDecoder"]
     socketMAP = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     socketMAP.bind((hostIp,portMAP))
-    communicationInfo = (hostIp, portBSM)
+    priorityRequestGeneratorPort = config["PortNumber"]["PriorityRequestGenerator"]
+    communicationInfo = (hostIp, priorityRequestGeneratorPort)
     
     # initialize sockets for SRM receiving
     portSRM = config["PortNumber"]["MessageTransceiver"]["MessageEncoder"]
@@ -56,24 +57,37 @@ def test_countSRM():
     bsmsInMap = 0
     SRMreceived = 0
 
+    #escape listening loop if after 2 seconds there is no message
+    timeout = 2 
+    
     for i in range(numberMAPs):
         #broadcast map and bsm messages
+        if time.time()-MAPSendingTime >= 1:
+            socketMAP.sendto(dataMAP,communicationInfo)
+            MAPSendingTime = time.time()
         if time.time()-bsmSendingTime >= 0.1:
             socketBSM.sendto(dataBSM,communicationInfo)
             bsmSendingTime = time.time()
             bsmsInMap += 1 
-        if time.time()-MAPSendingTime >= 1:
-            socketMAP.sendto(dataMAP,communicationInfo)
-            MAPSendingTime = time.time()
+        
         #receive generated SRMs 
-        try:
-            dataSRM, address = socketSRM.recvfrom(10240)
-            dataSRM = dataSRM.decode()
-            receivedMessage = json.loads(dataSRM)
-            SRMreceived += 1 
-    
+        readable, _, _ = select.select([socketSRM], [], [], timeout)
+        for s in readable: 
+            if s == socketSRM:
+                try:
+                    dataSRM, address = socketSRM.recvfrom(10240)
+                    dataSRM = dataSRM.decode()
+                    receivedMessage = json.loads(dataSRM)
+                    SRMreceived += 1 
+                
+                except:
+                    pass
     #evaluate if number of SRMs is the same as number of BSMs in map
-    assert(bsmsInMap == SRMreceived)
+    socketBSM.close()
+    socketMAP.close()
+    socketSRM.close()
+    assert bsmsInMap == SRMreceived
+    
 
 def test_countNoSRM():
      #set bsmReceiver in the same port that the MMITSS-ROS2 Receiver sends the json formatted hostBSM 
@@ -85,13 +99,14 @@ def test_countNoSRM():
     # initialize sockets for MAP and BSM broadcasting
 
     hostIp = config["HostIp"]
-    portBSM = config["PortNumber"]["PriorityRequestGenerator"]
+    portBSM = config["PortNumber"]["HostBsmDecoder"]
     socketBSM = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     socketBSM.bind((hostIp,portBSM))
     portMAP = config["PortNumber"]["MessageTransceiver"]["MessageDecoder"]
     socketMAP = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     socketMAP.bind((hostIp,portMAP))
-    communicationInfo = (hostIp, portBSM)
+    priorityRequestGeneratorPort = config["PortNumber"]["PriorityRequestGenerator"]
+    communicationInfo = (hostIp, priorityRequestGeneratorPort)
     
     # initialize sockets for SRM receiving
     portSRM = config["PortNumber"]["MessageTransceiver"]["MessageEncoder"]
@@ -102,9 +117,11 @@ def test_countNoSRM():
 
     fileName = "bsm.json"
     f = open(fileName,"r")
-    dataBSM = f.read()
+    dataBSM = f.read().encode()
+    dataBSM = json.loads(dataBSM)
     dataBSM["BasicVehicle"]["position"]["latitude_DecimalDegree"]=40
-    dataBSM=dataBSM.encode()
+    dataBSM = json.dumps(dataBSM).encode()
+
     f.close()
     fileName = "map.json"
     f = open(fileName,"r")
@@ -117,6 +134,9 @@ def test_countNoSRM():
     bsmsInMap = 0
     SRMreceived = 0
 
+    #escape listening loop if after 2 seconds there is no message
+    timeout = 2 
+
     for i in range(numberMAPs):
         #broadcast map and bsm messages
         if time.time()-bsmSendingTime >= 0.1:
@@ -126,17 +146,47 @@ def test_countNoSRM():
         if time.time()-MAPSendingTime >= 1:
             socketMAP.sendto(dataMAP,communicationInfo)
             MAPSendingTime = time.time()
-        #receive generated SRMs 
-        try:
-            dataSRM, address = socketSRM.recvfrom(10240)
-            dataSRM = dataSRM.decode()
-            receivedMessage = json.loads(dataSRM)
-            SRMreceived += 1 
-    
+         #receive generated SRMs 
+        readable, _, _ = select.select([socketSRM], [], [], timeout)
+        for s in readable: 
+            if s == socketSRM:
+                try:
+                    dataSRM, address = socketSRM.recvfrom(10240)
+                    dataSRM = dataSRM.decode()
+                    receivedMessage = json.loads(dataSRM)
+                    SRMreceived += 1 
+                
+                except:
+                    pass
     #evaluate if number of SRMs is the same as number of BSMs in map
     assert(0 == SRMreceived)
-
+# test_countNoSRM()
 def test_countSRMROS2():
+
+    #create a subscriber class that will store the accumulate the number of SRM messages received
+    class Subscriber:
+        def __init__(self):
+            self.SRMreceived = 0
+            self.node = rclpy.create_node("my_subscriber")
+            self.subscriber = self.node.create_subscription(
+                ByteArray,
+                "/hardware_interface/comms/outbound_binary_message",
+                self.callback,
+                10  # Set the queue size
+            )
+
+        def callback(self, msg):
+                # Callback function to process received messages
+                self.SRMreceived +=1
+
+        def spin(self):
+            # Spin the node to start processing callbacks
+            rclpy.spin_once(self.node)
+
+        def destroy_node(self):
+            # Cleanup when the node is shutting down
+            self.node.destroy_node()
+
 
     #set bsmReceiver in the same port that the MMITSS-ROS2 Receiver sends the json formatted hostBSM 
 
@@ -144,16 +194,16 @@ def test_countSRMROS2():
     config = (json.load(configFile))
     configFile.close()
 
-    # initialize sockets for MAP and BSM broadcasting
-
+   # initialize sockets for MAP and BSM broadcasting
     hostIp = config["HostIp"]
-    portBSM = config["PortNumber"]["PriorityRequestGenerator"]
+    portBSM = config["PortNumber"]["HostBsmDecoder"]
     socketBSM = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     socketBSM.bind((hostIp,portBSM))
     portMAP = config["PortNumber"]["MessageTransceiver"]["MessageDecoder"]
     socketMAP = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     socketMAP.bind((hostIp,portMAP))
-    communicationInfo = (hostIp, portBSM)
+    priorityRequestGeneratorPort = config["PortNumber"]["PriorityRequestGenerator"]
+    communicationInfo = (hostIp, priorityRequestGeneratorPort)
     
     
     #Obtain messages
@@ -173,45 +223,37 @@ def test_countSRMROS2():
     bsmsInMap = 0
     SRMreceived = 0
 
-    #create ROS2 node subscribing to SRM published topic
 
-    def callback(msg):
-        SRMreceived+=1
+
+
+    #create ROS2 node subscribing to SRM published topic
 
     try:
         rclpy.init()
     except:
         pass
-    node = rclpy.create_node('my_subscriber')
-
-    subscriber = node.create_subscription(
-        ByteArray,
-        "/hardware_interface/comms/outbound_binary_message",
-        callback,
-        10  # Set the queue size
-    )
-
+    subscriber = Subscriber()
     
-    
+   
     for i in range(numberMAPs):
         #broadcast map and bsm messages
+        if time.time()-MAPSendingTime >= 1:
+            socketMAP.sendto(dataMAP,communicationInfo)
+            MAPSendingTime = time.time()
+
         if time.time()-bsmSendingTime >= 0.1:
             socketBSM.sendto(dataBSM,communicationInfo)
             bsmSendingTime = time.time()
             bsmsInMap += 1 
-        if time.time()-MAPSendingTime >= 1:
-            socketMAP.sendto(dataMAP,communicationInfo)
-            MAPSendingTime = time.time()
-        #receive generated SRMs on ROS2 
-        try:
-            rclpy.spin(node)
-        except KeyboardInterrupt:
-            pass
+        
+    #receive generated SRMs on ROS2 
+    
+    subscriber.spin()
+    SRMreceived = subscriber.SRMreceived
+    subscriber.destroy_node()
+    rclpy.shutdown()            
+    assert(bsmsInMap == subscriber.SRMreceived)
 
-            
-    #evaluate if number of SRMs is the same as number of BSMs in map
-    assert(bsmsInMap == SRMreceived)
-
-    node.destroy_node()
-    rclpy.shutdown()
+        #evaluate if number of SRMs is the same as number of BSMs in map
+        
 
