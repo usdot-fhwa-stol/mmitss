@@ -1,7 +1,9 @@
 # CARMA-MMITSS TRANSCEIVER VEHICLE SIDE PROCESSOR TESTING
 
-Welcome to the vehicle side processor(VSP) CARMA-MMITSS testing. The unit testing of the different sub-components of the CARMA-MMITSS VSP system will be performed in an semi-automated fashion by means of testing scripts. The requirements for the testing are:
-    
+Welcome to the vehicle side processor(VSP) CARMA-MMITSS testing. The unit testing of the different sub-components of the CARMA-MMITSS VSP system will be performed in an semi-automated fashion by means of testing scripts. 
+
+### Requirements
+
     *cda-mmitss repository cloned
     *ros2 foxy
     *python 3
