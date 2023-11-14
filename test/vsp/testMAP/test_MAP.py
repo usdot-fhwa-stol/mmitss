@@ -13,25 +13,17 @@ import socket
 import json
 import datetime
 import time
+import select
 
 
 def test_listenToRos():
-    try:    
-        rclpy.init()
-    except:
-        pass
-    node = rclpy.create_node("list_nodes_example")
-    try:
-        subscribers = ros2node.api.get_subscriber_names_and_types_by_node("mmitss_carma_listener","")
-        for pair in subscribers:
-            if "/hardware_interface/comms/inbound_binary_msg" in pair[0]:
-                for msgType in pair[1]:
-                    assert('carma_driver_msgs/msg/ByteArray'in msgType)
-                
-    except:
-        print("listener node not found")
-    node.destroy_node()
-    rclpy.shutdown()
+    cmdCommand = 'source /opt/ros/foxy/setup.bash;ros2 node list'
+    nodeList = subprocess.run(cmdCommand,shell=True,capture_output=True)
+    nodeCondition="mmitss_carma_listener" in str(nodeList.stdout)
+    cmdCommand = 'source /opt/ros/foxy/setup.bash;ros2 topic list'
+    topicList = subprocess.run(cmdCommand,shell=True,capture_output=True)
+    topicCondition="/hardware_interface/comms/inbound_binary_msg" in str(topicList.stdout)
+    assert nodeCondition and topicCondition
 
 def test_countMAP():
    
@@ -43,8 +35,8 @@ def test_countMAP():
 
     hostIp = config["HostIp"]
     port = config["PortNumber"]["PriorityRequestGenerator"]
-    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    s.bind((hostIp,port))
+    socketMAP = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    socketMAP.bind((hostIp,port))
 
     #create ROS2 Byte Array message and broadcast 
     msg = ByteArray()
@@ -63,12 +55,24 @@ def test_countMAP():
     publisher = node.create_publisher(ByteArray,"/hardware_interface/comms/inbound_binary_msg",10)
     
     MAPReceived = 0
+
+    #escape listening loop if after 2 seconds there is no message
+    timeout = 2
+
     for i in range(numMsgs):
         publisher.publish(msg)
-        data, address = s.recvfrom(10240)
-        data = data.decode()
-        receivedMessage = json.loads(data)
-        MAPReceived +=1 
+        readable, _, _ = select.select([socketMAP], [], [], timeout)
+        for s in readable: 
+            if s == socketMAP:
+                try:
+                    data, address = socketMAP.recvfrom(10240)
+                    data = data.decode()
+                    receivedMessage = json.loads(data)
+                    MAPReceived += 1 
+                
+                except:
+                    pass
+ 
     assert(numMsgs == MAPReceived)
 
 
