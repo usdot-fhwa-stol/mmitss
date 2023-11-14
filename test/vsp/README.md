@@ -2,14 +2,14 @@
 
 Welcome to the vehicle side processor(VSP) CARMA-MMITSS testing. The unit testing of the different sub-components of the CARMA-MMITSS VSP system will be performed in an semi-automated fashion by means of testing scripts. The requirements for the testing are:
     
-    -cda-mmitss repository cloned
-    -ros2 foxy
-    -python 3
-    -pytest
-    -carma-driver-msgs built
-    -priority request generator executable (M_PriorityRequestGenerator built and inside its respective folder (../../../mmitss/src/vsp/priority-request-generator)
-    -CARMA-MMITSS Encoder executable (M_CarmaMsgEncoder) built and inside its respective folder (../../../mmitss/src/common/MsgTransceiver/CarmaEncoderRos2/src)
-    -CARMA-MMITSS Decoder executable (M_CarmaMsgDecoder) built and inside its respective folder (../../../mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src)
+    *cda-mmitss repository cloned
+    *ros2 foxy
+    *python 3
+    *pytest
+    *carma-driver-msgs built
+    *priority request generator executable (M_PriorityRequestGenerator built and inside its respective folder (../../../mmitss/src/vsp/priority-request-generator)
+    *CARMA-MMITSS Encoder executable (M_CarmaMsgEncoder) built and inside its respective folder (../../../mmitss/src/common/MsgTransceiver/CarmaEncoderRos2/src)
+    *CARMA-MMITSS Decoder executable (M_CarmaMsgDecoder) built and inside its respective folder (../../../mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src)
 
 ## Testing hostBSM receiving from ROS2:
 
