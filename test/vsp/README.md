@@ -31,6 +31,7 @@ In order to test the generation and broadcasting of the SRM message, two bash sc
     cd testSRM
     ../../../mmitss/src/vsp/priority-request-generator/M_PriorityRequestGenerator
 In another terminal, run the test scripts
+    
     cd testSRM
     ./runTestSRM.sh
     ./runTestSRMROS.sh
