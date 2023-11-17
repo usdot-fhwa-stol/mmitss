@@ -1,0 +1,14 @@
+# import producer import *
+
+
+def test_MAP():
+
+    # producer = Producer()
+    fileName = "map.json"
+    f = open(fileName,"r")
+    dataMAP = f.read().encode()
+    f.close()
+    print(dataMAP)
+    # message = 
+    # assert()
+test_MAP
