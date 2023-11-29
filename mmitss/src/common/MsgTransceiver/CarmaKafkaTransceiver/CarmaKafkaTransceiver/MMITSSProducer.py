@@ -1,7 +1,7 @@
 from confluent_kafka import Producer,KafkaException
 import json
 import socket
-from datetime import datetime
+
 
 class MMITSSProducer(Producer):
     def __init__(self,kind):
@@ -67,23 +67,20 @@ class MMITSSProducer(Producer):
         self.close()
   
     def encodeSPaT(self,msg):
-        timestamp = datetime.fromtimestamp(msg["Timestamp_posix"])
-        year = timestamp.year
-        remainingMinutes = int((timestamp-year).total_seconds() / 60)
-        jsonObject = {"time_stamp":remainingMinutes,"name":"","intersections":[]}
-        
+        moy = msg["Spat"]["minuteOfYear"]
+        jsonObject = {"time_stamp":moy,"name":"","intersections":[]}
         id = msg["Spat"]["IntersectionState"]["intersectionID"]
         revision = msg["Spat"]["msgCnt"]
         status = msg["Spat"]["status"]
-        moy = 
-        states = []
-        maneuversAssistList = []
-        jsonObject["intersections"].append()
+        states = [{"signal_group":signal["phaseNo"],"state_time_speed":[{"event_state":signal["currState"],"timing":{"start_time":signal["startTime"],\
+                                                                                                                     "min_end_time":signal["minEndTime"]}}]} for signal in msg["Spat"]["phaseState"]]
+        jsonObject["intersections"].append(\
+            [{"id":id,"revision":revision,"status":status,"states":states}]
+        )
         
         jsonObject= json.dumps(jsonObject)
         msg = jsonObject
         
-
         return msg 
     
     def encodeSSM(self,msg):
