@@ -1,6 +1,7 @@
 from confluent_kafka import Consumer,KafkaException
 import BasicVehicle
-
+import json
+import socket
 
 class MMITSSConsumer(Consumer):
     def __init__(self,broker, groupId,kind):
@@ -23,7 +24,7 @@ class MMITSSConsumer(Consumer):
         configFile.close()
         return config
     
-    def subscribeTopics():
+    def subscribeTopics(self):
         # Read a config file into a json object:
         configFile = open("/nojournal/bin/kafkaConfig.json", 'r')
         config = (json.load(configFile))
@@ -55,21 +56,20 @@ class MMITSSConsumer(Consumer):
             self.close()
 
     def callback(self,msg):
-        hostIp = config["HostIp"]
+        hostIp = self.config["HostIp"]
+        port = self.config["PortNumber"]["MessageTransceiver"]["MessageDecoder"]
         if self.kind == "SRM":
-            port = config["PortNumber"]["PriorityRequestGenerator"]
-            receivingPort = config["PortNumber"]["MessageTransceiver"]["MessageEncoder"]
+            receivingPort = self.config["PortNumber"]["PriorityRequestServer"]
             msg = self.decodeSRM(msg)
-        elif kind == "BSM":
-            port = config["PortNumber"]["HostBsmDecoder"]
-            receivingPort = ["PortNumber"]["PriorityRequestGenerator"]
+        elif self.kind == "BSM":
+            receivingPort = ["PortNumber"]["TrajectoryAware"]
             msg = self.decodeBSM(msg)
 
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.bind((hostIp,port))
         communicationInfo = (hostIp, receivingPort)
         s.sendto(msg.encode(),communicationInfo)
-    
+        s.close()
     def decodeSRM(self, msg):
         return msg
 
