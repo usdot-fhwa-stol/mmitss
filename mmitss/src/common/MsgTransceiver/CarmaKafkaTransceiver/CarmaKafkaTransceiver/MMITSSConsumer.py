@@ -4,34 +4,44 @@ import json
 import socket
 
 class MMITSSConsumer(Consumer):
-    def __init__(self,broker, groupId,kind):
+    def __init__(self,kind,consumerConfigFilename=None,socketConfigFilename=None):
         # Configuration for the Kafka consumer
-        consumerConf = {
-            'bootstrap.servers': broker,
-            'group.id': groupId,
-            'auto.offset.reset': 'earliest',
-        }
+        consumerConf,topics = self.readConsumerConfig(consumerConfigFilename) 
         self.kind = kind
         # Initialize the base class (Consumer)
-        super().__init__(consumerConf)
-        self.config = self.readConfig()
-        self.subscribeTopics()
 
-    def readConfig(self):
+        super().__init__(consumerConf)
+        self.config = self.readSocketConfig(socketConfigFilename)
+        self.subscribe(topics)
+
+    def readSocketConfig(self,filename=None):
         # Read a config file into a json object:
-        configFile = open("/nojournal/bin/mmitss-phase3-master-config.json", 'r')
+        if filename is not None:
+            configFile = open(filename, 'r')
+        else:
+            configFile = open("/nojournal/bin/mmitss-phase3-master-config.json", 'r')
         config = (json.load(configFile))
         configFile.close()
         return config
     
-    def subscribeTopics(self):
+    def readConsumerConfig(self,filename=None):
         # Read a config file into a json object:
-        configFile = open("/nojournal/bin/kafkaConfig.json", 'r')
+        if filename is not None:
+            configFile = open(filename, 'r')
+        else:
+            configFile = open("/nojournal/bin/kafkaConfig.json", 'r')
         config = (json.load(configFile))
         configFile.close()
         topics = config["CONSUMER_TOPICS"][self.kind]
-        # Subscribe to the specified topics
-        self.subscribe(topics)
+        broker = config["BOOTSTRAP_SERVER"]
+        groupId = config["GROUP_ID"]
+        consumerConfig = {
+            'bootstrap.servers': broker,
+            'group.id': groupId,
+            'auto.offset.reset': 'earliest',
+        }
+        return consumerConfig,[topics]
+        
         
     def broadcastMsg(self):
 

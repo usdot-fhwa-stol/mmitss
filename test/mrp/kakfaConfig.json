@@ -1,6 +1,11 @@
 {
     "BOOTSTRAP_SERVER": "localhost:9092",
-    "PRODUCER_TOPIC": "test",
-    "CONSUMER_TOPIC": "test",
+    "PRODUCER_TOPICS": {
+        "SPaT":"modified_spat","SSM":"v2xhub_ssm_out"
+    },
+    "CONSUMER_TOPICS": {"BSM":"v2xhub_bsm_in","SRM":"v2xhub_srm_in"
+
+    },
     "GROUP_ID": "group_one"
+    
 }

@@ -4,6 +4,10 @@ import json
 import Spat
 
 
+#write documentation of this test:
+#test the SPaT message
+
+
 def test_SPaTCount():
 
     #read KafkaConfig file
