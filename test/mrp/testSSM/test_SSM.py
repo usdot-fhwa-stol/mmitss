@@ -9,13 +9,13 @@ import threading
 
 
 #write documentation of this test:
-#test the SPaT message
+#test the SSM message
 
-def test_SPaT():
+def test_SSM():
 
-    #Emulate Map-Spat-Broadcaster sender socket
+    #Emulate Priority Request Server sender socket
 
-    # Read a config file into a json object:
+   # Read a config file into a json object:
     configFile = open("/nojournal/bin/mmitss-phase3-master-config.json", 'r')
     config = (json.load(configFile))
     configFile.close()
@@ -28,19 +28,19 @@ def test_SPaT():
     # Read external clients config in json object:
     communicationInfo = (hostIp, config["PortNumber"]["MessageTransceiver"]["MessageEncoder"])
 
-    fileName = "spat.json"
+    fileName = "ssm.json"
     f = open(fileName, 'r')
-    spatData = f.read() 
+    ssmData = f.read() 
     f.close()   
 
     producerConfigFilename = "../kafkaConfig.json"
-    producer = MMITSSProducer("SPaT",producerConfigFilename = producerConfigFilename)
+    producer = MMITSSProducer("SSM",producerConfigFilename = producerConfigFilename)
     
     # Read a config file into a json object:
     configFile = open(producerConfigFilename, 'r')
     config = (json.load(configFile))
     configFile.close()
-    topics = config["PRODUCER_TOPICS"]['SPaT']
+    topics = config["PRODUCER_TOPICS"]['SSM']
     broker = config["BOOTSTRAP_SERVER"]
     groupId = config["GROUP_ID"]
     consumerConfig = {
@@ -52,7 +52,7 @@ def test_SPaT():
     consumer = Consumer(consumerConfig)
     consumer.subscribe(topics)
     
-    s.sendto(spatData.encode(),communicationInfo)
+    s.sendto(ssmData.encode(),communicationInfo)
     s.close()
     p1 = threading.Thread(producer.socketLoop())
     p2 = threading.Thread(consumer.poll(1.0))

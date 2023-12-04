@@ -4,40 +4,48 @@ import socket
 
 
 class MMITSSProducer(Producer):
-    def __init__(self,kind):
-        producerConf = {
-            'bootstrap.servers': self.bootstrap_servers,
-        }
+    def __init__(self,kind,consumerConfigFilename=None,socketConfigFilename=None):
+        # Configuration for the Kafka Producer
         self.kind = kind
-        super().__init__(producerConf)
-        self.config = self.readConfig()
+        producerConf,topics = self.readProducerConfig(consumerConfigFilename) 
+        self.topics = topics       
         
-    def readConfig(self):
-        # Read a config file into a json object:
-        configFile = open("/nojournal/bin/mmitss-phase3-master-config.json", 'r')
+        # Initialize the base class (Producer)
+
+        super().__init__(producerConf)
+        self.config = self.readSocketConfig(socketConfigFilename)
+        
+    def readSocketConfig(self,filename=None):
+        if filename == None:
+            # Read a config file into a json object:
+            configFile = open("/nojournal/bin/mmitss-phase3-master-config.json", 'r')
+        else:
+            configFile = open(filename, 'r')
         config = (json.load(configFile))
         configFile.close()
         return config
     
-    def socketLoop(self):
-        
-        #Define topic to publish to based on kind of producer
-        configFile = open("/nojournal/bin/kafkaConfig.json", 'r')
+    def readProducerConfig(self,filename=None):
+        if filename == None:
+            # Read a config file into a json object:
+            configFile = open("/nojournal/bin/kafkaConfig.json", 'r')
+        else:
+            configFile = open(filename, 'r')
         config = (json.load(configFile))
         configFile.close()
         topics = config["PRODUCER_TOPICS"][self.kind]
-
+        broker = config["BOOTSTRAP_SERVER"]
+        producerConfig = {
+            'bootstrap.servers': broker,
+        }   
+        return producerConfig,topics
+    
+    def socketLoop(self):
+        
+       
         # Configure socket:
         hostIp = self.config["HostIp"]
-        
-        if self.kind == "SSM":
-            receivingPort = self.config["PortNumber"]["PriorityRequestServer"]
-            msg = self.decodeSSM(msg)
-        elif self.kind == "SPaT":
-            clientsJson = json.load(open('/nojournal/bin/mmitss-data-external-clients.json','r'))
-            clientsSPaTJson = clientsJson["spat"]["json"]
-            receivingPort = clientsSPaTJson
-            msg = self.decodeBSM(msg)
+        receivingPort = self.config["PortNumber"]["MessageTransceiver"]["MessageEncoder"]
         
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.bind((hostIp,receivingPort))
@@ -48,12 +56,12 @@ class MMITSSProducer(Producer):
                 data, address = s.recvfrom(10240)
                 data = data.decode()
                 msg = json.loads(data)
-                if self.kind == "SSM":
-                    msg = self.encodeSSM(msg)
-                elif self.kind == "SPaT":
+                if msg["MsgType"] == "SPaT":
                     msg = self.encodeSPaT(msg)
+                elif msg["MsgType"] == "SSM":
+                    msg = self.encodeSSM(msg)
                 try:
-                    self.produce(topics, value=msg)
+                    self.produce(self.topics, value=msg)
                     self.flush()
                     
                 except KafkaException as e:

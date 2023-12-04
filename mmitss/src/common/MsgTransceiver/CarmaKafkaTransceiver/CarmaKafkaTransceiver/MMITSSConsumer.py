@@ -6,8 +6,9 @@ import socket
 class MMITSSConsumer(Consumer):
     def __init__(self,kind,consumerConfigFilename=None,socketConfigFilename=None):
         # Configuration for the Kafka consumer
-        consumerConf,topics = self.readConsumerConfig(consumerConfigFilename) 
         self.kind = kind
+        consumerConf,topics = self.readConsumerConfig(consumerConfigFilename) 
+        
         # Initialize the base class (Consumer)
 
         super().__init__(consumerConf)
