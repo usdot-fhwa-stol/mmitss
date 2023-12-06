@@ -14,7 +14,7 @@ def testSRM():
     # Mock the Kafka consumer to avoid actually sending messages
     consumerMock = mocker.patch('CarmaKafkaTransceiver.MMITSSProducer.MMITSSProducer')
     consumerInitArguments = {"kind":"SRM","consumerConfigFilename":"../kafkaConfig.json","socketConfigFilename":None}
-    consumer = MMITSSConsumer("SRM",consumerConfigFilename = "../kafkaConfig.json")
+    consumer = MMITSSConsumer("SRM",consumerConfigFilename = "../../../mmitss/config/carma-vehicle-sample/nojournal/bin/kafkaConfig.json",socketConfigFilename = "../../../mmitss/config/carma-vehicle-sample/nojournal/bin/mmitss-phase3-master-config.json")
     
     
     #create Kafka Producer message 

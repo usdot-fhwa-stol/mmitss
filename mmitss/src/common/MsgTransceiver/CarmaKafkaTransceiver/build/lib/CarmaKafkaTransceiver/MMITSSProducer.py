@@ -35,10 +35,8 @@ class MMITSSProducer(Producer):
         configFile.close()
         topics = config["PRODUCER_TOPICS"][self.kind]
         broker = config["BOOTSTRAP_SERVER"]
-        securityProtocol = config["SECURITY_PROTOCOL"]
         producerConfig = {
             'bootstrap.servers': broker,
-            'security.protocol': securityProtocol,
         }   
         return producerConfig,topics
     

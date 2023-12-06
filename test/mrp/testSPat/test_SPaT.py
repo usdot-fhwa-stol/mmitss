@@ -33,9 +33,9 @@ def test_SPaT():
     spatData = f.read() 
     f.close()   
 
-    producerConfigFilename = "../kafkaConfig.json"
-    producer = MMITSSProducer("SPaT",producerConfigFilename = producerConfigFilename)
     
+    producer = MMITSSProducer("SPaT",producerConfigFilename = "../../../mmitss/config/carma-vehicle-sample/nojournal/bin/kafkaConfig.json",socketConfigFilename = "../../../mmitss/config/carma-vehicle-sample/nojournal/bin/mmitss-phase3-master-config.json")
+    producerConfigFilename = "../../../mmitss/config/carma-vehicle-sample/nojournal/bin/kafkaConfig.json"
     # Read a config file into a json object:
     configFile = open(producerConfigFilename, 'r')
     config = (json.load(configFile))

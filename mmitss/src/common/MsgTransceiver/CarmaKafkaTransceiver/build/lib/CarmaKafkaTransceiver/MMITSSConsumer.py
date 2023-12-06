@@ -34,10 +34,8 @@ class MMITSSConsumer(Consumer):
         topics = config["CONSUMER_TOPICS"][self.kind]
         broker = config["BOOTSTRAP_SERVER"]
         groupId = config["GROUP_ID"]
-        securityProtocol = config["SECURITY_PROTOCOL"]
         consumerConfig = {
             'bootstrap.servers': broker,
-            'security.protocol': securityProtocol,
             'group.id': groupId,
             'auto.offset.reset': 'earliest',
         }

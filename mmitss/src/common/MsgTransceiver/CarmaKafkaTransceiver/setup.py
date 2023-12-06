@@ -4,6 +4,7 @@ setup(name="CarmaKafkaTransceiver",
         version='0.1.0',
         py_modules=["CarmaKafkaTransceiver"],
         description='CarmaKafkaTransceiver tools and classes',
+        package_dir={}
         author='Samuel Cornejo',
         author_email='samuelcornejo@arizona.edu',
         packages=find_packages(),  # Automatically discover and include all packages

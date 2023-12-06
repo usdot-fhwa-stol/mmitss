@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: CarmaKafkaTransceiver
+Version: 0.1.0
+Summary: CarmaKafkaTransceiver tools and classes
+Author: Samuel Cornejo
+Author-email: samuelcornejo@arizona.edu
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: confluent-kafka

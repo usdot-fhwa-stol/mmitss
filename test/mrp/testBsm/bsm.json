@@ -24,7 +24,7 @@
 		},
 		"elev" : "356",
 		"heading" : "28800",
-		"id" : "f03ad610", // hex encode BSM ID
+		"id" : "f03ad610",
 		"lat" : "389564281",
 		"long" : "-771500417",
 		"msg_count" : "117",

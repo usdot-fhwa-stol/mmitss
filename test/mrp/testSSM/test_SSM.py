@@ -34,8 +34,8 @@ def test_SSM():
     f.close()   
 
     producerConfigFilename = "../kafkaConfig.json"
-    producer = MMITSSProducer("SSM",producerConfigFilename = producerConfigFilename)
-    
+    producer = MMITSSProducer("SSM",producerConfigFilename = "../../../mmitss/config/carma-vehicle-sample/nojournal/bin/kafkaConfig.json",socketConfigFilename = "../../../mmitss/config/carma-vehicle-sample/nojournal/bin/mmitss-phase3-master-config.json")
+    producerConfigFilename = "../../../mmitss/config/carma-vehicle-sample/nojournal/bin/kafkaConfig.json"
     # Read a config file into a json object:
     configFile = open(producerConfigFilename, 'r')
     config = (json.load(configFile))

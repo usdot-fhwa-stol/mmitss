@@ -32,7 +32,7 @@ June 25, 2019
 
 """
 
-from src.common.Position3D import Position3D
+
 import json
 
 
@@ -75,36 +75,6 @@ class BasicVehicle():
         return self
 
 
-if __name__ == '__main__':
-    from src.common.Position3D import Position3D
-    # simple self test code
-    host_position = Position3D(32.1234567, -112.1234567, 723)
-    hostVehicle = BasicVehicle(1234, 0, host_position, 15.3, 92.8, "transit")
-    print(hostVehicle.temporaryID, hostVehicle.secMark_Second, hostVehicle.longitude_DecimalDegree, 
-        hostVehicle.latitude_DecimalDegree, hostVehicle.elevation_Meter, hostVehicle.speed_MeterPerSecond, hostVehicle.heading_Degree, 
-        hostVehicle.vehicleType)
-    basicVehicle_json = hostVehicle.BasicVehicle2json()
-    print(basicVehicle_json)
-
-    newPosition = Position3D(0,0,0)
-    newHostVehicle = BasicVehicle(0,0,newPosition,0,0,"passengerVehicle")
-    newHostVehicle = newHostVehicle.json2BasicVehicle(basicVehicle_json)
-    print(newHostVehicle.temporaryID, newHostVehicle.secMark_Second, newHostVehicle.longitude_DecimalDegree, 
-        newHostVehicle.latitude_DecimalDegree, newHostVehicle.elevation_Meter, newHostVehicle.speed_MeterPerSecond, newHostVehicle.heading_Degree, 
-        newHostVehicle.vehicleType)
-
-
-    #test to read a json basic vehicle file that Niraj created
-
-    # read file
-    with open('BasicVehicleTestOutput.json', 'r') as testfile:
-        data=testfile.read()
-    testPosition = Position3D(0,0,0)
-    testHostVehicle = BasicVehicle(0,0,testPosition, 0, 0, 'nullVehicle')
-    testHostVehicle = testHostVehicle.json2BasicVehicle(data)
-    print(testHostVehicle.temporaryID, testHostVehicle.secMark_Second, testHostVehicle.longitude_DecimalDegree, 
-        testHostVehicle.latitude_DecimalDegree, testHostVehicle.elevation_Meter, testHostVehicle.speed_MeterPerSecond, testHostVehicle.heading_Degree, 
-        testHostVehicle.vehicleType)
 
 
 
