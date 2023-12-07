@@ -1,4 +1,4 @@
-from CarmaKafkaTransceiver.MMITSSConsumer import *
+from MMITSSConsumer import *
 # \MITSSConsumer
 from confluent_kafka import Producer
 import json
@@ -21,7 +21,7 @@ def testBSM():
     
     
     #create Kafka Producer message 
-    producerConfig = {"bootstrap.servers":kafkaConfig["BOOTSTRAP_SERVER"],"security.protocol" : kafkaConfig["SECURITY_PROTOCOL"]}
+    producerConfig = {"bootstrap.servers":kafkaConfig["BOOTSTRAP_SERVER"]}
     producer = Producer(producerConfig)
     
     #read bsm json file
@@ -29,10 +29,12 @@ def testBSM():
     f = open(fileName,"r")
     dataBSM  = json.dumps(json.loads(f.read()))
     f.close()
+    
 
     #send message
 
     producer.produce(kafkaConfig["CONSUMER_TOPICS"]["BSM"],dataBSM)
+    
     producer.flush()
 
     #receive message and broadcast back to MMITSS
