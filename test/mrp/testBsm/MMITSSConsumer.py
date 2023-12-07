@@ -77,7 +77,8 @@ class MMITSSConsumer(Consumer):
             msg = self.decodeBSM(msg)
 
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.bind((hostIp,port))
+        s.bind((hostIp,21000))
+        # s.bind((hostIp,port))
         communicationInfo = (hostIp, receivingPort)
         s.sendto(msg.encode(),communicationInfo)
         s.close()
