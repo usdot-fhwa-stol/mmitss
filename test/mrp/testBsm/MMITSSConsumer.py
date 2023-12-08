@@ -42,11 +42,12 @@ class MMITSSConsumer(Consumer):
         return consumerConfig,[topics]
         
         
-    def broadcastMsg(self):
+    def broadcastMsg(self,debug=False):
 
         """
         Start consuming messages and invoke the callback for each message.
         """
+        messageCount = 0
         try:
             while True:
                 msg = self.poll(1.0)  # Poll for messages, with a timeout of 1 second
@@ -60,12 +61,14 @@ class MMITSSConsumer(Consumer):
                 
                 msg = json.loads(msg.value().decode("utf-8"))
                 self.callback(msg)
-
+                messageCount+=1
+                if debug==True:
+                    break
         except KeyboardInterrupt:
-            pass
+            print("print message count: ",messageCount)
         finally:
             self.close()
-
+        return messageCount
     def callback(self,msg):
         hostIp = self.config["HostIp"]
         port = self.config["PortNumber"]["MessageTransceiver"]["MessageDecoder"]
@@ -83,6 +86,7 @@ class MMITSSConsumer(Consumer):
         s.sendto(msg.encode(),communicationInfo)
         s.close()
     def decodeSRM(self, msg):
+        msg = json.dumps(msg)
         return msg
 
     def decodeBSM(self, msg):
