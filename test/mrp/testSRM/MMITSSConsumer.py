@@ -39,8 +39,7 @@ class MMITSSConsumer(Consumer):
         groupId = config["GROUP_ID"]
         consumerConfig = {
             'bootstrap.servers': broker,
-            'group.id': groupId,
-            'auto.offset.reset': 'earliest'
+            'group.id': groupId
 
         }
         return consumerConfig,[topics]

@@ -36,7 +36,7 @@ class MMITSSConsumer(Consumer):
         groupId = config["GROUP_ID"]
         consumerConfig = {
             'bootstrap.servers': broker,
-            'group.id': groupId,
+            'group.id': groupId
 
         }
         return consumerConfig,[topics]

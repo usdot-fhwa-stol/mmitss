@@ -3,7 +3,6 @@ from MMITSSConsumer import *
 from confluent_kafka import Producer
 import json
 import os
-from unittest.mock import MagicMock
 
 def testBSM():
     
@@ -12,8 +11,6 @@ def testBSM():
     f = open(fileName,"r")
     kafkaConfig  = json.loads(f.read())
     f.close()
-    
-    # Mock the Kafka consumer to avoid actually sending messages
     
     consumer = MMITSSConsumer("BSM",consumerConfigFilename = "kafkaConfig.json",socketConfigFilename = "mmitss-phase3-master-config.json")
     
