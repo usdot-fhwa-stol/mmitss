@@ -28,9 +28,11 @@ def test_SSM():
     topics = config["PRODUCER_TOPICS"]['SSM']
     broker = config["BOOTSTRAP_SERVER"]
     groupId = config["GROUP_ID"]['SSM']
+    autoOffsetReset = config["AUTO_OFFSET_RESET"]
     consumerConfig = {
         'bootstrap.servers': broker,
-        'group.id': groupId
+        'group.id': groupId,
+        'auto.offset.reset': autoOffsetReset
     }
 
     consumer = Consumer(consumerConfig)
@@ -58,7 +60,7 @@ def test_SSM():
 
     
   
-test_SSM()    
+
     
 
 

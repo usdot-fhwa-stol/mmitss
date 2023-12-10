@@ -7,6 +7,6 @@
 
     },
     "GROUP_ID": {"BSM":"bsm-group","SRM":"srm-group","SPaT":"spat-group","SSM":"ssm-group"},
-    "SECURITY_PROTOCOL" : "ssl"
-    
+    "SECURITY_PROTOCOL" : "ssl",
+    "AUTO_OFFSET_RESET": "earliest"
 }
