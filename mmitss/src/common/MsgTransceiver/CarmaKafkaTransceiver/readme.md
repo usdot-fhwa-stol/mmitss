@@ -20,4 +20,5 @@ This files can be found on the configuration folder of the cdammitss repository.
 ## Run
 Inside a python script:
 >import CarmaKafkaTransceiver
+>
 >CarmaKafkaTransceiver.main()
