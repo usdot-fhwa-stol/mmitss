@@ -37,10 +37,11 @@ class MMITSSConsumer(Consumer):
         topics = config["CONSUMER_TOPICS"][self.kind]
         broker = config["BOOTSTRAP_SERVER"]
         groupId = config["GROUP_ID"]
+        autoOffsetReset = config["AUTO_OFFSET_RESET"]
         consumerConfig = {
             'bootstrap.servers': broker,
-            'group.id': groupId
-
+            'group.id': groupId,
+            'auto.offset.reset': autoOffsetReset
         }
         return consumerConfig,[topics]
         
@@ -83,8 +84,7 @@ class MMITSSConsumer(Consumer):
             msg = self.decodeBSM(msg)
 
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.bind((hostIp,21000))
-        # s.bind((hostIp,port))
+        s.bind((hostIp,port))
         communicationInfo = (hostIp, receivingPort)
         s.sendto(msg.encode(),communicationInfo)
         s.close()

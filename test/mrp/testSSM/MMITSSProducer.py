@@ -58,7 +58,7 @@ class MMITSSProducer(Producer):
                 data, address = s.recvfrom(10240)
                 data = data.decode()
                 msg = json.loads(data)
-                if msg["MessageType"] == "SPaT":
+                if msg["MsgType"] == "SPaT":
                     msg = self.encodeSPaT(msg)
                 elif msg["MessageType"] == "SSM":
                     msg = self.encodeSSM(msg)

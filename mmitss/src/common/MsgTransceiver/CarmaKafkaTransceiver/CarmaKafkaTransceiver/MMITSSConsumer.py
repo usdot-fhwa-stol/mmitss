@@ -1,6 +1,8 @@
 from confluent_kafka import Consumer,KafkaException
 import json
 import socket
+import logging
+
 
 class MMITSSConsumer(Consumer):
     def __init__(self,kind,consumerConfigFilename=None,socketConfigFilename=None):
@@ -12,6 +14,7 @@ class MMITSSConsumer(Consumer):
         super().__init__(consumerConf)
         self.config = self.readSocketConfig(socketConfigFilename)
         self.subscribe(topics)
+        logging.basicConfig(level=logging.DEBUG)
 
     def readSocketConfig(self,filename=None):
         # Read a config file into a json object:
@@ -34,10 +37,11 @@ class MMITSSConsumer(Consumer):
         topics = config["CONSUMER_TOPICS"][self.kind]
         broker = config["BOOTSTRAP_SERVER"]
         groupId = config["GROUP_ID"]
+        autoOffsetReset = config["AUTO_OFFSET_RESET"]
         consumerConfig = {
             'bootstrap.servers': broker,
-            'group.id': groupId
-
+            'group.id': groupId,
+            'auto.offset.reset': autoOffsetReset
         }
         return consumerConfig,[topics]
         
@@ -80,8 +84,7 @@ class MMITSSConsumer(Consumer):
             msg = self.decodeBSM(msg)
 
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.bind((hostIp,21000))
-        # s.bind((hostIp,port))
+        s.bind((hostIp,port))
         communicationInfo = (hostIp, receivingPort)
         s.sendto(msg.encode(),communicationInfo)
         s.close()

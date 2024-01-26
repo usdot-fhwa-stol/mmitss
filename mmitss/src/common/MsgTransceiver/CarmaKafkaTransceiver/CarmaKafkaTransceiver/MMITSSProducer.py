@@ -4,10 +4,10 @@ import socket
 
 
 class MMITSSProducer(Producer):
-    def __init__(self,kind,consumerConfigFilename=None,socketConfigFilename=None):
+    def __init__(self,kind,producerConfigFilename=None,socketConfigFilename=None):
         # Configuration for the Kafka Producer
         self.kind = kind
-        producerConf,topics = self.readProducerConfig(consumerConfigFilename) 
+        producerConf,topics = self.readProducerConfig(producerConfigFilename) 
         self.topics = topics       
         
         # Initialize the base class (Producer)
@@ -41,7 +41,7 @@ class MMITSSProducer(Producer):
         }   
         return producerConfig,topics
     
-    def socketLoop(self):
+    def socketLoop(self,debug=False):
         
        
         # Configure socket:
@@ -52,6 +52,7 @@ class MMITSSProducer(Producer):
         s.bind((hostIp,receivingPort))
 
         #Wait for message in socket and publish to specific topic
+        messageCount = 0
         while True:
             try :
                 data, address = s.recvfrom(10240)
@@ -59,12 +60,14 @@ class MMITSSProducer(Producer):
                 msg = json.loads(data)
                 if msg["MsgType"] == "SPaT":
                     msg = self.encodeSPaT(msg)
-                elif msg["MsgType"] == "SSM":
+                elif msg["MessageType"] == "SSM":
                     msg = self.encodeSSM(msg)
                 try:
-                    self.produce(self.topics, value=msg)
+                    self.produce(self.topics, msg)
                     self.flush()
-                    
+                    messageCount+=1
+                    if debug == True:
+                        break
                 except KafkaException as e:
                     print(f"Error producing message: {e}")
             except:
@@ -73,7 +76,7 @@ class MMITSSProducer(Producer):
                 break
         
         s.close()
-        self.close()
+        
   
     def encodeSPaT(self,msg):
         moy = msg["Spat"]["minuteOfYear"]
@@ -93,5 +96,5 @@ class MMITSSProducer(Producer):
         return msg 
     
     def encodeSSM(self,msg):
-        
+        msg = json.dumps(msg)
         return msg 

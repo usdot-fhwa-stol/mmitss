@@ -27,7 +27,6 @@ def testBSM():
     
 
     #send message
-
     producer.produce(kafkaConfig["CONSUMER_TOPICS"]["BSM"],dataBSM)
     
     producer.flush()
