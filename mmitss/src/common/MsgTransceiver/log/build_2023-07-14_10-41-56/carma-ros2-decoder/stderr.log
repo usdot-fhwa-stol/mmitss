@@ -1,0 +1,26 @@
+In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-inbound-listener.cpp:1[m[K:
+[01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-inbound-listener.h:4:10:[m[K [01;31m[Kfatal error: [m[KUdpSocket.h: No such file or directory
+    4 | #include [01;31m[K"UdpSocket.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:63: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-transceiver-decoder.cpp:10:10:[m[K [01;31m[Kfatal error: [m[KAsnJ2735Lib.h: No such file or directory
+   10 | #include [01;31m[K"AsnJ2735Lib.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:102: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o] Error 1
+In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-outbound-listener.cpp:1[m[K:
+[01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-outbound-listener.h:3:10:[m[K [01;31m[Kfatal error: [m[KUdpSocket.h: No such file or directory
+    3 | #include [01;31m[K<UdpSocket.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:89: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-outbound-listener.cpp.o] Error 1
+In file included from [01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-msg-decoder.cpp:3[m[K:
+[01m[K/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/carma-outbound-listener.h:3:10:[m[K [01;31m[Kfatal error: [m[KUdpSocket.h: No such file or directory
+    3 | #include [01;31m[K<UdpSocket.h>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:76: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-msg-decoder.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/M_CarmaMsgDecoder.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

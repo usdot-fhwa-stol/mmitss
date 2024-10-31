@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/RollDetected.msg
+// generated code does not contain a copyright notice
+
+
+module j3224_v2x_msgs {
+  module msg {
+    module RollDetected_Constants {
+      const int16 MIN_ROLL_DETECTED = -14400;
+      const int16 MAX_ROLL_DETECTED = 14400;
+    };
+    @verbatim (language="comment", text=
+      " RollDetected.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct RollDetected {
+      @verbatim (language="comment", text=
+        " RollDetected ::= INTEGER (-14400..14400)" "\n"
+        "   -- LSB units of 0.0125 degrees (signed)" "\n"
+        "   -- range of -180 to 180 degrees")
+      int16 roll_detected;
+    };
+  };
+};

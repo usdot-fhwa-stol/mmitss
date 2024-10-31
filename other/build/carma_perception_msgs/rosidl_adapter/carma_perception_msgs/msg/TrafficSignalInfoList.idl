@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_perception_msgs/msg/TrafficSignalInfoList.msg
+// generated code does not contain a copyright notice
+
+#include "carma_perception_msgs/msg/TrafficSignalInfo.idl"
+
+module carma_perception_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " TrafficSignalInfoList.msg" "\n"
+      "" "\n"
+      " Message Format for UI's Traffic Signal Plugin" "\n"
+      " Returns the list of TrafficSignalInfo in order of distance, where the closest signal should come first." "\n"
+      "" "\n"
+      " @author Mae Fromm" "\n"
+      " @version 0.1")
+    struct TrafficSignalInfoList {
+      sequence<carma_perception_msgs::msg::TrafficSignalInfo> traffic_signal_info_list;
+    };
+  };
+};

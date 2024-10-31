@@ -1,0 +1,62 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/PlanTrajectory.srv
+// generated code does not contain a copyright notice
+
+#include "carma_planning_msgs/msg/ManeuverPlan.idl"
+#include "carma_planning_msgs/msg/TrajectoryPlan.idl"
+#include "carma_planning_msgs/msg/VehicleState.idl"
+#include "std_msgs/msg/Header.idl"
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " PlanTrajectory.srv" "\n"
+      "" "\n"
+      " Service used to request a trajectory plan from a plugin")
+    struct PlanTrajectory_Request {
+      @verbatim (language="comment", text=
+        "request" "\n"
+        " Header" "\n"
+        " Stamp for the header should match time that vehicle state was computed." "\n"
+        " This may be later than the maneuver_plan header and possibly in the future if multiple plan trajectory requests were sent for one maneuver plan")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " The starting state of the vehicle")
+      carma_planning_msgs::msg::VehicleState vehicle_state;
+
+      @verbatim (language="comment", text=
+        " The set of maneuvers to be executed")
+      carma_planning_msgs::msg::ManeuverPlan maneuver_plan;
+
+      @verbatim (language="comment", text=
+        " The initial trajectory plan to be modified")
+      carma_planning_msgs::msg::TrajectoryPlan initial_trajectory_plan;
+
+      @verbatim (language="comment", text=
+        " The index specifying the maneuver within the maneuver plan that a trajectory must be planned for")
+      uint16 maneuver_index_to_plan;
+    };
+    module PlanTrajectory_Response_Constants {
+      const uint8 MANEUVER_ABORTED = 0;
+      const uint8 MANEUVER_IN_PROGRESS = 1;
+      const uint8 MANEUVER_COMPLETE = 2;
+    };
+    struct PlanTrajectory_Response {
+      @verbatim (language="comment", text=
+        "response" "\n"
+        " The returned trajectory")
+      carma_planning_msgs::msg::TrajectoryPlan trajectory_plan;
+
+      @verbatim (language="comment", text=
+        " A set of array indexes which map to the maneuvers in the provided maneuver_plan" "\n"
+        " These indicate which maneuvers the returned trajectory is addressing")
+      sequence<uint8> related_maneuvers;
+
+      @verbatim (language="comment", text=
+        " A list of maneuver completion status which map 1-1 with the related_maneuvers array" "\n"
+        " Later maneuvers in this list should never be marked in complete unless the preceding maneuver is marked complete")
+      sequence<uint8> maneuver_status;
+    };
+  };
+};

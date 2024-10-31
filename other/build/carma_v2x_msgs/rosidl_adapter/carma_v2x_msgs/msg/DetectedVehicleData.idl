@@ -1,0 +1,80 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/DetectedVehicleData.msg
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/AngularVelocity.idl"
+#include "carma_v2x_msgs/msg/Attitude.idl"
+#include "carma_v2x_msgs/msg/VehicleHeight.idl"
+#include "carma_v2x_msgs/msg/VehicleSize.idl"
+#include "j2735_v2x_msgs/msg/BasicVehicleClass.idl"
+#include "j2735_v2x_msgs/msg/ExteriorLights.idl"
+#include "j3224_v2x_msgs/msg/AngularVelocityConfidence.idl"
+#include "j3224_v2x_msgs/msg/AttitudeConfidence.idl"
+#include "j3224_v2x_msgs/msg/ClassificationConfidence.idl"
+#include "j3224_v2x_msgs/msg/VehicleSizeConfidence.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    module DetectedVehicleData_Constants {
+      const uint16 HAS_LIGHTS = 1;
+      const uint16 HAS_VEH_ATTITUDE = 2;
+      const uint16 HAS_VEH_ATTITUDE_CONFIDENCE = 4;
+      const uint16 HAS_ANG_VEL = 8;
+      const uint16 HAS_ANG_VEL_CONFIDENCE = 16;
+      const uint16 HAS_SIZE = 32;
+      const uint16 HAS_HEIGHT = 64;
+      const uint16 HAS_VEHICLE_SIZE_CONFIDENCE = 128;
+      const uint16 HAS_VEHICLE_CLASS = 256;
+      const uint16 HAS_CLASS_CONF = 512;
+    };
+    @verbatim (language="comment", text=
+      " DetectedVehicleData.msg" "\n"
+      "" "\n"
+      " Modified J3224 2020 message format, adjusted to use base SI units (m,s, etc) in most case." "\n"
+      "" "\n"
+      " Parsed description of DetectedVehicleData from the SAE J3224 2020 specification." "\n"
+      " For further usage details consult the specification. See note on SI units above.")
+    struct DetectedVehicleData {
+      @verbatim (language="comment", text=
+        " DetectedVehicleData::= SEQUENCE {" "\n"
+        "    lights ExteriorLights OPTIONAL," "\n"
+        "    vehAttitude Attitude OPTIONAL," "\n"
+        "    vehAttitudeConfidence AttitudeConfidence OPTIONAL," "\n"
+        "    vehAngVel AngularVelocity OPTIONAL," "\n"
+        "    vehAngVelConfidence AngularVelocityConfidence OPTIONAL," "\n"
+        "    size VehicleSize OPTIONAL," "\n"
+        "    height VehicleHeight OPTIONAL," "\n"
+        "    vehicleSizeConfidence VehicleSizeConfidence OPTIONAL," "\n"
+        "    vehicleClass BasicVehicleClass OPTIONAL," "\n"
+        "    classConf ClassificationConfidence OPTIONAL," "\n"
+        "    ..." "\n"
+        " }" "\n"
+        " A BIT STRING defining the presence of optional fields." "\n"
+        " Compare with bitwise-and" "\n"
+        " if (presence_vector & HAS_LIGHTS) etc." "\n"
+        " Create with bitwise-or" "\n"
+        " presence_vector = presence_vector | HAS_LIGHTS")
+      uint16 presence_vector;
+
+      j2735_v2x_msgs::msg::ExteriorLights lights;
+
+      carma_v2x_msgs::msg::Attitude veh_attitude;
+
+      j3224_v2x_msgs::msg::AttitudeConfidence veh_attitude_confidence;
+
+      carma_v2x_msgs::msg::AngularVelocity veh_ang_vel;
+
+      j3224_v2x_msgs::msg::AngularVelocityConfidence veh_ang_vel_confidence;
+
+      carma_v2x_msgs::msg::VehicleSize size;
+
+      carma_v2x_msgs::msg::VehicleHeight height;
+
+      j3224_v2x_msgs::msg::VehicleSizeConfidence vehicle_size_confidence;
+
+      j2735_v2x_msgs::msg::BasicVehicleClass vehicle_class;
+
+      j3224_v2x_msgs::msg::ClassificationConfidence class_conf;
+    };
+  };
+};

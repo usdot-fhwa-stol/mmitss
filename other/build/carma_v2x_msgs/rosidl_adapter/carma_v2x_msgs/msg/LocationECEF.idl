@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/LocationECEF.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " LocationECEF.msg")
+    struct LocationECEF {
+      @verbatim (language="comment", text=
+        " This is used to describe a global location in" "\n"
+        " \"earth-centered, earth-fixed\" (ECEF) frame in centimeters." "\n"
+        " Location unavailable can be represented by (0, 0, 0)" "\n"
+        " X coordinate in ECEF frame" "\n"
+        " the range for this value is [-638363700, 638363700]")
+      int32 ecef_x;
+
+      @verbatim (language="comment", text=
+        " Y coordinate in ECEF frame" "\n"
+        " the range for this value is [-638363700, 638363700]")
+      int32 ecef_y;
+
+      @verbatim (language="comment", text=
+        " Z coordinate in ECEF frame" "\n"
+        " the range for this value is [-636225200, 636225200]")
+      int32 ecef_z;
+
+      @verbatim (language="comment", text=
+        " GPS timestamp in milliseconds")
+      uint64 timestamp;
+    };
+  };
+};

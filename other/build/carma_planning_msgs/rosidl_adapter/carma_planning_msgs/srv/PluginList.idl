@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/PluginList.srv
+// generated code does not contain a copyright notice
+
+#include "carma_planning_msgs/msg/Plugin.idl"
+#include "std_msgs/msg/Header.idl"
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " PluginList.srv" "\n"
+      "" "\n"
+      " Provided by the Guidance node. Returns a list of plugins depending on which" "\n"
+      " service is providing this message" "\n"
+      "" "\n"
+      " @author Kyle Rush" "\n"
+      " @version 0.1")
+    struct PluginList_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      " Response")
+    struct PluginList_Response {
+      @verbatim (language="comment", text=
+        " A list of available plugins")
+      std_msgs::msg::Header header;
+
+      sequence<carma_planning_msgs::msg::Plugin> plugins;
+    };
+  };
+};

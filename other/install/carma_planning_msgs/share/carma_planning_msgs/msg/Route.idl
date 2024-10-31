@@ -1,0 +1,55 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/Route.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/Header.idl"
+
+module carma_planning_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " Route Message" "\n"
+      "" "\n"
+      " This contains lanelet IDs of the route and the shortest path along with the end point in the route" "\n"
+      "" "\n"
+      " @author Shuwei Qiang" "\n"
+      " @version 0.1")
+    struct Route {
+      @verbatim (language="comment", text=
+        " Timestamp and frame_id of the map")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " The route filename")
+      string route_id;
+
+      @verbatim (language="comment", text=
+        " The version of current route, monotonically increasing integer starting at 1")
+      uint32 route_version;
+
+      @verbatim (language="comment", text=
+        " The map version used to generate this route")
+      uint32 map_version;
+
+      @verbatim (language="comment", text=
+        " Route name, for display purpose")
+      string route_name;
+
+      @verbatim (language="comment", text=
+        " Is new route after route invalidation")
+      boolean is_rerouted;
+
+      @verbatim (language="comment", text=
+        " LaneLet IDs of the route shortest path")
+      sequence<int64> shortest_path_lanelet_ids;
+
+      @verbatim (language="comment", text=
+        " LaneLet IDs of the whole route, including all lanelets in the shortest path")
+      sequence<int64> route_path_lanelet_ids;
+
+      @verbatim (language="comment", text=
+        " End point of the route in map frame. Must be on the last lanelet of the route.")
+      geometry_msgs::msg::Point end_point;
+    };
+  };
+};

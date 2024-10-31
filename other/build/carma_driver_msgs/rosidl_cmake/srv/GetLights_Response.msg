@@ -1,0 +1,3 @@
+
+
+carma_driver_msgs/LightBarStatus status

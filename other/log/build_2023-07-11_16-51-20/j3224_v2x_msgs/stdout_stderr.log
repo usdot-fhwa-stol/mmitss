@@ -1,0 +1,1069 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found carma_cmake_common: 0.1.0 (/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake)
+-- Found ros_environment: 2.5.1 (/opt/ros/foxy/share/ros_environment/cmake)
+-- Setting build type to Release as none was specified.
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Found ament_cmake_core: 0.9.12 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+-- Found PythonInterp: /home/mmitss/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+-- Found j2735_v2x_msgs: 1.0.0 (/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/cmake)
+-- Found PythonInterp: /home/mmitss/anaconda3/bin/python3 (found version "3.8.8") 
+-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /home/mmitss/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3.5") 
+-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+-- Found PythonLibs: /home/mmitss/anaconda3/lib/libpython3.8.so (found suitable version "3.8.8", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /home/mmitss/anaconda3/include/python3.8
+-- Using PYTHON_LIBRARIES: /home/mmitss/anaconda3/lib/libpython3.8.so
+-- Found PythonExtra: .so  
+-- Using numpy include directory: /home/mmitss/anaconda3/lib/python3.8/site-packages/numpy/core/include
+-- Configuring done
+CMake Warning at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:235 (add_library):
+  Cannot generate a safe runtime search path for target
+  j3224_v2x_msgs__rosidl_typesupport_fastrtps_c__pyext because files in some
+  directories may conflict with libraries in implicit directories:
+
+    runtime library [libssl.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+      /home/mmitss/anaconda3/lib
+    runtime library [libcrypto.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+      /home/mmitss/anaconda3/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+  CMakeLists.txt:40 (rosidl_generate_interfaces)
+
+
+-- Generating done
+-- Build files have been written to: /home/mmitss/Documents/cda-mmitss/other/build/j3224_v2x_msgs
+[35m[1mScanning dependencies of target j3224_v2x_msgs__cpp[0m
+[  0%] [34m[1mGenerating C code for ROS interfaces[0m
+[  0%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  0%] Built target j3224_v2x_msgs__cpp
+[  1%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[  2%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[  3%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[35m[1mScanning dependencies of target j3224_v2x_msgs__rosidl_generator_c[0m
+[  5%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__functions.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/angular_velocity__functions.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/attitude__functions.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/classification_confidence__functions.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/attitude_confidence__functions.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/detected_object_common_data__functions.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/detected_object_data__functions.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/detected_object_list__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/detected_object_optional_data__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/detected_obstacle_data__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/detected_vru_data__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/detected_vehicle_data__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/equipment_type__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/measurement_time_offset__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/object_distance__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/object_id__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/object_type__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/obstacle_size__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/pitch_detected__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/pitch_rate__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/position_offset_xyz__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/roll_detected__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/roll_rate__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/roll_rate_confidence__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/size_value_confidence__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/size_value__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_generator_c.dir/rosidl_generator_c/j3224_v2x_msgs/msg/detail/yaw_detected__functions.c.o[0m
+[ 15%] [32m[1mLinking C shared library libj3224_v2x_msgs__rosidl_generator_c.so[0m
+[ 15%] Built target j3224_v2x_msgs__rosidl_generator_c
+[ 16%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 17%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[35m[1mScanning dependencies of target j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/angular_velocity__type_support.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/attitude__type_support.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/angular_velocity_confidence__type_support.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/attitude_confidence__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target j3224_v2x_msgs__rosidl_typesupport_cpp[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/angular_velocity__type_support.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/classification_confidence__type_support.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/angular_velocity_confidence__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/detected_object_common_data__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target j3224_v2x_msgs__rosidl_typesupport_c[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/detected_object_data__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/angular_velocity__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/angular_velocity_confidence__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/attitude__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/attitude_confidence__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/classification_confidence__type_support.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/detected_object_common_data__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/attitude__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/attitude_confidence__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/detected_object_data__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/detected_object_list__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/detected_object_optional_data__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/detected_obstacle_data__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/detected_object_list__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/detected_vru_data__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/detected_vehicle_data__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target j3224_v2x_msgs__rosidl_typesupport_introspection_cpp[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/detected_object_optional_data__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/equipment_type__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/angular_velocity__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/measurement_time_offset__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/classification_confidence__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/detected_object_common_data__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/object_distance__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/object_id__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/object_type__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/obstacle_size__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/obstacle_size_confidence__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target j3224_v2x_msgs__rosidl_typesupport_introspection_c[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/pitch_detected__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/pitch_rate__type_support.cpp.o[0m
+[ 29%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/angular_velocity__type_support.c.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/pitch_rate_confidence__type_support.cpp.o[0m
+[ 31%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__type_support.c.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/position_offset_xyz__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/attitude__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/attitude_confidence__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/detected_object_data__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/roll_detected__type_support.cpp.o[0m
+[ 32%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/attitude__type_support.c.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/roll_rate__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/detected_object_list__type_support.cpp.o[0m
+[ 33%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/attitude_confidence__type_support.c.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/roll_rate_confidence__type_support.cpp.o[0m
+[ 34%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/classification_confidence__type_support.c.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/sensor_data_sharing_message__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/detected_object_optional_data__type_support.cpp.o[0m
+[ 36%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/detected_object_common_data__type_support.c.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/size_value__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/detected_obstacle_data__type_support.cpp.o[0m
+[ 36%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/detected_object_data__type_support.c.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/size_value_confidence__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/vehicle_size_confidence__type_support.cpp.o[0m
+[ 38%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/detected_object_list__type_support.c.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/j3224_v2x_msgs/msg/yaw_detected__type_support.cpp.o[0m
+[ 38%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/detected_object_optional_data__type_support.c.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/classification_confidence__type_support.cpp.o[0m
+[ 39%] [32m[1mLinking CXX shared library libj3224_v2x_msgs__rosidl_typesupport_c.so[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/detected_object_common_data__type_support.cpp.o[0m
+[ 39%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/detected_obstacle_data__type_support.c.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/detected_obstacle_data__type_support.cpp.o[0m
+[ 39%] Built target j3224_v2x_msgs__rosidl_typesupport_c
+[ 40%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/detected_vru_data__type_support.cpp.o[0m
+[ 41%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/detected_vru_data__type_support.c.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/detected_vehicle_data__type_support.cpp.o[0m
+[ 41%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/detected_vehicle_data__type_support.c.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/equipment_type__type_support.cpp.o[0m
+[ 42%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/equipment_type__type_support.c.o[0m
+[ 42%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/measurement_time_offset__type_support.c.o[0m
+[ 42%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/object_distance__type_support.c.o[0m
+[ 43%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/object_id__type_support.c.o[0m
+[ 43%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/object_type__type_support.c.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/detected_object_data__type_support.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/detected_vru_data__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/detected_object_list__type_support.cpp.o[0m
+[ 45%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/obstacle_size__type_support.c.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/measurement_time_offset__type_support.cpp.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__type_support.c.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/object_distance__type_support.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/object_id__type_support.cpp.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/pitch_detected__type_support.c.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/object_type__type_support.cpp.o[0m
+[ 49%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/pitch_rate__type_support.c.o[0m
+[ 49%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__type_support.c.o[0m
+[ 49%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/position_offset_xyz__type_support.c.o[0m
+[ 50%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/roll_detected__type_support.c.o[0m
+[ 50%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/roll_rate__type_support.c.o[0m
+[ 50%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/roll_rate_confidence__type_support.c.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/obstacle_size__type_support.cpp.o[0m
+[ 51%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__type_support.c.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/obstacle_size_confidence__type_support.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/detected_vehicle_data__type_support.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/detected_object_optional_data__type_support.cpp.o[0m
+[ 52%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/size_value__type_support.c.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/pitch_detected__type_support.cpp.o[0m
+[ 52%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/size_value_confidence__type_support.c.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/detected_obstacle_data__type_support.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/equipment_type__type_support.cpp.o[0m
+[ 53%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__type_support.c.o[0m
+[ 53%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/j3224_v2x_msgs/msg/detail/yaw_detected__type_support.c.o[0m
+[ 54%] [32m[1mLinking C shared library libj3224_v2x_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 54%] Built target j3224_v2x_msgs__rosidl_typesupport_introspection_c
+[ 55%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/measurement_time_offset__type_support.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/pitch_rate__type_support.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/pitch_rate_confidence__type_support.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/position_offset_xyz__type_support.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/detected_vru_data__type_support.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/detected_vehicle_data__type_support.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/object_distance__type_support.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/object_id__type_support.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/roll_detected__type_support.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/roll_rate__type_support.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/roll_rate_confidence__type_support.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/equipment_type__type_support.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/object_type__type_support.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/measurement_time_offset__type_support.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/sensor_data_sharing_message__type_support.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/obstacle_size__type_support.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/size_value__type_support.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/size_value_confidence__type_support.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/obstacle_size_confidence__type_support.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/object_distance__type_support.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/object_id__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/vehicle_size_confidence__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/pitch_detected__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/j3224_v2x_msgs/msg/yaw_detected__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/pitch_rate__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/object_type__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/obstacle_size__type_support.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/pitch_rate_confidence__type_support.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/position_offset_xyz__type_support.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/roll_detected__type_support.cpp.o[0m
+[ 65%] [32m[1mLinking CXX shared library libj3224_v2x_msgs__rosidl_typesupport_cpp.so[0m
+[ 65%] Built target j3224_v2x_msgs__rosidl_typesupport_cpp
+[ 66%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/roll_rate__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/pitch_detected__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/roll_rate_confidence__type_support.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/sensor_data_sharing_message__type_support.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/size_value__type_support.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/size_value_confidence__type_support.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/pitch_rate__type_support.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/vehicle_size_confidence__type_support.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__type_support.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/j3224_v2x_msgs/msg/detail/dds_fastrtps/yaw_detected__type_support.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/position_offset_xyz__type_support.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/roll_detected__type_support.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/roll_rate__type_support.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/roll_rate_confidence__type_support.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__type_support.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/size_value__type_support.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/size_value_confidence__type_support.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__type_support.cpp.o[0m
+[ 73%] [32m[1mLinking CXX shared library libj3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/j3224_v2x_msgs/msg/detail/yaw_detected__type_support.cpp.o[0m
+[ 73%] Built target j3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp
+[ 74%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 75%] [32m[1mLinking CXX shared library libj3224_v2x_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 75%] Built target j3224_v2x_msgs__rosidl_typesupport_introspection_cpp
+[35m[1mScanning dependencies of target j3224_v2x_msgs__rosidl_typesupport_fastrtps_c[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/attitude__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/angular_velocity__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/detected_object_common_data__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/attitude_confidence__type_support_c.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/classification_confidence__type_support_c.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/detected_object_data__type_support_c.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/detected_object_list__type_support_c.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/detected_obstacle_data__type_support_c.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/detected_object_optional_data__type_support_c.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/detected_vru_data__type_support_c.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/detected_vehicle_data__type_support_c.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/equipment_type__type_support_c.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/measurement_time_offset__type_support_c.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/object_distance__type_support_c.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/object_id__type_support_c.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/object_type__type_support_c.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/obstacle_size__type_support_c.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__type_support_c.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/pitch_detected__type_support_c.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/pitch_rate__type_support_c.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__type_support_c.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/position_offset_xyz__type_support_c.cpp.o[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/roll_detected__type_support_c.cpp.o[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/roll_rate__type_support_c.cpp.o[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/roll_rate_confidence__type_support_c.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__type_support_c.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/size_value__type_support_c.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/size_value_confidence__type_support_c.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__type_support_c.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/j3224_v2x_msgs/msg/detail/yaw_detected__type_support_c.cpp.o[0m
+[ 86%] [32m[1mLinking CXX shared library libj3224_v2x_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 86%] Built target j3224_v2x_msgs__rosidl_typesupport_fastrtps_c
+[35m[1mScanning dependencies of target j3224_v2x_msgs[0m
+[ 86%] Built target j3224_v2x_msgs
+[35m[1mScanning dependencies of target j3224_v2x_msgs__py[0m
+[ 86%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 86%] Built target j3224_v2x_msgs__py
+[35m[1mScanning dependencies of target j3224_v2x_msgs__python[0m
+[ 86%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_angular_velocity_confidence_s.c.o[0m
+[ 86%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_attitude_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_angular_velocity_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_attitude_confidence_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_classification_confidence_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_detected_object_common_data_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_detected_object_data_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_detected_object_list_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_detected_obstacle_data_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_detected_vru_data_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_detected_object_optional_data_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_detected_vehicle_data_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_equipment_type_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_measurement_time_offset_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_object_distance_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_object_id_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_object_type_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_obstacle_size_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_obstacle_size_confidence_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_pitch_detected_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_pitch_rate_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_pitch_rate_confidence_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_position_offset_xyz_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_roll_detected_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_roll_rate_s.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_roll_rate_confidence_s.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_sensor_data_sharing_message_s.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_size_value_s.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_vehicle_size_confidence_s.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_size_value_confidence_s.c.o[0m
+[ 98%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__python.dir/rosidl_generator_py/j3224_v2x_msgs/msg/_yaw_detected_s.c.o[0m
+[ 98%] [32m[1mLinking C shared library rosidl_generator_py/j3224_v2x_msgs/libj3224_v2x_msgs__python.so[0m
+[ 98%] Built target j3224_v2x_msgs__python
+[35m[1mScanning dependencies of target j3224_v2x_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[35m[1mScanning dependencies of target j3224_v2x_msgs__rosidl_typesupport_c__pyext[0m
+[35m[1mScanning dependencies of target j3224_v2x_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[ 99%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/j3224_v2x_msgs/_j3224_v2x_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 99%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/j3224_v2x_msgs/_j3224_v2x_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[100%] [32mBuilding C object CMakeFiles/j3224_v2x_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/j3224_v2x_msgs/_j3224_v2x_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/j3224_v2x_msgs/j3224_v2x_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/j3224_v2x_msgs/j3224_v2x_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking CXX shared library rosidl_generator_py/j3224_v2x_msgs/j3224_v2x_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[100%] Built target j3224_v2x_msgs__rosidl_typesupport_c__pyext
+[100%] Built target j3224_v2x_msgs__rosidl_typesupport_introspection_c__pyext
+[100%] Built target j3224_v2x_msgs__rosidl_typesupport_fastrtps_c__pyext
+-- Install configuration: "Release"
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/ament_index/resource_index/rosidl_interfaces/j3224_v2x_msgs
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/pitch_rate_confidence.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/attitude_confidence.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/measurement_time_offset.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_obstacle_data.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/position_offset_xyz.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/angular_velocity.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_vehicle_data.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/attitude.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/roll_rate_confidence.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/roll_rate.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/obstacle_size.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/vehicle_size_confidence.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/object_distance.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/sensor_data_sharing_message.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/classification_confidence.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/roll_detected.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/size_value_confidence.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_object_data.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_object_common_data.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/equipment_type.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/pitch_detected.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/pitch_rate.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/object_id.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/angular_velocity_confidence.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_vru_data.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/object_type.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_object_optional_data.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/yaw_detected.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/size_value.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/obstacle_size_confidence.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_object_list.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/environment/library_path.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/environment/library_path.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_generator_c.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/dds_fastrtps
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_c.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_vehicle_data.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_obstacle_data.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_vru_data.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_object_optional_data.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/object_id.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/sensor_data_sharing_message.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/object_type.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_object_list.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/obstacle_size.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_object_data.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/roll_rate.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/object_distance.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/position_offset_xyz.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/pitch_detected.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/attitude_confidence.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/pitch_rate_confidence.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/size_value.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/roll_detected.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/pitch_rate.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/vehicle_size_confidence.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/attitude.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/measurement_time_offset.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/yaw_detected.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/size_value_confidence.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detected_object_common_data.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/angular_velocity_confidence.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/roll_rate_confidence.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/equipment_type.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/classification_confidence.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/angular_velocity.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/obstacle_size_confidence.hpp
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__type_support.hpp
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/vehicle_size_confidence__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_list__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_obstacle_data__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vehicle_data__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_detected__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_common_data__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_id__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/measurement_time_offset__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude_confidence__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/sensor_data_sharing_message__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/attitude__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_optional_data__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/position_offset_xyz__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_type__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/object_distance__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/classification_confidence__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/pitch_rate_confidence__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_vru_data__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_rate_confidence__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/detected_object_data__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/yaw_detected__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/obstacle_size_confidence__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/roll_detected__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/size_value_confidence__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/equipment_type__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/include/j3224_v2x_msgs/msg/detail/angular_velocity_confidence__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__rosidl_typesupport_cpp.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/environment/pythonpath.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/environment/pythonpath.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/__init__.py
+Compiling '/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/__init__.py'...
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_size_value_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_object_type.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_object_list.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_roll_rate_confidence_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_roll_rate_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_attitude_confidence_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_object_distance_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_pitch_rate_confidence_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_attitude_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_object_type_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_pitch_rate_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_obstacle_size.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_equipment_type.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_measurement_time_offset_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_vehicle_size_confidence_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_pitch_detected_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_size_value_confidence_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_sensor_data_sharing_message.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_object_list_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_attitude.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_obstacle_size_confidence.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_vru_data.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_position_offset_xyz.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_equipment_type_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_roll_rate.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_roll_detected_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_angular_velocity_confidence.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_yaw_detected_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_classification_confidence.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_angular_velocity_confidence_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_obstacle_size_confidence_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_vehicle_data_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_object_optional_data_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_position_offset_xyz_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_object_id_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_classification_confidence_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_vehicle_size_confidence.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_angular_velocity.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_yaw_detected.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_roll_detected.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_object_common_data.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_sensor_data_sharing_message_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_obstacle_size_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_obstacle_data.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_size_value_confidence.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_vru_data_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_pitch_rate.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_pitch_detected.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_obstacle_data_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_object_data.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_pitch_rate_confidence.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_object_common_data_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_object_optional_data.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_attitude_confidence.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_size_value.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_roll_rate_confidence.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_measurement_time_offset.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_angular_velocity_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_object_distance.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_object_id.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/__init__.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_object_data_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/msg/_detected_vehicle_data.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/j3224_v2x_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/j3224_v2x_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/j3224_v2x_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/j3224_v2x_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/j3224_v2x_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages/j3224_v2x_msgs/j3224_v2x_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__python.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/libj3224_v2x_msgs__python.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/AngularVelocity.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/AngularVelocityConfidence.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/Attitude.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/AttitudeConfidence.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ClassificationConfidence.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedObjectCommonData.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedObjectData.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedObjectList.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedObjectOptionalData.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedObstacleData.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedVRUData.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedVehicleData.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/EquipmentType.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/MeasurementTimeOffset.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ObjectDistance.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ObjectID.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ObjectType.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ObstacleSize.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ObstacleSizeConfidence.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/PitchDetected.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/PitchRate.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/PitchRateConfidence.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/PositionOffsetXYZ.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/RollDetected.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/RollRate.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/RollRateConfidence.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/SensorDataSharingMessage.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/SizeValue.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/SizeValueConfidence.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/VehicleSizeConfidence.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/YawDetected.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/AngularVelocity.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/AngularVelocityConfidence.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/Attitude.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/AttitudeConfidence.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ClassificationConfidence.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedObjectCommonData.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedObjectData.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedObjectList.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedObjectOptionalData.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedObstacleData.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedVRUData.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/DetectedVehicleData.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/EquipmentType.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/MeasurementTimeOffset.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ObjectDistance.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ObjectID.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ObjectType.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ObstacleSize.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/ObstacleSizeConfidence.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/PitchDetected.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/PitchRate.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/PitchRateConfidence.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/PositionOffsetXYZ.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/RollDetected.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/RollRate.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/RollRateConfidence.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/SensorDataSharingMessage.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/SizeValue.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/SizeValueConfidence.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/VehicleSizeConfidence.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/msg/YawDetected.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/ament_index/resource_index/package_run_dependencies/j3224_v2x_msgs
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/ament_index/resource_index/parent_prefix_path/j3224_v2x_msgs
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/environment/ament_prefix_path.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/environment/ament_prefix_path.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/environment/path.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/environment/path.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/local_setup.bash
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/local_setup.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/local_setup.zsh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/local_setup.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/package.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/ament_index/resource_index/packages/j3224_v2x_msgs
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_generator_cExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_generator_cExport-release.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_typesupport_introspection_cExport-release.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_typesupport_cExport-release.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_typesupport_introspection_cppExport-release.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgs__rosidl_typesupport_cppExport-release.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/rosidl_cmake-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgsConfig.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/cmake/j3224_v2x_msgsConfig-version.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/package.xml
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/share/j3224_v2x_msgs/rule.yml

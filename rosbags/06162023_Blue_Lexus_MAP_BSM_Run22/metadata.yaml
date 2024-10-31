@@ -1,0 +1,33 @@
+rosbag2_bagfile_information:
+  compression_format: ''
+  compression_mode: ''
+  custom_data: {}
+  duration:
+    nanoseconds: 4656631302
+  files:
+  - duration:
+      nanoseconds: 4656631302
+    message_count: 48
+    path: 06162023_Blue_Lexus_MAP_BSM_Run22.db3
+    starting_time:
+      nanoseconds_since_epoch: 1686931847425158248
+  message_count: 48
+  relative_file_paths:
+  - 06162023_Blue_Lexus_MAP_BSM_Run22.db3
+  starting_time:
+    nanoseconds_since_epoch: 1686931847425158248
+  storage_identifier: sqlite3
+  topics_with_message_count:
+  - message_count: 47
+    topic_metadata:
+      name: /hardware_interface/comms/outbound_binary_msg
+      offered_qos_profiles: ''
+      serialization_format: cdr
+      type: carma_driver_msgs/msg/ByteArray
+  - message_count: 1
+    topic_metadata:
+      name: /hardware_interface/comms/inbound_binary_msg
+      offered_qos_profiles: ''
+      serialization_format: cdr
+      type: carma_driver_msgs/msg/ByteArray
+  version: 6

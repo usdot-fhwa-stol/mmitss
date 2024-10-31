@@ -1,0 +1,30 @@
+[0.043s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/mmitss/Documents/cda-mmitss/other/carma-msgs/j2735_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs
+[0.141s] -- The C compiler identification is GNU 9.4.0
+[0.235s] -- The CXX compiler identification is GNU 9.4.0
+[0.239s] -- Check for working C compiler: /usr/bin/cc
+[0.332s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.333s] -- Detecting C compiler ABI info
+[0.439s] -- Detecting C compiler ABI info - done
+[0.458s] -- Detecting C compile features
+[0.458s] -- Detecting C compile features - done
+[0.462s] -- Check for working CXX compiler: /usr/bin/c++
+[0.581s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.583s] -- Detecting CXX compiler ABI info
+[0.696s] -- Detecting CXX compiler ABI info - done
+[0.714s] -- Detecting CXX compile features
+[0.715s] -- Detecting CXX compile features - done
+[0.716s] -- Found carma_cmake_common: 0.1.0 (/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake)
+[0.717s] -- Found ros_environment: 2.5.1 (/opt/ros/foxy/share/ros_environment/cmake)
+[0.718s] Skipping build of j2735_msgs as only ROS 1 is supported. Detected version is ROS 2
+[0.718s] -- Configuring done
+[0.719s] -- Generating done
+[0.719s] CMake Warning:
+[0.719s]   Manually-specified variables were not used by the project:
+[0.720s] 
+[0.720s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[0.720s] 
+[0.720s] 
+[0.720s] -- Build files have been written to: /home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs
+[0.723s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs' returned '0': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/mmitss/Documents/cda-mmitss/other/carma-msgs/j2735_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs
+[0.727s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs -- -j8 -l8
+[0.785s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs' returned '0': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs -- -j8 -l8

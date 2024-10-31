@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/GetEmergencyRoute.srv
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " GetEmergencyRoute.srv" "\n"
+      "" "\n"
+      " Provided by the EmergencyResponseVehicle node. Call the service to receive the name of" "\n"
+      "   the node's current emergency route, if it was successfully loaded." "\n"
+      "   Responds with success boolean and name of loaded route." "\n"
+      "" "\n"
+      " @author Alex Frye" "\n"
+      " @version 0.1")
+    struct GetEmergencyRoute_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      " Response")
+    struct GetEmergencyRoute_Response {
+      @verbatim (language="comment", text=
+        " Success boolean")
+      boolean is_successful;
+
+      @verbatim (language="comment", text=
+        " Name of route selected")
+      string route_name;
+    };
+  };
+};

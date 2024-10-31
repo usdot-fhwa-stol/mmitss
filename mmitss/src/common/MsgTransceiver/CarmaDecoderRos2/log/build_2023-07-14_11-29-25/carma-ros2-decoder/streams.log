@@ -1,0 +1,145 @@
+[0.020s] Invoking command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder -- -j8 -l8
+[0.048s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.073s] -- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+[0.288s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[0.381s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.384s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.479s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.522s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.523s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.746s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.757s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.769s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.770s] -- Configured cppcheck include dirs: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/common;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../include/libj2735;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/asn1j2735/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/glpk/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/mapengine/include;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/net-snmp;/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/../../../../3rdparty/jsoncpp
+[0.770s] -- Configured cppcheck exclude dirs and/or files: 
+[0.781s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.782s] -- Configured cpplint exclude dirs and/or files: 
+[0.783s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.786s] -- Added test 'lint_cmake' to check CMake code style
+[0.788s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.799s] -- Added test 'uncrustify' to check C / C++ code style
+[0.799s] -- Configured uncrustify additional arguments: 
+[0.801s] -- Added test 'xmllint' to check XML markup files
+[0.804s] -- Configuring done
+[0.941s] -- Generating done
+[0.943s] -- Build files have been written to: /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder
+[0.991s] [ 20%] [32m[1mLinking CXX executable M_CarmaMsgDecoder[0m
+[1.568s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o: in function `InboundMsgListener::inboundMsgCallback(std::shared_ptr<carma_driver_msgs::msg::ByteArray_<std::allocator<void> > >)':
+[1.568s] carma-inbound-listener.cpp:(.text+0x568): undefined reference to `UdpSocket::UdpSocket(unsigned short)'
+[1.568s] /usr/bin/ld: carma-inbound-listener.cpp:(.text+0x6d3): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+[1.568s] /usr/bin/ld: carma-inbound-listener.cpp:(.text+0x7ee): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+[1.568s] /usr/bin/ld: carma-inbound-listener.cpp:(.text+0x8b1): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+[1.568s] /usr/bin/ld: carma-inbound-listener.cpp:(.text+0x937): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+[1.569s] /usr/bin/ld: carma-inbound-listener.cpp:(.text+0xa59): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+[1.569s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o:carma-inbound-listener.cpp:(.text+0xb83): more undefined references to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)' follow
+[1.569s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-inbound-listener.cpp.o: in function `InboundMsgListener::inboundMsgCallback(std::shared_ptr<carma_driver_msgs::msg::ByteArray_<std::allocator<void> > >)':
+[1.569s] carma-inbound-listener.cpp:(.text+0xfb8): undefined reference to `UdpSocket::closeSocket()'
+[1.569s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-outbound-listener.cpp.o: in function `OutboundMsgListener::outboundMsgCallback(std::shared_ptr<carma_driver_msgs::msg::ByteArray_<std::allocator<void> > >)':
+[1.569s] carma-outbound-listener.cpp:(.text+0x425): undefined reference to `UdpSocket::UdpSocket(unsigned short)'
+[1.570s] /usr/bin/ld: carma-outbound-listener.cpp:(.text+0x55a): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+[1.570s] /usr/bin/ld: carma-outbound-listener.cpp:(.text+0x5d9): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+[1.570s] /usr/bin/ld: carma-outbound-listener.cpp:(.text+0x6a2): undefined reference to `UdpSocket::sendData(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned short, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+[1.570s] /usr/bin/ld: carma-outbound-listener.cpp:(.text+0x6fc): undefined reference to `UdpSocket::closeSocket()'
+[1.570s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::createJsonStringOfMapPayload(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+[1.570s] carma-transceiver-decoder.cpp:(.text+0xc75): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[1.570s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xc8a): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.571s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xd12): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[1.571s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xd27): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.571s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xe3d): undefined reference to `LocAware::LocAware(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool)'
+[1.571s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xe5d): undefined reference to `LocAware::getIntersectionIdByName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const'
+[1.571s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xf0f): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.571s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xf62): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.571s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0xfb5): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.572s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1006): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.572s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1088): undefined reference to `LocAware::~LocAware()'
+[1.572s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::bsmDecoder[abi:cxx11](std::vector<unsigned char, std::allocator<unsigned char> >)':
+[1.572s] carma-transceiver-decoder.cpp:(.text+0x1431): undefined reference to `BasicVehicle::BasicVehicle()'
+[1.572s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x149a): undefined reference to `AsnJ2735Lib::decode_msgFrame(unsigned char const*, unsigned long, Frame_element_t&)'
+[1.573s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x14f1): undefined reference to `BasicVehicle::setTemporaryID(int)'
+[1.573s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x151e): undefined reference to `BasicVehicle::setSecMark_Second(double)'
+[1.573s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1586): undefined reference to `BasicVehicle::setPosition(double, double, double)'
+[1.573s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x15b9): undefined reference to `BasicVehicle::setSpeed_MeterPerSecond(double)'
+[1.573s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x15e0): undefined reference to `BasicVehicle::setHeading_Degree(double)'
+[1.573s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1625): undefined reference to `BasicVehicle::setType(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+[1.574s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1662): undefined reference to `BasicVehicle::setLength_cm(int)'
+[1.574s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1681): undefined reference to `BasicVehicle::setWidth_cm(int)'
+[1.574s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x169a): undefined reference to `BasicVehicle::basicVehicle2Json[abi:cxx11]()'
+[1.574s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x16fe): undefined reference to `BasicVehicle::~BasicVehicle()'
+[1.574s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1774): undefined reference to `BasicVehicle::~BasicVehicle()'
+[1.574s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::srmDecoder[abi:cxx11](std::vector<unsigned char, std::allocator<unsigned char> >)':
+[1.574s] carma-transceiver-decoder.cpp:(.text+0x17d9): undefined reference to `SignalRequest::SignalRequest()'
+[1.575s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1842): undefined reference to `AsnJ2735Lib::decode_msgFrame(unsigned char const*, unsigned long, Frame_element_t&)'
+[1.575s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x189b): undefined reference to `SignalRequest::setMsgCount(int)'
+[1.575s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x18b7): undefined reference to `SignalRequest::setMinuteOfYear(int)'
+[1.575s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x18d6): undefined reference to `SignalRequest::setMsOfMinute(int)'
+[1.575s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x18f5): undefined reference to `SignalRequest::setRegionalID(int)'
+[1.575s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1914): undefined reference to `SignalRequest::setIntersectionID(int)'
+[1.575s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1933): undefined reference to `SignalRequest::setRequestID(int)'
+[1.575s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1952): undefined reference to `SignalRequest::setPriorityRequestType(int)'
+[1.576s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x197f): undefined reference to `SignalRequest::setInBoundLaneIntersectionAccessPoint(int, int)'
+[1.576s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x19b6): undefined reference to `SignalRequest::setETA(int, int, int)'
+[1.576s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x19d3): undefined reference to `SignalRequest::setTemporaryVechileID(int)'
+[1.576s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x19f2): undefined reference to `SignalRequest::setBasicVehicleRole(int)'
+[1.576s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1a5a): undefined reference to `SignalRequest::setPosition(double, double, double)'
+[1.576s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1a81): undefined reference to `SignalRequest::setHeading_Degree(double)'
+[1.576s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1ab4): undefined reference to `SignalRequest::setSpeed_MeterPerSecond(double)'
+[1.576s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1acd): undefined reference to `SignalRequest::signalRequest2Json[abi:cxx11]()'
+[1.577s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1b14): undefined reference to `SignalRequest::~SignalRequest()'
+[1.577s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1b5a): undefined reference to `SignalRequest::~SignalRequest()'
+[1.577s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::ssmDecoder[abi:cxx11](std::vector<unsigned char, std::allocator<unsigned char> >)':
+[1.577s] carma-transceiver-decoder.cpp:(.text+0x1bbf): undefined reference to `SignalStatus::SignalStatus()'
+[1.577s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1c37): undefined reference to `AsnJ2735Lib::decode_msgFrame(unsigned char const*, unsigned long, Frame_element_t&)'
+[1.577s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1c8d): undefined reference to `SignalStatus::setMinuteOfYear(int)'
+[1.577s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1cac): undefined reference to `SignalStatus::setMsOfMinute(int)'
+[1.577s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1ccb): undefined reference to `SignalStatus::setSequenceNumber(int)'
+[1.577s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1cea): undefined reference to `SignalStatus::setUpdateCount(int)'
+[1.577s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1d09): undefined reference to `SignalStatus::setRegionalID(int)'
+[1.577s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1d28): undefined reference to `SignalStatus::setIntersectionID(int)'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1d4e): undefined reference to `SignalStatus::setNoOfRequest(int)'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1f86): undefined reference to `SignalStatus::setTemporaryVechileID(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x1fc7): undefined reference to `SignalStatus::setRequestID(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2008): undefined reference to `SignalStatus::setMsgCount(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2049): undefined reference to `SignalStatus::setBasicVehicleRole(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x208a): undefined reference to `SignalStatus::setInBoundLaneIntersectionAccessPoint(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x20cb): undefined reference to `SignalStatus::setETA(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x210c): undefined reference to `SignalStatus::setPriorityRequestStatus(std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2154): undefined reference to `SignalStatus::signalStatus2Json[abi:cxx11](std::vector<ActiveRequest, std::allocator<ActiveRequest> >)'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x21d6): undefined reference to `SignalStatus::~SignalStatus()'
+[1.578s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x22f8): undefined reference to `SignalStatus::~SignalStatus()'
+[1.578s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::spatDecoder[abi:cxx11](std::vector<unsigned char, std::allocator<unsigned char> >)':
+[1.579s] carma-transceiver-decoder.cpp:(.text+0x23b7): undefined reference to `AsnJ2735Lib::decode_msgFrame(unsigned char const*, unsigned long, Frame_element_t&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x246d): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2482): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x250a): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x251f): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x25a1): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x25bf): undefined reference to `getVerboseTimestamp[abi:cxx11]()'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2603): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2630): undefined reference to `getVerboseTimestamp[abi:cxx11]()'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2674): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x26f9): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x2770): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x27d8): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x283c): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.579s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o:carma-transceiver-decoder.cpp:(.text+0x28a4): more undefined references to `Json::Value::operator=(Json::Value&&)' follow
+[1.579s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o: in function `TransceiverDecoder::createJsonStringForSystemPerformanceDataLog(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+[1.579s] carma-transceiver-decoder.cpp:(.text+0x3a1f): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3a34): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.579s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3ab0): undefined reference to `Json::StreamWriterBuilder::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3ac5): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3b52): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3bbd): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3bd1): undefined reference to `getPosixTimestamp()'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c1a): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c35): undefined reference to `getVerboseTimestamp[abi:cxx11]()'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3c85): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3cf3): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3d80): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3ddf): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.580s] /usr/bin/ld: carma-transceiver-decoder.cpp:(.text+0x3e3e): undefined reference to `Json::Value::operator=(Json::Value&&)'
+[1.580s] /usr/bin/ld: CMakeFiles/M_CarmaMsgDecoder.dir/src/carma-transceiver-decoder.cpp.o:carma-transceiver-decoder.cpp:(.text+0x3ebf): more undefined references to `Json::Value::operator=(Json::Value&&)' follow
+[1.581s] collect2: error: ld returned 1 exit status
+[1.582s] make[2]: *** [CMakeFiles/M_CarmaMsgDecoder.dir/build.make:755: M_CarmaMsgDecoder] Error 1
+[1.582s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/M_CarmaMsgDecoder.dir/all] Error 2
+[1.582s] make: *** [Makefile:141: all] Error 2
+[1.584s] Invoked command in '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy:${CMAKE_PREFIX_PATH} CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build/carma-ros2-decoder -- -j8 -l8

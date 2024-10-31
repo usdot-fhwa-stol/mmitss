@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/AbortActiveRoute.srv
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " AbortActiveRoute.srv" "\n"
+      "" "\n"
+      " Service provided by RouteManager node. Aborts the currently active route." "\n"
+      " Returns an error message if no route is active" "\n"
+      "" "\n"
+      " @version 0.1")
+    struct AbortActiveRoute_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    module AbortActiveRoute_Response_Constants {
+      const uint8 NO_ERROR = 0;
+      const uint8 NO_ACTIVE_ROUTE = 1;
+    };
+    @verbatim (language="comment", text=
+      " Response" "\n"
+      " An enumeration representing a service execution error as defined in the route design document.")
+    struct AbortActiveRoute_Response {
+      uint8 error_status;
+    };
+  };
+};

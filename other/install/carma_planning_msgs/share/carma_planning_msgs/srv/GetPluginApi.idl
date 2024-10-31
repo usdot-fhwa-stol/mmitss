@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/GetPluginApi.srv
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " GetPluginApi.srv" "\n"
+      "" "\n"
+      " This is a service provided by plugin manager to output plugins' API" "\n"
+      " upon client request.")
+    struct GetPluginApi_Request {
+      @verbatim (language="comment", text=
+        " Request" "\n"
+        " A string of arguments that describes the capability it wants")
+      string capability;
+    };
+    struct GetPluginApi_Response {
+      @verbatim (language="comment", text=
+        " Response" "\n"
+        " The fully qualified ROS graph name of the plugin's service")
+      sequence<string> plan_service;
+    };
+  };
+};

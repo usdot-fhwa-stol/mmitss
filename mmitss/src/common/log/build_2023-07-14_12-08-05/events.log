@@ -1,0 +1,77 @@
+[0.000000] (-) TimerEvent: {}
+[0.000289] (-) JobUnselected: {'identifier': 'carma-ros2-encoder'}
+[0.000472] (carma-ros2-decoder) JobQueued: {'identifier': 'carma-ros2-decoder', 'dependencies': OrderedDict()}
+[0.000579] (carma-ros2-decoder) JobStarted: {'identifier': 'carma-ros2-decoder'}
+[0.011175] (carma-ros2-decoder) JobProgress: {'identifier': 'carma-ros2-decoder', 'progress': 'cmake'}
+[0.011594] (carma-ros2-decoder) Command: {'cmd': ['/usr/bin/cmake', '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoderRos2', '-DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/mmitss/src/common/install/carma-ros2-decoder'], 'cwd': '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/build/carma-ros2-decoder', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('QT_SCALE_FACTOR', '1'), ('LANGUAGE', 'en_US'), ('USER', 'mmitss'), ('MMITSS_NETWORK_ADAPTER', 'eno2'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '1785'), ('XDG_SESSION_TYPE', 'x11'), ('COMPIZ_CONFIG_PROFILE', 'mate'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ibm/ILOG/CPLEX_Studio221/cplex/lib/x86-64_linux:/opt/ibm/ILOG/CPLEX_Studio221/concert/lib/x86-64_linux'), ('QT4_IM_MODULE', 'ibus'), ('HOME', '/home/mmitss'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/MsgTransceiver/CarmaDecoder'), ('DESKTOP_SESSION', 'mate'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module:gail:atk-bridge:canberra-gtk-module'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('MIBS', 'ALL'), ('MANAGERPID', '1701'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=adaab56d5436905fe8f125cb64b0eeba'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('UBUNTU_MENUPROXY', '1'), ('MANDATORY_PATH', '/usr/share/gconf/mate.mandatory.path'), ('QT_QPA_PLATFORMTHEME', 'gtk2'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'mmitss'), ('WINDOWID', '50331654'), ('QT_AUTO_SCREEN_SCALE_FACTOR', '0'), ('JOURNAL_STREAM', '9:41105'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/mate.default.path'), ('TERM', 'xterm-256color'), ('GTK_OVERLAY_SCROLLING', '0'), ('XDG_SESSION_ID', 'c2'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/home/mmitss/anaconda3/bin:/home/mmitss/anaconda3/condabin:/home/mmitss/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/MFieldC:@/tmp/.ICE-unix/1713,unix/MFieldC:/tmp/.ICE-unix/1713'), ('GDM_LANG', 'en_US'), ('INVOCATION_ID', '1ad915cad06046d896e16f8258aac9f8'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('MMITSS_ROOT', '/home/mmitss/Documents/cda-mmitss/mmitss/build/scripts/../../..'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'MATE'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'mate'), ('XAUTHORITY', '/home/mmitss/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/mmitss'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/mmitss/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'mate'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '7'), ('PWD', '/home/mmitss/Documents/cda-mmitss/mmitss/src/common/build/carma-ros2-decoder'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-mate:/etc/xdg'), ('CONDA_EXE', '/home/mmitss/anaconda3/bin/conda'), ('PROCESSOR', 'x86'), ('CLUTTER_IM_MODULE', 'ibus'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=adaab56d5436905fe8f125cb64b0eeba'), ('XDG_DATA_DIRS', '/usr/share/mate:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('MATE_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('CONDA_PREFIX', '/home/mmitss/anaconda3'), ('CPATH', '/opt/ibm/ILOG/CPLEX_Studio221/cplex/include:/opt/ibm/ILOG/CPLEX_Studio221/concert/include'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.068425] (carma-ros2-decoder) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.099608] (-) TimerEvent: {}
+[0.116210] (carma-ros2-decoder) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.119943] (carma-ros2-decoder) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.179245] (carma-ros2-decoder) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.179982] (carma-ros2-decoder) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199699] (-) TimerEvent: {}
+[0.238541] (carma-ros2-decoder) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.250000] (carma-ros2-decoder) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.250300] (carma-ros2-decoder) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.253489] (carma-ros2-decoder) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.299838] (-) TimerEvent: {}
+[0.322267] (carma-ros2-decoder) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.323159] (carma-ros2-decoder) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.389325] (carma-ros2-decoder) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.399459] (carma-ros2-decoder) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.399907] (-) TimerEvent: {}
+[0.400090] (carma-ros2-decoder) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.401748] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.424559] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found PythonInterp: /home/mmitss/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3") \n'}
+[0.424849] (carma-ros2-decoder) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3\n'}
+[0.500038] (-) TimerEvent: {}
+[0.600420] (-) TimerEvent: {}
+[0.629868] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)\n'}
+[0.700515] (-) TimerEvent: {}
+[0.728292] (carma-ros2-decoder) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.734361] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.800610] (-) TimerEvent: {}
+[0.803981] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.822321] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[0.882017] (carma-ros2-decoder) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.900689] (-) TimerEvent: {}
+[0.931325] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.932760] (carma-ros2-decoder) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.933644] (carma-ros2-decoder) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.997834] (carma-ros2-decoder) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.998077] (carma-ros2-decoder) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.000759] (-) TimerEvent: {}
+[1.060659] (carma-ros2-decoder) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.060940] (carma-ros2-decoder) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.100864] (-) TimerEvent: {}
+[1.114406] (carma-ros2-decoder) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.114583] (carma-ros2-decoder) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.175623] (carma-ros2-decoder) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.176814] (carma-ros2-decoder) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.200972] (-) TimerEvent: {}
+[1.301220] (-) TimerEvent: {}
+[1.401513] (-) TimerEvent: {}
+[1.421728] (carma-ros2-decoder) StderrLine: {'line': b'CMake Error at CMakeLists.txt:27 (find_package):\n'}
+[1.421943] (carma-ros2-decoder) StderrLine: {'line': b'  By not providing "Findcarma_driver_msgs.cmake" in CMAKE_MODULE_PATH this\n'}
+[1.422015] (carma-ros2-decoder) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[1.422113] (carma-ros2-decoder) StderrLine: {'line': b'  "carma_driver_msgs", but CMake did not find one.\n'}
+[1.422187] (carma-ros2-decoder) StderrLine: {'line': b'\n'}
+[1.422249] (carma-ros2-decoder) StderrLine: {'line': b'  Could not find a package configuration file provided by "carma_driver_msgs"\n'}
+[1.422312] (carma-ros2-decoder) StderrLine: {'line': b'  with any of the following names:\n'}
+[1.422366] (carma-ros2-decoder) StderrLine: {'line': b'\n'}
+[1.422423] (carma-ros2-decoder) StderrLine: {'line': b'    carma_driver_msgsConfig.cmake\n'}
+[1.422482] (carma-ros2-decoder) StderrLine: {'line': b'    carma_driver_msgs-config.cmake\n'}
+[1.422534] (carma-ros2-decoder) StderrLine: {'line': b'\n'}
+[1.422586] (carma-ros2-decoder) StderrLine: {'line': b'  Add the installation prefix of "carma_driver_msgs" to CMAKE_PREFIX_PATH or\n'}
+[1.422639] (carma-ros2-decoder) StderrLine: {'line': b'  set "carma_driver_msgs_DIR" to a directory containing one of the above\n'}
+[1.422692] (carma-ros2-decoder) StderrLine: {'line': b'  files.  If "carma_driver_msgs" provides a separate development package or\n'}
+[1.422745] (carma-ros2-decoder) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[1.422798] (carma-ros2-decoder) StderrLine: {'line': b'\n'}
+[1.422851] (carma-ros2-decoder) StderrLine: {'line': b'\n'}
+[1.423340] (carma-ros2-decoder) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.423430] (carma-ros2-decoder) StdoutLine: {'line': b'See also "/home/mmitss/Documents/cda-mmitss/mmitss/src/common/build/carma-ros2-decoder/CMakeFiles/CMakeOutput.log".\n'}
+[1.423498] (carma-ros2-decoder) StdoutLine: {'line': b'See also "/home/mmitss/Documents/cda-mmitss/mmitss/src/common/build/carma-ros2-decoder/CMakeFiles/CMakeError.log".\n'}
+[1.429934] (carma-ros2-decoder) CommandEnded: {'returncode': 1}
+[1.457171] (carma-ros2-decoder) JobEnded: {'identifier': 'carma-ros2-decoder', 'rc': 1}
+[1.467678] (-) EventReactorShutdown: {}

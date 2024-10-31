@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_debug_ros2_msgs/msg/LaneletIdRegulatoryElementPair.msg
+// generated code does not contain a copyright notice
+
+#include "carma_debug_ros2_msgs/msg/RegulatoryElement.idl"
+
+module carma_debug_ros2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " LaneletIdRegulatoryElementPair.msg")
+    struct LaneletIdRegulatoryElementPair {
+      @verbatim (language="comment", text=
+        " This is a debug message used to reflect the data type std::pair<lanelet::Id, lanelet::RegulatoryElementPtr>" "\n"
+        " The id of the lanelet which the regulatory element will be applied to")
+      uint64 lanelet_id;
+
+      @verbatim (language="comment", text=
+        " The regulatory element to be added")
+      carma_debug_ros2_msgs::msg::RegulatoryElement element;
+    };
+  };
+};

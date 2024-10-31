@@ -1,0 +1,652 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found carma_cmake_common: 0.1.0 (/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake)
+-- Found ros_environment: 2.5.1 (/opt/ros/foxy/share/ros_environment/cmake)
+-- Setting build type to Release as none was specified.
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Found ament_cmake_core: 0.9.12 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+-- Found PythonInterp: /home/mmitss/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+-- Found carma_msgs: 1.0.0 (/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/cmake)
+-- Found PythonInterp: /home/mmitss/anaconda3/bin/python3 (found version "3.8.8") 
+-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /home/mmitss/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3.5") 
+-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+-- Found PythonLibs: /home/mmitss/anaconda3/lib/libpython3.8.so (found suitable version "3.8.8", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /home/mmitss/anaconda3/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /home/mmitss/anaconda3/include/python3.8
+-- Using PYTHON_LIBRARIES: /home/mmitss/anaconda3/lib/libpython3.8.so
+-- Found PythonExtra: .so  
+-- Using numpy include directory: /home/mmitss/anaconda3/lib/python3.8/site-packages/numpy/core/include
+-- Configuring done
+CMake Warning at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:235 (add_library):
+  Cannot generate a safe runtime search path for target
+  carma_driver_msgs__rosidl_typesupport_fastrtps_c__pyext because files in
+  some directories may conflict with libraries in implicit directories:
+
+    runtime library [libssl.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+      /home/mmitss/anaconda3/lib
+    runtime library [libcrypto.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+      /home/mmitss/anaconda3/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+  CMakeLists.txt:46 (rosidl_generate_interfaces)
+
+
+-- Generating done
+-- Build files have been written to: /home/mmitss/Documents/cda-mmitss/other/build/carma_driver_msgs
+[  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[35m[1mScanning dependencies of target carma_driver_msgs__cpp[0m
+[  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  1%] Built target carma_driver_msgs__cpp
+[  2%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[  2%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[  3%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[35m[1mScanning dependencies of target carma_driver_msgs__rosidl_generator_c[0m
+[  3%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/msg/detail/robot_enabled__functions.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/msg/detail/heading_stamped__functions.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/msg/detail/light_bar_status__functions.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/msg/detail/driver_status__functions.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/msg/detail/byte_array__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/msg/detail/trailer_angle__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/msg/detail/turn_signal__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/srv/detail/get_driver_api__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/srv/detail/get_driver_status__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/srv/detail/get_lights__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/srv/detail/send_message__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/srv/detail/set_enable_robotic__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/srv/detail/set_light_bar_indicator__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_generator_c.dir/rosidl_generator_c/carma_driver_msgs/srv/detail/set_lights__functions.c.o[0m
+[ 14%] [32m[1mLinking C shared library libcarma_driver_msgs__rosidl_generator_c.so[0m
+[ 14%] Built target carma_driver_msgs__rosidl_generator_c
+[ 15%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 16%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[35m[1mScanning dependencies of target carma_driver_msgs__rosidl_typesupport_introspection_cpp[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/msg/detail/byte_array__type_support.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/msg/detail/driver_status__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target carma_driver_msgs__rosidl_typesupport_cpp[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/msg/byte_array__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/msg/detail/light_bar_status__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/msg/detail/heading_stamped__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/msg/driver_status__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target carma_driver_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/msg/heading_stamped__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/msg/detail/robot_enabled__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/msg/detail/dds_fastrtps/byte_array__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/msg/detail/trailer_angle__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/msg/detail/turn_signal__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/msg/light_bar_status__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/srv/detail/get_driver_api__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/msg/robot_enabled__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/msg/turn_signal__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/msg/detail/dds_fastrtps/driver_status__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/msg/trailer_angle__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/msg/detail/dds_fastrtps/heading_stamped__type_support.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/srv/detail/get_driver_status__type_support.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/srv/get_driver_status__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/msg/detail/dds_fastrtps/light_bar_status__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target carma_driver_msgs__rosidl_typesupport_c[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/msg/byte_array__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/msg/driver_status__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/msg/heading_stamped__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/srv/get_driver_api__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/msg/light_bar_status__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/msg/robot_enabled__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/msg/trailer_angle__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/msg/turn_signal__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/srv/get_driver_api__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/srv/get_driver_status__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target carma_driver_msgs__rosidl_typesupport_introspection_c[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/srv/get_drivers_with_capabilities__type_support.cpp.o[0m
+[ 40%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/msg/detail/byte_array__type_support.c.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/srv/get_drivers_with_capabilities__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/srv/get_lights__type_support.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/srv/detail/get_lights__type_support.cpp.o[0m
+[ 42%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/msg/detail/driver_status__type_support.c.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/srv/send_message__type_support.cpp.o[0m
+[ 44%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/msg/detail/heading_stamped__type_support.c.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/srv/set_enable_robotic__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/msg/detail/dds_fastrtps/trailer_angle__type_support.cpp.o[0m
+[ 46%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/msg/detail/light_bar_status__type_support.c.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/srv/set_light_bar_indicator__type_support.cpp.o[0m
+[ 48%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/msg/detail/robot_enabled__type_support.c.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/carma_driver_msgs/srv/set_lights__type_support.cpp.o[0m
+[ 48%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/msg/detail/trailer_angle__type_support.c.o[0m
+[ 49%] [32m[1mLinking CXX shared library libcarma_driver_msgs__rosidl_typesupport_c.so[0m
+[ 50%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/msg/detail/turn_signal__type_support.c.o[0m
+[ 50%] Built target carma_driver_msgs__rosidl_typesupport_c
+[ 51%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/srv/detail/get_driver_api__type_support.c.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/srv/get_lights__type_support.cpp.o[0m
+[ 52%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/srv/detail/get_driver_status__type_support.c.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/srv/detail/send_message__type_support.cpp.o[0m
+[ 54%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__type_support.c.o[0m
+[ 55%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/srv/detail/get_lights__type_support.c.o[0m
+[ 55%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/srv/detail/send_message__type_support.c.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/srv/detail/set_enable_robotic__type_support.c.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/srv/detail/dds_fastrtps/get_driver_api__type_support.cpp.o[0m
+[ 58%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/srv/detail/set_light_bar_indicator__type_support.c.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/srv/send_message__type_support.cpp.o[0m
+[ 59%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/carma_driver_msgs/srv/detail/set_lights__type_support.c.o[0m
+[ 59%] [32m[1mLinking C shared library libcarma_driver_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/srv/detail/set_enable_robotic__type_support.cpp.o[0m
+[ 59%] Built target carma_driver_msgs__rosidl_typesupport_introspection_c
+[ 60%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/srv/set_enable_robotic__type_support.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/srv/detail/set_lights__type_support.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/srv/detail/dds_fastrtps/get_drivers_with_capabilities__type_support.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/srv/set_light_bar_indicator__type_support.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/srv/detail/dds_fastrtps/get_driver_status__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/carma_driver_msgs/srv/detail/set_light_bar_indicator__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_driver_msgs/srv/set_lights__type_support.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/srv/detail/dds_fastrtps/send_message__type_support.cpp.o[0m
+[ 66%] [32m[1mLinking CXX shared library libcarma_driver_msgs__rosidl_typesupport_cpp.so[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/srv/detail/dds_fastrtps/set_enable_robotic__type_support.cpp.o[0m
+[ 67%] [32m[1mLinking CXX shared library libcarma_driver_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 67%] Built target carma_driver_msgs__rosidl_typesupport_cpp
+[ 67%] Built target carma_driver_msgs__rosidl_typesupport_introspection_cpp
+[ 68%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/srv/detail/dds_fastrtps/set_lights__type_support.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/srv/detail/dds_fastrtps/set_light_bar_indicator__type_support.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/srv/detail/dds_fastrtps/get_lights__type_support.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/msg/detail/dds_fastrtps/turn_signal__type_support.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_driver_msgs/msg/detail/dds_fastrtps/robot_enabled__type_support.cpp.o[0m
+[ 72%] [32m[1mLinking CXX shared library libcarma_driver_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 72%] Built target carma_driver_msgs__rosidl_typesupport_fastrtps_cpp
+[ 73%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[35m[1mScanning dependencies of target carma_driver_msgs__rosidl_typesupport_fastrtps_c[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/msg/detail/heading_stamped__type_support_c.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/msg/detail/byte_array__type_support_c.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/msg/detail/driver_status__type_support_c.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/srv/detail/get_driver_api__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/msg/detail/turn_signal__type_support_c.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/srv/detail/get_driver_status__type_support_c.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__type_support_c.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/srv/detail/get_lights__type_support_c.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/srv/detail/send_message__type_support_c.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/msg/detail/trailer_angle__type_support_c.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/srv/detail/set_enable_robotic__type_support_c.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/srv/detail/set_light_bar_indicator__type_support_c.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/srv/detail/set_lights__type_support_c.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/msg/detail/robot_enabled__type_support_c.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/carma_driver_msgs/msg/detail/light_bar_status__type_support_c.cpp.o[0m
+[ 84%] [32m[1mLinking CXX shared library libcarma_driver_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 84%] Built target carma_driver_msgs__rosidl_typesupport_fastrtps_c
+[35m[1mScanning dependencies of target carma_driver_msgs[0m
+[ 84%] Built target carma_driver_msgs
+[35m[1mScanning dependencies of target carma_driver_msgs__py[0m
+[ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 85%] Built target carma_driver_msgs__py
+[35m[1mScanning dependencies of target carma_driver_msgs__python[0m
+[ 85%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/msg/_driver_status_s.c.o[0m
+[ 86%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/msg/_heading_stamped_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/msg/_byte_array_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/msg/_light_bar_status_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/srv/_get_driver_api_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/srv/_get_driver_status_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/srv/_get_drivers_with_capabilities_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/srv/_get_lights_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/srv/_send_message_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/srv/_set_light_bar_indicator_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/srv/_set_enable_robotic_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/srv/_set_lights_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/msg/_turn_signal_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/msg/_trailer_angle_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/carma_driver_msgs__python.dir/rosidl_generator_py/carma_driver_msgs/msg/_robot_enabled_s.c.o[0m
+[ 96%] [32m[1mLinking C shared library rosidl_generator_py/carma_driver_msgs/libcarma_driver_msgs__python.so[0m
+[ 96%] Built target carma_driver_msgs__python
+[35m[1mScanning dependencies of target carma_driver_msgs__rosidl_typesupport_c__pyext[0m
+[35m[1mScanning dependencies of target carma_driver_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[35m[1mScanning dependencies of target carma_driver_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[ 97%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/carma_driver_msgs/_carma_driver_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[ 98%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/carma_driver_msgs/_carma_driver_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 99%] [32mBuilding C object CMakeFiles/carma_driver_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/carma_driver_msgs/_carma_driver_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 99%] [32m[1mLinking CXX shared library rosidl_generator_py/carma_driver_msgs/carma_driver_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 99%] Built target carma_driver_msgs__rosidl_typesupport_fastrtps_c__pyext
+[ 99%] [32m[1mLinking C shared library rosidl_generator_py/carma_driver_msgs/carma_driver_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 99%] Built target carma_driver_msgs__rosidl_typesupport_c__pyext
+[100%] [32m[1mLinking C shared library rosidl_generator_py/carma_driver_msgs/carma_driver_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[100%] Built target carma_driver_msgs__rosidl_typesupport_introspection_c__pyext
+-- Install configuration: "Release"
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/ament_index/resource_index/rosidl_interfaces/carma_driver_msgs
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/get_driver_status.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/send_message.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/get_drivers_with_capabilities.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/set_lights.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/set_enable_robotic.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/get_driver_api.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/get_lights.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/set_light_bar_indicator.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/turn_signal.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/driver_status.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/robot_enabled.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/light_bar_status.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/trailer_angle.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/heading_stamped.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__type_support.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__functions.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__functions.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__struct.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/byte_array.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/environment/library_path.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/environment/library_path.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_generator_c.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/dds_fastrtps
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/dds_fastrtps
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__type_support.c
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__type_support.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__rosidl_typesupport_introspection_c.h
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_c.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/get_drivers_with_capabilities.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/get_driver_api.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/set_enable_robotic.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/get_lights.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/set_lights.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/send_message.hpp
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/set_light_bar_indicator.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/get_driver_status.hpp
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/robot_enabled.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/light_bar_status.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/byte_array.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/heading_stamped.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/trailer_angle.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/driver_status.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/turn_signal.hpp
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__traits.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__struct.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__builder.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__type_support.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__builder.hpp
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_light_bar_indicator__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_drivers_with_capabilities__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/send_message__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_lights__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_lights__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/set_enable_robotic__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_status__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/srv/detail/get_driver_api__type_support.cpp
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg
+-- Up-to-date: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/byte_array__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/heading_stamped__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/light_bar_status__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/turn_signal__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/driver_status__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/robot_enabled__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/include/carma_driver_msgs/msg/detail/trailer_angle__type_support.cpp
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__rosidl_typesupport_cpp.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/environment/pythonpath.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/environment/pythonpath.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/__init__.py
+Compiling '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/__init__.py'...
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_byte_array.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_trailer_angle.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_heading_stamped.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_light_bar_status.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_heading_stamped_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_robot_enabled_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_driver_status_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_trailer_angle_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_turn_signal_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_turn_signal.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_byte_array_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_robot_enabled.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_light_bar_status_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/__init__.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/msg/_driver_status.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_set_enable_robotic_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_get_drivers_with_capabilities.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_get_driver_api.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_set_light_bar_indicator.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_get_driver_status_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_set_lights_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_set_enable_robotic.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_send_message_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_get_lights_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_get_lights.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_get_drivers_with_capabilities_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_get_driver_status.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_get_driver_api_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_send_message.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_set_lights.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/__init__.py
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/srv/_set_light_bar_indicator_s.c
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/carma_driver_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/carma_driver_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/carma_driver_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/carma_driver_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/carma_driver_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages/carma_driver_msgs/carma_driver_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__python.so
+-- Set runtime path of "/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/libcarma_driver_msgs__python.so" to ""
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/ByteArray.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/DriverStatus.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/HeadingStamped.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/LightBarStatus.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/RobotEnabled.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/TrailerAngle.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/TurnSignal.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriverApi.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriverStatus.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriversWithCapabilities.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetLights.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SendMessage.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetEnableRobotic.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetLightBarIndicator.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetLights.idl
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/ByteArray.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/DriverStatus.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/HeadingStamped.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/LightBarStatus.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/RobotEnabled.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/TrailerAngle.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/msg/TurnSignal.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriverApi.srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriverApi_Request.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriverApi_Response.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriverStatus.srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriverStatus_Request.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriverStatus_Response.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriversWithCapabilities.srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriversWithCapabilities_Request.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetDriversWithCapabilities_Response.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetLights.srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetLights_Request.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/GetLights_Response.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SendMessage.srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SendMessage_Request.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SendMessage_Response.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetEnableRobotic.srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetEnableRobotic_Request.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetEnableRobotic_Response.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetLightBarIndicator.srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetLightBarIndicator_Request.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetLightBarIndicator_Response.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetLights.srv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetLights_Request.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/srv/SetLights_Response.msg
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/ament_index/resource_index/package_run_dependencies/carma_driver_msgs
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/ament_index/resource_index/parent_prefix_path/carma_driver_msgs
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/environment/ament_prefix_path.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/environment/ament_prefix_path.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/environment/path.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/environment/path.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/local_setup.bash
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/local_setup.sh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/local_setup.zsh
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/local_setup.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.dsv
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/ament_index/resource_index/packages/carma_driver_msgs
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_generator_cExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_generator_cExport-release.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_typesupport_introspection_cExport-release.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_typesupport_cExport-release.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_typesupport_introspection_cppExport-release.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgs__rosidl_typesupport_cppExport-release.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/rosidl_cmake-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgsConfig.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/cmake/carma_driver_msgsConfig-version.cmake
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.xml
+-- Installing: /home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/rule.yml

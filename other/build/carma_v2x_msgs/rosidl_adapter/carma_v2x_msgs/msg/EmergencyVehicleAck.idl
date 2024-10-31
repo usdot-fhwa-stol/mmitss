@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/EmergencyVehicleAck.msg
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/MobilityHeader.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " EmergencyVehicleAck.msg")
+    struct EmergencyVehicleAck {
+      @verbatim (language="comment", text=
+        " This message is used by an emergency vehicle to acknowledge receipt of an" "\n"
+        " EmergencyVehicleResponse message from a carma-equipped vehicle" "\n"
+        " standard header for all mobility messages")
+      carma_v2x_msgs::msg::MobilityHeader m_header;
+
+      @verbatim (language="comment", text=
+        " True when the emergency vehicle has received the EmergencyVehicleResponse message. Currently this should never be false")
+      boolean acknowledgement;
+    };
+  };
+};

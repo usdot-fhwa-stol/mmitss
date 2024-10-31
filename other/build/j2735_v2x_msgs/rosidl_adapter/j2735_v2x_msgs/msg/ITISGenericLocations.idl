@@ -1,0 +1,113 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j2735_v2x_msgs/msg/ITISGenericLocations.msg
+// generated code does not contain a copyright notice
+
+
+module j2735_v2x_msgs {
+  module msg {
+    module ITISGenericLocations_Constants {
+      const uint16 ON_BRIDGES = 7937;
+      const uint16 IN_TUNNELS = 7938;
+      const uint16 ENTERING_OR_LEAVING_TUNNELS = 7939;
+      const uint16 ON_RAMPS = 7940;
+      const uint16 IN_ROAD_CONSTRUCTION_AREA = 7941;
+      const uint16 AROUND_A_CURVE = 7942;
+      const uint16 ON_CURVE = 8026;
+      const uint16 ON_TRACKS = 8009;
+      const uint16 IN_STREET = 8025;
+      const uint16 SHOULDER = 8027;
+      const uint16 ON_MINOR_ROADS = 7943;
+      const uint16 ADJACENT_TO_ROADWAY = 7945;
+      const uint16 ACROSS_TRACKS = 8024;
+      const uint16 ON_BEND = 7946;
+      const uint16 INTERSECTION = 8032;
+      const uint16 ENTIRE_INTERSECTION = 7947;
+      const uint16 IN_THE_MEDIAN = 7948;
+      const uint16 MOVED_TO_SIDE_OF_ROAD = 7949;
+      const uint16 MOVED_TO_SHOULDER = 7950;
+      const uint16 ON_THE_ROADWAY = 7951;
+      const uint16 DIP = 8010;
+      const uint16 TRAFFIC_CIRCLE = 8011;
+      const uint16 CROSSOVER = 8028;
+      const uint16 CROSS_ROAD = 8029;
+      const uint16 SIDE_ROAD = 8030;
+      const uint16 TO = 8014;
+      const uint16 BY = 8015;
+      const uint16 THROUGH = 8016;
+      const uint16 AREA_OF = 8017;
+      const uint16 UNDER = 8018;
+      const uint16 OVER = 8019;
+      const uint16 FROM = 8020;
+      const uint16 APPROACHING = 8021;
+      const uint16 ENTERING_AT = 8022;
+      const uint16 EXITING_AT = 8023;
+      const uint16 IN_SHADED_AREAS = 7952;
+      const uint16 IN_LOW_LYING_AREAS = 7953;
+      const uint16 IN_THE_DOWNTOWN_AREA = 7954;
+      const uint16 IN_THE_INNER_CITY_AREA = 7955;
+      const uint16 IN_PARTS = 7956;
+      const uint16 IN_SOME_PLACES = 7957;
+      const uint16 IN_THE_DITCH = 7958;
+      const uint16 IN_THE_VALLEY = 7959;
+      const uint16 ON_HILL_TOP = 7960;
+      const uint16 NEAR_THE_FOOTHILS = 7961;
+      const uint16 AT_HIGH_ALTITUDES = 7962;
+      const uint16 NEAR_THE_LAKE = 7963;
+      const uint16 NEAR_THE_SHORE = 7964;
+      const uint16 NEARBY_BASIN = 8008;
+      const uint16 OVER_THE_CREST_OF_A_HILL = 7965;
+      const uint16 OTHER_THAN_ON_THE_ROADWAY = 7966;
+      const uint16 NEAR_THE_BEACH = 7967;
+      const uint16 NEAR_BEACH_ACCESS_POINT = 7968;
+      const uint16 MOUNTAIN_PASS = 8006;
+      const uint16 LOWER_LEVEL = 7969;
+      const uint16 UPPER_LEVEL = 7970;
+      const uint16 AIRPORT = 7971;
+      const uint16 CONCOURSE = 7972;
+      const uint16 GATE = 7973;
+      const uint16 BAGGAGE_CLAIM = 7974;
+      const uint16 CUSTOMS_POINT = 7975;
+      const uint16 RESERVATION_CENTER = 8007;
+      const uint16 STATION = 7976;
+      const uint16 PLATFORM = 7977;
+      const uint16 DOCK = 7978;
+      const uint16 DEPOT = 7979;
+      const uint16 EV_CHARGING_POINT = 7980;
+      const uint16 INFORMATION_WELCOME_POINT = 7981;
+      const uint16 AT_REST_AREA = 7982;
+      const uint16 AT_SERVICE_AREA = 7983;
+      const uint16 AT_WEIGH_STATION = 7984;
+      const uint16 ROADSIDE_PARK = 8003;
+      const uint16 PICNIC_AREAS = 7985;
+      const uint16 REST_AREA = 7986;
+      const uint16 SERVICE_STATIONS = 7987;
+      const uint16 TOILETS = 7988;
+      const uint16 BUS_STOP = 8031;
+      const uint16 PARK_AND_RIDE_LOT = 8012;
+      const uint16 ON_THE_RIGHT = 7989;
+      const uint16 ON_THE_LEFT = 7990;
+      const uint16 IN_THE_CENTER = 7991;
+      const uint16 IN_THE_OPPOSITE_DIRECTION = 7992;
+      const uint16 CROSS_TRAFFIC = 7993;
+      const uint16 NORTHBOUND_TRAFFIC = 7994;
+      const uint16 EASTBOUND_TRAFFIC = 7995;
+      const uint16 SOUTHBOUND_TRAFFIC = 7996;
+      const uint16 WESTBOUND_TRAFFIC = 7997;
+      const uint16 NORTH = 7998;
+      const uint16 SOUTH = 7999;
+      const uint16 EAST = 8000;
+      const uint16 WEST = 8001;
+      const uint16 NORTHEAST = 8002;
+      const uint16 NORTHWEST = 8003;
+      const uint16 SOUTHEAST = 8004;
+      const uint16 SOUTHWEST = 8005;
+    };
+    @verbatim (language="comment", text=
+      " ITISGenericLocations.msg" "\n"
+      "" "\n"
+      " J2735 2016 message format.")
+    struct ITISGenericLocations {
+      uint16 generic_locations;
+    };
+  };
+};

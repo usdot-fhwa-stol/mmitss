@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/Trajectory.msg
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/LocationECEF.idl"
+#include "carma_v2x_msgs/msg/LocationOffsetECEF.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    module Trajectory_Constants {
+      const uint16 MAX_POINTS_IN_MESSAGE = 60;
+    };
+    @verbatim (language="comment", text=
+      " Trajectory.msg")
+    struct Trajectory {
+      @verbatim (language="comment", text=
+        " This message uses one start location in ECEF frame and a list of offset" "\n"
+        " points relative to X, Y and Z of start point to represent a trajectory." "\n"
+        " The time interval between each pair of points should be 0.1 seconds." "\n"
+        " start location in ECEF frame")
+      carma_v2x_msgs::msg::LocationECEF location;
+
+      @verbatim (language="comment", text=
+        " a list of offsets describing current trajectory" "\n"
+        " TODO: document the units of measure!")
+      sequence<carma_v2x_msgs::msg::LocationOffsetECEF> offsets;
+    };
+  };
+};

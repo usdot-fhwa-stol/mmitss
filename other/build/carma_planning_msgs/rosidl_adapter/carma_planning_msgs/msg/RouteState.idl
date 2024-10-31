@@ -1,0 +1,57 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/RouteState.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module carma_planning_msgs {
+  module msg {
+    module RouteState_Constants {
+      const uint8 LOADING = 0;
+      const uint8 SELECTION = 1;
+      const uint8 ROUTING = 2;
+      const uint8 FOLLOWING = 3;
+    };
+    @verbatim (language="comment", text=
+      " RouteState.msg" "\n"
+      "" "\n"
+      " State of route progress including orthogonal distance from" "\n"
+      " vehicle to current lanelet center line, parametric distance along" "\n"
+      " route, completion status, and the length of the route" "\n"
+      " provided in various metrics" "\n"
+      "" "\n"
+      " @author Michael McConnell" "\n"
+      " @version 0.1")
+    struct RouteState {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " The route id for which this message applies")
+      string route_id;
+
+      @verbatim (language="comment", text=
+        " Enum denoting the state of the route following")
+      uint8 state;
+
+      @verbatim (language="comment", text=
+        " Cross-track distance of vehicle along route in meters")
+      double cross_track;
+
+      @verbatim (language="comment", text=
+        " Down-track distance of vehicle along route in meters")
+      double down_track;
+
+      @verbatim (language="comment", text=
+        " Down-track distance of vehicle along the current lanelet in meters")
+      double lanelet_downtrack;
+
+      @verbatim (language="comment", text=
+        " Current host vehicle lane index")
+      int64 lanelet_id;
+
+      @verbatim (language="comment", text=
+        " Current speed limit on current lanelet in m/s")
+      double speed_limit;
+    };
+  };
+};

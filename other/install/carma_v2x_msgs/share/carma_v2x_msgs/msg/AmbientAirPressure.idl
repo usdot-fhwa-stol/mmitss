@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/AmbientAirPressure.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module AmbientAirPressure_Constants {
+      const float PRESSURE_MIN = 58000.0;
+      const float PRESSURE_MAX = 108800.0;
+    };
+    @verbatim (language="comment", text=
+      " AmbientAirPressure.msg" "\n"
+      "" "\n"
+      " Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.")
+    struct AmbientAirPressure {
+      @verbatim (language="comment", text=
+        " AmbientAirPressure in Pascals in range")
+      @unit (value="58000..108800")
+      float pressure;
+
+      @verbatim (language="comment", text=
+        " If true the ambient air pressure is unavailable")
+      boolean unavailable;
+    };
+  };
+};

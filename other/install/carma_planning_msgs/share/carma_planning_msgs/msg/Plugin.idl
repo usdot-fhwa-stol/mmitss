@@ -1,0 +1,48 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/Plugin.msg
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module msg {
+    module Plugin_Constants {
+      const uint8 UNKNOWN = 0;
+      const uint8 STRATEGIC = 1;
+      const uint8 TACTICAL = 2;
+      const uint8 CONTROL = 3;
+    };
+    @verbatim (language="comment", text=
+      " Plugin Message" "\n"
+      "" "\n"
+      " The details of a discovered plugin" "\n"
+      "" "\n"
+      " @author Kyle Rush" "\n"
+      " @version 0.1")
+    struct Plugin {
+      @verbatim (language="comment", text=
+        " The string name identifier for the plugin")
+      string name;
+
+      @verbatim (language="comment", text=
+        " The string version identifier for the plugin")
+      string version_id;
+
+      @verbatim (language="comment", text=
+        " The usage type for the plugin")
+      uint8 type;
+
+      @verbatim (language="comment", text=
+        " Whether or not the plugin is currently available to generate a trajectory" "\n"
+        " Availability should be determined by plugin itself")
+      boolean available;
+
+      @verbatim (language="comment", text=
+        " Whether or not the plugin is activated by user")
+      boolean activated;
+
+      @verbatim (language="comment", text=
+        " Indicate plugin's capabilitiy in a hierarchy structure: \"capbilitiy_A/feature_B_of_capbilitiy_A/implementation_C_of_feature_B\"")
+      string capability;
+    };
+  };
+};

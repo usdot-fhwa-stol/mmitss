@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/MeasurementTimeOffset.msg
+// generated code does not contain a copyright notice
+
+
+module j3224_v2x_msgs {
+  module msg {
+    module MeasurementTimeOffset_Constants {
+      const int16 MIN_MEASUREMENT_TIME_OFFSET = -1500;
+      const int16 MAX_MEASUREMENT_TIME_OFFSET = 1500;
+    };
+    @verbatim (language="comment", text=
+      " MeasurementTimeOffset.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct MeasurementTimeOffset {
+      @verbatim (language="comment", text=
+        " MeasurementTimeOffset ::= INTEGER (-1500..1500) -- LSB units of 1ms")
+      int16 measurement_time_offset;
+    };
+  };
+};

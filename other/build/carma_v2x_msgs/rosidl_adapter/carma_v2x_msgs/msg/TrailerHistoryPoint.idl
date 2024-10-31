@@ -1,0 +1,59 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/TrailerHistoryPoint.msg
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/Angle.idl"
+#include "carma_v2x_msgs/msg/CoarseHeading.idl"
+#include "carma_v2x_msgs/msg/NodeXY24b.idl"
+#include "carma_v2x_msgs/msg/TimeOffset.idl"
+#include "carma_v2x_msgs/msg/VertOffsetB07.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    module TrailerHistoryPoint_Constants {
+      const uint16 HAS_ELEVATION_OFFSET = 1;
+      const uint16 HAS_HEADING = 2;
+    };
+    @verbatim (language="comment", text=
+      " TrailerHistoryPoint.msg" "\n"
+      "" "\n"
+      " Modified J2735 2016 message format, adjusted to use base SI units (m,s, etc) in most case.")
+    struct TrailerHistoryPoint {
+      @verbatim (language="comment", text=
+        " TrailerHistoryPoint ::= SEQUENCE {" "\n"
+        "    pivotAngle       Angle," "\n"
+        "                     -- angle with respect to the lead unit" "\n"
+        "    timeOffset       TimeOffset," "\n"
+        "                     -- offset backwards in time" "\n"
+        "    -- Position relative to the hauling Vehicle" "\n"
+        "    positionOffset   Node-XY-24b," "\n"
+        "    elevationOffset  VertOffset-B07 OPTIONAL," "\n"
+        "    heading          CoarseHeading OPTIONAL," "\n"
+        "                     -- overall heading" "\n"
+        "    ..." "\n"
+        "    }" "\n"
+        " A BIT STRING defining the presence of optional fields." "\n"
+        " Compare with bitwise-and" "\n"
+        " if (presence_vector & HAS_ELEVATION_OFFSET) etc." "\n"
+        " Create with bitwise-or" "\n"
+        " presence_vector = presence_vector | HAS_ELEVATION_OFFSET")
+      uint16 presence_vector;
+
+      carma_v2x_msgs::msg::Angle pivot_angle;
+
+      carma_v2x_msgs::msg::TimeOffset time_offset;
+
+      carma_v2x_msgs::msg::NodeXY24b position_offset;
+
+      @verbatim (language="comment", text=
+        "###" "\n"
+        " OPTIONAL FIELDS" "\n"
+        " All fields below this section are optional." "\n"
+        " The presence of a given field can be idenfied by checking the presence_vector" "\n"
+        "###")
+      carma_v2x_msgs::msg::VertOffsetB07 elevation_offset;
+
+      carma_v2x_msgs::msg::CoarseHeading heading;
+    };
+  };
+};

@@ -1,0 +1,372 @@
+// generated from rosidl_typesupport_fastrtps_cpp/resource/idl__type_support.cpp.em
+// with input from j3224_v2x_msgs:msg/DetectedVRUData.idl
+// generated code does not contain a copyright notice
+#include "j3224_v2x_msgs/msg/detail/detected_vru_data__rosidl_typesupport_fastrtps_cpp.hpp"
+#include "j3224_v2x_msgs/msg/detail/detected_vru_data__struct.hpp"
+
+#include <limits>
+#include <stdexcept>
+#include <string>
+#include "rosidl_typesupport_cpp/message_type_support.hpp"
+#include "rosidl_typesupport_fastrtps_cpp/identifier.hpp"
+#include "rosidl_typesupport_fastrtps_cpp/message_type_support.h"
+#include "rosidl_typesupport_fastrtps_cpp/message_type_support_decl.hpp"
+#include "rosidl_typesupport_fastrtps_cpp/wstring_conversion.hpp"
+#include "fastcdr/Cdr.h"
+
+
+// forward declaration of message dependencies and their conversion functions
+namespace j2735_v2x_msgs
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const j2735_v2x_msgs::msg::PersonalDeviceUserType &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  j2735_v2x_msgs::msg::PersonalDeviceUserType &);
+size_t get_serialized_size(
+  const j2735_v2x_msgs::msg::PersonalDeviceUserType &,
+  size_t current_alignment);
+size_t
+max_serialized_size_PersonalDeviceUserType(
+  bool & full_bounded,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace j2735_v2x_msgs
+
+namespace j2735_v2x_msgs
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const j2735_v2x_msgs::msg::PropelledInformation &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  j2735_v2x_msgs::msg::PropelledInformation &);
+size_t get_serialized_size(
+  const j2735_v2x_msgs::msg::PropelledInformation &,
+  size_t current_alignment);
+size_t
+max_serialized_size_PropelledInformation(
+  bool & full_bounded,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace j2735_v2x_msgs
+
+namespace j2735_v2x_msgs
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const j2735_v2x_msgs::msg::Attachment &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  j2735_v2x_msgs::msg::Attachment &);
+size_t get_serialized_size(
+  const j2735_v2x_msgs::msg::Attachment &,
+  size_t current_alignment);
+size_t
+max_serialized_size_Attachment(
+  bool & full_bounded,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace j2735_v2x_msgs
+
+namespace j2735_v2x_msgs
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const j2735_v2x_msgs::msg::AttachmentRadius &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  j2735_v2x_msgs::msg::AttachmentRadius &);
+size_t get_serialized_size(
+  const j2735_v2x_msgs::msg::AttachmentRadius &,
+  size_t current_alignment);
+size_t
+max_serialized_size_AttachmentRadius(
+  bool & full_bounded,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace j2735_v2x_msgs
+
+
+namespace j3224_v2x_msgs
+{
+
+namespace msg
+{
+
+namespace typesupport_fastrtps_cpp
+{
+
+bool
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_j3224_v2x_msgs
+cdr_serialize(
+  const j3224_v2x_msgs::msg::DetectedVRUData & ros_message,
+  eprosima::fastcdr::Cdr & cdr)
+{
+  // Member: presence_vector
+  cdr << ros_message.presence_vector;
+  // Member: basic_type
+  j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.basic_type,
+    cdr);
+  // Member: propulsion
+  j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.propulsion,
+    cdr);
+  // Member: attachment
+  j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.attachment,
+    cdr);
+  // Member: radius
+  j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.radius,
+    cdr);
+  return true;
+}
+
+bool
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_j3224_v2x_msgs
+cdr_deserialize(
+  eprosima::fastcdr::Cdr & cdr,
+  j3224_v2x_msgs::msg::DetectedVRUData & ros_message)
+{
+  // Member: presence_vector
+  cdr >> ros_message.presence_vector;
+
+  // Member: basic_type
+  j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.basic_type);
+
+  // Member: propulsion
+  j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.propulsion);
+
+  // Member: attachment
+  j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.attachment);
+
+  // Member: radius
+  j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.radius);
+
+  return true;
+}
+
+size_t
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_j3224_v2x_msgs
+get_serialized_size(
+  const j3224_v2x_msgs::msg::DetectedVRUData & ros_message,
+  size_t current_alignment)
+{
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  (void)padding;
+  (void)wchar_size;
+
+  // Member: presence_vector
+  {
+    size_t item_size = sizeof(ros_message.presence_vector);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: basic_type
+
+  current_alignment +=
+    j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.basic_type, current_alignment);
+  // Member: propulsion
+
+  current_alignment +=
+    j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.propulsion, current_alignment);
+  // Member: attachment
+
+  current_alignment +=
+    j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.attachment, current_alignment);
+  // Member: radius
+
+  current_alignment +=
+    j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.radius, current_alignment);
+
+  return current_alignment - initial_alignment;
+}
+
+size_t
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_PUBLIC_j3224_v2x_msgs
+max_serialized_size_DetectedVRUData(
+  bool & full_bounded,
+  size_t current_alignment)
+{
+  size_t initial_alignment = current_alignment;
+
+  const size_t padding = 4;
+  const size_t wchar_size = 4;
+  (void)padding;
+  (void)wchar_size;
+  (void)full_bounded;
+
+
+  // Member: presence_vector
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: basic_type
+  {
+    size_t array_size = 1;
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_PersonalDeviceUserType(
+        full_bounded, current_alignment);
+    }
+  }
+
+  // Member: propulsion
+  {
+    size_t array_size = 1;
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_PropelledInformation(
+        full_bounded, current_alignment);
+    }
+  }
+
+  // Member: attachment
+  {
+    size_t array_size = 1;
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_Attachment(
+        full_bounded, current_alignment);
+    }
+  }
+
+  // Member: radius
+  {
+    size_t array_size = 1;
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        j2735_v2x_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_AttachmentRadius(
+        full_bounded, current_alignment);
+    }
+  }
+
+  return current_alignment - initial_alignment;
+}
+
+static bool _DetectedVRUData__cdr_serialize(
+  const void * untyped_ros_message,
+  eprosima::fastcdr::Cdr & cdr)
+{
+  auto typed_message =
+    static_cast<const j3224_v2x_msgs::msg::DetectedVRUData *>(
+    untyped_ros_message);
+  return cdr_serialize(*typed_message, cdr);
+}
+
+static bool _DetectedVRUData__cdr_deserialize(
+  eprosima::fastcdr::Cdr & cdr,
+  void * untyped_ros_message)
+{
+  auto typed_message =
+    static_cast<j3224_v2x_msgs::msg::DetectedVRUData *>(
+    untyped_ros_message);
+  return cdr_deserialize(cdr, *typed_message);
+}
+
+static uint32_t _DetectedVRUData__get_serialized_size(
+  const void * untyped_ros_message)
+{
+  auto typed_message =
+    static_cast<const j3224_v2x_msgs::msg::DetectedVRUData *>(
+    untyped_ros_message);
+  return static_cast<uint32_t>(get_serialized_size(*typed_message, 0));
+}
+
+static size_t _DetectedVRUData__max_serialized_size(bool & full_bounded)
+{
+  return max_serialized_size_DetectedVRUData(full_bounded, 0);
+}
+
+static message_type_support_callbacks_t _DetectedVRUData__callbacks = {
+  "j3224_v2x_msgs::msg",
+  "DetectedVRUData",
+  _DetectedVRUData__cdr_serialize,
+  _DetectedVRUData__cdr_deserialize,
+  _DetectedVRUData__get_serialized_size,
+  _DetectedVRUData__max_serialized_size
+};
+
+static rosidl_message_type_support_t _DetectedVRUData__handle = {
+  rosidl_typesupport_fastrtps_cpp::typesupport_identifier,
+  &_DetectedVRUData__callbacks,
+  get_message_typesupport_handle_function,
+};
+
+}  // namespace typesupport_fastrtps_cpp
+
+}  // namespace msg
+
+}  // namespace j3224_v2x_msgs
+
+namespace rosidl_typesupport_fastrtps_cpp
+{
+
+template<>
+ROSIDL_TYPESUPPORT_FASTRTPS_CPP_EXPORT_j3224_v2x_msgs
+const rosidl_message_type_support_t *
+get_message_type_support_handle<j3224_v2x_msgs::msg::DetectedVRUData>()
+{
+  return &j3224_v2x_msgs::msg::typesupport_fastrtps_cpp::_DetectedVRUData__handle;
+}
+
+}  // namespace rosidl_typesupport_fastrtps_cpp
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cpp, j3224_v2x_msgs, msg, DetectedVRUData)() {
+  return &j3224_v2x_msgs::msg::typesupport_fastrtps_cpp::_DetectedVRUData__handle;
+}
+
+#ifdef __cplusplus
+}
+#endif

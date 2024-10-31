@@ -1,0 +1,66 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/TrafficControlGeometry.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+#include "carma_v2x_msgs/msg/PathNode.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " TrafficControlGeometry.msg" "\n"
+      "" "\n"
+      " Part of the CARMA Cloud geo-fence specification not part of the official SAE j2735 standard" "\n"
+      "" "\n"
+      " J2735 2016 message format." "\n"
+      "" "\n"
+      " @version 0.1" "\n"
+      "" "\n"
+      " Description" "\n"
+      " ...")
+    struct TrafficControlGeometry {
+      @verbatim (language="comment", text=
+        " TrafficControlGeometry ::= SEQUENCE" "\n"
+        " {" "\n"
+        "  proj IA5String (SIZE(0..63))," "\n"
+        "  datum IA5String (SIZE(0..63))," "\n"
+        "  reftime EpochMins," "\n"
+        "  reflon Longitude," "\n"
+        "  reflat Latitude," "\n"
+        "  refelv Elevation, -- decimeter offset -4096 from reference datum" "\n"
+        "  heading INTEGER (0..3599), -- initial path heading clockwise from north in tenths of degrees" "\n"
+        "  nodes SEQUENCE (SIZE(1..255)) OF PathNode" "\n"
+        " }" "\n"
+        " proj IA5String (SIZE(0..63)),")
+      string proj;
+
+      @verbatim (language="comment", text=
+        " datum IA5String (SIZE(0..63)),")
+      string datum;
+
+      @verbatim (language="comment", text=
+        " reftime EpochMins,")
+      builtin_interfaces::msg::Time reftime;
+
+      @verbatim (language="comment", text=
+        " reflon Longitude,")
+      double reflon;
+
+      @verbatim (language="comment", text=
+        " reflat Latitude,")
+      double reflat;
+
+      @verbatim (language="comment", text=
+        " refelv Elevation, -- decimeter offset -4096 from reference datum")
+      float refelv;
+
+      @verbatim (language="comment", text=
+        " heading INTEGER (0..3599), -- initial path heading clockwise from north in tenths of degrees")
+      float heading;
+
+      @verbatim (language="comment", text=
+        " nodes SEQUENCE (SIZE(1..255)) OF PathNode")
+      sequence<carma_v2x_msgs::msg::PathNode> nodes;
+    };
+  };
+};

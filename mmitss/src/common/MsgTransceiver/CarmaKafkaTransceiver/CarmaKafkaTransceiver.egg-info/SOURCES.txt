@@ -1,0 +1,10 @@
+setup.py
+CarmaKafkaTransceiver/MMITSSConsumer.py
+CarmaKafkaTransceiver/MMITSSProducer.py
+CarmaKafkaTransceiver/__init__.py
+CarmaKafkaTransceiver/main.py
+CarmaKafkaTransceiver.egg-info/PKG-INFO
+CarmaKafkaTransceiver.egg-info/SOURCES.txt
+CarmaKafkaTransceiver.egg-info/dependency_links.txt
+CarmaKafkaTransceiver.egg-info/requires.txt
+CarmaKafkaTransceiver.egg-info/top_level.txt

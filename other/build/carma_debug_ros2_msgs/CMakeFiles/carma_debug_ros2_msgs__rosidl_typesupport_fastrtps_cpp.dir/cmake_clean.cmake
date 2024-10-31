@@ -1,0 +1,21 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/lanelet_id_regulatory_element_pair__type_support.cpp.o"
+  "CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/map_update_readable__type_support.cpp.o"
+  "CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/regulatory_element__type_support.cpp.o"
+  "CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/trajectory_curvature_speeds__type_support.cpp.o"
+  "libcarma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.pdb"
+  "libcarma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.so"
+  "rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/lanelet_id_regulatory_element_pair__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/map_update_readable__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/regulatory_element__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/dds_fastrtps/trajectory_curvature_speeds__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/lanelet_id_regulatory_element_pair__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/map_update_readable__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/regulatory_element__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/carma_debug_ros2_msgs/msg/detail/trajectory_curvature_speeds__rosidl_typesupport_fastrtps_cpp.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/carma_debug_ros2_msgs__rosidl_typesupport_fastrtps_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

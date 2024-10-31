@@ -1,0 +1,54 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_debug_ros2_msgs/msg/TrajectoryCurvatureSpeeds.msg
+// generated code does not contain a copyright notice
+
+#include "carma_planning_msgs/msg/TrajectoryPlan.idl"
+#include "carma_planning_msgs/msg/VehicleState.idl"
+
+module carma_debug_ros2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " TrajectoryCurvatureSpeeds.msg")
+    struct TrajectoryCurvatureSpeeds {
+      @verbatim (language="comment", text=
+        " This message contains the computed curvatures and expected speed limits along the specified trajectory based on the provided acceleration limit" "\n"
+        " The initial intended use case is as a debug message for inlane-cruising" "\n"
+        " The header of the message can be found in the trajectroy_plan.header field." "\n"
+        " The trajectory the provided data corresponds too")
+      carma_planning_msgs::msg::TrajectoryPlan trajectory_plan;
+
+      @verbatim (language="comment", text=
+        " The computed curvatures of lane for the provided trajectroy at each point." "\n"
+        " This array should have the same length as the trajectory_plan")
+      sequence<double> curvatures;
+
+      @verbatim (language="comment", text=
+        " The computed speed limits based on lateral accel at each curvature point")
+      sequence<double> speed_limits;
+
+      @verbatim (language="comment", text=
+        " The planned velocity profile of the provided trajectory before it was converted to timestamps")
+      sequence<double> velocity_profile;
+
+      @verbatim (language="comment", text=
+        " The computed tangents of the points in the trajectory plan")
+      sequence<double> tangent_headings;
+
+      @verbatim (language="comment", text=
+        " The relative downtracks between points in the trajectory plan")
+      sequence<double> relative_downtrack;
+
+      @verbatim (language="comment", text=
+        " The lateral acceleration limit used to generate the plan")
+      double lat_accel_limit;
+
+      @verbatim (language="comment", text=
+        " The longitudinal acceleration limit used to generate the plan")
+      double lon_accel_limit;
+
+      @verbatim (language="comment", text=
+        " Starting state for trajectory planning that resulted in the trajectory")
+      carma_planning_msgs::msg::VehicleState starting_state;
+    };
+  };
+};

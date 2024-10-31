@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/PlanType.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module PlanType_Constants {
+      const uint8 UNKNOWN = 0;
+      const uint8 CHANGE_LANE_LEFT = 1;
+      const uint8 CHANGE_LANE_RIGHT = 2;
+      const uint8 JOIN_PLATOON_AT_REAR = 3;
+      const uint8 PLATOON_FOLLOWER_JOIN = 4;
+      const uint8 JOIN_PLATOON_FROM_FRONT = 5;
+      const uint8 PLATOON_FRONT_JOIN = 6;
+      const uint8 CUT_IN_FROM_SIDE = 7;
+      const uint8 PLATOON_CUT_IN_JOIN = 8;
+      const uint8 STOP_CREATE_GAP = 9;
+      const uint8 CUT_IN_FRONT_DONE = 10;
+      const uint8 CUT_IN_MID_OR_REAR_DONE = 11;
+      const uint8 PLATOON_DEPARTURE = 12;
+      const uint8 DELETE_MEMBER = 13;
+    };
+    @verbatim (language="comment", text=
+      " PlanType.msg" "\n"
+      "" "\n"
+      " Helper message for MobilityIntro.msg to define the specifics of a type of coordinated plan.")
+    struct PlanType {
+      @verbatim (language="comment", text=
+        " Variable which can be used to store a specific plan type value.")
+      uint8 type;
+    };
+  };
+};

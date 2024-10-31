@@ -1,0 +1,7 @@
+{
+  "package_name": "can_msgs",
+  "non_idl_tuples": [
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/can_msgs:msg/CanState.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/can_msgs:msg/Frame.msg"
+  ]
+}

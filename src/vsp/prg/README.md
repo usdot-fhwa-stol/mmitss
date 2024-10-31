@@ -1,1 +1,0 @@
-This is a CARMA Platform version of the mmitss priority request generator.

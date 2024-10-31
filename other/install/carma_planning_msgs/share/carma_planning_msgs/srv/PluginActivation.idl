@@ -1,0 +1,37 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/PluginActivation.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " Plugin Message" "\n"
+      "" "\n"
+      " A command from the user to activate or deactivate a plugin" "\n"
+      "" "\n"
+      " @author Kyle Rush" "\n"
+      " @version 0.1")
+    struct PluginActivation_Request {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " The name of the plugin to change the activation state for")
+      string plugin_name;
+
+      @verbatim (language="comment", text=
+        " The version of the plugin to change the activation state for")
+      string plugin_version;
+
+      @verbatim (language="comment", text=
+        " The state to change to")
+      boolean activated;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct PluginActivation_Response {
+      boolean newstate;
+    };
+  };
+};

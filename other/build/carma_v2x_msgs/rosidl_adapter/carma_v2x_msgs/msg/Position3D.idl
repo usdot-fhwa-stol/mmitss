@@ -1,0 +1,59 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/Position3D.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    module Position3D_Constants {
+      const double LATITUDE_UNAVAILABLE = 90.0000001;
+      const double LATITUDE_MAX = 90.0;
+      const double LATITUDE_MIN = -90.0;
+      const double LONGITUDE_UNAVAILABLE = 180.0000001;
+      const double LONGITUDE_MAX = 180.0;
+      const double LONGITUDE_MIN = -179.9999999;
+      const float ELEVATION_UNAVAILABLE = -409.6;
+      const float ELEVATION_MAX = 6143.9;
+      const float ELEVATION_MIN = -409.5;
+    };
+    @verbatim (language="comment", text=
+      " Position3D.msg" "\n"
+      "" "\n"
+      " J2735 2016 message format." "\n"
+      "" "\n"
+      " @author Mae Fromm" "\n"
+      " @version 0.1" "\n"
+      " Provides a precise location in the WGS-84 coordinate system, from which short offsets may be used" "\n"
+      " to create additional data using a flat earth projection centered on this location.")
+    struct Position3D {
+      @verbatim (language="comment", text=
+        " Position3D ::= SEQUENCE {" "\n"
+        " Deviates from J2735 standard:" "\n"
+        " Latitude in this message are conveyed as deg rather than 1/10th micro deg to avoid redundant unnecessary conversion by subscribers" "\n"
+        " lat Latitude, -- in degrees" "\n"
+        " Latitude ::= DOUBLE (-90.0000000-90.0000001)" "\n"
+        "  -- Providing a range of plus-minus 90 degrees")
+      double latitude;
+
+      @verbatim (language="comment", text=
+        " Deviates from J2735 standard:" "\n"
+        " Latitude in this message are conveyed as deg rather than 1/10th micro deg to avoid redundant unnecessary conversion by subscribers" "\n"
+        " long Longitude, -- in degrees" "\n"
+        " Longitude ::= INTEGER (-179.9999999-180.0000001)" "\n"
+        "  -- Providing a range of plus-minus 180 degrees")
+      double longitude;
+
+      @verbatim (language="comment", text=
+        " Deviates from J2735 standard:" "\n"
+        " Elevation in this message are conveyed as m rather than 10 cm to avoid redundant unnecessary conversion by subscribers" "\n"
+        " elevation Elevation OPTIONAL, -- in 1 m units" "\n"
+        " Elevation ::= INTEGER (-409.6-6143.9)" "\n"
+        "  -- In units of m steps above or below the reference ellipsoid" "\n"
+        "  -- Providing a range of -409.5 to + 6143.9 meters" "\n"
+        "  -- The value -409.6 shall be used when Unknown is to be sent")
+      float elevation;
+
+      boolean elevation_exists;
+    };
+  };
+};

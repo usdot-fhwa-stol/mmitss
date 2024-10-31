@@ -1,0 +1,20 @@
+{
+  "package_name": "carma_driver_msgs",
+  "non_idl_tuples": [
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:msg/ByteArray.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:msg/DriverStatus.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:msg/HeadingStamped.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:msg/LightBarStatus.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:msg/RobotEnabled.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:msg/TrailerAngle.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:msg/TurnSignal.msg",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:srv/GetDriverApi.srv",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:srv/GetDriverStatus.srv",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:srv/GetDriversWithCapabilities.srv",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:srv/GetLights.srv",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:srv/SendMessage.srv",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:srv/SetEnableRobotic.srv",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:srv/SetLightBarIndicator.srv",
+    "/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs:srv/SetLights.srv"
+  ]
+}

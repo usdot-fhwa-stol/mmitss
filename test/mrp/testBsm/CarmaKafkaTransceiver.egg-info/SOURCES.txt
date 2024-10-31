@@ -1,0 +1,5 @@
+CarmaKafkaTransceiver.egg-info/PKG-INFO
+CarmaKafkaTransceiver.egg-info/SOURCES.txt
+CarmaKafkaTransceiver.egg-info/dependency_links.txt
+CarmaKafkaTransceiver.egg-info/requires.txt
+CarmaKafkaTransceiver.egg-info/top_level.txt

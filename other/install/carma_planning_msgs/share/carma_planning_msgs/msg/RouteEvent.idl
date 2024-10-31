@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/RouteEvent.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module carma_planning_msgs {
+  module msg {
+    module RouteEvent_Constants {
+      const uint8 ROUTE_LOADED = 0;
+      const uint8 ROUTE_SELECTED = 1;
+      const uint8 ROUTE_STARTED = 2;
+      const uint8 ROUTE_COMPLETED = 3;
+      const uint8 ROUTE_DEPARTED = 4;
+      const uint8 ROUTE_ABORTED = 5;
+      const uint8 ROUTE_GEN_FAILED = 6;
+      const uint8 ROUTE_INVALIDATION = 7;
+    };
+    @verbatim (language="comment", text=
+      " RouteEvent.msg" "\n"
+      "" "\n"
+      " Enum denoting an event which has just occurred on the route" "\n"
+      "" "\n"
+      " @author Shuwei Qiang" "\n"
+      " @version 0.1")
+    struct RouteEvent {
+      @verbatim (language="comment", text=
+        " standard ROS header")
+      std_msgs::msg::Header header;
+
+      uint8 event;
+    };
+  };
+};

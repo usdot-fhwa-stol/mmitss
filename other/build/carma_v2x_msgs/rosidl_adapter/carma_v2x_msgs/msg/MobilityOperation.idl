@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/MobilityOperation.msg
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/MobilityHeader.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " MobilityOperation.msg")
+    struct MobilityOperation {
+      @verbatim (language="comment", text=
+        " This message is used by plugins to send necessary parameters to other" "\n"
+        " CAVs at any desired frequency in order to accomplish a collaborative plan" "\n"
+        " standard header for all mobility messages")
+      carma_v2x_msgs::msg::MobilityHeader m_header;
+
+      @verbatim (language="comment", text=
+        " strategy string to indicate which strategy type this message is used for")
+      string strategy;
+
+      @verbatim (language="comment", text=
+        " strategy parameters specified by each individual plugin/component" "\n"
+        " the maximum length of this string is 100")
+      string strategy_params;
+    };
+  };
+};

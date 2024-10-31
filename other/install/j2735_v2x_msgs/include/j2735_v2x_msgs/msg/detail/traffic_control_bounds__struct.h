@@ -1,0 +1,83 @@
+// generated from rosidl_generator_c/resource/idl__struct.h.em
+// with input from j2735_v2x_msgs:msg/TrafficControlBounds.idl
+// generated code does not contain a copyright notice
+
+#ifndef J2735_V2X_MSGS__MSG__DETAIL__TRAFFIC_CONTROL_BOUNDS__STRUCT_H_
+#define J2735_V2X_MSGS__MSG__DETAIL__TRAFFIC_CONTROL_BOUNDS__STRUCT_H_
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+
+
+// Constants defined in the message
+
+/// Constant 'REFLON_MAX'.
+enum
+{
+  j2735_v2x_msgs__msg__TrafficControlBounds__REFLON_MAX = 1800000000l
+};
+
+/// Constant 'REFLON_MIN'.
+enum
+{
+  j2735_v2x_msgs__msg__TrafficControlBounds__REFLON_MIN = -1799999999l
+};
+
+/// Constant 'REFLON_UNAVAILABLE'.
+enum
+{
+  j2735_v2x_msgs__msg__TrafficControlBounds__REFLON_UNAVAILABLE = 1800000001l
+};
+
+/// Constant 'REFLAT_MAX'.
+enum
+{
+  j2735_v2x_msgs__msg__TrafficControlBounds__REFLAT_MAX = 900000000l
+};
+
+/// Constant 'REFLAT_MIN'.
+enum
+{
+  j2735_v2x_msgs__msg__TrafficControlBounds__REFLAT_MIN = -900000000l
+};
+
+/// Constant 'REFLAT_UNAVAILABLE'.
+enum
+{
+  j2735_v2x_msgs__msg__TrafficControlBounds__REFLAT_UNAVAILABLE = 900000001l
+};
+
+// Include directives for member types
+// Member 'offsets'
+#include "j2735_v2x_msgs/msg/detail/offset_point__struct.h"
+
+// Struct defined in msg/TrafficControlBounds in the package j2735_v2x_msgs.
+typedef struct j2735_v2x_msgs__msg__TrafficControlBounds
+{
+  uint64_t oldest;
+  int32_t reflon;
+  int32_t reflat;
+  j2735_v2x_msgs__msg__OffsetPoint offsets[3];
+} j2735_v2x_msgs__msg__TrafficControlBounds;
+
+// Struct for a sequence of j2735_v2x_msgs__msg__TrafficControlBounds.
+typedef struct j2735_v2x_msgs__msg__TrafficControlBounds__Sequence
+{
+  j2735_v2x_msgs__msg__TrafficControlBounds * data;
+  /// The number of valid items in data
+  size_t size;
+  /// The number of allocated items in data
+  size_t capacity;
+} j2735_v2x_msgs__msg__TrafficControlBounds__Sequence;
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // J2735_V2X_MSGS__MSG__DETAIL__TRAFFIC_CONTROL_BOUNDS__STRUCT_H_

@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from j3224_v2x_msgs/msg/AngularVelocity.msg
+// generated code does not contain a copyright notice
+
+#include "j3224_v2x_msgs/msg/PitchRate.idl"
+#include "j3224_v2x_msgs/msg/RollRate.idl"
+
+module j3224_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " AngularVelocity.msg" "\n"
+      "" "\n"
+      " J3224 2020 message format.")
+    struct AngularVelocity {
+      @verbatim (language="comment", text=
+        " AngularVelocity ::= SEQUENCE {" "\n"
+        "    pitchRate PitchRate," "\n"
+        "    rollRate RollRate" "\n"
+        " }")
+      j3224_v2x_msgs::msg::PitchRate pitch_rate;
+
+      j3224_v2x_msgs::msg::RollRate roll_rate;
+    };
+  };
+};

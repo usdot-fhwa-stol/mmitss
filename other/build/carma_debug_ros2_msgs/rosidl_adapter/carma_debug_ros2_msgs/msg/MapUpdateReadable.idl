@@ -1,0 +1,59 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_debug_ros2_msgs/msg/MapUpdateReadable.msg
+// generated code does not contain a copyright notice
+
+#include "carma_debug_ros2_msgs/msg/LaneletIdRegulatoryElementPair.idl"
+#include "std_msgs/msg/Header.idl"
+
+module carma_debug_ros2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " MapUpdateReadable.msg")
+    struct MapUpdateReadable {
+      @verbatim (language="comment", text=
+        " This message attempts to make carma_wm map updates readable for debugging." "\n"
+        " At runtime map updates are communicated bin a binary format. This is efficient for communications" "\n"
+        " but makes debugging difficult. This message will show as much information about the update as is practical." "\n"
+        "###" "\n"
+        " Map Bin Details" "\n"
+        "###" "\n"
+        " Exact header of the origin autoware_lanelet2_msgs/MapBin.msg")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " version of map format. keep this as empty string if unnecessary")
+      string format_version;
+
+      @verbatim (language="comment", text=
+        " version of map version. keep this as empty string if unnecessary")
+      string map_version;
+
+      @verbatim (language="comment", text=
+        " The route filename")
+      string route_id;
+
+      @verbatim (language="comment", text=
+        " The version of current route, monotonically increasing integer starting at 1")
+      uint32 route_version;
+
+      @verbatim (language="comment", text=
+        " route flag to set the route invalidation status")
+      boolean invalidates_route;
+
+      @verbatim (language="comment", text=
+        "###" "\n"
+        " Update Information" "\n"
+        "###" "\n"
+        " Traffic Control Message Unique Id")
+      string traffic_control_id;
+
+      @verbatim (language="comment", text=
+        " Regulatory elements to update")
+      sequence<carma_debug_ros2_msgs::msg::LaneletIdRegulatoryElementPair> update_list;
+
+      @verbatim (language="comment", text=
+        " Regulatory elements to remove")
+      sequence<carma_debug_ros2_msgs::msg::LaneletIdRegulatoryElementPair> remove_list;
+    };
+  };
+};

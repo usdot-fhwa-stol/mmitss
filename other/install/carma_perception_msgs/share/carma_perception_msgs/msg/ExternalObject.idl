@@ -1,0 +1,87 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_perception_msgs/msg/ExternalObject.msg
+// generated code does not contain a copyright notice
+
+#include "carma_perception_msgs/msg/PredictedState.idl"
+#include "geometry_msgs/msg/PoseWithCovariance.idl"
+#include "geometry_msgs/msg/TwistWithCovariance.idl"
+#include "geometry_msgs/msg/Vector3.idl"
+#include "std_msgs/msg/Header.idl"
+
+module carma_perception_msgs {
+  module msg {
+    module ExternalObject_Constants {
+      const uint16 ID_PRESENCE_VECTOR = 1;
+      const uint16 POSE_PRESENCE_VECTOR = 2;
+      const uint16 VELOCITY_PRESENCE_VECTOR = 4;
+      const uint16 VELOCITY_INST_PRESENCE_VECTOR = 8;
+      const uint16 SIZE_PRESENCE_VECTOR = 16;
+      const uint16 CONFIDENCE_PRESENCE_VECTOR = 32;
+      const uint16 OBJECT_TYPE_PRESENCE_VECTOR = 64;
+      const uint16 BSM_ID_PRESENCE_VECTOR = 128;
+      const uint16 DYNAMIC_OBJ_PRESENCE = 256;
+      const uint16 PREDICTION_PRESENCE_VECTOR = 512;
+      const uint8 UNKNOWN = 0;
+      const uint8 SMALL_VEHICLE = 1;
+      const uint8 LARGE_VEHICLE = 2;
+      const uint8 MOTORCYCLE = 3;
+      const uint8 PEDESTRIAN = 4;
+    };
+    @verbatim (language="comment", text=
+      " ExternalObject.msg" "\n"
+      "" "\n"
+      " Describes a tracked object")
+    struct ExternalObject {
+      @verbatim (language="comment", text=
+        "Header contains the frame rest of the fields will use")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "a presence vector, this message is used to describe objects coming from potentially" "\n"
+        "different sources. The presence vector is used to determine what items are set" "\n"
+        "by the producer")
+      uint16 presence_vector;
+
+      @verbatim (language="comment", text=
+        "Object id. Matching ids on a topic should refer to the same object within some time period, expanded")
+      uint32 id;
+
+      @verbatim (language="comment", text=
+        "bsm id is of the form [0xff,0xff,0xff,0xff]")
+      sequence<uint8> bsm_id;
+
+      @verbatim (language="comment", text=
+        "Pose of the object within the frame specified in header")
+      geometry_msgs::msg::PoseWithCovariance pose;
+
+      @verbatim (language="comment", text=
+        "Average velocity of the object within the frame specified in header")
+      geometry_msgs::msg::TwistWithCovariance velocity;
+
+      @verbatim (language="comment", text=
+        "Instantaneous velocity of an object within the frame specified in header")
+      geometry_msgs::msg::TwistWithCovariance velocity_inst;
+
+      @verbatim (language="comment", text=
+        "The size of the object aligned along the axis of the object described by the orientation in pose" "\n"
+        "Dimensions are specified in meters")
+      geometry_msgs::msg::Vector3 size;
+
+      @verbatim (language="comment", text=
+        "Confidence [0,1]")
+      double confidence;
+
+      @verbatim (language="comment", text=
+        "describes a general object type as defined in this message")
+      uint8 object_type;
+
+      @verbatim (language="comment", text=
+        " Binary value to show if the object is static or dynamic (1: dynamic, 0: static)")
+      boolean dynamic_obj;
+
+      @verbatim (language="comment", text=
+        "Predictions for the object")
+      sequence<carma_perception_msgs::msg::PredictedState> predictions;
+    };
+  };
+};

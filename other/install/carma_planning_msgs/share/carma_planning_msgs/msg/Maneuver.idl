@@ -1,0 +1,49 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/Maneuver.msg
+// generated code does not contain a copyright notice
+
+#include "carma_planning_msgs/msg/IntersectionTransitLeftTurnManeuver.idl"
+#include "carma_planning_msgs/msg/IntersectionTransitRightTurnManeuver.idl"
+#include "carma_planning_msgs/msg/IntersectionTransitStraightManeuver.idl"
+#include "carma_planning_msgs/msg/LaneChangeManeuver.idl"
+#include "carma_planning_msgs/msg/LaneFollowingManeuver.idl"
+#include "carma_planning_msgs/msg/StopAndWaitManeuver.idl"
+
+module carma_planning_msgs {
+  module msg {
+    module Maneuver_Constants {
+      const uint8 LANE_FOLLOWING = 0;
+      const uint8 LANE_CHANGE = 1;
+      const uint8 INTERSECTION_TRANSIT_STRAIGHT = 2;
+      const uint8 INTERSECTION_TRANSIT_LEFT_TURN = 3;
+      const uint8 INTERSECTION_TRANSIT_RIGHT_TURN = 4;
+      const uint8 STOP_AND_WAIT = 5;
+    };
+    @verbatim (language="comment", text=
+      " Maneuver.msg" "\n"
+      "" "\n"
+      " Message defining a Maneuver for use in CARMA planning." "\n"
+      " This message wraps the possible maneuver types")
+    struct Maneuver {
+      @verbatim (language="comment", text=
+        " the type of maneuver")
+      uint8 type;
+
+      @verbatim (language="comment", text=
+        " Remaining enum values reserved for future use" "\n"
+        " The maneuver type objects which this maneuver wraps" "\n"
+        " Only one of these fields will be populated at a time to match the maneuver type of this message")
+      carma_planning_msgs::msg::LaneFollowingManeuver lane_following_maneuver;
+
+      carma_planning_msgs::msg::LaneChangeManeuver lane_change_maneuver;
+
+      carma_planning_msgs::msg::IntersectionTransitStraightManeuver intersection_transit_straight_maneuver;
+
+      carma_planning_msgs::msg::IntersectionTransitLeftTurnManeuver intersection_transit_left_turn_maneuver;
+
+      carma_planning_msgs::msg::IntersectionTransitRightTurnManeuver intersection_transit_right_turn_maneuver;
+
+      carma_planning_msgs::msg::StopAndWaitManeuver stop_and_wait_maneuver;
+    };
+  };
+};

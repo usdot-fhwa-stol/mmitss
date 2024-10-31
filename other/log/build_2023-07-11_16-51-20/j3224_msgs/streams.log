@@ -1,0 +1,30 @@
+[0.012s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/mmitss/Documents/cda-mmitss/other/carma-msgs/j3224_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs
+[0.083s] -- The C compiler identification is GNU 9.4.0
+[0.152s] -- The CXX compiler identification is GNU 9.4.0
+[0.157s] -- Check for working C compiler: /usr/bin/cc
+[0.245s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.246s] -- Detecting C compiler ABI info
+[0.341s] -- Detecting C compiler ABI info - done
+[0.363s] -- Detecting C compile features
+[0.363s] -- Detecting C compile features - done
+[0.366s] -- Check for working CXX compiler: /usr/bin/c++
+[0.470s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.471s] -- Detecting CXX compiler ABI info
+[0.562s] -- Detecting CXX compiler ABI info - done
+[0.584s] -- Detecting CXX compile features
+[0.584s] -- Detecting CXX compile features - done
+[0.586s] -- Found carma_cmake_common: 0.1.0 (/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake)
+[0.588s] -- Found ros_environment: 2.5.1 (/opt/ros/foxy/share/ros_environment/cmake)
+[0.588s] Skipping build of j3224_msgs as only ROS 1 is supported. Detected version is ROS 2
+[0.588s] -- Configuring done
+[0.589s] -- Generating done
+[0.589s] CMake Warning:
+[0.590s]   Manually-specified variables were not used by the project:
+[0.590s] 
+[0.590s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[0.590s] 
+[0.590s] 
+[0.590s] -- Build files have been written to: /home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs
+[0.594s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs' returned '0': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/mmitss/Documents/cda-mmitss/other/carma-msgs/j3224_msgs -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs
+[0.597s] Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs -- -j8 -l8
+[0.649s] Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs' returned '0': AMENT_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs -- -j8 -l8

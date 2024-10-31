@@ -1,0 +1,5 @@
+-- Found carma_cmake_common: 0.1.0 (/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/cmake)
+-- Found ros_environment: 2.5.1 (/opt/ros/foxy/share/ros_environment/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs

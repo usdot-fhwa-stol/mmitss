@@ -1,0 +1,50 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_perception_msgs/msg/CheckActiveGeofence.msg
+// generated code does not contain a copyright notice
+
+
+module carma_perception_msgs {
+  module msg {
+    module CheckActiveGeofence_Constants {
+      const uint8 SPEED_LIMIT = 1;
+      const uint8 LANE_CLOSED = 2;
+      const uint8 LANE_OPEN = 3;
+    };
+    @verbatim (language="comment", text=
+      " CheckActiveGeofence.msg" "\n"
+      "" "\n"
+      " @version 0.1" "\n"
+      "" "\n"
+      " Description" "\n"
+      " ...")
+    struct CheckActiveGeofence {
+      @verbatim (language="comment", text=
+        "Check whether or not vehicle is on an active geofence")
+      boolean is_on_active_geofence;
+
+      @verbatim (language="comment", text=
+        "Geofence type value")
+      uint8 type;
+
+      @verbatim (language="comment", text=
+        " Reason of boradcasting active Geofence")
+      string reason;
+
+      @verbatim (language="comment", text=
+        "Speed limit value")
+      double value;
+
+      @verbatim (language="comment", text=
+        "Distance in meters to the next geofence")
+      double distance_to_next_geofence;
+
+      @verbatim (language="comment", text=
+        " Road vehicles minimum following distance (meters) within geofence")
+      double minimum_gap;
+
+      @verbatim (language="comment", text=
+        " Recommended speed within geofence (MPH). This is max_speed allowed within an active Geofence")
+      double advisory_speed;
+    };
+  };
+};

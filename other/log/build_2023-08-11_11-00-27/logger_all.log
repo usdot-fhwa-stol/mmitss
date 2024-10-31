@@ -1,0 +1,887 @@
+[0.350s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.350s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f45f0bb3af0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f45f0bb3af0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f45f0bc00a0>)
+[0.389s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.389s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.389s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.389s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.389s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.389s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.389s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mmitss/Documents/cda-mmitss/other'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.400s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extension 'ignore'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extension 'ignore_ament_install'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extensions ['colcon_pkg']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extension 'colcon_pkg'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extensions ['colcon_meta']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extension 'colcon_meta'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extensions ['ros']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extension 'ros'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extensions ['cmake', 'python']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extension 'cmake'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extension 'python'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extensions ['python_setup_py']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs) by extension 'python_setup_py'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/can_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/can_msgs) by extension 'ignore'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/can_msgs) by extension 'ignore_ament_install'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/can_msgs) by extensions ['colcon_pkg']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/can_msgs) by extension 'colcon_pkg'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/can_msgs) by extensions ['colcon_meta']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/can_msgs) by extension 'colcon_meta'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/can_msgs) by extensions ['ros']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/can_msgs) by extension 'ros'
+[0.406s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/can_msgs' with type 'ros.ament_cmake' and name 'can_msgs'
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_cmake_common) by extensions ['ignore', 'ignore_ament_install']
+[0.406s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_cmake_common) by extension 'ignore'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_cmake_common) by extension 'ignore_ament_install'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_cmake_common) by extensions ['colcon_pkg']
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_cmake_common) by extension 'colcon_pkg'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_cmake_common) by extensions ['colcon_meta']
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_cmake_common) by extension 'colcon_meta'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_cmake_common) by extensions ['ros']
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_cmake_common) by extension 'ros'
+[0.409s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/carma_cmake_common' with type 'ros.ament_cmake' and name 'carma_cmake_common'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_msgs) by extension 'ignore'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_msgs) by extension 'ignore_ament_install'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_msgs) by extensions ['colcon_pkg']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_msgs) by extension 'colcon_pkg'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_msgs) by extensions ['colcon_meta']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_msgs) by extension 'colcon_meta'
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_msgs) by extensions ['ros']
+[0.412s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_msgs) by extension 'ros'
+[0.416s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/carma_debug_msgs' with type 'ros.catkin' and name 'carma_debug_msgs'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_ros2_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.417s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_ros2_msgs) by extension 'ignore'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_ros2_msgs) by extension 'ignore_ament_install'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_ros2_msgs) by extensions ['colcon_pkg']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_ros2_msgs) by extension 'colcon_pkg'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_ros2_msgs) by extensions ['colcon_meta']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_ros2_msgs) by extension 'colcon_meta'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_ros2_msgs) by extensions ['ros']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_debug_ros2_msgs) by extension 'ros'
+[0.420s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/carma_debug_ros2_msgs' with type 'ros.ament_cmake' and name 'carma_debug_ros2_msgs'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_driver_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_driver_msgs) by extension 'ignore'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_driver_msgs) by extension 'ignore_ament_install'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_driver_msgs) by extensions ['colcon_pkg']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_driver_msgs) by extension 'colcon_pkg'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_driver_msgs) by extensions ['colcon_meta']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_driver_msgs) by extension 'colcon_meta'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_driver_msgs) by extensions ['ros']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_driver_msgs) by extension 'ros'
+[0.423s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/carma_driver_msgs' with type 'ros.ament_cmake' and name 'carma_driver_msgs'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_localization_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_localization_msgs) by extension 'ignore'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_localization_msgs) by extension 'ignore_ament_install'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_localization_msgs) by extensions ['colcon_pkg']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_localization_msgs) by extension 'colcon_pkg'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_localization_msgs) by extensions ['colcon_meta']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_localization_msgs) by extension 'colcon_meta'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_localization_msgs) by extensions ['ros']
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_localization_msgs) by extension 'ros'
+[0.426s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/carma_localization_msgs' with type 'ros.ament_cmake' and name 'carma_localization_msgs'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_msgs) by extension 'ignore'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_msgs) by extension 'ignore_ament_install'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_msgs) by extensions ['colcon_pkg']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_msgs) by extension 'colcon_pkg'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_msgs) by extensions ['colcon_meta']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_msgs) by extension 'colcon_meta'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_msgs) by extensions ['ros']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_msgs) by extension 'ros'
+[0.428s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/carma_msgs' with type 'ros.ament_cmake' and name 'carma_msgs'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_perception_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_perception_msgs) by extension 'ignore'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_perception_msgs) by extension 'ignore_ament_install'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_perception_msgs) by extensions ['colcon_pkg']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_perception_msgs) by extension 'colcon_pkg'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_perception_msgs) by extensions ['colcon_meta']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_perception_msgs) by extension 'colcon_meta'
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_perception_msgs) by extensions ['ros']
+[0.429s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_perception_msgs) by extension 'ros'
+[0.430s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/carma_perception_msgs' with type 'ros.ament_cmake' and name 'carma_perception_msgs'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_planning_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_planning_msgs) by extension 'ignore'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_planning_msgs) by extension 'ignore_ament_install'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_planning_msgs) by extensions ['colcon_pkg']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_planning_msgs) by extension 'colcon_pkg'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_planning_msgs) by extensions ['colcon_meta']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_planning_msgs) by extension 'colcon_meta'
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_planning_msgs) by extensions ['ros']
+[0.431s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_planning_msgs) by extension 'ros'
+[0.433s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/carma_planning_msgs' with type 'ros.ament_cmake' and name 'carma_planning_msgs'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_v2x_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_v2x_msgs) by extension 'ignore'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_v2x_msgs) by extension 'ignore_ament_install'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_v2x_msgs) by extensions ['colcon_pkg']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_v2x_msgs) by extension 'colcon_pkg'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_v2x_msgs) by extensions ['colcon_meta']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_v2x_msgs) by extension 'colcon_meta'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_v2x_msgs) by extensions ['ros']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/carma_v2x_msgs) by extension 'ros'
+[0.435s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/carma_v2x_msgs' with type 'ros.ament_cmake' and name 'carma_v2x_msgs'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_msgs) by extension 'ignore'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_msgs) by extension 'ignore_ament_install'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_msgs) by extensions ['colcon_pkg']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_msgs) by extension 'colcon_pkg'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_msgs) by extensions ['colcon_meta']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_msgs) by extension 'colcon_meta'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_msgs) by extensions ['ros']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_msgs) by extension 'ros'
+[0.437s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/cav_msgs' with type 'ros.catkin' and name 'cav_msgs'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_srvs) by extensions ['ignore', 'ignore_ament_install']
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_srvs) by extension 'ignore'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_srvs) by extension 'ignore_ament_install'
+[0.437s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_srvs) by extensions ['colcon_pkg']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_srvs) by extension 'colcon_pkg'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_srvs) by extensions ['colcon_meta']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_srvs) by extension 'colcon_meta'
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_srvs) by extensions ['ros']
+[0.438s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/cav_srvs) by extension 'ros'
+[0.439s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/cav_srvs' with type 'ros.catkin' and name 'cav_srvs'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extensions ['ignore', 'ignore_ament_install']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extension 'ignore'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extension 'ignore_ament_install'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extensions ['colcon_pkg']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extension 'colcon_pkg'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extensions ['colcon_meta']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extension 'colcon_meta'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extensions ['ros']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extension 'ros'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extensions ['cmake', 'python']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extension 'cmake'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extension 'python'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extensions ['python_setup_py']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/docker) by extension 'python_setup_py'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_msgs) by extension 'ignore'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_msgs) by extension 'ignore_ament_install'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_msgs) by extensions ['colcon_pkg']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_msgs) by extension 'colcon_pkg'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_msgs) by extensions ['colcon_meta']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_msgs) by extension 'colcon_meta'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_msgs) by extensions ['ros']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_msgs) by extension 'ros'
+[0.442s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/j2735_msgs' with type 'ros.catkin' and name 'j2735_msgs'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_v2x_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_v2x_msgs) by extension 'ignore'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_v2x_msgs) by extension 'ignore_ament_install'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_v2x_msgs) by extensions ['colcon_pkg']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_v2x_msgs) by extension 'colcon_pkg'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_v2x_msgs) by extensions ['colcon_meta']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_v2x_msgs) by extension 'colcon_meta'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_v2x_msgs) by extensions ['ros']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j2735_v2x_msgs) by extension 'ros'
+[0.443s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/j2735_v2x_msgs' with type 'ros.ament_cmake' and name 'j2735_v2x_msgs'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_msgs) by extension 'ignore'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_msgs) by extension 'ignore_ament_install'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_msgs) by extensions ['colcon_pkg']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_msgs) by extension 'colcon_pkg'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_msgs) by extensions ['colcon_meta']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_msgs) by extension 'colcon_meta'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_msgs) by extensions ['ros']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_msgs) by extension 'ros'
+[0.444s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/j3224_msgs' with type 'ros.catkin' and name 'j3224_msgs'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_v2x_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_v2x_msgs) by extension 'ignore'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_v2x_msgs) by extension 'ignore_ament_install'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_v2x_msgs) by extensions ['colcon_pkg']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_v2x_msgs) by extension 'colcon_pkg'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_v2x_msgs) by extensions ['colcon_meta']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_v2x_msgs) by extension 'colcon_meta'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_v2x_msgs) by extensions ['ros']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(carma-msgs/j3224_v2x_msgs) by extension 'ros'
+[0.446s] DEBUG:colcon.colcon_core.package_identification:Package 'carma-msgs/j3224_v2x_msgs' with type 'ros.ament_cmake' and name 'j3224_v2x_msgs'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.446s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.447s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.447s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.447s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.447s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.479s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.479s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.486s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 16 installed packages in /home/mmitss/Documents/cda-mmitss/other/install
+[0.489s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 257 installed packages in /opt/ros/foxy
+[0.491s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.585s] Level 5:colcon.colcon_core.verb:set package 'carma_cmake_common' build argument 'cmake_args' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'carma_cmake_common' build argument 'cmake_target' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'carma_cmake_common' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'carma_cmake_common' build argument 'cmake_clean_cache' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'carma_cmake_common' build argument 'cmake_clean_first' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'carma_cmake_common' build argument 'cmake_force_configure' from command line to 'False'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'carma_cmake_common' build argument 'ament_cmake_args' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'carma_cmake_common' build argument 'catkin_cmake_args' from command line to 'None'
+[0.586s] Level 5:colcon.colcon_core.verb:set package 'carma_cmake_common' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.586s] DEBUG:colcon.colcon_core.verb:Building package 'carma_cmake_common' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_cmake_common', 'symlink_install': False, 'test_result_base': None}
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'can_msgs' build argument 'cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'can_msgs' build argument 'cmake_target' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'can_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'can_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'can_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'can_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'can_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'can_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.587s] Level 5:colcon.colcon_core.verb:set package 'can_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.587s] DEBUG:colcon.colcon_core.verb:Building package 'can_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/can_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/can_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'carma_localization_msgs' build argument 'cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'carma_localization_msgs' build argument 'cmake_target' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'carma_localization_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'carma_localization_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'carma_localization_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'carma_localization_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'carma_localization_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'carma_localization_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.588s] Level 5:colcon.colcon_core.verb:set package 'carma_localization_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.588s] DEBUG:colcon.colcon_core.verb:Building package 'carma_localization_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/carma_localization_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_localization_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'carma_msgs' build argument 'cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'carma_msgs' build argument 'cmake_target' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'carma_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'carma_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'carma_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'carma_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'carma_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'carma_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.589s] Level 5:colcon.colcon_core.verb:set package 'carma_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.589s] DEBUG:colcon.colcon_core.verb:Building package 'carma_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/carma_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'carma_perception_msgs' build argument 'cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'carma_perception_msgs' build argument 'cmake_target' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'carma_perception_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'carma_perception_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'carma_perception_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'carma_perception_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'carma_perception_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'carma_perception_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.590s] Level 5:colcon.colcon_core.verb:set package 'carma_perception_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.590s] DEBUG:colcon.colcon_core.verb:Building package 'carma_perception_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/carma_perception_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.591s] Level 5:colcon.colcon_core.verb:set package 'j2735_msgs' build argument 'cmake_args' from command line to 'None'
+[0.591s] Level 5:colcon.colcon_core.verb:set package 'j2735_msgs' build argument 'cmake_target' from command line to 'None'
+[0.591s] Level 5:colcon.colcon_core.verb:set package 'j2735_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.591s] Level 5:colcon.colcon_core.verb:set package 'j2735_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.591s] Level 5:colcon.colcon_core.verb:set package 'j2735_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.591s] Level 5:colcon.colcon_core.verb:set package 'j2735_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.591s] Level 5:colcon.colcon_core.verb:set package 'j2735_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.591s] Level 5:colcon.colcon_core.verb:set package 'j2735_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.591s] Level 5:colcon.colcon_core.verb:set package 'j2735_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.591s] DEBUG:colcon.colcon_core.verb:Building package 'j2735_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/j2735_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.592s] Level 5:colcon.colcon_core.verb:set package 'j2735_v2x_msgs' build argument 'cmake_args' from command line to 'None'
+[0.592s] Level 5:colcon.colcon_core.verb:set package 'j2735_v2x_msgs' build argument 'cmake_target' from command line to 'None'
+[0.592s] Level 5:colcon.colcon_core.verb:set package 'j2735_v2x_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.592s] Level 5:colcon.colcon_core.verb:set package 'j2735_v2x_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.592s] Level 5:colcon.colcon_core.verb:set package 'j2735_v2x_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.592s] Level 5:colcon.colcon_core.verb:set package 'j2735_v2x_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.592s] Level 5:colcon.colcon_core.verb:set package 'j2735_v2x_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.592s] Level 5:colcon.colcon_core.verb:set package 'j2735_v2x_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.592s] Level 5:colcon.colcon_core.verb:set package 'j2735_v2x_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.592s] DEBUG:colcon.colcon_core.verb:Building package 'j2735_v2x_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/j2735_v2x_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/j2735_v2x_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.593s] Level 5:colcon.colcon_core.verb:set package 'carma_driver_msgs' build argument 'cmake_args' from command line to 'None'
+[0.593s] Level 5:colcon.colcon_core.verb:set package 'carma_driver_msgs' build argument 'cmake_target' from command line to 'None'
+[0.593s] Level 5:colcon.colcon_core.verb:set package 'carma_driver_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.593s] Level 5:colcon.colcon_core.verb:set package 'carma_driver_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.593s] Level 5:colcon.colcon_core.verb:set package 'carma_driver_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.593s] Level 5:colcon.colcon_core.verb:set package 'carma_driver_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.593s] Level 5:colcon.colcon_core.verb:set package 'carma_driver_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.593s] Level 5:colcon.colcon_core.verb:set package 'carma_driver_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.593s] Level 5:colcon.colcon_core.verb:set package 'carma_driver_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.593s] DEBUG:colcon.colcon_core.verb:Building package 'carma_driver_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/carma_driver_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.594s] Level 5:colcon.colcon_core.verb:set package 'j3224_msgs' build argument 'cmake_args' from command line to 'None'
+[0.594s] Level 5:colcon.colcon_core.verb:set package 'j3224_msgs' build argument 'cmake_target' from command line to 'None'
+[0.594s] Level 5:colcon.colcon_core.verb:set package 'j3224_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.594s] Level 5:colcon.colcon_core.verb:set package 'j3224_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.594s] Level 5:colcon.colcon_core.verb:set package 'j3224_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.594s] Level 5:colcon.colcon_core.verb:set package 'j3224_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.594s] Level 5:colcon.colcon_core.verb:set package 'j3224_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.594s] Level 5:colcon.colcon_core.verb:set package 'j3224_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.594s] Level 5:colcon.colcon_core.verb:set package 'j3224_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.594s] DEBUG:colcon.colcon_core.verb:Building package 'j3224_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/j3224_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.595s] Level 5:colcon.colcon_core.verb:set package 'j3224_v2x_msgs' build argument 'cmake_args' from command line to 'None'
+[0.595s] Level 5:colcon.colcon_core.verb:set package 'j3224_v2x_msgs' build argument 'cmake_target' from command line to 'None'
+[0.595s] Level 5:colcon.colcon_core.verb:set package 'j3224_v2x_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.595s] Level 5:colcon.colcon_core.verb:set package 'j3224_v2x_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.595s] Level 5:colcon.colcon_core.verb:set package 'j3224_v2x_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.595s] Level 5:colcon.colcon_core.verb:set package 'j3224_v2x_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.595s] Level 5:colcon.colcon_core.verb:set package 'j3224_v2x_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.595s] Level 5:colcon.colcon_core.verb:set package 'j3224_v2x_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.595s] Level 5:colcon.colcon_core.verb:set package 'j3224_v2x_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.595s] DEBUG:colcon.colcon_core.verb:Building package 'j3224_v2x_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/j3224_v2x_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/j3224_v2x_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.596s] Level 5:colcon.colcon_core.verb:set package 'carma_v2x_msgs' build argument 'cmake_args' from command line to 'None'
+[0.596s] Level 5:colcon.colcon_core.verb:set package 'carma_v2x_msgs' build argument 'cmake_target' from command line to 'None'
+[0.596s] Level 5:colcon.colcon_core.verb:set package 'carma_v2x_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.596s] Level 5:colcon.colcon_core.verb:set package 'carma_v2x_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.596s] Level 5:colcon.colcon_core.verb:set package 'carma_v2x_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.596s] Level 5:colcon.colcon_core.verb:set package 'carma_v2x_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.596s] Level 5:colcon.colcon_core.verb:set package 'carma_v2x_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.596s] Level 5:colcon.colcon_core.verb:set package 'carma_v2x_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.596s] Level 5:colcon.colcon_core.verb:set package 'carma_v2x_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.596s] DEBUG:colcon.colcon_core.verb:Building package 'carma_v2x_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/carma_v2x_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_v2x_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.597s] Level 5:colcon.colcon_core.verb:set package 'cav_msgs' build argument 'cmake_args' from command line to 'None'
+[0.597s] Level 5:colcon.colcon_core.verb:set package 'cav_msgs' build argument 'cmake_target' from command line to 'None'
+[0.597s] Level 5:colcon.colcon_core.verb:set package 'cav_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.597s] Level 5:colcon.colcon_core.verb:set package 'cav_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.597s] Level 5:colcon.colcon_core.verb:set package 'cav_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.597s] Level 5:colcon.colcon_core.verb:set package 'cav_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.597s] Level 5:colcon.colcon_core.verb:set package 'cav_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.597s] Level 5:colcon.colcon_core.verb:set package 'cav_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.597s] Level 5:colcon.colcon_core.verb:set package 'cav_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.597s] DEBUG:colcon.colcon_core.verb:Building package 'cav_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/cav_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/cav_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.598s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_msgs' build argument 'cmake_args' from command line to 'None'
+[0.598s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_msgs' build argument 'cmake_target' from command line to 'None'
+[0.598s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.598s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.598s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.598s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.598s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.598s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.598s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.598s] DEBUG:colcon.colcon_core.verb:Building package 'carma_debug_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.599s] Level 5:colcon.colcon_core.verb:set package 'carma_planning_msgs' build argument 'cmake_args' from command line to 'None'
+[0.599s] Level 5:colcon.colcon_core.verb:set package 'carma_planning_msgs' build argument 'cmake_target' from command line to 'None'
+[0.599s] Level 5:colcon.colcon_core.verb:set package 'carma_planning_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.599s] Level 5:colcon.colcon_core.verb:set package 'carma_planning_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.599s] Level 5:colcon.colcon_core.verb:set package 'carma_planning_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.599s] Level 5:colcon.colcon_core.verb:set package 'carma_planning_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.599s] Level 5:colcon.colcon_core.verb:set package 'carma_planning_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.599s] Level 5:colcon.colcon_core.verb:set package 'carma_planning_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.599s] Level 5:colcon.colcon_core.verb:set package 'carma_planning_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.599s] DEBUG:colcon.colcon_core.verb:Building package 'carma_planning_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/carma_planning_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_planning_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.600s] Level 5:colcon.colcon_core.verb:set package 'cav_srvs' build argument 'cmake_args' from command line to 'None'
+[0.600s] Level 5:colcon.colcon_core.verb:set package 'cav_srvs' build argument 'cmake_target' from command line to 'None'
+[0.600s] Level 5:colcon.colcon_core.verb:set package 'cav_srvs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.600s] Level 5:colcon.colcon_core.verb:set package 'cav_srvs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.600s] Level 5:colcon.colcon_core.verb:set package 'cav_srvs' build argument 'cmake_clean_first' from command line to 'False'
+[0.600s] Level 5:colcon.colcon_core.verb:set package 'cav_srvs' build argument 'cmake_force_configure' from command line to 'False'
+[0.600s] Level 5:colcon.colcon_core.verb:set package 'cav_srvs' build argument 'ament_cmake_args' from command line to 'None'
+[0.600s] Level 5:colcon.colcon_core.verb:set package 'cav_srvs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.600s] Level 5:colcon.colcon_core.verb:set package 'cav_srvs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.600s] DEBUG:colcon.colcon_core.verb:Building package 'cav_srvs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/cav_srvs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/cav_srvs', 'symlink_install': False, 'test_result_base': None}
+[0.601s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_ros2_msgs' build argument 'cmake_args' from command line to 'None'
+[0.601s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_ros2_msgs' build argument 'cmake_target' from command line to 'None'
+[0.601s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_ros2_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.601s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_ros2_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.601s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_ros2_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.601s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_ros2_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.601s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_ros2_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.601s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_ros2_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.601s] Level 5:colcon.colcon_core.verb:set package 'carma_debug_ros2_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.601s] DEBUG:colcon.colcon_core.verb:Building package 'carma_debug_ros2_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_ros2_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs', 'merge_install': False, 'path': '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_ros2_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.602s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.604s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.605s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_cmake_common' with build type 'ament_cmake'
+[0.605s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_cmake_common'
+[0.611s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.611s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.611s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common -- -j8 -l8
+[1.108s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common -- -j8 -l8
+[1.142s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common
+[1.176s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_cmake_common)
+[1.178s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_cmake_common
+[1.186s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common' for CMake module files
+[1.186s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common' for CMake config files
+[1.186s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_cmake_common', 'cmake_prefix_path')
+[1.188s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/hook/cmake_prefix_path.ps1'
+[1.189s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/hook/cmake_prefix_path.dsv'
+[1.189s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/hook/cmake_prefix_path.sh'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/bin'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/lib/pkgconfig/carma_cmake_common.pc'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/lib/python3.8/site-packages'
+[1.190s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/bin'
+[1.192s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.ps1'
+[1.192s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.dsv'
+[1.193s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.sh'
+[1.193s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.bash'
+[1.194s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.zsh'
+[1.195s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/colcon-core/packages/carma_cmake_common)
+[1.264s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_cmake_common)
+[1.269s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common' for CMake module files
+[1.271s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common' for CMake config files
+[1.271s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_cmake_common', 'cmake_prefix_path')
+[1.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/hook/cmake_prefix_path.ps1'
+[1.276s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/hook/cmake_prefix_path.dsv'
+[1.277s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/hook/cmake_prefix_path.sh'
+[1.279s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/bin'
+[1.279s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/lib/pkgconfig/carma_cmake_common.pc'
+[1.279s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/lib/python3.8/site-packages'
+[1.280s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/bin'
+[1.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.ps1'
+[1.284s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.dsv'
+[1.285s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.sh'
+[1.285s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.bash'
+[1.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/carma_cmake_common/package.zsh'
+[1.287s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common/share/colcon-core/packages/carma_cmake_common)
+[1.288s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/j2735_msgs' with build type 'catkin'
+[1.288s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/j2735_msgs'
+[1.290s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.290s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.300s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/j2735_v2x_msgs' with build type 'ament_cmake'
+[1.300s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/j2735_v2x_msgs'
+[1.303s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.303s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.311s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs' with build type 'ament_cmake'
+[1.311s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_msgs'
+[1.319s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.320s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.333s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/can_msgs' with build type 'ament_cmake'
+[1.334s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/can_msgs'
+[1.338s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.338s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.346s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_localization_msgs' with build type 'ament_cmake'
+[1.346s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_localization_msgs'
+[1.349s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.349s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.367s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs' with build type 'ament_cmake'
+[1.368s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_perception_msgs'
+[1.372s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.372s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.397s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs -- -j8 -l8
+[1.409s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/j2735_v2x_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/j2735_v2x_msgs -- -j8 -l8
+[1.415s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_msgs -- -j8 -l8
+[1.423s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/can_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/can_msgs -- -j8 -l8
+[1.441s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_localization_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_localization_msgs -- -j8 -l8
+[1.459s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_perception_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_perception_msgs -- -j8 -l8
+[1.520s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/j2735_msgs -- -j8 -l8
+[1.625s] WARNING:colcon.colcon_cmake.task.cmake.build:Could not run installation step for package 'j2735_msgs' because it has no 'install' target
+[1.674s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(j2735_msgs)
+[1.686s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs' for CMake module files
+[1.688s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs' for CMake config files
+[1.689s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs/bin'
+[1.689s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs/lib/pkgconfig/j2735_msgs.pc'
+[1.689s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs/lib/python3.8/site-packages'
+[1.690s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs/bin'
+[1.695s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs/share/j2735_msgs/package.ps1'
+[1.696s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs/share/j2735_msgs/package.dsv'
+[1.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs/share/j2735_msgs/package.sh'
+[1.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs/share/j2735_msgs/package.bash'
+[1.698s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs/share/j2735_msgs/package.zsh'
+[1.698s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/j2735_msgs/share/colcon-core/packages/j2735_msgs)
+[1.700s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/j3224_msgs' with build type 'catkin'
+[1.700s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/j3224_msgs'
+[1.704s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.705s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.749s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs -- -j8 -l8
+[1.871s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/j3224_msgs -- -j8 -l8
+[1.968s] WARNING:colcon.colcon_cmake.task.cmake.build:Could not run installation step for package 'j3224_msgs' because it has no 'install' target
+[2.019s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(j3224_msgs)
+[2.026s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs' for CMake module files
+[2.027s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs' for CMake config files
+[2.028s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs/bin'
+[2.028s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs/lib/pkgconfig/j3224_msgs.pc'
+[2.029s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs/lib/python3.8/site-packages'
+[2.029s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs/bin'
+[2.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs/share/j3224_msgs/package.ps1'
+[2.034s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs/share/j3224_msgs/package.dsv'
+[2.034s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs/share/j3224_msgs/package.sh'
+[2.035s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs/share/j3224_msgs/package.bash'
+[2.035s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs/share/j3224_msgs/package.zsh'
+[2.036s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/j3224_msgs/share/colcon-core/packages/j3224_msgs)
+[2.037s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/cav_msgs' with build type 'catkin'
+[2.037s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/cav_msgs'
+[2.046s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.046s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.087s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/cav_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/cav_msgs -- -j8 -l8
+[2.208s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/cav_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/cav_msgs -- -j8 -l8
+[2.310s] WARNING:colcon.colcon_cmake.task.cmake.build:Could not run installation step for package 'cav_msgs' because it has no 'install' target
+[2.354s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cav_msgs)
+[2.362s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs' for CMake module files
+[2.363s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs' for CMake config files
+[2.364s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs/bin'
+[2.364s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs/lib/pkgconfig/cav_msgs.pc'
+[2.365s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs/lib/python3.8/site-packages'
+[2.365s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs/bin'
+[2.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs/share/cav_msgs/package.ps1'
+[2.370s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs/share/cav_msgs/package.dsv'
+[2.371s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs/share/cav_msgs/package.sh'
+[2.371s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs/share/cav_msgs/package.bash'
+[2.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs/share/cav_msgs/package.zsh'
+[2.372s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/cav_msgs/share/colcon-core/packages/cav_msgs)
+[2.373s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_msgs' with build type 'catkin'
+[2.373s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_debug_msgs'
+[2.377s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.377s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.410s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/cav_srvs' with build type 'catkin'
+[2.410s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/cav_srvs'
+[2.416s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.416s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs -- -j8 -l8
+[2.467s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/cav_srvs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/cav_srvs -- -j8 -l8
+[2.594s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_debug_msgs -- -j8 -l8
+[2.610s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/cav_srvs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/cav_srvs -- -j8 -l8
+[2.721s] WARNING:colcon.colcon_cmake.task.cmake.build:Could not run installation step for package 'carma_debug_msgs' because it has no 'install' target
+[2.739s] WARNING:colcon.colcon_cmake.task.cmake.build:Could not run installation step for package 'cav_srvs' because it has no 'install' target
+[2.770s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_debug_msgs)
+[2.779s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs' for CMake module files
+[2.780s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs' for CMake config files
+[2.781s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs/bin'
+[2.781s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs/lib/pkgconfig/carma_debug_msgs.pc'
+[2.782s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs/lib/python3.8/site-packages'
+[2.782s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs/bin'
+[2.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs/share/carma_debug_msgs/package.ps1'
+[2.788s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs/share/carma_debug_msgs/package.dsv'
+[2.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs/share/carma_debug_msgs/package.sh'
+[2.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs/share/carma_debug_msgs/package.bash'
+[2.790s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs/share/carma_debug_msgs/package.zsh'
+[2.791s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_msgs/share/colcon-core/packages/carma_debug_msgs)
+[2.793s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cav_srvs)
+[2.798s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs' for CMake module files
+[2.799s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs' for CMake config files
+[2.800s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs/bin'
+[2.800s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs/lib/pkgconfig/cav_srvs.pc'
+[2.800s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs/lib/python3.8/site-packages'
+[2.801s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs/bin'
+[2.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs/share/cav_srvs/package.ps1'
+[2.807s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs/share/cav_srvs/package.dsv'
+[2.808s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs/share/cav_srvs/package.sh'
+[2.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs/share/cav_srvs/package.bash'
+[2.812s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs/share/cav_srvs/package.zsh'
+[2.814s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/cav_srvs/share/colcon-core/packages/cav_srvs)
+[17.392s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/can_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/can_msgs -- -j8 -l8
+[17.936s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_localization_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_localization_msgs -- -j8 -l8
+[18.987s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/can_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/can_msgs
+[19.134s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_localization_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_localization_msgs
+[19.486s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(can_msgs)
+[19.495s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs' for CMake module files
+[19.501s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/can_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/can_msgs
+[19.509s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs' for CMake config files
+[19.511s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_msgs', 'cmake_prefix_path')
+[19.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/cmake_prefix_path.ps1'
+[19.524s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/cmake_prefix_path.dsv'
+[19.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/cmake_prefix_path.sh'
+[19.529s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib'
+[19.530s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_msgs', 'ld_library_path_lib')
+[19.538s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/ld_library_path_lib.ps1'
+[19.540s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/ld_library_path_lib.dsv'
+[19.541s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/ld_library_path_lib.sh'
+[19.543s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/bin'
+[19.543s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib/pkgconfig/can_msgs.pc'
+[19.544s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib/python3.8/site-packages'
+[19.544s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_msgs', 'pythonpath')
+[19.565s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/pythonpath.ps1'
+[19.568s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/pythonpath.dsv'
+[19.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/pythonpath.sh'
+[19.574s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/bin'
+[19.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/package.ps1'
+[19.589s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/package.dsv'
+[19.591s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/package.sh'
+[19.592s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/package.bash'
+[19.593s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/package.zsh'
+[19.593s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/colcon-core/packages/can_msgs)
+[19.631s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_localization_msgs)
+[19.640s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_localization_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_localization_msgs
+[19.643s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs' for CMake module files
+[19.645s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs' for CMake config files
+[19.652s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_localization_msgs', 'cmake_prefix_path')
+[19.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/cmake_prefix_path.ps1'
+[19.656s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/cmake_prefix_path.dsv'
+[19.657s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/cmake_prefix_path.sh'
+[19.658s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib'
+[19.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_localization_msgs', 'ld_library_path_lib')
+[19.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/ld_library_path_lib.ps1'
+[19.666s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/ld_library_path_lib.dsv'
+[19.689s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/ld_library_path_lib.sh'
+[19.690s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/bin'
+[19.690s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib/pkgconfig/carma_localization_msgs.pc'
+[19.691s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib/python3.8/site-packages'
+[19.691s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_localization_msgs', 'pythonpath')
+[19.695s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/pythonpath.ps1'
+[19.696s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/pythonpath.dsv'
+[19.697s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/pythonpath.sh'
+[19.698s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/bin'
+[19.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/package.ps1'
+[19.717s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/package.dsv'
+[19.732s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/package.sh'
+[19.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/package.bash'
+[19.735s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/package.zsh'
+[19.735s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/colcon-core/packages/carma_localization_msgs)
+[21.210s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_localization_msgs)
+[21.215s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs' for CMake module files
+[21.216s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs' for CMake config files
+[21.217s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_localization_msgs', 'cmake_prefix_path')
+[21.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/cmake_prefix_path.ps1'
+[21.254s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/cmake_prefix_path.dsv'
+[21.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/cmake_prefix_path.sh'
+[21.264s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib'
+[21.265s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_localization_msgs', 'ld_library_path_lib')
+[21.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/ld_library_path_lib.ps1'
+[21.276s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/ld_library_path_lib.dsv'
+[21.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/ld_library_path_lib.sh'
+[21.288s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/bin'
+[21.289s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib/pkgconfig/carma_localization_msgs.pc'
+[21.290s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib/python3.8/site-packages'
+[21.290s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_localization_msgs', 'pythonpath')
+[21.321s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/pythonpath.ps1'
+[21.322s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/pythonpath.dsv'
+[21.323s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/hook/pythonpath.sh'
+[21.324s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/bin'
+[21.353s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/package.ps1'
+[21.355s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/package.dsv'
+[21.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/package.sh'
+[21.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/package.bash'
+[21.359s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/carma_localization_msgs/package.zsh'
+[21.381s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/share/colcon-core/packages/carma_localization_msgs)
+[21.713s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(can_msgs)
+[21.732s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs' for CMake module files
+[21.734s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs' for CMake config files
+[21.734s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_msgs', 'cmake_prefix_path')
+[21.738s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/cmake_prefix_path.ps1'
+[21.763s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/cmake_prefix_path.dsv'
+[21.765s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/cmake_prefix_path.sh'
+[21.767s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib'
+[21.767s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_msgs', 'ld_library_path_lib')
+[21.773s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/ld_library_path_lib.ps1'
+[21.775s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/ld_library_path_lib.dsv'
+[21.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/ld_library_path_lib.sh'
+[21.800s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/bin'
+[21.800s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib/pkgconfig/can_msgs.pc'
+[21.801s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib/python3.8/site-packages'
+[21.801s] Level 1:colcon.colcon_core.shell:create_environment_hook('can_msgs', 'pythonpath')
+[21.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/pythonpath.ps1'
+[21.835s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/pythonpath.dsv'
+[21.836s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/hook/pythonpath.sh'
+[21.838s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/bin'
+[21.843s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/package.ps1'
+[21.844s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/package.dsv'
+[21.845s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/package.sh'
+[21.846s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/package.bash'
+[21.847s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/can_msgs/package.zsh'
+[21.868s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/share/colcon-core/packages/can_msgs)
+[26.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_msgs -- -j8 -l8
+[26.742s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_perception_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_perception_msgs -- -j8 -l8
+[29.654s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_msgs
+[30.125s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_perception_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_perception_msgs
+[30.151s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_msgs)
+[30.160s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs' for CMake module files
+[30.162s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs' for CMake config files
+[30.172s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_msgs
+[30.173s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_msgs', 'cmake_prefix_path')
+[30.177s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/cmake_prefix_path.ps1'
+[30.179s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/cmake_prefix_path.dsv'
+[30.180s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/cmake_prefix_path.sh'
+[30.181s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib'
+[30.181s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_msgs', 'ld_library_path_lib')
+[30.211s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/ld_library_path_lib.ps1'
+[30.221s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/ld_library_path_lib.dsv'
+[30.221s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/ld_library_path_lib.sh'
+[30.222s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/bin'
+[30.223s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib/pkgconfig/carma_msgs.pc'
+[30.223s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib/python3.8/site-packages'
+[30.224s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_msgs', 'pythonpath')
+[30.228s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/pythonpath.ps1'
+[30.238s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/pythonpath.dsv'
+[30.240s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/pythonpath.sh'
+[30.266s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/bin'
+[30.276s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/package.ps1'
+[30.285s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/package.dsv'
+[30.286s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/package.sh'
+[30.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/package.bash'
+[30.288s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/package.zsh'
+[30.288s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/colcon-core/packages/carma_msgs)
+[30.769s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_perception_msgs)
+[30.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_perception_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_perception_msgs
+[30.786s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs' for CMake module files
+[30.788s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs' for CMake config files
+[30.797s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_perception_msgs', 'cmake_prefix_path')
+[30.812s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/cmake_prefix_path.ps1'
+[30.819s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/cmake_prefix_path.dsv'
+[30.821s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/cmake_prefix_path.sh'
+[30.824s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib'
+[30.824s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_perception_msgs', 'ld_library_path_lib')
+[30.832s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/ld_library_path_lib.ps1'
+[30.833s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/ld_library_path_lib.dsv'
+[30.834s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/ld_library_path_lib.sh'
+[30.835s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/bin'
+[30.838s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib/pkgconfig/carma_perception_msgs.pc'
+[30.839s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib/python3.8/site-packages'
+[30.839s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_perception_msgs', 'pythonpath')
+[30.844s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/pythonpath.ps1'
+[30.845s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/pythonpath.dsv'
+[30.845s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/pythonpath.sh'
+[30.847s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/bin'
+[30.851s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/package.ps1'
+[30.853s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/package.dsv'
+[30.854s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/package.sh'
+[30.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/package.bash'
+[30.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/package.zsh'
+[30.856s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/colcon-core/packages/carma_perception_msgs)
+[34.384s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_msgs)
+[34.397s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs' for CMake module files
+[34.402s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs' for CMake config files
+[34.404s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_msgs', 'cmake_prefix_path')
+[34.407s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/cmake_prefix_path.ps1'
+[34.409s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/cmake_prefix_path.dsv'
+[34.409s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/cmake_prefix_path.sh'
+[34.411s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib'
+[34.411s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_msgs', 'ld_library_path_lib')
+[34.431s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/ld_library_path_lib.ps1'
+[34.433s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/ld_library_path_lib.dsv'
+[34.434s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/ld_library_path_lib.sh'
+[34.435s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/bin'
+[34.435s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib/pkgconfig/carma_msgs.pc'
+[34.436s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib/python3.8/site-packages'
+[34.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_msgs', 'pythonpath')
+[34.442s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/pythonpath.ps1'
+[34.443s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/pythonpath.dsv'
+[34.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/hook/pythonpath.sh'
+[34.446s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/bin'
+[34.450s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/package.ps1'
+[34.452s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/package.dsv'
+[34.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/package.sh'
+[34.455s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/package.bash'
+[34.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/carma_msgs/package.zsh'
+[34.456s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/share/colcon-core/packages/carma_msgs)
+[34.465s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs' with build type 'ament_cmake'
+[34.466s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mmitss/Documents/cda-mmitss/other/carma-msgs/carma_driver_msgs'
+[34.475s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[34.475s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[34.603s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_perception_msgs)
+[34.622s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs' for CMake module files
+[34.624s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs' for CMake config files
+[34.626s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_perception_msgs', 'cmake_prefix_path')
+[34.630s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/cmake_prefix_path.ps1'
+[34.632s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/cmake_prefix_path.dsv'
+[34.633s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/cmake_prefix_path.sh'
+[34.634s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib'
+[34.634s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_perception_msgs', 'ld_library_path_lib')
+[34.638s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/ld_library_path_lib.ps1'
+[34.639s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/ld_library_path_lib.dsv'
+[34.642s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/ld_library_path_lib.sh'
+[34.644s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/bin'
+[34.645s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib/pkgconfig/carma_perception_msgs.pc'
+[34.646s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib/python3.8/site-packages'
+[34.647s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_perception_msgs', 'pythonpath')
+[34.657s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/pythonpath.ps1'
+[34.658s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/pythonpath.dsv'
+[34.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/hook/pythonpath.sh'
+[34.661s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/bin'
+[34.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/package.ps1'
+[34.669s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/package.dsv'
+[34.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/package.sh'
+[34.672s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/package.bash'
+[34.673s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/carma_perception_msgs/package.zsh'
+[34.674s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/share/colcon-core/packages/carma_perception_msgs)
+[34.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_driver_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ibm/ILOG/CPLEX_Studio221/cplex/lib/x86-64_linux:/opt/ibm/ILOG/CPLEX_Studio221/concert/lib/x86-64_linux PYTHONPATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_driver_msgs -- -j8 -l8
+[157.554s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_driver_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ibm/ILOG/CPLEX_Studio221/cplex/lib/x86-64_linux:/opt/ibm/ILOG/CPLEX_Studio221/concert/lib/x86-64_linux PYTHONPATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/carma_driver_msgs -- -j8 -l8
+[158.457s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_driver_msgs': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ibm/ILOG/CPLEX_Studio221/cplex/lib/x86-64_linux:/opt/ibm/ILOG/CPLEX_Studio221/concert/lib/x86-64_linux PYTHONPATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_driver_msgs
+[158.740s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_driver_msgs)
+[158.745s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs' for CMake module files
+[158.747s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/carma_driver_msgs' returned '0': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ibm/ILOG/CPLEX_Studio221/cplex/lib/x86-64_linux:/opt/ibm/ILOG/CPLEX_Studio221/concert/lib/x86-64_linux PYTHONPATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs/lib/python3.8/site-packages:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/cmake --install /home/mmitss/Documents/cda-mmitss/other/build/carma_driver_msgs
+[158.748s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs' for CMake config files
+[158.749s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_driver_msgs', 'cmake_prefix_path')
+[158.751s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/cmake_prefix_path.ps1'
+[158.752s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/cmake_prefix_path.dsv'
+[158.753s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/cmake_prefix_path.sh'
+[158.753s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib'
+[158.753s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_driver_msgs', 'ld_library_path_lib')
+[158.755s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/ld_library_path_lib.ps1'
+[158.756s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/ld_library_path_lib.dsv'
+[158.756s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/ld_library_path_lib.sh'
+[158.757s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/bin'
+[158.757s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/pkgconfig/carma_driver_msgs.pc'
+[158.757s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages'
+[158.757s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_driver_msgs', 'pythonpath')
+[158.765s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/pythonpath.ps1'
+[158.767s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/pythonpath.dsv'
+[158.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/pythonpath.sh'
+[158.770s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/bin'
+[158.775s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.ps1'
+[158.777s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.dsv'
+[158.779s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.sh'
+[158.780s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.bash'
+[158.781s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.zsh'
+[158.782s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/colcon-core/packages/carma_driver_msgs)
+[159.701s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(carma_driver_msgs)
+[159.708s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs' for CMake module files
+[159.709s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs' for CMake config files
+[159.712s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_driver_msgs', 'cmake_prefix_path')
+[159.716s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/cmake_prefix_path.ps1'
+[159.717s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/cmake_prefix_path.dsv'
+[159.718s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/cmake_prefix_path.sh'
+[159.719s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib'
+[159.719s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_driver_msgs', 'ld_library_path_lib')
+[159.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/ld_library_path_lib.ps1'
+[159.732s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/ld_library_path_lib.dsv'
+[159.734s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/ld_library_path_lib.sh'
+[159.735s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/bin'
+[159.736s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/pkgconfig/carma_driver_msgs.pc'
+[159.737s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/lib/python3.8/site-packages'
+[159.737s] Level 1:colcon.colcon_core.shell:create_environment_hook('carma_driver_msgs', 'pythonpath')
+[159.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/pythonpath.ps1'
+[159.745s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/pythonpath.dsv'
+[159.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/hook/pythonpath.sh'
+[159.748s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/bin'
+[159.754s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.ps1'
+[159.756s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.dsv'
+[159.758s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.sh'
+[159.759s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.bash'
+[159.760s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/carma_driver_msgs/package.zsh'
+[159.761s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs/share/colcon-core/packages/carma_driver_msgs)
+[208.002s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete was interrupted
+[208.002s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete again
+[208.006s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mmitss/Documents/cda-mmitss/other/build/j2735_v2x_msgs' returned '-2': CMAKE_PREFIX_PATH=/home/mmitss/Documents/cda-mmitss/other/install/carma_cmake_common:/home/mmitss/Documents/cda-mmitss/other/install/carma_debug_ros2_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_planning_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j3224_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_perception_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_driver_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_msgs:/home/mmitss/Documents/cda-mmitss/other/install/carma_localization_msgs:/home/mmitss/Documents/cda-mmitss/other/install/can_msgs:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/mmitss/Documents/cda-mmitss/other/build/j2735_v2x_msgs -- -j8 -l8
+[209.974s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(j2735_v2x_msgs)
+[209.980s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs' for CMake module files
+[209.983s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs' for CMake config files
+[209.998s] Level 1:colcon.colcon_core.shell:create_environment_hook('j2735_v2x_msgs', 'cmake_prefix_path')
+[210.001s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/hook/cmake_prefix_path.ps1'
+[210.002s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/hook/cmake_prefix_path.dsv'
+[210.002s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/hook/cmake_prefix_path.sh'
+[210.003s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib'
+[210.003s] Level 1:colcon.colcon_core.shell:create_environment_hook('j2735_v2x_msgs', 'ld_library_path_lib')
+[210.005s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/hook/ld_library_path_lib.ps1'
+[210.005s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/hook/ld_library_path_lib.dsv'
+[210.006s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/hook/ld_library_path_lib.sh'
+[210.006s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/bin'
+[210.006s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/pkgconfig/j2735_v2x_msgs.pc'
+[210.007s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/lib/python3.8/site-packages'
+[210.007s] Level 1:colcon.colcon_core.shell:create_environment_hook('j2735_v2x_msgs', 'pythonpath')
+[210.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/hook/pythonpath.ps1'
+[210.009s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/hook/pythonpath.dsv'
+[210.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/hook/pythonpath.sh'
+[210.010s] Level 1:colcon.colcon_core.environment:checking '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/bin'
+[210.012s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/package.ps1'
+[210.012s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/package.dsv'
+[210.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/package.sh'
+[210.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/package.bash'
+[210.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/j2735_v2x_msgs/package.zsh'
+[210.014s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mmitss/Documents/cda-mmitss/other/install/j2735_v2x_msgs/share/colcon-core/packages/j2735_v2x_msgs)
+[210.025s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished
+[210.025s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[210.025s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[210.026s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[210.047s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[210.047s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[210.047s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[210.221s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[210.224s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mmitss/Documents/cda-mmitss/other/install/local_setup.ps1'
+[210.225s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mmitss/Documents/cda-mmitss/other/install/_local_setup_util_ps1.py'
+[210.226s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mmitss/Documents/cda-mmitss/other/install/setup.ps1'
+[210.228s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mmitss/Documents/cda-mmitss/other/install/local_setup.sh'
+[210.229s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mmitss/Documents/cda-mmitss/other/install/_local_setup_util_sh.py'
+[210.230s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mmitss/Documents/cda-mmitss/other/install/setup.sh'
+[210.231s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mmitss/Documents/cda-mmitss/other/install/local_setup.bash'
+[210.232s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mmitss/Documents/cda-mmitss/other/install/setup.bash'
+[210.234s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mmitss/Documents/cda-mmitss/other/install/local_setup.zsh'
+[210.234s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mmitss/Documents/cda-mmitss/other/install/setup.zsh'

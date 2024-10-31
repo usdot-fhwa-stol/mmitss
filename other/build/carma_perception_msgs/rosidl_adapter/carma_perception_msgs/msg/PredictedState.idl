@@ -1,0 +1,37 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_perception_msgs/msg/PredictedState.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/Twist.idl"
+#include "std_msgs/msg/Header.idl"
+
+module carma_perception_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " PredictedState.msg" "\n"
+      "" "\n"
+      " Describes the predicted states of non-stationary external objects over one time step.")
+    struct PredictedState {
+      @verbatim (language="comment", text=
+        " Header contains the timestamp and frame id which the remaining fields reference.")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        " Predicted position of the object")
+      geometry_msgs::msg::Pose predicted_position;
+
+      @verbatim (language="comment", text=
+        " Prediction confidence [0,1]")
+      double predicted_position_confidence;
+
+      @verbatim (language="comment", text=
+        " Predicted velocity of the object")
+      geometry_msgs::msg::Twist predicted_velocity;
+
+      @verbatim (language="comment", text=
+        " Prediction confidence [0,1]")
+      double predicted_velocity_confidence;
+    };
+  };
+};

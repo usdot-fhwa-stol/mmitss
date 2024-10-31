@@ -1,0 +1,7 @@
+[1690479726.5102] Target device IP address: 10.12.6.104
+[1690479726.5103] Target device NTCIP port: 502
+[1690479726.5104] Verifying the network connection with the target SNMP device...
+[1690479726.5104] PING test begins
+[1690479728.7305] PING test successful
+[1690479728.7305] Successfully verified the network connection with the target SNMP device
+[1690479728.7374] Ready to forward SNMP GET/SET requests

@@ -1,0 +1,132 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/IntersectionState.msg
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/MovementState.idl"
+#include "j2735_v2x_msgs/msg/ConnectionManeuverAssist.idl"
+#include "j2735_v2x_msgs/msg/IntersectionReferenceID.idl"
+#include "j2735_v2x_msgs/msg/IntersectionStatusObject.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    module IntersectionState_Constants {
+      const uint32 MOY_INVALID = 527040;
+      const float TIME_STAMP_UNAVAILABLE = 65.535;
+    };
+    @verbatim (language="comment", text=
+      " IntersectionState.msg" "\n"
+      "" "\n"
+      " J2735 2016 message format." "\n"
+      "" "\n"
+      " @author Mae Fromm" "\n"
+      " @version 0.1" "\n"
+      "" "\n"
+      " The IntersectionState data frame is used to convey all the SPAT information for a single intersection. Both current" "\n"
+      " and future data can be sent." "\n"
+      "" "\n"
+      " IntersectionState ::= SEQUENCE {" "\n"
+      "  name DescriptiveName OPTIONAL," "\n"
+      "  -- human readable name for intersection" "\n"
+      "  -- to be used only in debug mode" "\n"
+      "  id IntersectionReferenceID," "\n"
+      "  -- A globally unique value set, consisting of a" "\n"
+      "  -- regionID and intersection ID assignment" "\n"
+      "  -- provides a unique mapping to the" "\n"
+      "  -- intersection MAP in question" "\n"
+      "  -- which provides complete location" "\n"
+      "  -- and approach/move/lane data" "\n"
+      "  revision MsgCount," "\n"
+      "  status IntersectionStatusObject," "\n"
+      "  -- general status of the controller(s)" "\n"
+      "  moy MinuteOfTheYear OPTIONAL," "\n"
+      "  -- Minute of current UTC year" "\n"
+      "  -- used only with messages to be archived" "\n"
+      "  timeStamp DSecond OPTIONAL," "\n"
+      "  -- the mSec point in the current UTC minute that" "\n"
+      "  -- this message was constructed" "\n"
+      "  enabledLanes EnabledLaneList OPTIONAL," "\n"
+      "  -- a list of lanes where the RevocableLane bit" "\n"
+      "  -- has been set which are now active and" "\n"
+      "  -- therefore part of the current intersection" "\n"
+      "  states MovementList," "\n"
+      "  -- Each Movement is given in turn" "\n"
+      "  -- and contains its signal phase state," "\n"
+      "  -- mapping to the lanes it applies to, and" "\n"
+      "  -- point in time it will end, and it" "\n"
+      "  -- may contain both active and future states" "\n"
+      "  maneuverAssistList ManeuverAssistList OPTIONAL," "\n"
+      "  -- Assist data" "\n"
+      "  regional SEQUENCE (SIZE(1..4)) OF RegionalExtension {{REGION.Reg-IntersectionState}} OPTIONAL," "\n"
+      "  ..." "\n"
+      " }")
+    struct IntersectionState {
+      @verbatim (language="comment", text=
+        " name DescriptiveName OPTIONAL := IA5String (SIZE(1..63))" "\n"
+        " -- often for debug use only" "\n"
+        " -- but at times used to name ped crossings" "\n"
+        " NOTE: As optional field, blank value can note that it's not set in carma.")
+      string name;
+
+      boolean name_exists;
+
+      j2735_v2x_msgs::msg::IntersectionReferenceID id;
+
+      @verbatim (language="comment", text=
+        "MsgCount ::= INTEGER (0..127)")
+      uint8 revision;
+
+      j2735_v2x_msgs::msg::IntersectionStatusObject status;
+
+      @verbatim (language="comment", text=
+        "MinuteOfTheYear OPTIONAL ::= INTEGER (0..527040)" "\n"
+        " The value of 527040 shall be used for invalid")
+      uint32 moy;
+
+      boolean moy_exists;
+
+      @verbatim (language="comment", text=
+        " Deviates from J2735 standard:" "\n"
+        " DSecond in this message are conveyed as seconds rather than milliseconds to avoid redundant unnecessary conversion by subscribers" "\n"
+        " DSecond ::= FLOAT (0..65.535)" "\n"
+        "  -- Float values from 0 to 59.999 represent the seconds within a minute" "\n"
+        "  -- A leap second is represented by the value range 60.000 to 60.999" "\n"
+        "  -- The values from 61.000 to 65.534 are reserved" "\n"
+        "  -- The value of 65.535 shall represent an unavailable value in the range of the minute" "\n"
+        "  -- Unit is seconds")
+      float time_stamp;
+
+      boolean time_stamp_exists;
+
+      @verbatim (language="comment", text=
+        " The Enabled Lane List data frame is a sequence of lane IDs for lane objects that are activated in the current map" "\n"
+        " configuration. These lanes, unlike most lanes, have their RevocableLane bit set to one (asserted). Such lanes are not" "\n"
+        " considered to be part of the current map unless they are in the Enabled Lane List. This concept is used to describe all the" "\n"
+        " possible regulatory states for a given physical lane." "\n"
+        "" "\n"
+        " EnabledLaneList ::= SEQUENCE (SIZE(1..16)) OF LaneID" "\n"
+        "-- The unique ID numbers for each" "\n"
+        "-- lane object which is 'active'" "\n"
+        "-- as part of the dynamic map contents." "\n"
+        " LaneID ::= INTEGER (0..255)" "\n"
+        " -- the value 0 shall be used when the lane ID is not available or not known" "\n"
+        " -- the value 255 is reserved for future use")
+      sequence<uint16> lane_id_list;
+
+      boolean enabled_lanes_exists;
+
+      @verbatim (language="comment", text=
+        " The MovementList data frame consists of a list of MovementState entries." "\n"
+        "" "\n"
+        " MovementList ::= SEQUENCE (SIZE(1..255)) OF MovementState")
+      sequence<carma_v2x_msgs::msg::MovementState> movement_list;
+
+      @verbatim (language="comment", text=
+        " This entry is used directly by one other data structure in this standard, a DF called DF_LaneAttributes <ASN>." "\n"
+        "  In addition, this item may be used by data structures in other ITS standards." "\n"
+        " ManeuverAssistList ::= SEQUENCE (SIZE(1..16)) OF ConnectionManeuverAssist")
+      sequence<j2735_v2x_msgs::msg::ConnectionManeuverAssist> connection_maneuver_assist_list;
+
+      boolean maneuever_assist_list_exists;
+    };
+  };
+};

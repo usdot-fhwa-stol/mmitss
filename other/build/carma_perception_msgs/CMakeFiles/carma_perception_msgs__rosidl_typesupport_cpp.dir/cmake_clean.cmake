@@ -1,0 +1,27 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/carma_perception_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_perception_msgs/msg/check_active_geofence__type_support.cpp.o"
+  "CMakeFiles/carma_perception_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_perception_msgs/msg/connected_vehicle_type__type_support.cpp.o"
+  "CMakeFiles/carma_perception_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_perception_msgs/msg/external_object__type_support.cpp.o"
+  "CMakeFiles/carma_perception_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_perception_msgs/msg/external_object_list__type_support.cpp.o"
+  "CMakeFiles/carma_perception_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_perception_msgs/msg/predicted_state__type_support.cpp.o"
+  "CMakeFiles/carma_perception_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_perception_msgs/msg/roadway_obstacle__type_support.cpp.o"
+  "CMakeFiles/carma_perception_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_perception_msgs/msg/roadway_obstacle_list__type_support.cpp.o"
+  "CMakeFiles/carma_perception_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_perception_msgs/msg/traffic_signal_info__type_support.cpp.o"
+  "CMakeFiles/carma_perception_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/carma_perception_msgs/msg/traffic_signal_info_list__type_support.cpp.o"
+  "libcarma_perception_msgs__rosidl_typesupport_cpp.pdb"
+  "libcarma_perception_msgs__rosidl_typesupport_cpp.so"
+  "rosidl_typesupport_cpp/carma_perception_msgs/msg/check_active_geofence__type_support.cpp"
+  "rosidl_typesupport_cpp/carma_perception_msgs/msg/connected_vehicle_type__type_support.cpp"
+  "rosidl_typesupport_cpp/carma_perception_msgs/msg/external_object__type_support.cpp"
+  "rosidl_typesupport_cpp/carma_perception_msgs/msg/external_object_list__type_support.cpp"
+  "rosidl_typesupport_cpp/carma_perception_msgs/msg/predicted_state__type_support.cpp"
+  "rosidl_typesupport_cpp/carma_perception_msgs/msg/roadway_obstacle__type_support.cpp"
+  "rosidl_typesupport_cpp/carma_perception_msgs/msg/roadway_obstacle_list__type_support.cpp"
+  "rosidl_typesupport_cpp/carma_perception_msgs/msg/traffic_signal_info__type_support.cpp"
+  "rosidl_typesupport_cpp/carma_perception_msgs/msg/traffic_signal_info_list__type_support.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/carma_perception_msgs__rosidl_typesupport_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,136 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/BSMCoreData.msg
+// generated code does not contain a copyright notice
+
+#include "carma_v2x_msgs/msg/AccelerationSet4Way.idl"
+#include "carma_v2x_msgs/msg/PositionalAccuracy.idl"
+#include "carma_v2x_msgs/msg/VehicleSize.idl"
+#include "j2735_v2x_msgs/msg/BrakeSystemStatus.idl"
+#include "j2735_v2x_msgs/msg/TransmissionState.idl"
+
+module carma_v2x_msgs {
+  module msg {
+    module BSMCoreData_Constants {
+      const uint16 MSG_COUNT_MAX = 127;
+      const uint16 ID_TIME_MAX = 3000;
+      const uint16 SEC_MARK_AVAILABLE = 1;
+      const uint16 LATITUDE_AVAILABLE = 2;
+      const uint16 LONGITUDE_AVAILABLE = 4;
+      const uint16 ELEVATION_AVAILABLE = 8;
+      const uint16 SPEED_AVAILABLE = 16;
+      const uint16 HEADING_AVAILABLE = 32;
+      const uint16 STEER_WHEEL_ANGLE_AVAILABLE = 64;
+      const uint16 SEC_MARK_MOD = 60000;
+      const double LATITUDE_MAX = 90.0;
+      const double LATITUDE_MIN = -90.0;
+      const double LONGITUDE_MAX = 180.0;
+      const double LONGITUDE_MIN = -179.9999999;
+      const float ELEVATION_MAX = 6143.9;
+      const float ELEVATION_MIN = -409.5;
+      const float SPEED_MAX = 163.8;
+      const float SPEED_MIN = 0.0;
+      const float HEADING_MAX = 359.9875;
+      const float HEADING_MIN = 0.0;
+      const float STEER_WHEEL_ANGLE_MAX = 189.0;
+      const float STEER_WHEEL_ANGLE_MIN = -189.0;
+    };
+    @verbatim (language="comment", text=
+      " BSMCoreData.msg" "\n"
+      "" "\n"
+      " J2735 2016 message format." "\n"
+      "" "\n"
+      " @author Mae Fromm" "\n"
+      " @version 0.1" "\n"
+      "" "\n"
+      " Contains critical core elements deemed to be needed with every BSM issued.")
+    struct BSMCoreData {
+      @verbatim (language="comment", text=
+        "MsgCount ::= INTEGER (0..127)")
+      uint8 msg_count;
+
+      @verbatim (language="comment", text=
+        "TemporaryID ::= OCTET STRING (SIZE(4))")
+      sequence<uint8> id;
+
+      @verbatim (language="comment", text=
+        " The presence vector is used to determine what optional items are set" "\n"
+        " Existance can be quickly checked using bit operators" "\n"
+        " Example msg.presence_vector & Msg.FLAG != 0")
+      uint16 presence_vector;
+
+      @verbatim (language="comment", text=
+        "DSecond ::= INTEGER (0..65535)" "\n"
+        "  -- Integer values from 0 to 59999 represent the milliseconds within a minute" "\n"
+        "  -- A leap second is represented by the value range 60000 to 60999" "\n"
+        "  -- The values from 61000 to 65534 are reserved" "\n"
+        "  -- The value of 65535 shall represent an unavailable value in the range of the minute" "\n"
+        "  -- Unit is milliseconds")
+      uint16 sec_mark;
+
+      @verbatim (language="comment", text=
+        "Latitude ::= INTEGER (-900000000..900000001)" "\n"
+        "  -- LSB = 1/10 micro degree" "\n"
+        "  -- Providing a range of plus-minus 90 degrees" "\n"
+        "  -- Convert to degree with factor 0.0000001 when field is used")
+      double latitude;
+
+      @verbatim (language="comment", text=
+        "Longitude ::= INTEGER (-1799999999..1800000001)" "\n"
+        "  -- LSB = 1/10 micro degree" "\n"
+        "  -- Providing a range of plus-minus 180 degrees" "\n"
+        "  -- Convert to degree with factor 0.0000001 when field is used")
+      double longitude;
+
+      @verbatim (language="comment", text=
+        "Elevation ::= INTEGER (-4096..61439)" "\n"
+        "  -- In units of 10 cm steps above or below the reference ellipsoid" "\n"
+        "  -- Providing a range of -409.5 to + 6143.9 meters" "\n"
+        "  -- The value -4096 shall be used when Unknown is to be sent" "\n"
+        "  -- Convert to meter with factor 0.1 when field is used")
+      float elev;
+
+      @verbatim (language="comment", text=
+        " Used to model the accuracy of the positional determination with respect to each given axis.")
+      carma_v2x_msgs::msg::PositionalAccuracy accuracy;
+
+      @verbatim (language="comment", text=
+        " Provide the current state of the vehicle transmission")
+      j2735_v2x_msgs::msg::TransmissionState transmission;
+
+      @verbatim (language="comment", text=
+        "Speed ::= INTEGER (0..8191) -- Units of 0.02 m/s" "\n"
+        "  -- The value 8191 indicates that speed is unavailable" "\n"
+        "  -- Convert to m/s with factor 0.02 when field is used")
+      float speed;
+
+      @verbatim (language="comment", text=
+        "Heading ::= INTEGER (0..28800)" "\n"
+        "  -- LSB of 0.0125 degrees" "\n"
+        "  -- A range of 0 to 359.9875 degrees" "\n"
+        "  -- Convert to degree with factor 0.0125 when field is used")
+      float heading;
+
+      @verbatim (language="comment", text=
+        "SteeringWheelAngle ::= INTEGER (-126..127)" "\n"
+        "  -- LSB units of 1.5 degrees, a range of -189 to +189 degrees" "\n"
+        "  -- +001 = +1.5 deg" "\n"
+        "  -- -126 = -189 deg and beyond" "\n"
+        "  -- +126 = +189 deg and beyond" "\n"
+        "  -- +127 to be used for unavailable" "\n"
+        "  -- Convert to degree with factor 1.5 when this field is used")
+      float angle;
+
+      @verbatim (language="comment", text=
+        " Set of acceleration values in 3 orthogonal directions of the vehicle and with yaw rotation rates expressed as a structure.")
+      carma_v2x_msgs::msg::AccelerationSet4Way accel_set;
+
+      @verbatim (language="comment", text=
+        " Conveys a variety of information about the current brake and system control activity of the vehicle.")
+      j2735_v2x_msgs::msg::BrakeSystemStatus brakes;
+
+      @verbatim (language="comment", text=
+        " The vehicle length and width")
+      carma_v2x_msgs::msg::VehicleSize size;
+    };
+  };
+};

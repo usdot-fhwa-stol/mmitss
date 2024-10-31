@@ -1,0 +1,68 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_planning_msgs/msg/VehicleState.msg
+// generated code does not contain a copyright notice
+
+
+module carma_planning_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " VehicleState.msg" "\n"
+      "" "\n"
+      " Message defines the host vehicle state at a given point in time" "\n"
+      "" "\n"
+      " The fields of this message are defined relative to the vehicle state and control models described in the VehicleModelLib documentation" "\n"
+      " This message must contain a super set of the fields")
+    struct VehicleState {
+      @verbatim (language="comment", text=
+        " 2d x-axis position of the vehicle center of gravity in meters" "\n"
+        " This position is in a fixed inertial frame which vehicle motion is described in")
+      double x_pos_global;
+
+      @verbatim (language="comment", text=
+        " 2d y-axis position of the vehicle center of gravity in meters" "\n"
+        " This position is in a fixed inertial frame which vehicle motion is described in")
+      double y_pos_global;
+
+      @verbatim (language="comment", text=
+        " The orientation of the vehicle's longitudinal axis in radians" "\n"
+        " This orientation is in a fixed inertial frame which vehicle motion is described in")
+      double orientation;
+
+      @verbatim (language="comment", text=
+        " longitudinal velocity of the vehicle center of gravity in ms in its body frame")
+      double longitudinal_vel;
+
+      @verbatim (language="comment", text=
+        " lateral velocity of the vehicle center of gravity in ms in its body frame")
+      double lateral_vel;
+
+      @verbatim (language="comment", text=
+        " The yaw rate of the vehicle in rads in the body frame which is equivalent to the rate of change of orientation")
+      double yaw_rate;
+
+      @verbatim (language="comment", text=
+        " The angular velocity of the front wheel in rads")
+      double front_wheel_rotation_rate;
+
+      @verbatim (language="comment", text=
+        " The angular velocity of the rear wheel in rads")
+      double rear_wheel_rotation_rate;
+
+      @verbatim (language="comment", text=
+        " The steering angle of the front wheel in rad with left being positive")
+      double steering_angle;
+
+      @verbatim (language="comment", text=
+        " The angle the trailer makes with the vehicle longitudinal axis in rad with left being positive")
+      double trailer_angle;
+
+      @verbatim (language="comment", text=
+        " The previous velocity command in ms")
+      double prev_vel_cmd;
+
+      @verbatim (language="comment", text=
+        " The previous steering command in rad")
+      double prev_steering_cmd;
+    };
+  };
+};

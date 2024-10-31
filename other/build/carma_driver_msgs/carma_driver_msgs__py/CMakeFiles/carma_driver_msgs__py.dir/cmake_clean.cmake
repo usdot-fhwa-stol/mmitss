@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "../rosidl_generator_py/carma_driver_msgs/_carma_driver_msgs_s.ep.rosidl_typesupport_c.c"
+  "../rosidl_generator_py/carma_driver_msgs/_carma_driver_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "../rosidl_generator_py/carma_driver_msgs/_carma_driver_msgs_s.ep.rosidl_typesupport_introspection_c.c"
+  "../rosidl_generator_py/carma_driver_msgs/msg/__init__.py"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_byte_array.py"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_byte_array_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_driver_status.py"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_driver_status_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_heading_stamped.py"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_heading_stamped_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_light_bar_status.py"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_light_bar_status_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_robot_enabled.py"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_robot_enabled_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_trailer_angle.py"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_trailer_angle_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_turn_signal.py"
+  "../rosidl_generator_py/carma_driver_msgs/msg/_turn_signal_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/srv/__init__.py"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_get_driver_api.py"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_get_driver_api_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_get_driver_status.py"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_get_driver_status_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_get_drivers_with_capabilities.py"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_get_drivers_with_capabilities_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_get_lights.py"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_get_lights_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_send_message.py"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_send_message_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_set_enable_robotic.py"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_set_enable_robotic_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_set_light_bar_indicator.py"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_set_light_bar_indicator_s.c"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_set_lights.py"
+  "../rosidl_generator_py/carma_driver_msgs/srv/_set_lights_s.c"
+  "CMakeFiles/carma_driver_msgs__py"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/carma_driver_msgs__py.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

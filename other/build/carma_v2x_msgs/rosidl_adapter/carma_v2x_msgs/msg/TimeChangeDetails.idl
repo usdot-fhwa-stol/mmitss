@@ -1,0 +1,80 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_v2x_msgs/msg/TimeChangeDetails.msg
+// generated code does not contain a copyright notice
+
+
+module carma_v2x_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " TimeChangeDetails.msg" "\n"
+      "" "\n"
+      " J2735 2016 message format." "\n"
+      "" "\n"
+      " @author Mae Fromm" "\n"
+      " @version 0.1" "\n"
+      "" "\n"
+      " The DF_TimeChangeDetails data frame conveys details about the timing of a phase within a movement. The core" "\n"
+      " data concept expressed is the time stamp (time mark) at which the related phase will change to the next state. This is" "\n"
+      " often found in the MinEndTime element, but the other elements may be needed to convey the full concept when adaptive" "\n"
+      " timing is employed." "\n"
+      "" "\n"
+      " NOTE: Time values in this message are conveyed as seconds rather than 1/10th of a second as specified by J2735" "\n"
+      "" "\n"
+      " TimeChangeDetails ::= SEQUENCE {" "\n"
+      " startTime TimeMark OPTIONAL," "\n"
+      " -- When this phase 1st started" "\n"
+      " minEndTime TimeMark," "\n"
+      " -- Expected shortest end time" "\n"
+      " maxEndTime TimeMark OPTIONAL," "\n"
+      " -- Expected longest end time" "\n"
+      " likelyTime TimeMark OPTIONAL," "\n"
+      " -- Best predicted value based on other data" "\n"
+      " confidence TimeIntervalConfidence OPTIONAL," "\n"
+      " -- Applies to above time element only" "\n"
+      " nextTime TimeMark OPTIONAL" "\n"
+      " -- A rough estimate of time when" "\n"
+      " -- this phase may next occur again" "\n"
+      " -- used to support various ECO driving power" "\n"
+      " -- management needs." "\n"
+      " }")
+    struct TimeChangeDetails {
+      @verbatim (language="comment", text=
+        " Deviates from J2735 standard:" "\n"
+        " TimeMarks in this message are conveyed as seconds rather than 1/10th seconds to avoid redundant unnecessary conversion by subscribers" "\n"
+        " TimeMark ::= FLOAT (0-3600.1)" "\n"
+        " -- Tenths of a second in the current or next hour" "\n"
+        " -- In units of 1/10th second from UTC time" "\n"
+        " -- A range of 0-3600.0 covers one hour" "\n"
+        " -- The values 3599.1-3599.9 are used when a leap second occurs" "\n"
+        " -- The value 3600.0 is used to indicate time >3600.0 seconds" "\n"
+        " -- 3600.1 is to be used when value undefined or unknown" "\n"
+        " -- Note that this is NOT expressed in GPS time" "\n"
+        " -- or in local time")
+      float start_time;
+
+      boolean start_time_exists;
+
+      float min_end_time;
+
+      float max_end_time;
+
+      boolean max_end_time_exists;
+
+      float likely_time;
+
+      boolean likely_time_exists;
+
+      @verbatim (language="comment", text=
+        " TimeIntervalConfidence ::= INTEGER (0..15)")
+      uint8 confidence;
+
+      boolean confidence_exists;
+
+      @verbatim (language="comment", text=
+        " TimeMark ::= FLOAT (0..3600.1)")
+      float next_time;
+
+      boolean next_time_exists;
+    };
+  };
+};

@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from carma_perception_msgs/msg/ExternalObjectList.msg
+// generated code does not contain a copyright notice
+
+#include "carma_perception_msgs/msg/ExternalObject.idl"
+#include "std_msgs/msg/Header.idl"
+
+module carma_perception_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      " ExternalObjectList.msg")
+    struct ExternalObjectList {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "A list of ExternalObjects")
+      sequence<carma_perception_msgs::msg::ExternalObject> objects;
+    };
+  };
+};

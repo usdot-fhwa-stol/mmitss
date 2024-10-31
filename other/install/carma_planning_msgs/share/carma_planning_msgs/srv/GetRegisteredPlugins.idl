@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from carma_planning_msgs/srv/GetRegisteredPlugins.srv
+// generated code does not contain a copyright notice
+
+#include "carma_planning_msgs/msg/Plugin.idl"
+
+module carma_planning_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      " GetRegisteredPlugins.srv" "\n"
+      "" "\n"
+      " Provided by the Guidance node. Returns a list of discovered, instantiated" "\n"
+      " and registered IPlugin instances" "\n"
+      "" "\n"
+      " @author Kyle Rush" "\n"
+      " @version 0.1")
+    struct GetRegisteredPlugins_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      " Response")
+    struct GetRegisteredPlugins_Response {
+      @verbatim (language="comment", text=
+        " A list of registered plugins")
+      sequence<carma_planning_msgs::msg::Plugin> plugins;
+    };
+  };
+};

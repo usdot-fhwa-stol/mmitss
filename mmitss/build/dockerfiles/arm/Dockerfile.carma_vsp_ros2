@@ -1,0 +1,17 @@
+#-----------------------------------------------------------------------------#
+#    Dockerfile to build an arm platform image for the carma/ros vsp          #
+#    Image name: mmitssuarizona/mmitss-vsp-carma-arm                                #
+#-----------------------------------------------------------------------------#
+FROM mmitssuarizona/mmitss-arm-base:2.1
+MAINTAINER S Cornejo (samuelcornejo@arizona.edu)
+
+COPY build/bin/CarmaDecoderRos2/arm/M_CarmaDecoder /mmitss
+COPY build/bin/CarmaEncoderRos2/arm/M_CarmaEncoder /mmitss
+COPY build/bin/PriorityRequestGenerator/arm/M_PriorityRequestGenerator /mmitss
+COPY build/bin/LightSirenStatusManager/arm/M_LightSirenStatusManager /mmitss
+COPY build/bin/LightSirenStatusManager/images /mmitss
+COPY build/bin/SystemInterface/arm/M_SystemInterface /mmitss
+COPY build/bin/V2XDataCollector/arm/M_V2XDataCollector /mmitss
+COPY build/bin/DataCompressor/arm/M_DataCompressor /mmitss
+
+ENTRYPOINT ["/usr/bin/supervisord", "--configuration=/nojournal/bin/supervisord.conf"]
