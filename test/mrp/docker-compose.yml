@@ -1,0 +1,83 @@
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    ports:
+       - "2181:2182"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - zookeeper-datavolume:/opt/zookeeper-3.4.13/data
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    depends_on: 
+      - zookeeper
+    ports:
+      - "9092:9092"
+    # Health check to confirm kafka server is healthy (script is a client) and all topics 
+    # have been created (time_sync is last topic).
+    healthcheck:
+      test: ["CMD", "kafka-topics.sh", "--describe", "--bootstrap-server", "127.0.0.1:9092", "--topic", "time_sync"]
+      interval: 2s
+      timeout: 10s
+      retries: 10
+    environment:
+      DOCKER_HOST_IP:  ${DOCKER_HOST_IP}
+      KAFKA_ADVERTISED_HOST_NAME:  ${DOCKER_HOST_IP}
+      KAFKA_CREATE_TOPICS: "\
+        v2xhub_scheduling_plan_sub:1:1,\
+        v2xhub_bsm_in:1:1,\
+        v2xhub_mobility_operation_in:1:1,\
+        v2xhub_mobility_path_in:1:1,\
+        vehicle_status_intent_output:1:1,\
+        v2xhub_map_msg_in:1:1,\
+        modified_spat:1:1,\
+        desired_phase_plan:1:1,\
+        tsc_config_state:1:1,\
+        v2xhub_sim_sensor_detected_object:1:1,\
+        v2xhub_sdsm_sub:1:1,\
+        desire_phase_plan:1:1,\
+        v2xhub_sdsm_tra:1:1,\
+        time_sync:1:1"
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LOG_DIRS: "/kafka/kafka-logs"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - kafka-datavolume:/kafka/kafka-logs
+##############################################################
+# Kafka Owl for monitoring kafka traffic. UI can be accessed on 
+# configurable port set in performance/kowl.yaml NOTE: IS NOT 
+# NECESSARY FOR DEPLOYMENT BUT HELFUL FOR DEBUGGING! 
+################################################################
+  kowl:
+    image: quay.io/cloudhut/kowl
+    container_name: kowl
+    restart: on-failure
+    network_mode: host
+    depends_on:
+      kafka:
+        condition: service_healthy  
+    environment:
+      CONFIG_FILEPATH: /etc/kowl/kowl.yaml
+    volumes:
+      - ./performance/kowl.yaml:/etc/kowl/kowl.yaml
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=IVP
+      - MYSQL_USER=IVP
+      - MYSQL_PASSWORD_FILE=/run/secrets/mysql_password
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql_root_password
+    network_mode: host
+    secrets:
+      - mysql_password
+      - mysql_root_password
+    volumes:
+      - ./mysql/localhost.sql:/docker-entrypoint-initdb.d/localhost.sql
+      - mysql-datavolume:/var/lib/mysql
+  
