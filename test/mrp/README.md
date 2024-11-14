@@ -49,4 +49,4 @@ For MMITSS MRP side, the SSM is generated from MMITSS MRP component, and then se
 - For servers that runs the testing script, starts from current directory
     ```./testSSM/runTest.sh```
 - Open another terminal, enter current directory, and execute the following command to generate pseduo SPaT message to MMITSS kafka transceiver:
-    ````python testSpat/ssmSender.py```
+    ```python testSpat/ssmSender.py```
