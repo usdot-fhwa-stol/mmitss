@@ -7,11 +7,12 @@ This page indicate a step-by-step instruction to deploy the testing on MMITSS Ka
 * confluent_kafka
 * python 3
 * pytest
-* [docker compose file](https://github.com/usdot-fhwa-stol/carma-streets/blob/develop/docker-compose.yaml) from CARMA Street docker compose.
+* [carma-streets](https://github.com/usdot-fhwa-stol/carma-streets/tree/develop) repository cloned
 
 
 ## Bring up Kafka container
-- open the docker compose file (.yaml), enter the following command:
+- Find the directory of carma-streets repo, enter the following command to excute the docker-compose file[origi_url](https://github.com/usdot-fhwa-stol/carma-streets/blob/develop/docker-compose.yaml):
+    ```cd carma-streets```
     ```docker-compose up kafka```
     ```docker exec -it kafka bash```
 - In kafka container, check the kafka topic by command:
