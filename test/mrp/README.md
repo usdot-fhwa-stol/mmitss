@@ -18,33 +18,33 @@ docker-compose up kafka
 docker exec -it kafka bash
 ```
 - In kafka container, check the kafka topic by command:
-```
+```bash
 kafka-topics.sh --bootstrap-server=localhost:9092 --list
 ```
 - In order to check the specific kafka topics, use the following command:
-```
+```bash
 $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <kafka_topic_name>
 ```
 
 ## Testing BSM receiving from Carma-Kafka broker
 For MMITSS MRP side, the BSM is sent from CARMA-Street via kafka broker. A bash script is strored in testBsm folder. Steps are as following:
 - For the terminal in kafka container, enter the command:
-```
+```bash
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic v2xhub_bsm_in
 ```
 - For servers that runs the testing script, starts from current directory
-```
+```bash
 ./testBsm/runTest.sh
 ```
 
 ## Testing SRM receiving from Carma-Kafka broker
 For MMITSS MRP side, the SRM is sent from CARMA-Street via kafka broker. A bash script is strored in testSRM folder. Steps are as following:
 - For the terminal in kafka container, enter the command:
-```
+```bash
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic v2xhub_srm_in
 ```
 - For servers that runs the testing script, starts from current directory
-```
+```bash
 ./testSRM/runTest.sh
 ```
 
