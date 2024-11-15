@@ -51,29 +51,29 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic v2xhub_srm_i
 ## Testing SPAT receiving from Carma-Kafka broker
 For MMITSS MRP side, the SPaT is generated from MMITSS MRP component, and then sent to CARMA-Street via kafka broker. A bash script is strored in testSPaT folder. The testing will verify the message from a custermized kafka consumer. Steps are as following:
 - For the terminal in kafka container, enter the command:
-```
+```bash
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic modified_spat
 ```
 - For servers that runs the testing script, starts from current directory
-```
+```bash
 ./testSPat/runTest.sh
 ```
 - Open another terminal, enter current directory, and execute the following command to generate pseduo SPaT message to MMITSS kafka transceiver:
-```
+```bash
 python testSpat/spatSender.py
 ```
 
 ## Testing SSM receiving from Carma-Kafka broker
 For MMITSS MRP side, the SSM is generated from MMITSS MRP component, and then sent to CARMA-Street via kafka broker. A bash script is strored in testSPaT folder. The testing will verify the message from a custermized kafka consumer. Steps are as following:
 - For the terminal in kafka container, enter the command:
-```
+```bash
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic v2xhub_ssm_out
 ```
 - For servers that runs the testing script, starts from current directory
-```
+```bash
 ./testSSM/runTest.sh
 ```
 - Open another terminal, enter current directory, and execute the following command to generate pseduo SPaT message to MMITSS kafka transceiver:
-```
+```bash
 python testSpat/ssmSender.py
 ```
