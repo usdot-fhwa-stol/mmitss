@@ -14,6 +14,12 @@ Welcome to the vehicle side processor(VSP) CARMA-MMITSS testing. The unit testin
 * CARMA-MMITSS Encoder executable (M_CarmaMsgEncoder) built and inside its respective folder (../../../mmitss/src/common/MsgTransceiver/CarmaEncoderRos2/src)
 * CARMA-MMITSS Decoder executable (M_CarmaMsgDecoder) built and inside its respective folder (../../../mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src)
 
+
+### Build MMITSS container ()
+> [!NOTE]
+> This step is a pre-step to build MMITSS running environment in dev container 
+
+
 ### MMITSS Docker container setup
 For this testing, MMITSS container is used to provide environment and unified configuration file for MMITSS application component. The configuration is placed under the directory mmitss_cfg4test/nojournal/bin/mmitss-phase3-master-config.json. The launch script can be run by the following command:
 
@@ -21,6 +27,10 @@ For this testing, MMITSS container is used to provide environment and unified co
     launch_mmitss_container_dev.sh
     ```
 The MMITSS container will be up when the script is excecuted, and it will provide the environment for mmitss component. 
+> [!CAUTION]
+> Prority request generator is highly recommended to be run in MMITSS container. Currently MMITSS does not have a released image for CDA-sim, we can use: cartlabpurdue/mmitss-vsp-x86:AA1.2 as an alternative. 
+> [!NOTE]
+> For develop purpose, it is better to use a dev container to run the mmitss component.
 
 ## Testing hostBSM receiving from ROS2:
 In order to test the receiving of the hostBSM a bash script in the testBsm folder is stored. To test the hostBSM receiving, execute the runTest.sh script in the testBSM folder.
