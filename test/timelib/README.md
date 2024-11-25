@@ -27,20 +27,7 @@ The steps above add the relevant STOL apt repository for pulling the correct Deb
 
 ### Clone the repo and open it in dev container
 
-Add user to docker group if it shows the current user has no permission to run the docker
-
-```shell
-# check docker status
-sudo systemctl status docker
-
-# if not active, start it
-sudo systemctl start docker
-
-# add user
-sudo usermod -aG docker $USER 
-
-# restart your computer
-```
+Install dev container extension in VS Code. Do this step in VS Code.
 
 
 ### Install Python bindings for CARMA Time Lib
@@ -58,8 +45,8 @@ cmake --build build
 
 After building, you will see if the installation passes tests. 
 
+#### Add user to docker group
 
-Add user to docker group
 If you encounter repeated permission issues when running docker commands add the current user to the docker group with the following commands
 
 ```shell
