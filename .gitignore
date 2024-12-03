@@ -1,0 +1,28 @@
+#ignore binaries
+M_*
+
+#unignore the shell script
+!docker/applictions/*.sh
+
+#Ignore obj files
+*.o
+
+#Ignore pycache file
+__pycache_/
+
+.idea
+
+*.code-workspace
+
+.vscode
+
+cmake*
+
+CMake*
+
+
+*.map.payload
+*.log
+*.csv
+test/vsp/mmitss_cfg4test/nojournal/bin/v2x-data
+test/vsp/mmitss_cfg4test/nojournal/bin/log

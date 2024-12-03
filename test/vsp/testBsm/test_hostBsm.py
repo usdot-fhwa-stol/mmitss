@@ -1,3 +1,4 @@
+
 import subprocess
 import threading
 from carma_driver_msgs.msg import ByteArray
@@ -31,7 +32,7 @@ def test_countBsm():
    
     #set bsmReceiver in the same port that the MMITSS-ROS2 Receiver sends the json formatted hostBSM 
 
-    configFile = open("/nojournal/bin/mmitss-phase3-master-config.json", 'r')
+    configFile = open("nojournal/bin/mmitss-phase3-master-config.json", 'r')
     config = (json.load(configFile))
     configFile.close()
 
@@ -75,7 +76,12 @@ def test_countBsm():
                 
                 except:
                     pass
+    print(numMsgs)
+    print(hostBSMReceived)
 
     assert(numMsgs == hostBSMReceived)
+    
+# test_countBsm()
+test_listenToRos()
 
 
