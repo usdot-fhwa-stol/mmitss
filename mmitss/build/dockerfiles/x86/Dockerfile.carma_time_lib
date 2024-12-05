@@ -1,37 +1,40 @@
 #-----------------------------------------------------------------------------#
 #    Dockerfile to build an arm platform image for carma intersection         #
-#    Image name: mmitssuarizona/mmitss-carma-mrp-arm                          # 
+#    Image name: mmitssuarizona/mmitss-carma-mrp-arm                          #
 #-----------------------------------------------------------------------------#
 FROM mmitssuarizona/mmitss-x86-base:2.1
 MAINTAINER S Cornejo (samuelcornejo@arizona.edu)
 
-
-RUN apt update && apt install -y curl lsb-release cmake
-
-
-RUN . /etc/lsb-release
-RUN echo "deb [trusted=yes] http://s3.amazonaws.com/stol-apt-repository ${DISTRIB_CODENAME} main" | tee /etc/apt/sources.list.d/stol-apt-repository.list > /dev/null 
-
-RUN apt update
-RUN apt install carma-clock-1
-
-
+# Install dependencies
 RUN apt-get update && apt-get install -y \
+    curl \
+    lsb-release \
+    cmake \
     git \
     bash \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
+# Add stol-apt-repository
+RUN . /etc/lsb-release && \
+    echo "deb [trusted=yes] http://s3.amazonaws.com/stol-apt-repository ${DISTRIB_CODENAME} main" | \
+    tee /etc/apt/sources.list.d/stol-apt-repository.list > /dev/null
+
+RUN apt-get update && apt-get install -y carma-clock-1
+
+# Clone carma-time-lib repository
 WORKDIR /root/dev_ws/src
 RUN git clone https://github.com/usdot-fhwa-stol/carma-time-lib.git -b develop
-WORKDIR /carma-time-lib
 
-RUN chmod +x ./install_dependencies.sh
-RUN cmake -Bbuild -DBUILD_PYTHON_BINDINGS=ON .
-RUN cmake --build build
+WORKDIR /root/dev_ws/src/carma-time-lib
 
+# Run the install script and build with CMake
+RUN chmod +x ./install_dependencies.sh && ./install_dependencies.sh
+RUN cmake -Bbuild -DBUILD_PYTHON_BINDINGS=ON . && \
+    cmake --build build --target install
 
+# Copy additional files
 ADD cda-mmitss /cda-mmitss
 
-ENTRYPOINT ["/usr/bin/supervisord", "--configuration=/nojournal/bin/supervisord.conf"]
-
+# Supervisord for managing services
+CMD ["/usr/bin/supervisord", "--configuration=/nojournal/bin/supervisord.conf"]
