@@ -1,6 +1,6 @@
 #-----------------------------------------------------------------------------#
 #    Dockerfile to build an arm platform image for carma intersection         #
-#    Image name: mmitssuarizona/mmitss-carma-mrp-arm                          #
+#    Image name: mmitssuarizona/mmitss-carma-time-lib                          #
 #-----------------------------------------------------------------------------#
 FROM mmitssuarizona/mmitss-x86-base:2.1
 MAINTAINER S Cornejo (samuelcornejo@arizona.edu)
@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     cmake \
     git \
     bash \
+    python3-dev \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
@@ -33,8 +34,8 @@ RUN chmod +x ./install_dependencies.sh && ./install_dependencies.sh
 RUN cmake -Bbuild -DBUILD_PYTHON_BINDINGS=ON . && \
     cmake --build build --target install
 
-# Copy additional files
-ADD cda-mmitss /cda-mmitss
+# # Copy additional files
+# ADD cda-mmitss /cda-mmitss
 
 # Supervisord for managing services
 CMD ["/usr/bin/supervisord", "--configuration=/nojournal/bin/supervisord.conf"]
