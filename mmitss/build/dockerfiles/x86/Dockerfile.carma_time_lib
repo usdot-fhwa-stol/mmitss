@@ -1,0 +1,37 @@
+#-----------------------------------------------------------------------------#
+#    Dockerfile to build an arm platform image for carma intersection         #
+#    Image name: mmitssuarizona/mmitss-carma-mrp-arm                          # 
+#-----------------------------------------------------------------------------#
+FROM mmitssuarizona/mmitss-x86-base:2.1
+MAINTAINER S Cornejo (samuelcornejo@arizona.edu)
+
+
+RUN apt update && apt install -y curl lsb-release cmake
+
+
+RUN . /etc/lsb-release
+RUN echo "deb [trusted=yes] http://s3.amazonaws.com/stol-apt-repository ${DISTRIB_CODENAME} main" | tee /etc/apt/sources.list.d/stol-apt-repository.list > /dev/null 
+
+RUN apt update
+RUN apt install carma-clock-1
+
+
+RUN apt-get update && apt-get install -y \
+    git \
+    bash \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /root/dev_ws/src
+RUN git clone https://github.com/usdot-fhwa-stol/carma-time-lib.git -b develop
+WORKDIR /carma-time-lib
+
+RUN chmod +x ./install_dependencies.sh
+RUN cmake -Bbuild -DBUILD_PYTHON_BINDINGS=ON .
+RUN cmake --build build
+
+
+ADD cda-mmitss /cda-mmitss
+
+ENTRYPOINT ["/usr/bin/supervisord", "--configuration=/nojournal/bin/supervisord.conf"]
+
