@@ -26,3 +26,5 @@ CMake*
 *.csv
 test/vsp/mmitss_cfg4test/nojournal/bin/v2x-data
 test/vsp/mmitss_cfg4test/nojournal/bin/log
+test/mrp/testSSM/__pycache__
+test/mrp/testSPat/__pycache__
