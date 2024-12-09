@@ -1,5 +1,5 @@
 {
-	"MessageType" : "SSM",
+	"MsgType" : "SSM",
 	"SignalStatus" : 
 	{
 		"intersectionID" : 1003,

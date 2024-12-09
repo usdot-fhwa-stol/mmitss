@@ -37,8 +37,10 @@ def test_SSM():
 
     consumer = Consumer(consumerConfig)
     consumer.subscribe([topics])
-    
-    producer.socketLoop(debug=True)
+
+
+
+    producer.socketLoop()
     messageCount = 0
     while True:
         msg = consumer.poll(1.0)  # Poll for messages, with a timeout of 1 second
@@ -58,6 +60,8 @@ def test_SSM():
     
     assert(messageCount==1)
 
+
+test_SSM()
     
   
 
