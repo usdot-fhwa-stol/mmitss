@@ -27,4 +27,9 @@ read -p "Name of container: " container_name
 read -p "Specify timezone string: " timezone
 
 
-docker run --privileged -d --restart always -v $config_path:/nojournal -e TZ=$timezone --network host --name $container_name $container_image > /dev/null 2>&1 &
+# docker run --privileged -d --restart always -v $config_path:/nojournal -e TZ=$timezone --network host --name $container_name $container_image > /dev/null 2>&1 &
+
+
+
+# for debug purpose, use the following lane
+docker run --privileged -d --restart always -v $config_path:/nojournal -e TZ=$timezone --network host --name $container_name $container_image > /dev/null 

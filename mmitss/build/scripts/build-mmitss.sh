@@ -44,16 +44,15 @@ else
     read -p "Build roadside applications? (y or n): " mrp
     read -p "Build vehicle applications? (y or n): " vsp
     read -p "Build simulation_server-tools applications? (y or n): " server
-    read -p "Build CARMA-ROS1 transceivers? (y or n)" carma
-	read -p "Build CARMA-ROS2 transceivers? (y or n)" carma2
+    # read -p "Build CARMA-ROS1 transceivers? (y or n)" carma
+    read -p "Build CARMA-ROS2 transceivers? (y or n)" carma2
 
     else
     common=y
     mrp=y
     vsp=y
     server=y
-    carma=y
-	carma2=y
+    carma2=y
     fi
 
     ######################################################################################
@@ -67,7 +66,120 @@ else
 	    echo "COMMON APPLICATIONS"
 	    echo "------------------------"
 	    ######################################################################################
+	    
+	    # if [ "$carma" = "y" ]; then
+#
+#			source /opt/ros/noetic/setup.bash
+#			source /opt/ros/noetic/setup.bash
+#			
+#			echo "Building CARMA-ROS Message Encoder..."
+#			cd ../../src/common/MsgTransceiver/CarmaEncoder
+#			# Clean the folder and build for linux.
+#			make clean &> /dev/null
+#
+#			if [ "$PROCESSOR" = "arm" ]; then
+#				make linux ARM=1 &> /dev/null
+#			else
+#				make linux &> /dev/null
+#			fi
+#
+#			# Indicate Success/Failure of the build
+#			if [ "$?" -eq "0" ]; then
+#				mv M_CarmaMsgEncoder ../../../../build/bin/CarmaEncoder/$PROCESSOR/M_CarmaMsgEncoder
+#				echo -e "${green}Successful${nocolor}"
+#			else
+#				echo -e "${red}Failed${nocolor}"
+#			fi
+#			# Remove the .o files to keep the folders clean
+#			rm ./*.o &> /dev/null
+#			# Return back to original directory to go over the process again for another one
+#			cd - &> /dev/null
+#			sleep 1s
+			#######################################################################################
 
+			#######################################################################################
+#			echo "Building CARMA-ROS Message Decoder..."
+#			cd ../../src/common/MsgTransceiver/CarmaDecoder
+#			# Clean the folder and build for linux.
+#			make clean &> /dev/null
+#
+#			if [ "$PROCESSOR" = "arm" ]; then
+#				make linux ARM=1 &> /dev/null
+#			else
+#				make linux &> /dev/null
+#			fi
+
+			# Indicate Success/Failure of the build
+#			if [ "$?" -eq "0" ]; then
+#				mv M_CarmaMsgDecoder ../../../../build/bin/CarmaDecoder/$PROCESSOR/M_CarmaMsgDecoder
+#				echo -e "${green}Successful${nocolor}"
+#			else
+#				echo -e "${red}Failed${nocolor}"
+#			fi
+#			# Remove the .o files to keep the folders clean
+#			rm ./*.o &> /dev/null
+#			# Return back to original directory to go over the process again for another one
+#			cd - &> /dev/null
+#			sleep 1s
+#		fi
+
+		if [ "$carma2" = "y" ]; then
+
+			echo "Building CARMA-ROS2 Message Encoder..."
+
+			source /opt/ros/foxy/setup.bash
+			source /opt/ros/foxy/setup.bash
+			
+			cd ../../src/common/MsgTransceiver/CarmaEncoderRos2/src
+			# Clean the folder and build for linux.
+			make clean &> /dev/null
+
+			if [ "$PROCESSOR" = "arm" ]; then
+				make linux ARM=1 &> /dev/null
+			else
+				make linux &> /dev/null
+			fi
+
+			# Indicate Success/Failure of the build
+			if [ "$?" -eq "0" ]; then
+				mv M_CarmaMsgEncoder ../../../../../build/bin/CarmaEncoderRos2/$PROCESSOR/M_CarmaMsgEncoder
+				echo -e "${green}Successful${nocolor}"
+			else
+				echo -e "${red}Failed${nocolor}"
+			fi
+			# Remove the .o files to keep the folders clean
+			rm ./*.o &> /dev/null
+			# Return back to original directory to go over the process again for another one
+			cd - &> /dev/null
+			sleep 1s
+			#######################################################################################
+
+			#######################################################################################
+			echo "Building CARMA-ROS2 Message Decoder..."
+			cd ../../src/common/MsgTransceiver/CarmaDecoderRos2/src
+			# Clean the folder and build for linux.
+			make clean &> /dev/null
+
+			if [ "$PROCESSOR" = "arm" ]; then
+				make linux ARM=1 &> /dev/null
+			else
+				make linux &> /dev/null
+			fi
+
+			# Indicate Success/Failure of the build
+			if [ "$?" -eq "0" ]; then
+				mv M_CarmaMsgDecoder ../../../../../build/bin/CarmaDecoderRos2/$PROCESSOR/M_CarmaMsgDecoder
+				echo -e "${green}Successful${nocolor}"
+			else
+				echo -e "${red}Failed${nocolor}"
+			fi
+			# Remove the .o files to keep the folders clean
+			rm ./*.o &> /dev/null
+			# Return back to original directory to go over the process again for another one
+			cd - &> /dev/null
+			sleep 1s
+		fi
+	    
 	    echo "Building Message Encoder..."
 	    cd ../../src/common/MsgTransceiver/MsgEncoder
 	    # Clean the folder and build for linux.
@@ -709,7 +821,7 @@ else
 			read -p "Build MRP image? Needs common and roadside applications. (y or n): " mrpFieldImage
 			read -p "Build VSP image? Needs common and vehicle applications. (y or n): " vspImage
 			read -p "Build simulation_server-tools image? Needs simulation_server-tools applications. (y or n): " serverImage
-            read -p "Build CARMA-ROS 1 applications. (y or n): " carma1Image
+                       read -p "Build CARMA-ROS 1 applications. (y or n): " carma1Image
 			read -p "Build CARMA-ROS 2 applications. (y or n): " carma2Image
 
 			if [ "$mrpFieldImage" = "y" ]; then
