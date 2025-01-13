@@ -21,20 +21,17 @@
 # This script launches the docker container after getting inputs from the user                                                                                               
 #############################################################################################
 
-read -p "Full absolute path of MMITSS configuration directory (with no trailing /): " -e config_path
-read -p "Name of container image on the Dockerhub : " container_image
-read -p "Name of container: " container_name
-read -p "Specify timezone string: " timezone
+# read -p "Full absolute path of MMITSS configuration directory (with no trailing /): " -e config_path
+# read -p "Name of container image on the Dockerhub : " container_image
+# read -p "Name of container: " container_name
+# read -p "Specify timezone string: " timezone
 
-read -p "path for the src code for MMITSS:" -e host_path
-
-# host_path_low="${host_path,,}"
-
-# echo "the path for src code is": $host_path_low
 
 # docker run --privileged -d --restart always -v $config_path:/nojournal -e TZ=$timezone --network host --name $container_name $container_image > /dev/null 2>&1 &
 
 
-
-# for debug purpose, use the following lane
-docker run --privileged -d --restart always -v $config_path:/nojournal -v $host_path_low:/mmitss/tmp -e TZ=$timezone --network host --name $container_name $container_image 
+docker container stop cda_ros_vsp
+docker container rm cda_ros_vsp
+# for debug on mmitss vsp ros image, there is a quick start version
+docker run --privileged -d --restart always -v "/home/yilin/SIP_project/Leidos/mmitss/test/vsp/mmitss_cfg4test/nojournal"
+:/nojournal -e TZ=America/New_York --network host --name cda_ros_vsp mmitssuarizona/mmitss-carma-vsp-ros2-x86:CDA1.0 > /dev/null 

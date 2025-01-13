@@ -33,6 +33,8 @@ RUN apt install python3-colcon-common-extensions -y
 COPY build/dockerfiles/x86/ros2_entrypoint.sh /mmitss
 RUN sudo chmod 755 /mmitss/ros2_entrypoint.sh
 
+COPY build/dockerfiles/x86/vspros2_startup.sh /mmitss
+
 WORKDIR /root/dev_ws/src
 RUN git clone https://github.com/usdot-fhwa-stol/carma-msgs.git
 WORKDIR /root/dev_ws/src/carma-msgs
@@ -40,7 +42,7 @@ WORKDIR /root/dev_ws/src/carma-msgs
 SHELL ["/bin/bash", "-c"]
 #RUN chmod +x /opt/ros/foxy/setup.bash
 RUN source /opt/ros/foxy/setup.bash && colcon build --packages-up-to carma_driver_msgs
-RUN source /root/dev_ws/src/carma-msgs/install/setup.bash
+
 
 
 COPY build/bin/CarmaDecoderRos2/x86/M_CarmaMsgDecoder /mmitss

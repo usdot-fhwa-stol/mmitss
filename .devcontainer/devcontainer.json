@@ -1,9 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-	"name": "C++",
+	"name": "carma_ros_containers_dev",
 	"build": {
-		"dockerfile": "Dockerfile"
+		"dockerfile": "../mmitss/build/dockerfiles/x86/Dockerfile.carma_vsp_ros2"
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
