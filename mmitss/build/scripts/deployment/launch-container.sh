@@ -37,4 +37,4 @@ read -p "path for the src code for MMITSS:" -e host_path
 
 
 # for debug purpose, use the following lane
-docker run --privileged -d --restart always -v $config_path:/nojournal -v $host_path_low:/mmitss/tmp -e TZ=$timezone --network host --name $container_name $container_image 
+docker run --privileged -d --restart always -v $config_path:/nojournal -v $host_path:/mmitss/tmp -e TZ=$timezone --network host --name $container_name $container_image 

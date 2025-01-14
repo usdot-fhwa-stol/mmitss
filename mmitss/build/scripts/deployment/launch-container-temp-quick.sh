@@ -30,8 +30,7 @@
 # docker run --privileged -d --restart always -v $config_path:/nojournal -e TZ=$timezone --network host --name $container_name $container_image > /dev/null 2>&1 &
 
 
-docker container stop cda_ros_vsp
-docker container rm cda_ros_vsp
+# docker container stop cda_ros_vsp
+# docker container rm cda_ros_vsp
 # for debug on mmitss vsp ros image, there is a quick start version
-docker run --privileged -d --restart always -v "/home/yilin/SIP_project/Leidos/mmitss/test/vsp/mmitss_cfg4test/nojournal"
-:/nojournal -e TZ=America/New_York --network host --name cda_ros_vsp mmitssuarizona/mmitss-carma-vsp-ros2-x86:CDA1.0 > /dev/null 
+docker run --privileged -d --restart always -v "/home/yilin/SIP_project/Leidos/mmitss/test/vsp/mmitss_cfg4test/nojournal":/nojournal -v "/home/yilin/SIP_project/Leidos/mmitss":/mmitss/tmp  -e TZ=America/New_York --network host --name cda_ros_vsp mmitssuarizona/mmitss-carma-vsp-ros2-x86:CDA1.0 > /dev/null 
