@@ -1,0 +1,39 @@
+#-----------------------------------------------------------------------------#
+#    Dockerfile to build an arm platform image for carma intersection         #
+#    Image name: mmitssuarizona/mmitss-carma-time-lib                          #
+#-----------------------------------------------------------------------------#
+FROM mmitssuarizona/mmitss-x86-base:2.1
+
+LABEL maintainer="samuelcornejo@arizona.edu"
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    lsb-release \
+    cmake \
+    git \
+    bash \
+    python3-dev \
+    build-essential \
+    python3-pip \
+    libpthread-stubs0-dev \
+    libssl-dev \
+    zlib1g-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Clone carma-time-lib repository
+WORKDIR /root/dev_ws/src
+RUN git clone https://github.com/usdot-fhwa-stol/carma-time-lib.git -b develop
+
+# Download CPM.cmake for dependency management
+RUN mkdir -p /root/dev_ws/src/carma-time-lib/cmake && \
+    curl -L https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/CPM.cmake \
+    -o /root/dev_ws/src/carma-time-lib/cmake/CPM.cmake
+
+WORKDIR /root/dev_ws/src/carma-time-lib
+
+# Run the install script and build with CMake
+RUN cmake -Bbuild -DBUILD_PYTHON_BINDINGS=ON . && \
+    cmake --build build --target install
+
+ENTRYPOINT ["/usr/bin/supervisord", "--configuration=/nojournal/bin/supervisord.conf"]
