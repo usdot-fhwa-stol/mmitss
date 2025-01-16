@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y \
     curl \
     lsb-release \
     cmake \
+    libgtest-dev \
+    libgmock-dev \
     git \
     bash \
     python3-dev \
@@ -21,19 +23,31 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Clone carma-time-lib repository
+# Set working directory for the repository
 WORKDIR /root/dev_ws/src
+
+# Clone the carma-time-lib repository
 RUN git clone https://github.com/usdot-fhwa-stol/carma-time-lib.git -b develop
 
-# Download CPM.cmake for dependency management
-RUN mkdir -p /root/dev_ws/src/carma-time-lib/cmake && \
-    curl -L https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/CPM.cmake \
-    -o /root/dev_ws/src/carma-time-lib/cmake/CPM.cmake
+# Download necessary CMake files into the appropriate directory
+RUN mkdir -p /opt/carma/cmake/ && \
+    curl -L -o /opt/carma/cmake/CommonSource.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/CommonSource.cmake && \
+    curl -L -o /opt/carma/cmake/Testing.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/Testing.cmake && \
+    curl -L -o /opt/carma/cmake/Packing.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/Packing.cmake && \
+    curl -L -o /opt/carma/cmake/CodeCoverage.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/CodeCoverage.cmake && \
+    curl -L -o /opt/carma/cmake/InstallingGeneral.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/InstallingGeneral.cmake && \
+    curl -L -o /opt/carma/cmake/InstallingConfigs.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/InstallingConfigs.cmake && \
+    curl -L -o /opt/carma/cmake/GetCPM.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/GetCPM.cmake
 
+
+# Move into the carma-time-lib directory
 WORKDIR /root/dev_ws/src/carma-time-lib
 
-# Run the install script and build with CMake
+ENV CARMA_OPT_DIR=/opt/carma
+
+# Build and install using CMake
 RUN cmake -Bbuild -DBUILD_PYTHON_BINDINGS=ON . && \
     cmake --build build --target install
 
+# Set the container's entry point
 ENTRYPOINT ["/usr/bin/supervisord", "--configuration=/nojournal/bin/supervisord.conf"]
