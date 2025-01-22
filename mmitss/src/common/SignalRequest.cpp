@@ -91,6 +91,13 @@ void SignalRequest::setETA(int vehExpectedTimeOfArrival_Minute, int vehExpectedT
     expectedTimeOfArrival.setETA_Duration(vehDuration);
 }
 
+void SignalRequest::setETAA(int vehExpectedTimeOfArrival_Minute, int vehExpectedTimeOfArrival_Second, int vehDuration)
+{
+    // expectedTimeOfArrival.setETA_Minute(vehExpectedTimeOfArrival_Minute);
+    // expectedTimeOfArrival.setETA_Second(vehExpectedTimeOfArrival_Second);
+    // expectedTimeOfArrival.setETA_Duration(vehDuration);
+}
+
 void SignalRequest::setTemporaryVechileID(int temporaryVehicleID)
 {
     vehicleID = temporaryVehicleID;

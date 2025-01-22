@@ -1,5 +1,7 @@
 #include "carma-outbound-listener.h"
 #include "carma-transceiver-decoder.h"
+#include "SignalRequest.h"
+
 
 #define DEBUG_DECODED_MSG
 
