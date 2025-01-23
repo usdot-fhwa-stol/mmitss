@@ -166,7 +166,6 @@ string TransceiverDecoder::srmDecoder(std::vector<uint8_t> srmPayload)
         signalRequest.setRequestID(static_cast<unsigned int>(srmOut.reqId));
         signalRequest.setPriorityRequestType(static_cast<unsigned int>(srmOut.reqType));
         signalRequest.setInBoundLaneIntersectionAccessPoint(static_cast<unsigned int>(srmOut.inLaneId), static_cast<unsigned int>(srmOut.inApprochId));
-        // signalRequest.setETAA(srmOut.ETAminute, srmOut.ETAsec, srmOut.duration);
         signalRequest.setETA(srmOut.ETAminute, srmOut.ETAsec, srmOut.duration);
 
         // signalRequest.setETA(10, 30, 4);
