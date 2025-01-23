@@ -2,52 +2,18 @@
 #    Dockerfile to build an arm platform image for carma intersection         #
 #    Image name: mmitssuarizona/mmitss-carma-time-lib                          #
 #-----------------------------------------------------------------------------#
-FROM mmitssuarizona/mmitss-x86-base:2.1
+FROM mmitssuarizona/mmitss-x86-base:3.0
 
-LABEL maintainer="samuelcornejo@arizona.edu"
-
-# Install dependencies
-RUN apt-get update && apt-get install -y \
-    curl \
-    lsb-release \
-    cmake \
-    libgtest-dev \
-    libgmock-dev \
-    git \
-    bash \
-    python3-dev \
-    build-essential \
-    python3-pip \
-    libpthread-stubs0-dev \
-    libssl-dev \
-    zlib1g-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-# Set working directory for the repository
-WORKDIR /root/dev_ws/src
-
-# Clone the carma-time-lib repository
-RUN git clone https://github.com/usdot-fhwa-stol/carma-time-lib.git -b develop
-
-# Download necessary CMake files into the appropriate directory
-RUN mkdir -p /opt/carma/cmake/ && \
-    curl -L -o /opt/carma/cmake/CommonSource.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/CommonSource.cmake && \
-    curl -L -o /opt/carma/cmake/Testing.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/Testing.cmake && \
-    curl -L -o /opt/carma/cmake/Packing.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/Packing.cmake && \
-    curl -L -o /opt/carma/cmake/CodeCoverage.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/CodeCoverage.cmake && \
-    curl -L -o /opt/carma/cmake/InstallingGeneral.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/InstallingGeneral.cmake && \
-    curl -L -o /opt/carma/cmake/InstallingConfigs.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/InstallingConfigs.cmake && \
-    curl -L -o /opt/carma/cmake/GetCPM.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/GetCPM.cmake
+LABEL maintainer="feng333@purdue.edu"
 
 
-# Move into the carma-time-lib directory
-WORKDIR /root/dev_ws/src/carma-time-lib
+# finish all related tasks in the sh file 
 
-ENV CARMA_OPT_DIR=/opt/carma
+WORKDIR /root/dev_ws/
 
-# Build and install using CMake
-RUN cmake -Bbuild -DBUILD_PYTHON_BINDINGS=ON . && \
-    cmake --build build --target install
+COPY build/dockerfiles/x86/carma_time_lib.sh /mmitss
+RUN sudo chmod 755 /mmitss/carma_time_lib.sh    
+
 
 # Set the container's entry point
 ENTRYPOINT ["/usr/bin/supervisord", "--configuration=/nojournal/bin/supervisord.conf"]
