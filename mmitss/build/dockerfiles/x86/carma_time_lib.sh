@@ -15,7 +15,7 @@ apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory for the repository
-cd /root/dev_ws/src
+mkdir -p /root/dev_ws/src && cd /root/dev_ws/src
 
 # Clone the carma-time-lib repository
 git clone https://github.com/usdot-fhwa-stol/carma-time-lib.git -b develop
@@ -30,9 +30,11 @@ mkdir -p /opt/carma/cmake/ && \
     curl -L -o /opt/carma/cmake/InstallingConfigs.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/InstallingConfigs.cmake && \
     curl -L -o /opt/carma/cmake/GetCPM.cmake https://raw.githubusercontent.com/usdot-fhwa-stol/carma-builds/develop/cmake/GetCPM.cmake
 
+# check if files downloaded
+ls -l /opt/carma/cmake/
 
 # Move into the carma-time-lib directory
-cd /root/dev_ws/src/carma-time-lib
+mkdir -p /root/dev_ws/src/carma-time-lib && cd /root/dev_ws/src/carma-time-lib
 
 # Set the environment variable
 CARMA_OPT_DIR=${CARMA_OPT_DIR:-/opt/carma}
@@ -41,5 +43,5 @@ CARMA_OPT_DIR=${CARMA_OPT_DIR:-/opt/carma}
 echo "CARMA_OPT_DIR is set to: $CARMA_OPT_DIR"
 
 # Build and install using CMake
-cmake -Bbuild -DBUILD_PYTHON_BINDINGS=ON . && \
+cmake -DCMAKE_MODULE_PATH=/opt/carma/cmake/ -Bbuild -DBUILD_PYTHON_BINDINGS=ON . && \
 cmake --build build --target install
