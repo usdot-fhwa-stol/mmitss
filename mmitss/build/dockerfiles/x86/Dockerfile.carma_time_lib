@@ -5,7 +5,7 @@
 FROM mmitssuarizona/mmitss-x86-base:3.0
 
 LABEL maintainer="feng333@purdue.edu"
-
+SHELL ["/bin/bash", "-c"]
 
 # finish all related tasks in the sh file 
 

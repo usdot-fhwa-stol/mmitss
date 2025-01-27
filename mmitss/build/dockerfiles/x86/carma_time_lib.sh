@@ -1,3 +1,5 @@
+#!/bin/bash
+
 apt-get update && apt-get install -y \
     curl \
     lsb-release \
@@ -36,12 +38,9 @@ ls -l /opt/carma/cmake/
 # Move into the carma-time-lib directory
 mkdir -p /root/dev_ws/src/carma-time-lib && cd /root/dev_ws/src/carma-time-lib
 
-# Set the environment variable
-CARMA_OPT_DIR=${CARMA_OPT_DIR:-/opt/carma}
-
-# Print the value of CARMA_OPT_DIR
-echo "CARMA_OPT_DIR is set to: $CARMA_OPT_DIR"
+# export CARMA_OPT_DIR varaibles for other applications
+export CARMA_OPT_DIR=/opt/carma
 
 # Build and install using CMake
-cmake -DCMAKE_MODULE_PATH=/opt/carma/cmake/ -Bbuild -DBUILD_PYTHON_BINDINGS=ON . && \
+cmake -Bbuild -DBUILD_PYTHON_BINDINGS=ON . && \
 cmake --build build --target install
