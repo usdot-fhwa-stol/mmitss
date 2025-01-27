@@ -9,17 +9,9 @@ SHELL ["/bin/bash", "-c"]
 
 # finish all related tasks in the sh file 
 
-# WORKDIR /root/dev_ws
-
-# COPY build/dockerfiles/x86/carma_time_lib.sh /mmitss
-
-# Print the current working directory
-
 COPY ./carma_time_lib.sh /root/dev_ws/mmitss/build/dockerfiles/x86/
 
 WORKDIR /root/dev_ws/mmitss/build/dockerfiles/x86/
-
-RUN echo "Current working directory is:" && pwd && ls -l
 
 RUN chmod 755 ./carma_time_lib.sh  
 RUN ./carma_time_lib.sh 
