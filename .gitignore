@@ -31,4 +31,5 @@ test/mrp/testSPat/__pycache__
 mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/build
 mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/install
 mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/log
+
 mmitss/build/scripts/deployment/launch-container-temp-quick.sh
