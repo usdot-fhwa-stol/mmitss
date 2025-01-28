@@ -33,3 +33,4 @@ mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/install
 mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/log
 
 mmitss/build/scripts/deployment/launch-container-temp-quick.sh
+mmitss/build/dockerfiles/x86/Dockerfile_ori.carma_vsp_ros2

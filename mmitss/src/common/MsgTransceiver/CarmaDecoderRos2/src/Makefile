@@ -24,3 +24,4 @@ TARGET = M_CarmaMsgDecoder
 OBJECTS = $(patsubst %.cpp, %.o,$(SRC))
 
 include $(MAKE_ROOT)/newrules.mk
+
