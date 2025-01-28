@@ -1,0 +1,21 @@
+#-----------------------------------------------------------------------------#
+#    Dockerfile to build an arm platform image for carma intersection         #
+#    Image name: mmitssuarizona/mmitss-carma-time-lib                          #
+#-----------------------------------------------------------------------------#
+FROM mmitssuarizona/mmitss-x86-base:3.0
+
+LABEL maintainer="feng333@purdue.edu"
+SHELL ["/bin/bash", "-c"]
+
+# finish all related tasks in the sh file 
+
+COPY ./carma_time_lib.sh /root/dev_ws/mmitss/build/dockerfiles/x86/
+
+WORKDIR /root/dev_ws/mmitss/build/dockerfiles/x86/
+
+RUN chmod 755 ./carma_time_lib.sh  
+RUN ./carma_time_lib.sh 
+
+
+# Set the container's entry point
+ENTRYPOINT ["/usr/bin/supervisord", "--configuration=/nojournal/bin/supervisord.conf"]
