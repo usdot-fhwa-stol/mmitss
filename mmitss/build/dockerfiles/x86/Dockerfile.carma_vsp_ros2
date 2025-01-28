@@ -11,8 +11,8 @@ WORKDIR /root/dev_ws/src
 WORKDIR /mmitss/script
 COPY build/dockerfiles/x86/install_carma_msgs.sh /mmitss/script
 
-RUN chmod 777 setenv.sh
-RUN ./setenv.sh
+RUN chmod 777 install_carma_msgs.sh
+RUN ./install_carma_msgs.sh
 
 COPY build/dockerfiles/x86/build_vsp_ros2_transceivers.sh /mmitss/script
 
