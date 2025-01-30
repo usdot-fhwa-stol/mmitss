@@ -3,6 +3,8 @@
 #include "carma-outbound-listener.h"
 #include "carma-inbound-listener.h"
 #include <memory>
+#include "SignalRequest.h"
+
 
 class Subscriber : public rclcpp::Node
 {
