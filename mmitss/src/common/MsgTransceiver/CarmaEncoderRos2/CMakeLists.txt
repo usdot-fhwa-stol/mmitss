@@ -67,13 +67,13 @@ target_link_libraries(
   CarmaEncoderRos2 ${rclcpp_LIBRARIES} ${carma_driver_msgs_LIBRARIES})
 
 target_include_directories(
-  CarmaEncoderRos2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../../include
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../include/common
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../include/libj2735
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../3rdparty/asn1j2735/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../3rdparty/glpk/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../3rdparty/mapengine/include
-  ${CMAKE_CURRENT_SOURCE_DIR}/../../../3rdparty/net-snmp)
+  CarmaEncoderRos2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../../../include
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../../../include/common
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../../../include/libj2735
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../../../3rdparty/asn1j2735/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../../../3rdparty/glpk/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../../../3rdparty/mapengine/include
+  ${CMAKE_CURRENT_SOURCE_DIR}/../../../../3rdparty/net-snmp)
 
 ament_target_dependencies(CarmaEncoderRos2 rclcpp carma_driver_msgs)
 
