@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 cd /mmitss/tmp/src/common
-build clean && build linux
+make clean && make linux
 
 source /opt/ros/foxy/setup.bash
 cd /mmitss/tmp/src/common/MsgTransceiver/CarmaDecoderRos2
