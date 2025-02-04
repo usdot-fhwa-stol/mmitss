@@ -37,3 +37,5 @@ mmitss/build/dockerfiles/x86/Dockerfile_ori.carma_vsp_ros2
 mmitss/build/scripts/quick-build-image.sh
 mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src
 mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/*.o
+
+test/vsp/testBsm/__pycache__

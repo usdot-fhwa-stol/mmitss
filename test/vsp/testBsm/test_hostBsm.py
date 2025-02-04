@@ -82,6 +82,6 @@ def test_countBsm():
     assert(numMsgs == hostBSMReceived)
     
 # test_countBsm()
-test_listenToRos()
+# test_listenToRos()
 
 

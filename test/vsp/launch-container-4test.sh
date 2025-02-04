@@ -18,31 +18,23 @@
 # in the Transportation Research Institute.                                                 
 #                                                                                           
 # Operational Description:                                                                   
-# This script launches the docker container after getting inputs from the user     
-# 
-# 20240107 This script is modified by Yilin to develop a mmitss valid environment for mmitss application component.                                                                                         
+# This script launches the docker container after getting inputs from the user                                                                                               
 #############################################################################################
 
-read -p "Full absolute path of MMITSS configuration directory (with no trailing /): " -e config_path
-read -p "Name of container image on the Dockerhub : " container_image
-read -p "Name of container: " container_name
-read -p "Specify timezone string: " timezone
+# read -p "Full absolute path of MMITSS configuration directory (with no trailing /): " -e config_path
+# read -p "Name of container image on the Dockerhub : " container_image
+# read -p "Name of container: " container_name
+# read -p "Specify timezone string: " timezone
 
-#########################this should be activitated in dev mode
-read -p "Specify dev source code path: " -e host_path
+# read -p "path for the src code for MMITSS:" -e host_path
+
+# host_path_low="${host_path,,}"
+
+# echo "the path for src code is": $host_path_low
+
+# docker run --privileged -d --restart always -v $config_path:/nojournal -e TZ=$timezone --network host --name $container_name $container_image > /dev/null 2>&1 &
 
 
-###
-#this is the origianl scripts for mmitss
-###
-#docker run --privileged -d --restart always -v $config_path:/nojournal -e TZ=$timezone --network host --name $container_name $container_image > /dev/null 2>&1 &
 
-############################################################################################
-# if want to build a dev env in docker, use the following cmd.
-############################################################################################
-# echo "docker run --privileged -d --restart no -v $config_path:/nojournal -v $host_path:/mmitss/tmp -e TZ=$timezone --network host --name $container_name $container_image /bin/bash"
-#docker run --privileged -it --restart no -v $config_path:/nojournal -v $host_path:/mmitss/tmp -e TZ=$timezone --network host --name $container_name $container_image /bin/bash
-
-# this is for quick build debug with released image 
-docker run -d --restart always -v $config_path:/nojournal -v $host_path:/mmitss/tmp -e TZ=$timezone --network host --name $container_name $container_image 
-
+# for debug purpose, use the following lane
+docker run --privileged -d --restart always -v "/home/yilin/SIP_project/Leidos/mmitss/test/vsp/mmitss_cfg4test/nojournal":/nojournal -v "/home/yilin/SIP_project/Leidos/mmitss/test":/mmitss/test -e TZ="America/New_York" --network host --name "cda_vsp_test" "mmitssuarizona/mmitss-carma-vsp-ros2-x86:CDA1.0" 

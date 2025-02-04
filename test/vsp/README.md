@@ -3,45 +3,55 @@
 Welcome to the vehicle side processor(VSP) CARMA-MMITSS testing. The unit testing of the different sub-components of the CARMA-MMITSS VSP system will be performed in an semi-automated fashion by means of testing scripts. 
 
 ### Requirements and Pre Steps for environment setup
-* cda-mmitss repository cloned
-* ros2 foxy installed 
-* python version=3.8
-* external packages: pytest, lark,  catkin, em
-* carma-driver-msgs built
-* mmitss docker container established 
-* required external packages: 
-* priority request generator executable (M_PriorityRequestGenerator) built and inside its respective folder (../../../mmitss/src/vsp/priority-request-generator)
-* CARMA-MMITSS Encoder executable (M_CarmaMsgEncoder) built and inside its respective folder (../../../mmitss/src/common/MsgTransceiver/CarmaEncoderRos2/src)
-* CARMA-MMITSS Decoder executable (M_CarmaMsgDecoder) built and inside its respective folder (../../../mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src)
+* usdot-fhwa-stol/mmitss repo cloned
+* docker installed
+* docker image build (referenced dockerfile: ../../mmitss/build/dockerfiles/x86/Dockerfile.carma_vsp_ros2), i.e. built image name: mmitssuarizona/mmitss-carma-vsp-ros2-x86:CDA1.0
 
-
-### Build MMITSS container ()
-> [!NOTE]
-> This step is a pre-step to build MMITSS running environment in dev container 
-
-
-### MMITSS Docker container setup
-For this testing, MMITSS container is used to provide environment and unified configuration file for MMITSS application component. The configuration is placed under the directory mmitss_cfg4test/nojournal/bin/mmitss-phase3-master-config.json. The launch script can be run by the following command:
-
+### Build Testing container ()
+This will build a testing docker container for testing.The configuration is placed under the directory mmitss_cfg4test/nojournal/bin/mmitss-phase3-master-config.json.
     ```bash
-    launch_mmitss_container_dev.sh
-    ```
-The MMITSS container will be up when the script is excecuted, and it will provide the environment for mmitss component. 
-> [!CAUTION]
-> Prority request generator is highly recommended to be run in MMITSS container. Currently MMITSS does not have a released image for CDA-sim, we can use: cartlabpurdue/mmitss-vsp-x86:AA1.2 as an alternative. 
-> [!NOTE]
-> For develop purpose, it is better to use a dev container to run the mmitss component.
+   cd vsp
+   ./launch-container-4test.sh
+   ```
+
 
 ## Testing hostBSM receiving from ROS2:
 In order to test the receiving of the hostBSM a bash script in the testBsm folder is stored. To test the hostBSM receiving, execute the runTest.sh script in the testBSM folder.
+> [!NOTE]
+> The testing need to be executed in testing container, the script to open testing container is showed below:
+    ```bash
+    docker container exec -it cda-test-vsp /bin/bash
+    ```
+> [!IMPORTANT]
+> Make sure to bring up two terminals to enter the testing container.
+
+In first container termial, compile and build CarmaDecoderRos2 executable, the source code is under the directory: /mmitss/tmp/src/common/MsgTransceiver/CarmaDecoderRos2. Run the following command:
+   ```bash
+   source /root/dev_ws/src/carma-msgs/install/setup.bash
+   cd src
+   ./M_CarmaDecoderRos2
+   ```
+
+In the second container terminal, find the testing folder placed under the directory: /mmitss/test/vsp. Then run the following command to finish the testing.
 
     ```bash
     cd testBSM
     ./runTest.sh
     ```
+Expected output should be:
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-4.6.9, py-1.8.1, pluggy-0.13.0
+rootdir: /mmitss/test/vsp/testBsm
+plugins: ament-lint-0.9.8, ament-xmllint-0.9.8, launch-testing-ros-0.11.7, launch-testing-0.10.10, ament-flake8-0.9.8, ament-copyright-0.9.8, ament-pep257-0.9.8, colcon-core-0.18.4, cov-2.8.1
+collected 2 items                                                              
+
+test_hostBsm.py ..                                                       [100%]
+
+=========================== 2 passed in 0.89 seconds ===========================
+
 
 ## Testing MAP receiving from ROS2:
-In order to test the receiving of the MAP a bash script in the testMAP folder is stored. To test the MAP receiving, execute the runTest.sh script in the testMAP folder.
+In order to test the receiving of the MAP a bash script in the testMAP folder is stored. To test the MAP receiving, execute the runTest.sh script in the testMAP folder. The testing process is similar as host BSM testing
 
     ```bash
     cd testBSM
