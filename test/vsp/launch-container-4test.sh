@@ -37,4 +37,4 @@
 
 
 # for debug purpose, use the following lane
-docker run --privileged -d --restart always -v "/home/yilin/SIP_project/Leidos/mmitss/test/vsp/mmitss_cfg4test/nojournal":/nojournal -v "/home/yilin/SIP_project/Leidos/mmitss/test":/mmitss/test -e TZ="America/New_York" --network host --name "cda_vsp_test" "mmitssuarizona/mmitss-carma-vsp-ros2-x86:CDA1.0" 
+docker run --privileged -d --restart always -v "/home/yilin/SIP_project/Leidos/mmitss/test/vsp/mmitss_cfg4test/nojournal":/nojournal -v "/home/yilin/SIP_project/Leidos/mmitss/test":/mmitss/test -v "/home/yilin/SIP_project/Leidos/mmitss/mmitss":/mmitss/src -e TZ="America/New_York" --network host --name "cda_vsp_test" "mmitssuarizona/mmitss-carma-vsp-ros2-x86:CDA1.0" 

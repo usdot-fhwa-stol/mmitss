@@ -14,7 +14,6 @@ This will build a testing docker container for testing.The configuration is plac
    ./launch-container-4test.sh
    ```
 
-
 ## Testing hostBSM receiving from ROS2:
 In order to test the receiving of the hostBSM a bash script in the testBsm folder is stored. To test the hostBSM receiving, execute the runTest.sh script in the testBSM folder.
 > [!NOTE]
@@ -51,26 +50,23 @@ test_hostBsm.py ..                                                       [100%]
 
 
 ## Testing MAP receiving from ROS2:
-In order to test the receiving of the MAP a bash script in the testMAP folder is stored. To test the MAP receiving, execute the runTest.sh script in the testMAP folder. The testing process is similar as host BSM testing
+In order to test the receiving of the MAP a bash script in the testMAP folder is stored. To test the MAP receiving, execute the runTest.sh script in the testMAP folder while open the CarmaDecoderRos2 at another terminal. The testing process is similar as host BSM testing
 
-    ```bash
-    cd testBSM
-    ./runTest.sh
-    ```
 
 ## Testing SRM broadcasting to ROS2:
-In order to test the generation and broadcasting of the SRM message, two bash script in the testSRM folder are going to be stored. However, this testing requires the execution of the priority request generator (PRG) in the background. So before runing the test scripts, run the PRG executable in one terminal:
+In order to test the generation and broadcasting of the SRM message, two bash script in the testSRM folder are going to be stored. However, this testing requires the execution of the priority request generator (PRG) in the background. So before runing the test scripts, run the PRG executable in one terminal after entering the docker container. The directory for PRG is placed at /mmitss/src/src/vsp/priority-request-generator:
+> [!NOTE]
+> For testing, the PRG need to be built from source. the build command is shown below:
 
     ```bash
-    cd testSRM
-    ../../../mmitss/src/vsp/priority-request-generator/M_PriorityRequestGenerator
+    make linux
+    ./M_PriorityRequestGenerator
     ```
 
-In another terminal, run the test scripts
+In another terminal, after entering test container,run the test scripts
     
     ```bash
-    cd testSRM
-    ./runTestSRM.sh
-    ./runTestSRMROS.sh
+    cd /mmitss/test/vsp/testSRM
+    pytest-3 test_SRMROS.py
     ```
     

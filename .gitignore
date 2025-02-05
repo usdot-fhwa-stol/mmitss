@@ -39,3 +39,5 @@ mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src
 mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/*.o
 
 test/vsp/testBsm/__pycache__
+test/vsp/testSPat/__pychche__
+test/vsp/testSRM/__pychche__
