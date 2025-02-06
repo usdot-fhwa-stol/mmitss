@@ -41,3 +41,4 @@ mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/*.o
 test/vsp/testBsm/__pycache__
 test/vsp/testSPat/__pycache__
 test/vsp/testSRM/__pycache__
+test/vsp/launch-container-4test.sh
