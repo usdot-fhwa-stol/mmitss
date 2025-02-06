@@ -11,8 +11,9 @@ Welcome to the vehicle side processor(VSP) CARMA-MMITSS testing. The unit testin
 This will build a testing docker container for testing.The configuration is placed under the directory mmitss_cfg4test/nojournal/bin/mmitss-phase3-master-config.json.
     ```bash
    cd vsp
-   ./launch-container-4test.sh
+   docker run --privileged -d --restart always -v "mmitss_cfg4test/nojournal":/nojournal -v "../../test":/mmitss/test -v "../../mmitss/mmitss":/mmitss/src -e TZ="America/New_York" --network host --name "cda_vsp_test" "mmitssuarizona/mmitss-carma-vsp-ros2-x86:CDA1.0" 
    ```
+The three volume is necessary for this test. If the local directory cannot be used, please change it to absolute directory on current machine. 
 
 ## Testing hostBSM receiving from ROS2:
 In order to test the receiving of the hostBSM a bash script in the testBsm folder is stored. To test the hostBSM receiving, execute the runTest.sh script in the testBSM folder.
