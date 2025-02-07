@@ -1,6 +1,6 @@
 #!/bin/bash
 
 source /opt/ros/foxy/setup.bash
-source ../../../other/install/setup.bash
+source /root/dev_ws/src/carma_msgs/install/setup.bash
 
-../../../mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/M_CarmaMsgDecoder & pytest test_MAP.py
+chmod 777 test_hostBsm.py && pytest-3 test_MAP.py

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source /opt/ros/foxy/setup.bash
-source ../../../other/install/setup.bash
-source ../../../mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/install/setup.bash
+source /root/dev_ws/src/carma_msgs/install/setup.bash
+pip install pytest
 
-../../../mmitss/src/common/MsgTransceiver/CarmaDecoderRos2/src/M_CarmaMsgDecoder & sleep 2;python3 -m unittest test_hostBsm.py
+chmod 777 test_hostBsm.py && pytest-3 test_hostBsm.py
