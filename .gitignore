@@ -42,3 +42,5 @@ test/vsp/testBsm/__pycache__
 test/vsp/testSPat/__pycache__
 test/vsp/testSRM/__pycache__
 test/vsp/launch-container-4test.sh
+mmitss/build/scripts/build-image-tmp.sh
+mmitss/build/scripts/deployment/quicklaunch.sh
