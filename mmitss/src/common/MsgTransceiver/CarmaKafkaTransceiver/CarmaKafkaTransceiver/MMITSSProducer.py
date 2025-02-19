@@ -46,7 +46,10 @@ class MMITSSProducer(Producer):
        
         # Configure socket:
         hostIp = self.config["HostIp"]
-        receivingPort = self.config["PortNumber"]["MessageTransceiver"]["MessageEncoder"]
+        if self.kind == "SPaT":
+            receivingPort = self.config["PortNumber"]["CarmaKafkaTransceiver"]["MapSpatProducer"]
+        elif self.kind == "SSM":
+            receivingPort = self.config["PortNumber"]["CarmaKafkaTransceiver"]["SSMProducer"]
         
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.bind((hostIp,receivingPort))
