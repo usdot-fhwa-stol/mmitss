@@ -1,6 +1,14 @@
 from confluent_kafka import Producer,KafkaException
 import json
 import socket
+import logging
+import time
+
+# def on_send_success(record_metadata):
+#     print(f"Message sent to topic {record_metadata.topic}, partition {record_metadata.partition}, offset {record_metadata.offset}")
+
+# def on_send_error(excp):
+#     log.error("Error while sending message", exc_info=excp)
 
 
 class MMITSSProducer(Producer):
@@ -36,7 +44,13 @@ class MMITSSProducer(Producer):
         topics = config["PRODUCER_TOPICS"][self.kind]
         broker = config["BOOTSTRAP_SERVER"]
         producerConfig = {
-            'bootstrap.servers': broker
+            'bootstrap.servers': broker,
+            'socket.timeout.ms': 500,       # Socket operation timeout (e.g., connection)
+            'request.timeout.ms': 500,      # Request timeout
+            'message.timeout.ms': 500,     # Message timeout (5 minutes)
+            'transaction.timeout.ms': 1500,  # Transaction timeout
+            'reconnect.backoff.max.ms': 500, # Maximum reconnect backoff
+            'delivery.timeout.ms': 500
           
         }   
         return producerConfig,topics
@@ -45,7 +59,8 @@ class MMITSSProducer(Producer):
         
        
         # Configure socket:
-        hostIp = self.config["HostIp"]
+        # hostIp = self.config["HostIp"]
+        hostIp = "127.0.0.1"
         if self.kind == "SPaT":
             receivingPort = self.config["PortNumber"]["CarmaKafkaTransceiver"]["MapSpatProducer"]
         elif self.kind == "SSM":
@@ -66,7 +81,10 @@ class MMITSSProducer(Producer):
                 elif msg["MessageType"] == "SSM":
                     msg = self.encodeSSM(msg)
                 try:
-                    self.produce(self.topics, msg)
+                    logging.info(msg)
+            
+                    tmp = self.produce(self.topics, msg)
+                    logging.info("msg produced")
                     self.flush()
                     messageCount+=1
                     if debug == True:
@@ -75,10 +93,12 @@ class MMITSSProducer(Producer):
                     print(f"Error producing message: {e}")
             except:
                 pass
-            if KeyboardInterrupt:
-                break
+            # logging.info("end of the loop")
+            time.sleep(0.1)
+            
         
-        s.close()
+        print("here")
+        # s.close()
         
   
     def encodeSPaT(self,msg):

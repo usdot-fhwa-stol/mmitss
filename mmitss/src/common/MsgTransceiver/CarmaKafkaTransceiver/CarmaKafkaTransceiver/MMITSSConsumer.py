@@ -69,8 +69,7 @@ class MMITSSConsumer(Consumer):
                 print(messageCount)
                 if debug==True:
                     break
-        except KeyboardInterrupt:
-            print("print message count: ",messageCount)
+        
         finally:
             self.close()
         return messageCount
