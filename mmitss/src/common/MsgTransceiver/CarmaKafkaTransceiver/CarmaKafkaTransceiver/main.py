@@ -6,14 +6,7 @@ import logging
 import time
 
 logging.basicConfig(level=logging.INFO, format="%(threadName)s: %(message)s")
-#logging.basicConfig(
-#    level=logging.INFO, 
-#    format="%(asctime)s - %(threadName)s - %(levelname)s - %(message)s",
-#    handlers=[
-#        logging.FileHandler("thread_logs.log"),  # Save to a file
-#        logging.StreamHandler()  # Also print to console
-#    ]
-#)
+
 
 
 def main():
@@ -39,7 +32,7 @@ def main():
         producerSSMProcessing.join()
     
     except KeyboardInterrupt:
-        
+
         consumerBSMProcessing.join()
         consumerSRMProcessing.join()
         producerSPaTProcessing.join()
