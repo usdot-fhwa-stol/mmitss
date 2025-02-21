@@ -2,25 +2,42 @@ from MMITSSConsumer import *
 from MMITSSProducer import *
 import threading
 
+import logging
+import time
+
+logging.basicConfig(level=logging.INFO, format="%(threadName)s: %(message)s")
+
+
+
 def main():
-    consumerBSM = MMITSSConsumer("BSM")
-    consumerSRM = MMITSSConsumer("SRM")
-    producerSPaT = MMITSSProducer("SPaT")
-    producerSSM = MMITSSProducer("SSM")
-    consumerBSMThread = threading.Thread(target=consumerBSM.broadcastMsg)
-    consumerSRMThread = threading.Thread(target=consumerSRM.broadcastMsg)
-    producerSPaTThread = threading.Thread(target=producerSPaT.socketLoop)
-    producerSSMThread = threading.Thread(target=producerSSM.socketLoop)
+    try:
 
-    consumerBSMThread.start()
-    consumerSRMThread.start()
-    producerSPaTThread.start()
-    producerSSMThread.start()
+        consumerBSM = MMITSSConsumer("BSM")
+        consumerSRM = MMITSSConsumer("SRM")
+        producerSPaT = MMITSSProducer("SPaT")
+        producerSSM = MMITSSProducer("SSM")
+        consumerBSMProcessing = threading.Thread(target=consumerBSM.broadcastMsg, name="BSM")
+        consumerSRMProcessing = threading.Thread(target=consumerSRM.broadcastMsg, name="SRM")
+        producerSPaTProcessing = threading.Thread(target=producerSPaT.socketLoop, name="SPaT")
+        producerSSMProcessing = threading.Thread(target=producerSSM.socketLoop, name="SSM")
+   
+        consumerBSMProcessing.start()
+        consumerSRMProcessing.start()
+        producerSPaTProcessing.start()
+        producerSSMProcessing.start()
+        
+        consumerBSMProcessing.join()
+        consumerSRMProcessing.join()
+        producerSPaTProcessing.join()
+        producerSSMProcessing.join()
+    
+    except KeyboardInterrupt:
 
-    consumerBSMThread.join()
-    consumerSRMThread.join()
-    producerSPaTThread.join()
-    producerSSMThread.join()
+        consumerBSMProcessing.join()
+        consumerSRMProcessing.join()
+        producerSPaTProcessing.join()
+        producerSSMProcessing.join()
+        logging.info("end of one loop")
     
 if __name__ == '__main__':
     main()

@@ -66,10 +66,10 @@ class MMITSSConsumer(Consumer):
                 msg = json.loads(msg.value().decode("utf-8"))
                 self.callback(msg)
                 messageCount+=1
+                print(messageCount)
                 if debug==True:
                     break
-        except KeyboardInterrupt:
-            print("print message count: ",messageCount)
+        
         finally:
             self.close()
         return messageCount

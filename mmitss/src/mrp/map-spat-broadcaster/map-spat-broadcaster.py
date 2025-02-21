@@ -47,7 +47,7 @@ def main():
     s.bind(MapSpatBroadcastAddress)
     
     snmpEngineAddress = (mrpIp, config["PortNumber"]["SnmpEngine"])
-    msgEncoderAddress = (mrpIp, config["PortNumber"]["MessageTransceiver"]["MessageEncoder"])
+    msgEncoderAddress = (mrpIp, config["PortNumber"]["CarmaKafkaTransceiver"]["MapSpatProducer"])
     dataCollectorServerAddress = (config["DataTransfer"]["server"]["ip_address"], config["PortNumber"]["DataCollector"])
     localDataCollectorAddress = (config["HostIp"], config["PortNumber"]["DataCollector"])
     msgDistributorAddress = (config["MessageDistributorIP"], config["PortNumber"]["MessageDistributor"])
@@ -157,6 +157,8 @@ def main():
 
             modifiedSpatJsonString = j2735Helper.get_standard_string_for_broadcast(spatJsonString, inactiveVehPhases, inactivePedPhases)
             s.sendto(modifiedSpatJsonString.encode(), msgEncoderAddress)
+            
+            print(modifiedSpatJsonString)
             s.sendto(modifiedSpatJsonString.encode(), localDataCollectorAddress)
 
             # Now that the broadcast is complete, do rest of the stuff required for other MMITSS applications

@@ -46,6 +46,7 @@ else
     read -p "Build simulation_server-tools applications? (y or n): " server
     read -p "Build CARMA-ROS1 transceivers? (y or n)" carma
 	read -p "Build CARMA-ROS2 transceivers? (y or n)" carma2
+    read -p "Build Kafka Transceivers? (y or n)" kafka
 
     else
     common=y
@@ -54,6 +55,7 @@ else
     server=y
     carma=y
 	carma2=y
+    kafka=y
     fi
 
     ######################################################################################
@@ -67,56 +69,58 @@ else
 	    echo "COMMON APPLICATIONS"
 	    echo "------------------------"
 	    ######################################################################################
+	    
+	    if [ "$kafka" = "n" ]; then
 
-	    echo "Building Message Encoder..."
-	    cd ../../src/common/MsgTransceiver/MsgEncoder
-	    # Clean the folder and build for linux.
-	    make clean &> /dev/null
+	    	echo "Building Message Encoder..."
+	    	cd ../../src/common/MsgTransceiver/MsgEncoder
+	    	# Clean the folder and build for linux.
+	    	make clean &> /dev/null
 
-	    if [ "$PROCESSOR" = "arm" ]; then
-		    make linux ARM=1 &> /dev/null
-	    else
-		    make linux &> /dev/null
-	    fi
+	    	if [ "$PROCESSOR" = "arm" ]; then
+		    	make linux ARM=1 &> /dev/null
+	    	else
+		    	make linux &> /dev/null
+	    	fi
 
-	    # Indicate Success/Failure of the build
-	    if [ "$?" -eq "0" ]; then
-		    mv M_MsgEncoder ../../../../build/bin/MsgEncoder/$PROCESSOR/M_MsgEncoder
-		    echo -e "${green}Successful${nocolor}"
-	    else
-		    echo -e "${red}Failed${nocolor}"
-	    fi
-	    # Remove the .o files to keep the folders clean
-	    rm ./*.o &> /dev/null
-	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
-	    sleep 1s
-	    #######################################################################################
+	    	# Indicate Success/Failure of the build
+	    	if [ "$?" -eq "0" ]; then
+		    	mv M_MsgEncoder ../../../../build/bin/MsgEncoder/$PROCESSOR/M_MsgEncoder
+		    	echo -e "${green}Successful${nocolor}"
+	    	else
+		    	echo -e "${red}Failed${nocolor}"
+	    	fi
+	    	# Remove the .o files to keep the folders clean
+	    	rm ./*.o &> /dev/null
+	    	# Return back to original directory to go over the process again for another one
+	    	cd - &> /dev/null
+	    	sleep 1s
+	    	#######################################################################################
 
-	    #######################################################################################
-	    echo "Building Wireless Message Decoder..."
-	    cd ../../src/common/MsgTransceiver/MsgDecoder/WirelessMsgDecoder
-	    # Clean the folder and build for linux.
-	    make clean &> /dev/null
+	    	#######################################################################################
+	    	echo "Building Wireless Message Decoder..."
+	    	cd ../../src/common/MsgTransceiver/MsgDecoder/WirelessMsgDecoder
+	    	# Clean the folder and build for linux.
+	    	make clean &> /dev/null
 
-	    if [ "$PROCESSOR" = "arm" ]; then
-		    make linux ARM=1 &> /dev/null
-	    else
-		    make linux &> /dev/null
-	    fi
+	    	if [ "$PROCESSOR" = "arm" ]; then
+		    	make linux ARM=1 &> /dev/null
+	    	else
+		    	make linux &> /dev/null
+	    	fi
 
-	    # Indicate Success/Failure of the build
-	    if [ "$?" -eq "0" ]; then
-		    mv M_WirelessMsgDecoder ../../../../../build/bin/WirelessMsgDecoder/$PROCESSOR/M_WirelessMsgDecoder
-		    echo -e "${green}Successful${nocolor}"
-	    else
-		    echo -e "${red}Failed${nocolor}"
-	    fi
-	    # Remove the .o files to keep the folders clean
-	    rm ./*.o &> /dev/null
-	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
-	    sleep 1s
+	    	# Indicate Success/Failure of the build
+	    	if [ "$?" -eq "0" ]; then
+		    	mv M_WirelessMsgDecoder ../../../../../build/bin/WirelessMsgDecoder/$PROCESSOR/M_WirelessMsgDecoder
+		    	echo -e "${green}Successful${nocolor}"
+	    	else
+		    	echo -e "${red}Failed${nocolor}"
+	    	fi
+	    	# Remove the .o files to keep the folders clean
+	    	rm ./*.o &> /dev/null
+	    	# Return back to original directory to go over the process again for another one
+	    	cd - &> /dev/null
+	    	sleep 1s
 	    #######################################################################################
 
 	    #######################################################################################
@@ -709,8 +713,9 @@ else
 			read -p "Build MRP image? Needs common and roadside applications. (y or n): " mrpFieldImage
 			read -p "Build VSP image? Needs common and vehicle applications. (y or n): " vspImage
 			read -p "Build simulation_server-tools image? Needs simulation_server-tools applications. (y or n): " serverImage
-            read -p "Build CARMA-ROS 1 applications. (y or n): " carma1Image
+            		read -p "Build CARMA-ROS 1 applications. (y or n): " carma1Image
 			read -p "Build CARMA-ROS 2 applications. (y or n): " carma2Image
+			read -p "Build kafka transceiver. (y or n): " kafkaImage
 
 			if [ "$mrpFieldImage" = "y" ]; then
 				echo "---------------------------------------"
@@ -747,6 +752,13 @@ else
 				echo "-----------------------------------------------------"
 				docker build -t mmitssuarizona/mmitss-carma-mrp-ros2-$PROCESSOR:$versionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.carma_mrp_ros2 .
                 docker build -t mmitssuarizona/mmitss-carma-vsp-ros2-$PROCESSOR:$versionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.carma_vsp_ros2 .
+			fi
+			
+			if [ "$kafkaImage" = "y" ]; then
+				echo "-----------------------------------------------------"
+				echo "Building Kafka-MRP image for $PROCESSOR"
+				echo "-----------------------------------------------------"
+				docker build -t mmitssuarizona/mmitss-carma-mrp-kafka-$PROCESSOR:$versionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.kafka_mrp .
 			fi
 
 
