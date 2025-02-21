@@ -1,7 +1,6 @@
 #! /bin/bash
 set -e
 
-#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4
 # install kafka
 apt-get update && \
   apt-get install -y --no-install-recommends gcc git pip libssl-dev g++ make && \

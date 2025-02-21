@@ -1,6 +1,5 @@
 from MMITSSConsumer import *
 from MMITSSProducer import *
-# import multiprocessing
 import threading
 
 import logging
@@ -40,10 +39,6 @@ def main():
         producerSSMProcessing.join()
     
     except KeyboardInterrupt:
-        # consumerBSMProcessing.terminate()
-        # consumerSRMProcessing.terminate()
-        # producerSPaTProcessing.terminate()
-        # producerSSMProcessing.terminate()
         
         consumerBSMProcessing.join()
         consumerSRMProcessing.join()
