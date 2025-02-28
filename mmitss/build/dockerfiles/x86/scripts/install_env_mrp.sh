@@ -1,15 +1,16 @@
 #! /bin/bash
 set -e
 
-# install kafka
-apt-get update && \
-  apt-get install -y --no-install-recommends gcc git pip libssl-dev g++ make && \
-  cd /tmp && git clone https://github.com/edenhill/librdkafka && \
-  cd librdkafka && git checkout tags/v2.0.2 && \
-  ./configure && make && make install && \
-  ldconfig &&\
-  cd ../ && rm -rf librdkafka
-
+# # install kafka
+# apt-get update && \
+#   apt-get install -y --no-install-recommends gcc git pip libssl-dev g++ make && \
+#   cd /tmp && git clone https://github.com/edenhill/librdkafka && \
+#   cd librdkafka && git checkout tags/v2.0.2 && \
+#   ./configure && make && make install && \
+#   ldconfig &&\
+#   cd ../ && rm -rf librdkafka
+apt-get update
+apt-get install -y --no-install-recommends pip 
 pip install confluent-kafka==2.0.2
 
 # install carma-street

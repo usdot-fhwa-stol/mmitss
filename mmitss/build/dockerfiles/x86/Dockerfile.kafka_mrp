@@ -8,18 +8,18 @@ MAINTAINER D Cunningham (donaldcunningham@email.arizona.edu)
 SHELL ["/bin/bash", "-c"]
 
 WORKDIR /mmitss
-COPY mmitss/src/common/MsgTransceiver/CarmaKafkaTransceiver /mmitss/CarmaKafkaTransceiver
+COPY /src/common/MsgTransceiver/CarmaKafkaTransceiver /mmitss/CarmaKafkaTransceiver
 
 WORKDIR /mmitss/script
-COPY mmitss/build/dockerfiles/x86/scripts/install_env_mrp.sh /mmitss/script
-COPY mmitss/build/dockerfiles/x86/scripts/runKafkaTransceiver.sh /mmitss/script
+COPY build/dockerfiles/x86/scripts/install_env_mrp.sh /mmitss/script
+COPY build/dockerfiles/x86/scripts/runKafkaTransceiver.sh /mmitss/script
 
 RUN chmod 777 runKafkaTransceiver.sh 
 RUN chmod 777 install_env_mrp.sh
 RUN ./install_env_mrp.sh
 
 WORKDIR /mmitss/tmp
-COPY mmitss /mmitss/repo
+COPY . /mmitss/repo
 # RUN ls
 
 # COPY build/bin/WirelessMsgDecoder/x86/M_WirelessMsgDecoder /mmitss
