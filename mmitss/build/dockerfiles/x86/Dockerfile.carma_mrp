@@ -9,8 +9,6 @@ COPY build/bin/TrafficControllerInterface/x86/M_TrafficControllerInterface /mmit
 COPY build/bin/PriorityRequestSolver/x86/M_PriorityRequestSolver /mmitss
 COPY build/bin/PriorityRequestServer/x86/M_PriorityRequestServer /mmitss
 COPY build/bin/SnmpEngine/x86/M_SnmpEngine /mmitss
-COPY build/bin/CarmaDecoder/x86/M_CarmaMsgDecoder /mmitss
-COPY build/bin/CarmaEncoder/x86/M_CarmaMsgEncoder /mmitss
 COPY build/bin/MapSpatBroadcaster/x86/M_MapSpatBroadcaster /mmitss
 COPY build/bin/SystemInterface/x86/M_SystemInterface /mmitss
 COPY build/bin/V2XDataCollector/x86/M_V2XDataCollector /mmitss

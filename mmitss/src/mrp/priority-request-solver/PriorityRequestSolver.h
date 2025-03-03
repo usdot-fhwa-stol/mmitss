@@ -139,7 +139,6 @@ public:
   string getTimePhaseDiagramMessageString();
   int getMessageType(string jsonString);
   double getCoefficientOfFrictionValue(double vehicleSpeed);
-  double getCurrentTime();
   bool findEmergencyVehicleRequestInList();
   bool findTransitOrTruckRequestInList();
   bool findCoordinationRequestInList();

@@ -955,7 +955,9 @@ void PriorityRequestServer::setVehicleType(SignalRequest signalRequest)
 */
 int PriorityRequestServer::getMinuteOfYear()
 {
-	time_t t = time(NULL);
+	std::chrono::system_clock::time_point now {std::chrono::milliseconds((long)(getPosixTimestamp()*1000))};
+
+	time_t t = std::chrono::system_clock::to_time_t(now);
 	tm *timePtr = gmtime(&t);
 
 	int dayOfYear = timePtr->tm_yday;
@@ -972,7 +974,9 @@ int PriorityRequestServer::getMinuteOfYear()
 */
 int PriorityRequestServer::getMsOfMinute()
 {
-	time_t t = time(NULL);
+	std::chrono::system_clock::time_point now {std::chrono::milliseconds((long)(getPosixTimestamp()*1000))};
+
+	time_t t = std::chrono::system_clock::to_time_t(now);
 	tm *timePtr = gmtime(&t);
 
 	int currentSecond = timePtr->tm_sec;

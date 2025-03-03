@@ -943,7 +943,7 @@ void PriorityRequestSolver::getCurrentSignalStatus(string jsonString)
 
     else if (!transitOrTruckRequestStatus && signalCoordinationRequestStatus)
     {
-        double currentTimeOfToday = getCurrentTime();
+        double currentTimeOfToday = getPosixTimestamp();
         elapsedTimeInCycle = fmod((currentTimeOfToday - coordinationStartTime - offset), cycleLength);
         loggingData("The elapsed time in a cycle is " + std::to_string(elapsedTimeInCycle));
 
@@ -1467,22 +1467,7 @@ bool PriorityRequestSolver::checkSignalCoordinationTimingPlanStatus()
     return sendCoordinationPlanRequest;
 }
 
-double PriorityRequestSolver::getCurrentTime()
-{
-    double currentTime{};
-    time_t s = 1;
-    struct tm *current_time;
 
-    // time in seconds
-    s = time(NULL);
-
-    // to get current time
-    current_time = localtime(&s);
-
-    currentTime = current_time->tm_hour * 3600.00 + current_time->tm_min * 60.00 + current_time->tm_sec;
-
-    return currentTime;
-}
 
 /*
     -Check whether to log data or not

@@ -14,11 +14,13 @@
 */
 
 #include <UdpSocket.h>
+#include <udp_time_sync/TimeSync.hpp>
 #include "PriorityRequestSolver.h"
 #include "SolverDataManager.h"
 
 int main()
 {
+    
     Json::Value jsonObject;
     std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
     string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
@@ -39,7 +41,8 @@ int main()
     const int timePhaseDiagramToolPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["TimePhaseDiagramTool"].asInt());
 
     const string LOCALHOST = jsonObject["HostIp"].asString();
-
+    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestSolver"].asInt()));
+    sync.start();
     char receiveBuffer[40960];
     char receivedSignalStatusBuffer[40960];
     char receivedCoordinationPlanBuffer[40960];
@@ -49,7 +52,7 @@ int main()
 
     priorityRequestSolverSocket.sendData(LOCALHOST, static_cast<short unsigned int>(trafficControllerPortNo), priorityRequestSolver.getSignalTimingPlanRequestString());
     // priorityRequestSolver.terminateProgram();
-
+    
     while (true)
     {
         priorityRequestSolverSocket.receiveData(receiveBuffer, sizeof(receiveBuffer));
@@ -130,6 +133,6 @@ int main()
 
     priorityRequestSolverSocket.closeSocket();
     priorityRequestSolver_To_TCI_Interface_Socket.closeSocket();
-
+    sync.stop();
     return 0;
 }
