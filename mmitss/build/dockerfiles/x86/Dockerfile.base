@@ -12,7 +12,6 @@ MAINTAINER D Cunningham (donaldcunningham@email.arizona.edu)
 # perform a sysupgrade and install some necessary packages -
 RUN apt-get update && apt-get install -y apt-utils supervisor iputils-ping net-tools tzdata
 RUN mkdir -p /var/log/supervisor
-COPY 3rdparty/udp-time-sync/udp-time-sync-1_0.0.1-dev_focal_amd64.deb /tmp
 
 COPY lib/x86/system/libssl.so.1.1 /usr/lib/x86_64-linux-gnu/
 COPY lib/x86/system/libcrypto.so.1.1 /usr/lib/x86_64-linux-gnu/

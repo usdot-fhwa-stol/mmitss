@@ -11,10 +11,9 @@ apt-get update && apt-get install -y \
     python3-dev \
     build-essential \
     carma-clock-1 \
-    udp-socket-1 
+    udp-socket-1 \
+    udp-time-sync-1
 
-# temporarily required until PR is closed   
-apt-get install -y /tmp/udp-time-sync-1_0.0.1-dev_focal_amd64.deb
 
 
 echo " ------> Install rapidjson..."
