@@ -6,7 +6,7 @@ include $(MAKE_ROOT)/newheader.mk
 
 INCLUDES    := -I$(J2735_INCL) -I$(JSONCPP_INCL) -I$(COMMON_INCL) -I$(BUILD_ROOT)/3rdparty/ -I$(MAPENGINE_INCL) -I/opt/carma/include/  # tell the compiler where to find theinclude directories
 CPPFLAGS	:= $(CPPFLAGS) -fPIC -std=c++17 -DLOGGING
-LDFLAGS     := -shared -L/opt/carma/lib
+LDFLAGS     := -L/opt/carma/lib
 
 #LDFLAGS     := -fPIC -Wl,-rpath=$(J2735_SO_DIR) # tell the linker to add a path to the j2735 shared lib 
 #LDFLAGS     := -Wl,-rpath=$(J2735_SO_DIR) # tell the linker to add a path to the j2735 shared lib 
