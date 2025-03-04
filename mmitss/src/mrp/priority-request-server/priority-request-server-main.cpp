@@ -40,7 +40,7 @@ int main()
     const int dataCollectorPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["DataCollector"].asInt());
 
     const string LOCALHOST = jsonObject["HostIp"].asString();
-    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestServer"].asInt()));
+    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestServer"].asInt()),true);
     sync.start();
     const string messageDistributorIP = jsonObject["MessageDistributorIP"].asString();
     string ssmJsonString{};

@@ -18,6 +18,7 @@
 #include "PriorityRequestSolver.h"
 #include "SolverDataManager.h"
 
+
 int main()
 {
     
@@ -41,7 +42,7 @@ int main()
     const int timePhaseDiagramToolPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["TimePhaseDiagramTool"].asInt());
 
     const string LOCALHOST = jsonObject["HostIp"].asString();
-    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestSolver"].asInt()));
+    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestSolver"].asInt()), true);
     sync.start();
     char receiveBuffer[40960];
     char receivedSignalStatusBuffer[40960];

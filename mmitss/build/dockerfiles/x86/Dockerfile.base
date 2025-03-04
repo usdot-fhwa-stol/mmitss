@@ -44,3 +44,4 @@ RUN ./carma_time_lib.sh
 # Environment variables
 ENV PATH $PATH:/mmitss
 ENV MIBS=ALL
+ENV LD_LIBRARY_PATH /opt/carma/lib/
