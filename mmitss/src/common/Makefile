@@ -3,12 +3,12 @@ BUILD_ROOT=../..
 MAKE_ROOT :=$(BUILD_ROOT)/make
 include $(MAKE_ROOT)/newheader.mk
 
-INCLUDES    := -I$(J2735_INCL) -I$(COMMON_INCL)# tell the compiler where to find the include directories
-CPPFLAGS	:= $(CPPFLAGS) -fPIC
-LDFLAGS     := -shared 
+INCLUDES    := -I$(J2735_INCL) -I$(COMMON_INCL) -I/opt/carma/include/# tell the compiler where to find the include directories
+CPPFLAGS	:= $(CPPFLAGS) -fPIC -std=c++17
+LDFLAGS     := -shared -L/opt/carma/lib
 #LDFLAGS     := -shared -Wl,-rpath=$(J2735_SO_DIR) # tell the linker to add a path to the json shared lib 
 #-Wl is used to pass the option(rpath) to the linker --- we probably want to move this into a default rather than a hard coded location
-LIBS        := -L$(J2735_LIB) -ldsrc -lasn #tell the linker where to find the libraries
+LIBS        := -L$(J2735_LIB) -ldsrc -lasn -lcarma-clock -ludp-socket -ludp_time_sync #tell the linker where to find the libraries
 
 
 #cpp's go here

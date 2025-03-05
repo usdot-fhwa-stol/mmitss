@@ -121,13 +121,14 @@ else
 	    	# Return back to original directory to go over the process again for another one
 	    	cd - &> /dev/null
 	    	sleep 1s
+		fi
 	    #######################################################################################
 
 	    #######################################################################################
 	    echo "Building V2X Data Collector..."
 	    cd ../../src/common/v2x-data-collector
 	    # Clean the folder and build for linux.
-	    pyinstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed v2x-data-collector-main.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed v2x-data-collector-main.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/v2x-data-collector-main  ../../../build/bin/V2XDataCollector/$PROCESSOR/M_V2XDataCollector
@@ -147,7 +148,7 @@ else
 	    echo "Building V2X Data Transfer..."
 	    cd ../../src/common/v2x-data-transfer
 	    # Clean the folder and build for linux.
-	    pyinstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed v2x-data-transfer-main.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed v2x-data-transfer-main.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/v2x-data-transfer-main  ../../../build/bin/V2XDataTransfer/$PROCESSOR/M_V2XDataTransfer
@@ -167,7 +168,7 @@ else
 	    echo "Building System Interface..."
 	    cd ../../src/system-interface
 	    # Clean the folder and build for linux.
-	    pyinstaller --add-data "templates:templates" --add-data "static:static" --additional-hooks-dir=. --onefile --windowed system-interface.py &> /dev/null
+	    python3 -m PyInstaller --add-data "templates:templates" --add-data "static:static" --additional-hooks-dir=. --onefile --windowed system-interface.py &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/system-interface  ../../build/bin/SystemInterface/$PROCESSOR/M_SystemInterface
@@ -273,7 +274,7 @@ else
 	    echo "Building Traffic Controller Interface..."
 	    cd ../../src/mrp/traffic-controller-interface
 	    # Clean the folder and build for linux.
-	    pyinstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed traffic-controller-interface.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed traffic-controller-interface.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/traffic-controller-interface  ../../../build/bin/TrafficControllerInterface/$PROCESSOR/M_TrafficControllerInterface
@@ -293,7 +294,7 @@ else
 	    echo "Building Map Spat Broadcaster..."
 	    cd ../../src/mrp/map-spat-broadcaster
 	    # Clean the folder and build for linux.
-	    pyinstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed map-spat-broadcaster.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed map-spat-broadcaster.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/map-spat-broadcaster  ../../../build/bin/MapSpatBroadcaster/$PROCESSOR/M_MapSpatBroadcaster
@@ -313,7 +314,7 @@ else
 	    echo "Building Time Phase Diagram Tool..."
 	    cd ../../src/mrp/time-phase-diagram-tool
 	    # Clean the folder and build for linux.
-	    pyinstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed time-phase-diagram-tool.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed time-phase-diagram-tool.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/time-phase-diagram-tool  ../../../build/bin/TimePhaseDiagramTool/$PROCESSOR/M_TimePhaseDiagramTool
@@ -333,7 +334,7 @@ else
 	    echo "Building Signal Coordination Request Generator..."
 	    cd ../../src/mrp/signal-coordination-request-generator
 	    # Clean the folder and build for linux.
-	    pyinstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed signal-coordination-request-generator.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed signal-coordination-request-generator.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/signal-coordination-request-generator  ../../../build/bin/SignalCoordinationRequestGenerator/$PROCESSOR/M_SignalCoordinationRequestGenerator
@@ -440,7 +441,7 @@ else
 	    echo "Building Light Siren Status Manager..."
 	    cd ../../src/vsp/light-siren-status-manager
 	    # Clean the folder and build for linux.
-	    pyinstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed light-siren-status-manager.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed light-siren-status-manager.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/light-siren-status-manager  ../../../build/bin/LightSirenStatusManager/$PROCESSOR/M_LightSirenStatusManager
@@ -460,7 +461,7 @@ else
 	    echo "Building Data Compressor..."
 	    cd ../../src/vsp/data-compressor
 	    # Clean the folder and build for linux.
-	    pyinstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed data-compressor.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed data-compressor.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/data-compressor  ../../../build/bin/DataCompressor/$PROCESSOR/M_DataCompressor
@@ -515,7 +516,7 @@ else
 	    echo "Building Message Distributor..."
 	    cd ../../src/server/message-distributor
 	    # Clean the folder and build for linux.
-	    pyinstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed message-distributor.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed message-distributor.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/message-distributor  ../../../build/bin/MessageDistributor/$PROCESSOR/M_MessageDistributor
@@ -535,7 +536,7 @@ else
 	    echo "Building Simulated BSM Blob Processor..."
 	    cd ../../src/simulation/simulated-bsm-blob-processor
 	    # Clean the folder and build for linux.
-	    pyinstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed simulated-bsm-blob-processor.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed simulated-bsm-blob-processor.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/simulated-bsm-blob-processor  ../../../build/bin/SimulatedBsmBlobProcessor/$PROCESSOR/M_SimulatedBsmBlobProcessor

@@ -15,9 +15,11 @@
 
 #include "PriorityRequestServer.h"
 #include <UdpSocket.h>
+#include <udp_time_sync/TimeSync.hpp>
 
 int main()
 {
+    
     Json::Value jsonObject;
     std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
     string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
@@ -38,6 +40,8 @@ int main()
     const int dataCollectorPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["DataCollector"].asInt());
 
     const string LOCALHOST = jsonObject["HostIp"].asString();
+    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestServer"].asInt()),true);
+    sync.start();
     const string messageDistributorIP = jsonObject["MessageDistributorIP"].asString();
     string ssmJsonString{};
     string solverJsonString{};
@@ -45,7 +49,7 @@ int main()
     char receiveBuffer[40960];
     int msgType{};
     bool timedOutOccur{};
-
+    
     while (true)
     {
         timedOutOccur = PRSSocket.receiveData(receiveBuffer, sizeof(receiveBuffer));
@@ -124,7 +128,7 @@ int main()
             }
         }
     }
-
+    sync.stop();
     PRSSocket.closeSocket();
     return 0;
 }

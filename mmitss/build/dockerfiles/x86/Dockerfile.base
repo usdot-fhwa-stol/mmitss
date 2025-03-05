@@ -10,7 +10,6 @@ FROM ubuntu:20.04
 MAINTAINER D Cunningham (donaldcunningham@email.arizona.edu)
 
 # perform a sysupgrade and install some necessary packages -
-
 RUN apt-get update && apt-get install -y apt-utils supervisor iputils-ping net-tools tzdata
 RUN mkdir -p /var/log/supervisor
 
@@ -26,7 +25,6 @@ COPY 3rdparty/mapengine/lib/x86/liblocAware.so.1.0 /usr/local/lib/mmitss/
 COPY 3rdparty/asn1j2735/lib/x86/libasn.so.1.0 /usr/local/lib/mmitss/
 COPY 3rdparty/asn1j2735/lib/x86/libdsrc.so.1.0 /usr/local/lib/mmitss/
 COPY lib/mmitss.conf /etc/ld.so.conf.d/
-
 # Create the symbolic links for the copied libraries."
 RUN ln -s /usr/local/lib/mmitss/libnetsnmp.so.35.0.0 /usr/local/lib/mmitss/libnetsnmp.so.35 && ln -s /usr/local/lib/mmitss/libglpk.so.35.1.0 /usr/local/lib/mmitss/libglpk.so.35 
 RUN ln -s /usr/local/lib/mmitss/liblocAware.so.1.0 /usr/local/lib/mmitss/liblocAware.so && ln -s /usr/local/lib/mmitss/libasn.so.1.0 /usr/local/lib/mmitss/libasn.so 
@@ -34,12 +32,16 @@ RUN ln -s /usr/local/lib/mmitss/libdsrc.so.1.0 /usr/local/lib/mmitss/libdsrc.so
 # Alpine - RUN ldconfig /etc/ld.so.conf.d/
 RUN ldconfig
 
-RUN mkdir /mmitss
+RUN mkdir -p /mmitss
+COPY --chmod=777 build/dockerfiles/x86/scripts/carma_time_lib.sh /mmitss
+
 RUN mkdir /var/net-snmp
 RUN mkdir /var/net-snmp/mib_indexes
 
 WORKDIR /mmitss
+RUN ./carma_time_lib.sh
 
 # Environment variables
 ENV PATH $PATH:/mmitss
 ENV MIBS=ALL
+ENV LD_LIBRARY_PATH /opt/carma/lib/
