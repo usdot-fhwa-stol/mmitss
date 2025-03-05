@@ -82,6 +82,8 @@ class MMITSSConsumer(Consumer):
         elif self.kind == "BSM":
             receivingPort = self.config["PortNumber"]["TrajectoryAware"]
             msg = self.decodeBSM(msg)
+        elif self.kind == "TimeSync":
+            receivingPort = self.config["TimeSyncPortNumber"]["PriorityRequestServer"]
 
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.bind((hostIp,port))
