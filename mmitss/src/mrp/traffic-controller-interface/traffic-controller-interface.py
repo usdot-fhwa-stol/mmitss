@@ -98,7 +98,9 @@ def main():
                 logger.write("Received a new schedule") 
                 logger.write(str(receivedMessage))
                 phaseControlScheduler.signalController.resetAllPhaseControls()
-                phaseControlScheduler.processReceivedSchedule(receivedMessage)
+                # scale the received schedule by a given factor to match simulation
+                scaled_receivedMessage = scheduler.update_schedule_json(receivedMessage, scheduler.scale_factor)
+                phaseControlScheduler.processReceivedSchedule(scaled_receivedMessage)
 
         elif receivedMessage["MsgType"]=="CurrNextPhaseRequest":
             # Let the object of SignalController class do the needful to send the information about current and next phase to the requestor.

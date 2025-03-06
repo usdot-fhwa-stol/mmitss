@@ -65,6 +65,8 @@ class PhaseControlScheduler(Scheduler):
         # Close the config file:
         configFile.close()
 
+        self.scale_factor = config["Scale_factor"] # int
+
         self.mapSpatBroadcasterAddress = ((config["HostIp"],config["PortNumber"]["MapSPaTBroadcaster"]))
         self.scheduleSpatTranslator = ScheduleSpatTranslator()
       
@@ -345,6 +347,22 @@ class PhaseControlScheduler(Scheduler):
         self.signalController.setPhaseControl(Command.OMIT_VEH_PHASES,False, [],time.time())
         # Clear PedOmits
         self.signalController.setPhaseControl(Command.OMIT_PED_PHASES,False, [],time.time())
+    
+    def update_schedule_json(self, scheduleJson: dict, scale_factor:int):
+        # multiply the schedule json with a given factor
+        # scheduleJson: dict, a parsed Json, containing signal schedule
+        # scale_factor: int, factor used to multiply with start and end tie, should come from config
+        scheduleJson_new = scheduleJson.copy()
+        Schedule_new = []
+        for item in scheduleJson_new['Schedule']:
+            item['commandEndTime'] = item['commandEndTime']*scale_factor
+            item['commandStartTime'] = item['commandStartTime']*scale_factor
+            Schedule_new.append(item)
+
+        scheduleJson_new['Schedule'] = Schedule_new
+
+        return scheduleJson_new
+
 
 
     
@@ -364,6 +382,7 @@ if __name__ == "__main__":
     # Open a dummy schedule and load it into a json object
     scheduleFile = open("test/schedule1.json", "r")
     scheduleJson = json.loads(scheduleFile.read())
+    scheduleJson = scheduler.update_schedule_json(scheduleJson, scheduler.scale_factor) ###
     scheduleFile.close()
 
     iteration = 1
@@ -373,4 +392,4 @@ if __name__ == "__main__":
         iteration = iteration+1
         if iteration > 10:
             break
-        time.sleep(200)
+        time.sleep(800)
