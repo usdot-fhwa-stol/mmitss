@@ -14,20 +14,24 @@ def main():
 
         consumerBSM = MMITSSConsumer("BSM")
         consumerSRM = MMITSSConsumer("SRM")
+        consumerTimeSync = MMITSSConsumer("TimeSync")
         producerSPaT = MMITSSProducer("SPaT")
         producerSSM = MMITSSProducer("SSM")
         consumerBSMProcessing = threading.Thread(target=consumerBSM.broadcastMsg, name="BSM")
         consumerSRMProcessing = threading.Thread(target=consumerSRM.broadcastMsg, name="SRM")
+        consumerTimeSyncProcessing = threading.Thread(target=consumerTimeSync.broadcastMsg, name="TimeSync")
         producerSPaTProcessing = threading.Thread(target=producerSPaT.socketLoop, name="SPaT")
         producerSSMProcessing = threading.Thread(target=producerSSM.socketLoop, name="SSM")
    
         consumerBSMProcessing.start()
         consumerSRMProcessing.start()
+        consumerTimeSyncProcessing.start()
         producerSPaTProcessing.start()
         producerSSMProcessing.start()
         
         consumerBSMProcessing.join()
         consumerSRMProcessing.join()
+        consumerTimeSyncProcessing.join()
         producerSPaTProcessing.join()
         producerSSMProcessing.join()
     
@@ -35,6 +39,7 @@ def main():
 
         consumerBSMProcessing.join()
         consumerSRMProcessing.join()
+        consumerTimeSyncProcessing.join()
         producerSPaTProcessing.join()
         producerSSMProcessing.join()
         logging.info("end of one loop")
