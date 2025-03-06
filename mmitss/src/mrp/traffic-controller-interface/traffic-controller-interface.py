@@ -99,7 +99,7 @@ def main():
                 logger.write(str(receivedMessage))
                 phaseControlScheduler.signalController.resetAllPhaseControls()
                 # scale the received schedule by a given factor to match simulation
-                scaled_receivedMessage = scheduler.update_schedule_json(receivedMessage, scheduler.scale_factor)
+                scaled_receivedMessage = phaseControlScheduler.update_schedule_json(receivedMessage, phaseControlScheduler.scale_factor)
                 phaseControlScheduler.processReceivedSchedule(scaled_receivedMessage)
 
         elif receivedMessage["MsgType"]=="CurrNextPhaseRequest":
@@ -120,8 +120,8 @@ def main():
             requiredStatus = receivedMessage["Status"]
             if requiredStatus == True:
                 # Then activate the special function from StartTime till EndTime
-                startTime = receivedMessage["StartTime"]
-                endTime = receivedMessage["EndTime"]
+                startTime = receivedMessage["StartTime"] * phaseControlScheduler.scale_factor
+                endTime = receivedMessage["EndTime"] * phaseControlScheduler.scale_factor
                 functionId = receivedMessage["Id"]
                 currentStatus = asc.specialFunctionLocalStatus[functionId]
                 if currentStatus != requiredStatus:
