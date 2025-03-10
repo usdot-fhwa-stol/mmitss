@@ -48,6 +48,7 @@ from SignalController import SignalController
 from Scheduler import Scheduler
 from Logger import Logger
 from ScheduleSpatTranslator import ScheduleSpatTranslator
+import os
 
 class PhaseControlScheduler(Scheduler):
 
@@ -65,7 +66,12 @@ class PhaseControlScheduler(Scheduler):
         # Close the config file:
         configFile.close()
 
-        self.scale_factor = config["Scale_factor"] # int
+        # get env variable
+        sim_mode = os.environ.get("SIMULATION_MODE")
+        if sim_mode:
+            self.scale_factor = config["Scale_factor"] # int
+        else:
+            self.scale_factor = 1
 
         self.mapSpatBroadcasterAddress = ((config["HostIp"],config["PortNumber"]["MapSPaTBroadcaster"]))
         self.scheduleSpatTranslator = ScheduleSpatTranslator()
