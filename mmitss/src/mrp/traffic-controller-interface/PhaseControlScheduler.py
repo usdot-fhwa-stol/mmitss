@@ -398,4 +398,4 @@ if __name__ == "__main__":
         iteration = iteration+1
         if iteration > 10:
             break
-        time.sleep(800)
+        time.sleep(200)
