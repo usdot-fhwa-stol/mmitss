@@ -83,13 +83,27 @@ class MMITSSConsumer(Consumer):
             receivingPort = self.config["PortNumber"]["TrajectoryAware"]
             msg = self.decodeBSM(msg)
         elif self.kind == "TimeSync":
-            receivingPort = self.config["TimeSyncPort"]["PriorityRequestServer"]
+            time_sync_ports = []
+            time_sync_ports.append(self.config["TimeSyncPort"]["PriorityRequestServer"])
+            time_sync_ports.append(self.config["TimeSyncPort"]["PrioritySolver"])
+            time_sync_ports.append(self.config["TimeSyncPort"]["MapSPaTBroadcaster"])
+            time_sync_ports.append(self.config["TimeSyncPort"]["TrafficControllerInterface"])
+            time_sync_ports.append(self.config["TimeSyncPort"]["SignalCoordination"])
+            msg = self.decodeTimeSync(msg)
+            for port in time_sync_ports:
+                s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                logging.info(f"Sending TimeSync message to port {port}")
+                s.bind((hostIp,port))
+                communicationInfo = (hostIp, port)
+                s.sendto(msg.encode(),communicationInfo)
+                s.close()
 
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.bind((hostIp,port))
-        communicationInfo = (hostIp, receivingPort)
-        s.sendto(msg.encode(),communicationInfo)
-        s.close()
+        if self.kind != "TimeSync":    
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.bind((hostIp,port))
+            communicationInfo = (hostIp, receivingPort)
+            s.sendto(msg.encode(),communicationInfo)
+            s.close()
     def decodeSRM(self, msg):
         msg = json.dumps(msg)
         return msg
@@ -111,5 +125,8 @@ class MMITSSConsumer(Consumer):
 
         msg = json.dumps(bsmJson)
         
+        return msg
+    def decodeTimeSync(self, msg):
+        msg = json.dumps(msg)
         return msg
     

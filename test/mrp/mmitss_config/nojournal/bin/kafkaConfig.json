@@ -3,10 +3,10 @@
     "PRODUCER_TOPICS": {
         "SPaT":"modified_spat","SSM":"v2xhub_ssm_out"
     },
-    "CONSUMER_TOPICS": {"BSM":"v2xhub_bsm_in","SRM":"v2xhub_srm_in"
+    "CONSUMER_TOPICS": {"BSM":"v2xhub_bsm_in","SRM":"v2xhub_srm_in", "TimeSync": "time_sync"
 
     },
-    "GROUP_ID": {"BSM":"bsm-group","SRM":"srm-group","SPaT":"spat-group","SSM":"ssm-group"},
+    "GROUP_ID": "CarmaKafkaTransceiver",
     "SECURITY_PROTOCOL" : "ssl",
     "AUTO_OFFSET_RESET": "earliest"
     
