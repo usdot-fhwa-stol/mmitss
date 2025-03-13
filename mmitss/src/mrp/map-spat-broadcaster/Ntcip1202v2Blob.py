@@ -34,6 +34,8 @@
 
 import time
 import datetime
+import importlib
+libTimeSync = importlib.import_module("libudp_time_sync")
 
 class Ntcip1202v2Blob:
 
@@ -108,7 +110,7 @@ class Ntcip1202v2Blob:
 
     def processNewData(self, receivedBlob):
         # Derived from system time (Not controller's time)
-        currentTimeMs = int(round(time.time() * 10))
+        currentTimeMs = int(round(libTimeSync.nowInMilliseconds()))
         startOfTheYear = datetime.datetime((datetime.datetime.now().year), 1, 1)
         timeSinceStartOfTheYear = (datetime.datetime.now() - startOfTheYear)
         self.minuteOfYear = int(timeSinceStartOfTheYear.total_seconds()/60)
@@ -167,9 +169,9 @@ class Ntcip1202v2Blob:
                 self.vehElapsedTime[i] = 0.0            
             else:
                 if self.vehCurrState[i] == self.vehPrevState[i]:
-                    self.vehElapsedTime[i] = int(round(time.time() * 10)) - self.vehStartTime[i]
+                    self.vehElapsedTime[i] = int(round(libTimeSync.nowInMilliseconds())) - self.vehStartTime[i]
                 else: 
-                    self.vehStartTime[i] = int(round(time.time() * 10))
+                    self.vehStartTime[i] = int(round(libTimeSync.nowInMilliseconds()))
                     self.vehElapsedTime[i] = 0.0
                 self.vehPrevState[i] = self.vehCurrState[i]
 
@@ -250,9 +252,9 @@ class Ntcip1202v2Blob:
                 self.pedElapsedTime[i] = 0.0
             else:
                 if self.pedCurrState[i] == self.pedPrevState[i]:
-                    self.pedElapsedTime[i] = int(round(time.time() * 10)) - self.pedStartTime[i]
+                    self.pedElapsedTime[i] = int(round(libTimeSync.nowInMilliseconds())) - self.pedStartTime[i]
                 else: 
-                    self.pedStartTime[i] = int(round(time.time() * 10))
+                    self.pedStartTime[i] = int(round(libTimeSync.nowInMilliseconds()))
                     self.pedElapsedTime[i] = 0.0
                 self.pedPrevState[i] = self.pedCurrState[i]
         
@@ -370,7 +372,7 @@ if __name__=="__main__":
 
     while True:
         data, addr = s.recvfrom(1024)
-        blobReceiptTime = time.time()
+        blobReceiptTime = libTimeSync.nowInMilliseconds()
         currentBlob.processNewData(data)
-        processingTime = time.time()-blobReceiptTime
+        processingTime = libTimeSync.nowInMilliseconds()-blobReceiptTime
         print(processingTime)

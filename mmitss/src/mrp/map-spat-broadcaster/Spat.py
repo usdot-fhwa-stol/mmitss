@@ -27,6 +27,8 @@ from Ntcip1202v2Blob import Ntcip1202v2Blob
 import json
 from Phase import Phase
 import datetime
+import importlib
+libTimeSync = importlib.import_module("libudp_time_sync")
 
 class Spat:
     def __init__(self):

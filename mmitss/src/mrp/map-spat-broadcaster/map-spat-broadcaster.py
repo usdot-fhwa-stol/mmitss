@@ -33,6 +33,9 @@ import Ntcip1202v2Blob
 import Spat
 import MmitssSpat
 import J2735Helper
+import importlib
+libTimeSync = importlib.import_module("libudp_time_sync")
+import os
 
 def main():
 
@@ -52,6 +55,12 @@ def main():
     localDataCollectorAddress = (config["HostIp"], config["PortNumber"]["DataCollector"])
     msgDistributorAddress = (config["MessageDistributorIP"], config["PortNumber"]["MessageDistributor"])
     tci_currPhaseAddress = (mrpIp, config["PortNumber"]["TrafficControllerCurrPhaseListener"])
+
+    # Read IP and port to receive time info 
+    if os.environ['SIMULATION_MODE'] == True:
+        # initialize time sync
+        timeSync = libTimeSync.TimeSync(mrpIp,config["TimeSyncPort"]["MapSPaTBroadcaster"],True) # set True to log and test
+        timeSync.start()
     
     # Read controllerIp from the config file and store it.
     controllerIp = config["SignalController"]["IpAddress"]
