@@ -61,7 +61,7 @@
 	},
 	"TimeSyncPort":{
 		"PriorityRequestServer": 30001,
-		"PrioritySolver": 30002,
+		"PriorityRequestSolver": 30002,
 		"MapSPaTBroadcaster": 30003,
 		"TrafficControllerInterface": 30004,
 		"SignalCoordination": 30006
