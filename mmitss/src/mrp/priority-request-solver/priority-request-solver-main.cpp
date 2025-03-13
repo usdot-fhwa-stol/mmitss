@@ -31,6 +31,10 @@ int main()
     reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject, &errors);
     delete reader;
 
+    const string LOCALHOST = jsonObject["HostIp"].asString();
+    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestSolver"].asInt()), true);
+    sync.start();
+    
     PriorityRequestSolver priorityRequestSolver;
     ScheduleManager scheduleManager;
     SolverDataManager solverDataManager;
@@ -41,9 +45,7 @@ int main()
     const int signalCoordinationRequestGeneratorPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["SignalCoordination"].asInt());
     const int timePhaseDiagramToolPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["TimePhaseDiagramTool"].asInt());
 
-    const string LOCALHOST = jsonObject["HostIp"].asString();
-    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestSolver"].asInt()), true);
-    sync.start();
+    
     char receiveBuffer[40960];
     char receivedSignalStatusBuffer[40960];
     char receivedCoordinationPlanBuffer[40960];
