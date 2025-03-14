@@ -85,7 +85,7 @@ class MMITSSConsumer(Consumer):
         elif self.kind == "TimeSync":
             time_sync_ports = []
             time_sync_ports.append(self.config["TimeSyncPort"]["PriorityRequestServer"])
-            time_sync_ports.append(self.config["TimeSyncPort"]["PrioritySolver"])
+            time_sync_ports.append(self.config["TimeSyncPort"]["PriorityRequestSolver"])
             time_sync_ports.append(self.config["TimeSyncPort"]["MapSPaTBroadcaster"])
             time_sync_ports.append(self.config["TimeSyncPort"]["TrafficControllerInterface"])
             time_sync_ports.append(self.config["TimeSyncPort"]["SignalCoordination"])

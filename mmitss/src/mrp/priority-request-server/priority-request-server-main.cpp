@@ -28,7 +28,10 @@ int main()
     std::string errors{};
     reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject, &errors);
     delete reader;
-
+    const string LOCALHOST = jsonObject["HostIp"].asString();
+    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestServer"].asInt()),true);
+    sync.start();
+    
     PriorityRequestServer PRS;
     SignalRequest signalRequest;
     SignalStatus signalStatus;
@@ -39,9 +42,7 @@ int main()
     const int messageDistributorPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["MessageDistributor"].asInt());
     const int dataCollectorPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["DataCollector"].asInt());
 
-    const string LOCALHOST = jsonObject["HostIp"].asString();
-    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestServer"].asInt()),true);
-    sync.start();
+    
     const string messageDistributorIP = jsonObject["MessageDistributorIP"].asString();
     string ssmJsonString{};
     string solverJsonString{};
