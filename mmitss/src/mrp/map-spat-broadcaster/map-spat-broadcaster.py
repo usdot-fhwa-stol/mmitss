@@ -101,7 +101,7 @@ def main():
     spatObject.setIntersectionID(intersectionID)
     spatObject.setRegionalID(regionalID)
 
-    mmitssSpatObject = MmitssSpat.MmitssSpat(splitPhases)
+    mmitssSpatObject = MmitssSpat.MmitssSpat(splitPhases) # TODO: do we need to pass the timeSync object? otherwise, how to ensure the time will synchronize across classes?
     mmitssSpatObject.setIntersectionID(intersectionID)
     mmitssSpatObject.setRegionalID(regionalID)
 
@@ -171,7 +171,7 @@ def main():
             s.sendto(modifiedSpatJsonString.encode(), localDataCollectorAddress)
 
             # Now that the broadcast is complete, do rest of the stuff required for other MMITSS applications
-            currentPhasesDict = currentBlob.getCurrentPhasesDict()
+            currentPhasesDict = currentBlob.getCurrentPhasesDict() # Time info used here will be used for TCI decision making
             currentPhasesJson = json.dumps(currentPhasesDict)
             vehCurrStateJson = json.dumps({
                 "MsgType": "CurrentState_VehiclePhases",

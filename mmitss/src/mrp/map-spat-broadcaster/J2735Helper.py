@@ -23,8 +23,7 @@
 import math
 import json
 from datetime import datetime
-import importlib
-libTimeSync = importlib.import_module("libudp_time_sync")
+
 
 DECISEC_IN_HOUR = 36000
 SEC_IN_MINUTE = 60
