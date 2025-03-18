@@ -35,7 +35,24 @@
 import time
 import datetime
 import importlib
+import os, sys
+
+# Append the path to sys.path
+# path_to_append = os.path.join(current_dir, 'path', 'to', 'your', 'directory')
+sys.path.append('/opt/carma/lib/')
 libTimeSync = importlib.import_module("libudp_time_sync")
+
+def datetime_from_epoch_ms(epoch_ms):
+        """Converts epoch milliseconds to a datetime object.
+    
+        Args:
+            epoch_ms: The epoch time in milliseconds.
+    
+        Returns:
+            A datetime object representing the given epoch milliseconds.
+        """
+        seconds = epoch_ms / 1000.0
+        return datetime.datetime.fromtimestamp(seconds)
 
 class Ntcip1202v2Blob:
 
@@ -107,13 +124,15 @@ class Ntcip1202v2Blob:
 
         ########### Current Phase Info ###########
         self.currentPhases = [0,0]
+    
+    
 
     def processNewData(self, receivedBlob):
         # Derived from system time (Not controller's time)
-        currentTimeMs = int(round(libTimeSync.nowInMilliseconds()))
+        currentTimeMs = libTimeSync.nowInMilliseconds()
         # libTimeSync is not applied since the following time info is not used in TCI decision making.
-        startOfTheYear = datetime.datetime((datetime.datetime.now().year), 1, 1)
-        timeSinceStartOfTheYear = (datetime.datetime.now() - startOfTheYear)
+        startOfTheYear = datetime.datetime((datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()).year), 1, 1)
+        timeSinceStartOfTheYear = (datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()) - startOfTheYear)
         self.minuteOfYear = int(timeSinceStartOfTheYear.total_seconds()/60)
         self.msOfMinute = int((timeSinceStartOfTheYear.total_seconds() - (self.minuteOfYear * 60))*1000)
 ##################################### VEH INFORMATION ####################################################################

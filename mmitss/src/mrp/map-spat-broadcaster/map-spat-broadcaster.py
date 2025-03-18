@@ -34,10 +34,16 @@ import Spat
 import MmitssSpat
 import J2735Helper
 import importlib
+import os, sys
+
+sys.path.append('/opt/carma/lib/')
 libTimeSync = importlib.import_module("libudp_time_sync")
-import os
+
+
 
 def main():
+
+    print(os.getcwd())
 
     # Read a config file by creating an object of the time MapSpatBroadcasterConfig
     configFile = open("/nojournal/bin/mmitss-phase3-master-config.json", 'r')
@@ -57,11 +63,12 @@ def main():
     tci_currPhaseAddress = (mrpIp, config["PortNumber"]["TrafficControllerCurrPhaseListener"])
 
     # Read IP and port to receive time info 
-    if os.environ['SIMULATION_MODE'] == True:
-        # initialize time sync
-        timeSync = libTimeSync.TimeSync(mrpIp,config["TimeSyncPort"]["MapSPaTBroadcaster"],True) # set True to log and test
-        timeSync.start()
+    # if os.environ['SIMULATION_MODE'] and os.environ['SIMULATION_MODE'] == True:
     
+    # initialize time sync
+    timeSync = libTimeSync.TimeSync(mrpIp,config["TimeSyncPort"]["MapSPaTBroadcaster"]) # set True to log and test
+    timeSync.start()
+
     # Read controllerIp from the config file and store it.
     controllerIp = config["SignalController"]["IpAddress"]
 
