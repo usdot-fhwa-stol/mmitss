@@ -1,6 +1,8 @@
 import time
 from Ntcip1202v2Blob import Ntcip1202v2Blob
 from Spat import Spat
+import importlib
+libTimeSync = importlib.import_module("libudp_time_sync")
 
 
 UNKNOWN = 36001
@@ -81,13 +83,13 @@ class MmitssSpat(Spat):
 
         self.rMinMaxEndTimes_cycle0 = scheduleSpatTranslation["RedStates"]["Cycle0"]["MinMaxEndTime"]
 
-        self.prevTimestamp = int(time.time() * 10)
+        self.prevTimestamp = int(libTimeSync.nowInMilliseconds()/100)
 
         self.firstBlob = True
         
 
     def update(self, spatBlob:Ntcip1202v2Blob):
-        currentTime = int(time.time() * 10)
+        currentTime = int(libTimeSync.nowInMilliseconds()/100)
         self.timestep = currentTime - self.prevTimestamp
         self.prevTimestamp = currentTime
         

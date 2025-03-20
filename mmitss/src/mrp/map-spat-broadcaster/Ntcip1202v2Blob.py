@@ -34,6 +34,26 @@
 
 import time
 import datetime
+from datetime import timezone
+import importlib
+import os, sys
+
+# Append the path to sys.path
+# path_to_append = os.path.join(current_dir, 'path', 'to', 'your', 'directory')
+sys.path.append('/opt/carma/lib/')
+libTimeSync = importlib.import_module("libudp_time_sync")
+
+def datetime_from_epoch_ms(epoch_ms):
+        """Converts epoch milliseconds to a datetime object.
+    
+        Args:
+            epoch_ms: The epoch time in milliseconds.
+    
+        Returns:
+            A datetime object representing the given epoch milliseconds.
+        """
+        seconds = epoch_ms / 1000.0
+        return datetime.datetime.fromtimestamp(seconds, timezone.utc)
 
 class Ntcip1202v2Blob:
 
@@ -105,12 +125,14 @@ class Ntcip1202v2Blob:
 
         ########### Current Phase Info ###########
         self.currentPhases = [0,0]
+    
+    
 
     def processNewData(self, receivedBlob):
         # Derived from system time (Not controller's time)
-        currentTimeMs = int(round(time.time() * 10))
-        startOfTheYear = datetime.datetime((datetime.datetime.now().year), 1, 1)
-        timeSinceStartOfTheYear = (datetime.datetime.now() - startOfTheYear)
+        currentTimeMs = int(libTimeSync.nowInMilliseconds()/100)
+        startOfTheYear = datetime.datetime((datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()).year), 1, 1, tzinfo=timezone.utc)
+        timeSinceStartOfTheYear = (datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()) - startOfTheYear)
         self.minuteOfYear = int(timeSinceStartOfTheYear.total_seconds()/60)
         self.msOfMinute = int((timeSinceStartOfTheYear.total_seconds() - (self.minuteOfYear * 60))*1000)
 ##################################### VEH INFORMATION ####################################################################
@@ -167,9 +189,9 @@ class Ntcip1202v2Blob:
                 self.vehElapsedTime[i] = 0.0            
             else:
                 if self.vehCurrState[i] == self.vehPrevState[i]:
-                    self.vehElapsedTime[i] = int(round(time.time() * 10)) - self.vehStartTime[i]
+                    self.vehElapsedTime[i] = int(round(libTimeSync.nowInMilliseconds()/100)) - self.vehStartTime[i]
                 else: 
-                    self.vehStartTime[i] = int(round(time.time() * 10))
+                    self.vehStartTime[i] = int(round(libTimeSync.nowInMilliseconds()/100))
                     self.vehElapsedTime[i] = 0.0
                 self.vehPrevState[i] = self.vehCurrState[i]
 
@@ -250,9 +272,9 @@ class Ntcip1202v2Blob:
                 self.pedElapsedTime[i] = 0.0
             else:
                 if self.pedCurrState[i] == self.pedPrevState[i]:
-                    self.pedElapsedTime[i] = int(round(time.time() * 10)) - self.pedStartTime[i]
+                    self.pedElapsedTime[i] = int(round(libTimeSync.nowInMilliseconds()/100)) - self.pedStartTime[i]
                 else: 
-                    self.pedStartTime[i] = int(round(time.time() * 10))
+                    self.pedStartTime[i] = int(round(libTimeSync.nowInMilliseconds()/100))
                     self.pedElapsedTime[i] = 0.0
                 self.pedPrevState[i] = self.pedCurrState[i]
         
@@ -370,7 +392,7 @@ if __name__=="__main__":
 
     while True:
         data, addr = s.recvfrom(1024)
-        blobReceiptTime = time.time()
+        blobReceiptTime = libTimeSync.nowInMilliseconds()/1000
         currentBlob.processNewData(data)
-        processingTime = time.time()-blobReceiptTime
+        processingTime = libTimeSync.nowInMilliseconds()/1000 - blobReceiptTime
         print(processingTime)

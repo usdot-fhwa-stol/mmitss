@@ -23,10 +23,17 @@
     -> If NTCIP1202 standard changes, a similar class needs to be developed with similar API, for other components to run smooth.
 '''
 
-from Ntcip1202v2Blob import Ntcip1202v2Blob
+import Ntcip1202v2Blob
 import json
 from Phase import Phase
 import datetime
+import sys
+import importlib
+
+from Ntcip1202v2Blob import datetime_from_epoch_ms
+
+sys.path.append('/opt/carma/lib/')
+libTimeSync = importlib.import_module("libudp_time_sync")
 
 class Spat:
     def __init__(self):
@@ -137,8 +144,8 @@ class Spat:
             self.vehPhasesDict[i] = self.vehPhases[i].asDict()
             self.pedPhasesDict[i] = self.pedPhases[i].asDict()
         spatDict = dict({"MsgType": "SPaT",
-                    "Timestamp_verbose": str(datetime.datetime.now()),
-                    "Timestamp_posix": datetime.datetime.now().timestamp(),
+                    "Timestamp_verbose": str(datetime_from_epoch_ms(libTimeSync.nowInMilliseconds())),
+                    "Timestamp_posix": datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()).timestamp(),
                     "Spat" :
                     {
                         "IntersectionState" :
