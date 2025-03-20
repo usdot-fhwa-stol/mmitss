@@ -189,9 +189,9 @@ class Ntcip1202v2Blob:
                 self.vehElapsedTime[i] = 0.0            
             else:
                 if self.vehCurrState[i] == self.vehPrevState[i]:
-                    self.vehElapsedTime[i] = int(round(libTimeSync.nowInMilliseconds())) - self.vehStartTime[i]
+                    self.vehElapsedTime[i] = int(round(libTimeSync.nowInMilliseconds()/100)) - self.vehStartTime[i]
                 else: 
-                    self.vehStartTime[i] = int(round(libTimeSync.nowInMilliseconds()))
+                    self.vehStartTime[i] = int(round(libTimeSync.nowInMilliseconds()/100))
                     self.vehElapsedTime[i] = 0.0
                 self.vehPrevState[i] = self.vehCurrState[i]
 
@@ -272,9 +272,9 @@ class Ntcip1202v2Blob:
                 self.pedElapsedTime[i] = 0.0
             else:
                 if self.pedCurrState[i] == self.pedPrevState[i]:
-                    self.pedElapsedTime[i] = int(round(libTimeSync.nowInMilliseconds())) - self.pedStartTime[i]
+                    self.pedElapsedTime[i] = int(round(libTimeSync.nowInMilliseconds()/100)) - self.pedStartTime[i]
                 else: 
-                    self.pedStartTime[i] = int(round(libTimeSync.nowInMilliseconds()))
+                    self.pedStartTime[i] = int(round(libTimeSync.nowInMilliseconds()/100))
                     self.pedElapsedTime[i] = 0.0
                 self.pedPrevState[i] = self.pedCurrState[i]
         
