@@ -131,7 +131,6 @@ class Ntcip1202v2Blob:
     def processNewData(self, receivedBlob):
         # Derived from system time (Not controller's time)
         currentTimeMs = libTimeSync.nowInMilliseconds()
-        # libTimeSync is not applied since the following time info is not used in TCI decision making.
         startOfTheYear = datetime.datetime((datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()).year), 1, 1, tzinfo=timezone.utc)
         timeSinceStartOfTheYear = (datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()) - startOfTheYear)
         self.minuteOfYear = int(timeSinceStartOfTheYear.total_seconds()/60)
