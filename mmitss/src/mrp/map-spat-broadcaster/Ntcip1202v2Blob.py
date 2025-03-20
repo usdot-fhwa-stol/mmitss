@@ -34,6 +34,7 @@
 
 import time
 import datetime
+from datetime import timezone
 import importlib
 import os, sys
 
@@ -52,7 +53,7 @@ def datetime_from_epoch_ms(epoch_ms):
             A datetime object representing the given epoch milliseconds.
         """
         seconds = epoch_ms / 1000.0
-        return datetime.datetime.fromtimestamp(seconds)
+        return datetime.datetime.fromtimestamp(seconds, timezone.utc)
 
 class Ntcip1202v2Blob:
 
@@ -131,7 +132,7 @@ class Ntcip1202v2Blob:
         # Derived from system time (Not controller's time)
         currentTimeMs = libTimeSync.nowInMilliseconds()
         # libTimeSync is not applied since the following time info is not used in TCI decision making.
-        startOfTheYear = datetime.datetime((datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()).year), 1, 1)
+        startOfTheYear = datetime.datetime((datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()).year), 1, 1, tzinfo=timezone.utc)
         timeSinceStartOfTheYear = (datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()) - startOfTheYear)
         self.minuteOfYear = int(timeSinceStartOfTheYear.total_seconds()/60)
         self.msOfMinute = int((timeSinceStartOfTheYear.total_seconds() - (self.minuteOfYear * 60))*1000)

@@ -22,7 +22,7 @@ def generate_time_sync():
     jsonResult = json.dumps(jsonResult)
     return jsonResult
 port = 30003
-address = "127.0.0.1"
+address = "128.46.170.38" #
 host = (address, port)
 try:
     sock = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)

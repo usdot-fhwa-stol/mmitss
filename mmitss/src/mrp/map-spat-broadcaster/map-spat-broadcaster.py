@@ -43,8 +43,6 @@ libTimeSync = importlib.import_module("libudp_time_sync")
 
 def main():
 
-    print(os.getcwd())
-
     # Read a config file by creating an object of the time MapSpatBroadcasterConfig
     configFile = open("/nojournal/bin/mmitss-phase3-master-config.json", 'r')
     config = (json.load(configFile))
