@@ -130,7 +130,7 @@ class Ntcip1202v2Blob:
 
     def processNewData(self, receivedBlob):
         # Derived from system time (Not controller's time)
-        currentTimeMs = libTimeSync.nowInMilliseconds()
+        currentTimeMs = int(libTimeSync.nowInMilliseconds()/100)
         startOfTheYear = datetime.datetime((datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()).year), 1, 1, tzinfo=timezone.utc)
         timeSinceStartOfTheYear = (datetime_from_epoch_ms(libTimeSync.nowInMilliseconds()) - startOfTheYear)
         self.minuteOfYear = int(timeSinceStartOfTheYear.total_seconds()/60)
@@ -392,7 +392,7 @@ if __name__=="__main__":
 
     while True:
         data, addr = s.recvfrom(1024)
-        blobReceiptTime = libTimeSync.nowInMilliseconds()
+        blobReceiptTime = libTimeSync.nowInMilliseconds()/1000
         currentBlob.processNewData(data)
-        processingTime = libTimeSync.nowInMilliseconds()-blobReceiptTime
+        processingTime = libTimeSync.nowInMilliseconds()/1000 - blobReceiptTime
         print(processingTime)

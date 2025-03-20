@@ -83,13 +83,13 @@ class MmitssSpat(Spat):
 
         self.rMinMaxEndTimes_cycle0 = scheduleSpatTranslation["RedStates"]["Cycle0"]["MinMaxEndTime"]
 
-        self.prevTimestamp = int(libTimeSync.nowInMilliseconds())
+        self.prevTimestamp = int(libTimeSync.nowInMilliseconds()/100)
 
         self.firstBlob = True
         
 
     def update(self, spatBlob:Ntcip1202v2Blob):
-        currentTime = int(libTimeSync.nowInMilliseconds())
+        currentTime = int(libTimeSync.nowInMilliseconds()/100)
         self.timestep = currentTime - self.prevTimestamp
         self.prevTimestamp = currentTime
         
