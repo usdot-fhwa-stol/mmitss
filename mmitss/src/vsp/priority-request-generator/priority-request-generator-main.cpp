@@ -44,6 +44,9 @@ int main()
     const int dataCollectorPort = static_cast<short unsigned int>(jsonObject["PortNumber"]["DataCollector"].asInt());
     const int srmReceiverPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt());
     const int prgStatusReceiverPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["HMIController"].asInt());
+
+    time_sync::TimeSync sync(HostIP, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestGenerator"].asInt()),true);
+    sync.start();
     
     char receiveBuffer[40960];
     string srmJsonString{};
