@@ -179,8 +179,8 @@ void MapManager::writeMAPPayloadInFile()
 int MapManager::getMapPayloadReceivedTime()
 {
     int minuteOfYear{};
-    double t_bar = getPosixTimestamp();
-    const time_t t = t_bar
+    double timestamp = getPosixTimestamp();
+    time_t t = static_cast<time_t>(timestamp);
     tm *timePtr = gmtime(&t);
 
     int dayOfYear = timePtr->tm_yday;
@@ -198,8 +198,8 @@ int MapManager::getMapPayloadReceivedTime()
 int MapManager::getMapPayloadReceivedSecondOfMinute()
 {
     int secondOfMinute{};
-    double t_bar = getPosixTimestamp();
-    const time_t t = t_bar
+    double timestamp = getPosixTimestamp();
+    time_t t = static_cast<time_t>(timestamp);
     tm *timePtr = gmtime(&t);
 
     secondOfMinute = timePtr->tm_sec;
