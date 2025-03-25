@@ -320,6 +320,8 @@ bool PriorityRequestGenerator::checkRequestSendingRequirement(vector<BusStopInfo
 	bool requestSendingRequirement{false};
 	double currentTime = getPosixTimestamp();
 
+	cout << "[" << fixed << showpoint << setprecision(2) << currentTime << "] PRG currentTime in checkRequestSendingRequirement BUSSTOP: " << endl;
+
 	if (!bus_Stop_List.empty())
 		busStopList = bus_Stop_List;
 
