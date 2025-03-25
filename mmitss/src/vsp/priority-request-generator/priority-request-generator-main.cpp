@@ -16,6 +16,7 @@
 #include "PriorityRequestGenerator.h"
 #include "PriorityRequestGeneratorStatus.h"
 #include <UdpSocket.h>
+#include <udp_time_sync/TimeSync.hpp>
 
 
 int main()
