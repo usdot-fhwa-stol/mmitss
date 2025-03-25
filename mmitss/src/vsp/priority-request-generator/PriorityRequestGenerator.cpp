@@ -37,6 +37,7 @@
 #include "locAware.h"
 #include "geoUtils.h"
 #include "PriorityRequestGenerator.h"
+#include <sys/time.h>
 
 using namespace GeoUtils;
 using namespace MsgEnum;
@@ -1193,7 +1194,9 @@ void PriorityRequestGenerator::displayConsoleData(string consoleString)
 void PriorityRequestGenerator::readConfigFile()
 {
 	ofstream logFile;
-	double timeStamp = getPosixTimestamp();
+	struct timeval tv_tt;
+ 	gettimeofday(&tv_tt, NULL);
+	double timeStamp =  static_cast<double>(tv_tt.tv_sec)+static_cast<double>(tv_tt.tv_usec)/1.0e6; //getPosixTimestamp();
 	Json::Value jsonObject;
 	ifstream jsonconfigfile("/nojournal/bin/mmitss-phase3-master-config.json");
 	string configJsonString((std::istreambuf_iterator<char>(jsonconfigfile)), std::istreambuf_iterator<char>());

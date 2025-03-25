@@ -48,7 +48,6 @@ int main()
 
     time_sync::TimeSync sync(HostIP, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestGenerator"].asInt()),true);
     sync.start();
-    
     char receiveBuffer[40960];
     string srmJsonString{};
     string prgStatusJsonString{};
