@@ -17,7 +17,7 @@ class Subscriber : public rclcpp::Node
     {
       subscriptionInbound = this->create_subscription<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/inbound_binary_msg",1000, std::bind(&InboundMsgListener::inboundMsgCallback,&inListener,std::placeholders::_1));
       subscriptionOutbound = this->create_subscription<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/outbound_binary_msg",1000, std::bind(&OutboundMsgListener::outboundMsgCallback,&outListener,std::placeholders::_1));
-      // subscriptionClock = this->create_subscription<rosgraph_msgs::msg::Clock>("/sim_clock",1000, std::bind(&InboundMsgListener::inboundClockCallback,&inListener,std::placeholders::_1));
+      subscriptionClock = this->create_subscription<rosgraph_msgs::msg::Clock>("/sim_clock",1000, std::bind(&InboundMsgListener::inboundClockCallback,&inListener,std::placeholders::_1));
 
     }
 
@@ -25,17 +25,18 @@ class Subscriber : public rclcpp::Node
     
     rclcpp::Subscription<carma_driver_msgs::msg::ByteArray>::SharedPtr subscriptionInbound;
     rclcpp::Subscription<carma_driver_msgs::msg::ByteArray>::SharedPtr subscriptionOutbound;
-    // rclcpp::Subscription<rosgraph_msgs::msg::Clock>::SharedPtr subscriptionClock;
+    rclcpp::Subscription<rosgraph_msgs::msg::Clock>::SharedPtr subscriptionClock;
 };
 
 
 
 int main(int argc, char * argv[])
 {
+    rclcpp::init(argc, argv);
+
     std::cout << "Starting Carma Decoder Node" << std::endl;
     InboundMsgListener inListener;
     OutboundMsgListener outListener;
-    rclcpp::init(argc, argv);
     rclcpp::spin(std::make_shared<Subscriber>(inListener,outListener));
     rclcpp::shutdown();
     
