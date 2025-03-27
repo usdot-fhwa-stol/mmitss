@@ -5,6 +5,7 @@
 #include "json/json.h"
 #include "carma_driver_msgs/msg/byte_array.hpp"
 #include "stdio.h"
+#include <rosgraph_msgs/msg/clock.hpp>
 
 class InboundMsgListener
 {
@@ -23,8 +24,10 @@ public:
     InboundMsgListener();
     ~InboundMsgListener();
     void inboundMsgCallback(const carma_driver_msgs::msg::ByteArray::SharedPtr msg);
+    void inboundClockCallback( const rosgraph_msgs::msg::Clock::SharedPtr msg );
     std::string getIP(std::string msgType);
     short unsigned int getPort(std::string msgType);
     std::string decodeType(std::vector<uint8_t> msgContent,std::string msgType);
+    std::string decodeClock(const rosgraph_msgs::msg::Clock::SharedPtr msg);
 };
 

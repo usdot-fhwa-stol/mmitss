@@ -6,12 +6,25 @@
 
 InboundMsgListener::InboundMsgListener()
 {
-   
-    
 }
 
 InboundMsgListener::~InboundMsgListener()
 {
+}
+
+void InboundMsgListener::inboundClockCallback( const rosgraph_msgs::msg::Clock::SharedPtr msg )
+{
+    std::cout << "Inbound Clock Callback" << std::endl;
+    Json::Value jsonObject_config;
+    std::string time_sync = decodeClock(msg);
+    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
+    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
+    Json::Reader reader;
+    string errors{};
+    reader.parse(configJsonString.c_str(), jsonObject_config);
+    UdpSocket decoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageDecoder"].asInt())); 
+    decoderSocket.sendData(jsonObject_config["HostIp"].asString(),static_cast<short unsigned int>(jsonObject_config["TimeSyncPort"]["PriorityRequestGenerator"].asInt()),time_sync);
+    decoderSocket.closeSocket();
 }
 void InboundMsgListener::inboundMsgCallback(const carma_driver_msgs::msg::ByteArray::SharedPtr msg)
 {
@@ -54,6 +67,8 @@ std::string InboundMsgListener::getIP(std::string msgType)
     }
     
 }
+
+
 
 short unsigned int InboundMsgListener::getPort(std::string msgType)
 {
@@ -117,6 +132,13 @@ std::string InboundMsgListener::decodeType(std::vector<uint8_t> msgContent,std::
             return ssmJsonString;
         } 
     }
+}
+
+std::string InboundMsgListener::decodeClock(const rosgraph_msgs::msg::Clock::SharedPtr msg)
+{
+    TransceiverDecoder decoder;
+    std::string time_sync = decoder.decodeClock(msg);
+    return time_sync;
 }
 
 

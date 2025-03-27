@@ -17,6 +17,7 @@
 #include "ActiveRequest.h"
 #include "carma-transceiver-decoder.h"
 #include "Timestamp.h"
+#include <rosgraph_msgs/msg/clock.hpp>
 
 const double KPH_TO_MPS_CONVERSION = 0.277778;
 const int RED = 3;
@@ -177,6 +178,18 @@ string TransceiverDecoder::srmDecoder(std::vector<uint8_t> srmPayload)
         jsonString = signalRequest.signalRequest2Json();
     }
 
+    return jsonString;
+}
+
+string TransceiverDecoder::decodeClock(const rosgraph_msgs::msg::Clock::SharedPtr msg)
+{
+    Json::Value jsonObject;
+    jsonObject["timestep"] = int(msg->clock.sec*1000 + msg->clock.nanosec * 1e-6);
+    jsonObject["seq"] = 0;
+    Json::StreamWriterBuilder builder;
+    builder["commentStyle"] = "None";   
+    builder["indentation"] = "";
+    string jsonString = Json::writeString(builder, jsonObject);
     return jsonString;
 }
 
