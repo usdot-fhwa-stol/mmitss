@@ -71,6 +71,8 @@ int main()
             if (PRG.checkPriorityRequestSendingRequirementStatus())
             {
                 srmJsonString = PRG.createSRMJsonString(basicVehicle, signalRequest, mapManager);
+                cout << "[" << fixed << showpoint << setprecision(2) << srmJsonString << "] PRG srmJsonString: " << endl;
+
                 priorityRequestGeneratorSocket.sendData(HostIP, static_cast<short unsigned int>(srmReceiverPortNo), srmJsonString);
                 priorityRequestGeneratorSocket.sendData(HostIP, static_cast<short unsigned int>(dataCollectorPort), srmJsonString);
             }

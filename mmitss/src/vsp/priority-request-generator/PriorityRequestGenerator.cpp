@@ -320,8 +320,6 @@ bool PriorityRequestGenerator::checkRequestSendingRequirement(vector<BusStopInfo
 	bool requestSendingRequirement{false};
 	double currentTime = getPosixTimestamp();
 
-	cout << "[" << fixed << showpoint << setprecision(2) << currentTime << "] PRG currentTime in checkRequestSendingRequirement BUSSTOP: " << endl;
-
 	if (!bus_Stop_List.empty())
 		busStopList = bus_Stop_List;
 
@@ -1028,14 +1026,15 @@ double PriorityRequestGenerator::getRequestTimedOutValue()
 int PriorityRequestGenerator::getMinuteOfYear()
 {
 	int minuteOfYear{};
-	time_t t = time(NULL);
+	double timestamp = getPosixTimestamp();
+    time_t t = static_cast<time_t>(timestamp);
 	tm *timePtr = gmtime(&t);
 
 	int dayOfYear = timePtr->tm_yday;
 	int currentHour = timePtr->tm_hour;
 	int currentMinute = timePtr->tm_min;
 
-	minuteOfYear = (dayOfYear - 1) * HOUR_DAY_CONVERSION * MINTUTE_HOUR_CONVERSION + currentHour * MINTUTE_HOUR_CONVERSION + currentMinute;
+	minuteOfYear = std::max(dayOfYear-1, 0) * HOUR_DAY_CONVERSION * MINTUTE_HOUR_CONVERSION + currentHour * MINTUTE_HOUR_CONVERSION + currentMinute;
 
 	return minuteOfYear;
 }
@@ -1046,7 +1045,8 @@ int PriorityRequestGenerator::getMinuteOfYear()
 int PriorityRequestGenerator::getMsOfMinute()
 {
 	int msOfMinute{};
-	time_t t = time(NULL);
+	double timestamp = getPosixTimestamp();
+    time_t t = static_cast<time_t>(timestamp);
 	tm *timePtr = gmtime(&t);
 
 	int currentSecond = timePtr->tm_sec;
