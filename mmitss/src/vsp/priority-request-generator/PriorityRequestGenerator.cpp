@@ -134,8 +134,8 @@ string PriorityRequestGenerator::createSRMJsonString(BasicVehicle basicVehicle, 
 	
 	// vehicleExpectedTimeOfArrival_Second = static_cast<int>(remquo((relativeETAInSecond / SECOND_MINTUTE_CONVERSION), 1.0, &vehicleExpectedTimeOfArrival_Minute) * SECOND_MINTUTE_CONVERSION * SECOND_MILISECOND_CONVERSION);
 	// vehicleExpectedTimeOfArrival_Minute = getMinuteOfYear() + vehicleExpectedTimeOfArrival_Minute;
-	vehicleExpectedTimeOfArrival_Minute = getMinuteOfYear() + (relativeETAInMiliSecond / static_cast<int>(SECOND_MINTUTE_CONVERSION * SECOND_MILISECOND_CONVERSION));
-	vehicleExpectedTimeOfArrival_Second = relativeETAInMiliSecond % static_cast<int>(SECOND_MINTUTE_CONVERSION * SECOND_MILISECOND_CONVERSION);
+	vehicleExpectedTimeOfArrival_Minute = getMinuteOfYear() + (relativeETAInMiliSecond / static_cast<int>(SECOND_MINTUTE_CONVERSION * SECOND_MILISECOND_CONVERSION));	
+	vehicleExpectedTimeOfArrival_Second = relativeETAInMiliSecond % static_cast<int>(SECOND_MINTUTE_CONVERSION * SECOND_MILISECOND_CONVERSION); //its unit is actually milisecond
 	vehicleExpectedTimeOfArrival_Duration = minimumETA_Duration * SECOND_MILISECOND_CONVERSION;
 	setMsgCount(msgCount);
 	tempVehicleSpeed = getVehicleSpeed(); //storing vehicle speed while sending srm. It will be use to compare if there is any speed change or not
