@@ -32,9 +32,9 @@ class Subscriber : public rclcpp::Node
 
 int main(int argc, char * argv[])
 {
-    rclcpp::init(argc, argv);
-
     std::cout << "Starting Carma Decoder Node" << std::endl;
+    rclcpp::init(argc, argv);
+    
     InboundMsgListener inListener;
     OutboundMsgListener outListener;
     rclcpp::spin(std::make_shared<Subscriber>(inListener,outListener));

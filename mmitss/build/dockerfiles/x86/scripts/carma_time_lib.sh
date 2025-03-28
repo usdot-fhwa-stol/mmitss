@@ -11,11 +11,12 @@ apt-get update && apt-get install -y \
     python3-dev \
     build-essential \
     carma-clock-1 \
-    udp-socket-1 \
-    udp-time-sync-1
+    udp-socket-1 
 
 
-
+# Install udp-time-sync TODO: remove this when the package is available in the apt repository after https://github.com/usdot-fhwa-stol/udp-time-sync/pull/4 closes
+cd /tmp
+apt install ./udp-time-sync-1_0.0.1-dev_focal_amd64.deb
 echo " ------> Install rapidjson..."
 cd /tmp
 git clone https://github.com/Tencent/rapidjson
@@ -27,14 +28,5 @@ cmake --install build
 cd .. 
 rm -r rapidjson
 
-#Install spdlog
-echo " ------> Install spdlog... "
-cd /tmp
-git clone https://github.com/gabime/spdlog.git -b v1.12.0
-cd spdlog 
-cmake -Bbuild -DCMAKE_POSITION_INDEPENDENT_CODE=ON 
-cmake --build build
-cmake --install build
-cd .. 
-rm -r spdlog
+
 
