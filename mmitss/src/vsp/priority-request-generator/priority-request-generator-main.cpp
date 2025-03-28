@@ -16,6 +16,7 @@
 #include "PriorityRequestGenerator.h"
 #include "PriorityRequestGeneratorStatus.h"
 #include <UdpSocket.h>
+#include <udp_time_sync/TimeSync.hpp>
 
 
 int main()
@@ -44,7 +45,9 @@ int main()
     const int dataCollectorPort = static_cast<short unsigned int>(jsonObject["PortNumber"]["DataCollector"].asInt());
     const int srmReceiverPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt());
     const int prgStatusReceiverPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["HMIController"].asInt());
-    
+
+    time_sync::TimeSync sync(HostIP, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestGenerator"].asInt()),true);
+    sync.start();
     char receiveBuffer[40960];
     string srmJsonString{};
     string prgStatusJsonString{};
@@ -68,6 +71,8 @@ int main()
             if (PRG.checkPriorityRequestSendingRequirementStatus())
             {
                 srmJsonString = PRG.createSRMJsonString(basicVehicle, signalRequest, mapManager);
+                cout << "[" << fixed << showpoint << setprecision(2) << srmJsonString << "] PRG srmJsonString: " << endl;
+
                 priorityRequestGeneratorSocket.sendData(HostIP, static_cast<short unsigned int>(srmReceiverPortNo), srmJsonString);
                 priorityRequestGeneratorSocket.sendData(HostIP, static_cast<short unsigned int>(dataCollectorPort), srmJsonString);
             }

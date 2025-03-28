@@ -16,7 +16,7 @@ std::string getVerboseTimestamp()
 
     // Convert to time_t for formatting
     std::time_t t = std::chrono::system_clock::to_time_t(time_point);
-    std::tm tm = *std::localtime(&t);
+    std::tm tm = *std::gmtime(&t);
 
     // Create string stream to format date and time
     std::stringstream ss;

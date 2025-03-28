@@ -39,7 +39,7 @@ using std::ofstream;
 using std::ifstream;
 
 #define EmergencyVehicle 2
-#define Transit 6
+// #define Transit 9
 #define Truck 9
 #define SRM_TIME_GAP_VALUE 2.0
 #define DISTANCEUNITCONVERSION 100

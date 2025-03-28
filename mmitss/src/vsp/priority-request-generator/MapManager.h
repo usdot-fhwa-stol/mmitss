@@ -19,6 +19,7 @@
 #include "BasicVehicle.h"
 #include "Position3D.h"
 #include "Map.h"
+#include "Timestamp.h"
 
 using std::cout;
 using std::endl;

@@ -37,6 +37,7 @@
 #include "locAware.h"
 #include "geoUtils.h"
 #include "PriorityRequestGenerator.h"
+#include <sys/time.h>
 
 using namespace GeoUtils;
 using namespace MsgEnum;
@@ -133,8 +134,8 @@ string PriorityRequestGenerator::createSRMJsonString(BasicVehicle basicVehicle, 
 	
 	// vehicleExpectedTimeOfArrival_Second = static_cast<int>(remquo((relativeETAInSecond / SECOND_MINTUTE_CONVERSION), 1.0, &vehicleExpectedTimeOfArrival_Minute) * SECOND_MINTUTE_CONVERSION * SECOND_MILISECOND_CONVERSION);
 	// vehicleExpectedTimeOfArrival_Minute = getMinuteOfYear() + vehicleExpectedTimeOfArrival_Minute;
-	vehicleExpectedTimeOfArrival_Minute = getMinuteOfYear() + (relativeETAInMiliSecond / static_cast<int>(SECOND_MINTUTE_CONVERSION * SECOND_MILISECOND_CONVERSION));
-	vehicleExpectedTimeOfArrival_Second = relativeETAInMiliSecond % static_cast<int>(SECOND_MINTUTE_CONVERSION * SECOND_MILISECOND_CONVERSION);
+	vehicleExpectedTimeOfArrival_Minute = getMinuteOfYear() + (relativeETAInMiliSecond / static_cast<int>(SECOND_MINTUTE_CONVERSION * SECOND_MILISECOND_CONVERSION));	
+	vehicleExpectedTimeOfArrival_Second = relativeETAInMiliSecond % static_cast<int>(SECOND_MINTUTE_CONVERSION * SECOND_MILISECOND_CONVERSION); //its unit is actually milisecond
 	vehicleExpectedTimeOfArrival_Duration = minimumETA_Duration * SECOND_MILISECOND_CONVERSION;
 	setMsgCount(msgCount);
 	tempVehicleSpeed = getVehicleSpeed(); //storing vehicle speed while sending srm. It will be use to compare if there is any speed change or not
@@ -1025,14 +1026,15 @@ double PriorityRequestGenerator::getRequestTimedOutValue()
 int PriorityRequestGenerator::getMinuteOfYear()
 {
 	int minuteOfYear{};
-	time_t t = time(NULL);
+	double timestamp = getPosixTimestamp();
+    time_t t = static_cast<time_t>(timestamp);
 	tm *timePtr = gmtime(&t);
 
 	int dayOfYear = timePtr->tm_yday;
 	int currentHour = timePtr->tm_hour;
 	int currentMinute = timePtr->tm_min;
 
-	minuteOfYear = (dayOfYear - 1) * HOUR_DAY_CONVERSION * MINTUTE_HOUR_CONVERSION + currentHour * MINTUTE_HOUR_CONVERSION + currentMinute;
+	minuteOfYear = std::max(dayOfYear-1, 0) * HOUR_DAY_CONVERSION * MINTUTE_HOUR_CONVERSION + currentHour * MINTUTE_HOUR_CONVERSION + currentMinute;
 
 	return minuteOfYear;
 }
@@ -1043,7 +1045,8 @@ int PriorityRequestGenerator::getMinuteOfYear()
 int PriorityRequestGenerator::getMsOfMinute()
 {
 	int msOfMinute{};
-	time_t t = time(NULL);
+	double timestamp = getPosixTimestamp();
+    time_t t = static_cast<time_t>(timestamp);
 	tm *timePtr = gmtime(&t);
 
 	int currentSecond = timePtr->tm_sec;
@@ -1193,7 +1196,9 @@ void PriorityRequestGenerator::displayConsoleData(string consoleString)
 void PriorityRequestGenerator::readConfigFile()
 {
 	ofstream logFile;
-	double timeStamp = getPosixTimestamp();
+	struct timeval tv_tt;
+ 	gettimeofday(&tv_tt, NULL);
+	double timeStamp =  static_cast<double>(tv_tt.tv_sec)+static_cast<double>(tv_tt.tv_usec)/1.0e6; //getPosixTimestamp();
 	Json::Value jsonObject;
 	ifstream jsonconfigfile("/nojournal/bin/mmitss-phase3-master-config.json");
 	string configJsonString((std::istreambuf_iterator<char>(jsonconfigfile)), std::istreambuf_iterator<char>());

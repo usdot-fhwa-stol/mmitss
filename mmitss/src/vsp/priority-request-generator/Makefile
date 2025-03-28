@@ -3,10 +3,12 @@ BUILD_ROOT=../../..
 MAKE_ROOT :=$(BUILD_ROOT)/make
 include $(MAKE_ROOT)/newheader.mk
 
-INCLUDES    := -I$(J2735_INCL) -I$(JSONCPP_INCL) -I$(COMMON_INCL) -I$(BUILD_ROOT)/3rdparty/ -I$(MAPENGINE_INCL) # tell the compiler where to find the include directories
+INCLUDES    := -I$(J2735_INCL) -I$(JSONCPP_INCL) -I$(COMMON_INCL) -I/opt/carma/include/ -I$(BUILD_ROOT)/3rdparty/ -I$(MAPENGINE_INCL) # tell the compiler where to find the include directories
+CPPFLAGS	:= -std=c++17 # might cause issue XXXXX
+LDFLAGS     := -L/opt/carma/lib
 #LDFLAGS     := -Wl,-rpath=$(J2735_LIB) # tell the linker to add a path to the json shared lib 
 #-Wl is used to pass the option(rpath) to the linker --- we probably want to move this into a default rather than a hard coded location
-LIBS        := -L$(J2735_LIB) -L$(MMITSS_COMMON_LIB) -L$(MAPENGINE_LIB) -llocAware -ldsrc -lasn -lmmitss-common #tell the linker where to find the j2735 and json libraries
+LIBS        := -L$(J2735_LIB) -L$(MMITSS_COMMON_LIB) -L$(MAPENGINE_LIB) -llocAware -ldsrc -lasn -lmmitss-common -lcarma-clock -ludp-socket -ludp_time_sync #tell the linker where to find the j2735 and json libraries
 
 #cpp's go here
 SRC += priority-request-generator-main.cpp PriorityRequestGenerator.cpp MapManager.cpp PriorityRequestGeneratorStatus.cpp

@@ -31,6 +31,7 @@
 #include "locAware.h"
 #include "geoUtils.h"
 #include "msgEnum.h"
+#include "Timestamp.h"
 
 using namespace GeoUtils;
 using namespace MsgEnum;
@@ -178,7 +179,8 @@ void MapManager::writeMAPPayloadInFile()
 int MapManager::getMapPayloadReceivedTime()
 {
     int minuteOfYear{};
-    time_t t = time(NULL);
+    double timestamp = getPosixTimestamp();
+    time_t t = static_cast<time_t>(timestamp);
     tm *timePtr = gmtime(&t);
 
     int dayOfYear = timePtr->tm_yday;
@@ -196,7 +198,8 @@ int MapManager::getMapPayloadReceivedTime()
 int MapManager::getMapPayloadReceivedSecondOfMinute()
 {
     int secondOfMinute{};
-    time_t t = time(NULL);
+    double timestamp = getPosixTimestamp();
+    time_t t = static_cast<time_t>(timestamp);
     tm *timePtr = gmtime(&t);
 
     secondOfMinute = timePtr->tm_sec;
