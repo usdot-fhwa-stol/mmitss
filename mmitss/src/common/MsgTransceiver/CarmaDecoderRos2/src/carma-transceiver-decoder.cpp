@@ -261,6 +261,9 @@ string TransceiverDecoder::spatDecoder(std::vector<uint8_t> spatPayload)
         builder["indentation"] = "";
         int currVehPhaseState{};
         int currPedPhaseState{};
+        // Timestamp_pox and Timestamp_verbose are not used by PriorityRequestGenerator and are meant to
+        // indicate received time of message so using real time is fine. Avoid using Timestamp::posixTimestamp 
+        // or Timestamp::verboseTimestamp since these depend on TimeSync which is not included in transceiver
         std::time_t currentTime = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
         jsonObject["MsgType"] = "SPaT";
         jsonObject["Timestamp_posix"] = currentTime/1000.0;
@@ -370,6 +373,9 @@ string TransceiverDecoder::createJsonStringForSystemPerformanceDataLog(string ms
 	Json::StreamWriterBuilder builder;
 	builder["commentStyle"] = "None";
 	builder["indentation"] = "";
+    // Timestamp_pox and Timestamp_verbose are not used by PriorityRequestGenerator and are meant to
+    // indicate received time of message so using real time is fine. Avoid using Timestamp::posixTimestamp 
+    // or Timestamp::verboseTimestamp since these depend on TimeSync which is not included in transceiver
     std::time_t currentTime = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     jsonObject["MsgType"] = "MsgCount";
     jsonObject["MsgInformation"]["TimeInterval"] = timeInterval;
