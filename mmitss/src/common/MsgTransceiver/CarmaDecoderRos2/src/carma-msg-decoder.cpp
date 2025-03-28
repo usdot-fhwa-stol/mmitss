@@ -34,7 +34,7 @@ int main(int argc, char * argv[])
 {
     std::cout << "Starting Carma Decoder Node" << std::endl;
     rclcpp::init(argc, argv);
-    
+    rcutils_logging_set_logger_level ("rclcpp", RCUTILS_LOG_SEVERITY_DEBUG);
     InboundMsgListener inListener;
     OutboundMsgListener outListener;
     rclcpp::spin(std::make_shared<Subscriber>(inListener,outListener));

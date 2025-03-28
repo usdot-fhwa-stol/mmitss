@@ -186,8 +186,6 @@ string TransceiverDecoder::decodeClock(const rosgraph_msgs::msg::Clock::SharedPt
     jsonObject["timestep"] = int(msg->clock.sec*1000 + msg->clock.nanosec * 1e-6);
     jsonObject["seq"] = 0;
     Json::StreamWriterBuilder builder;
-    builder["commentStyle"] = "None";   
-    builder["indentation"] = "";
     string jsonString = Json::writeString(builder, jsonObject);
     return jsonString;
 }

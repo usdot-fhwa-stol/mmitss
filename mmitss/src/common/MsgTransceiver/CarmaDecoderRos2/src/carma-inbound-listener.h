@@ -6,6 +6,8 @@
 #include "carma_driver_msgs/msg/byte_array.hpp"
 #include "stdio.h"
 #include <rosgraph_msgs/msg/clock.hpp>
+#include "rclcpp/rclcpp.hpp"
+
 
 class InboundMsgListener
 {

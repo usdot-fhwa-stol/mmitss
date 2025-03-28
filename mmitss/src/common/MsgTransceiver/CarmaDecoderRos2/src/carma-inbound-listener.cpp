@@ -14,7 +14,7 @@ InboundMsgListener::~InboundMsgListener()
 
 void InboundMsgListener::inboundClockCallback( const rosgraph_msgs::msg::Clock::SharedPtr msg )
 {
-    std::cout << "Inbound Clock Callback" << std::endl;
+    RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "InboundMsgListener::inboundClockCallback msg: %d.%d", msg->clock.sec, msg->clock.nanosec);
     Json::Value jsonObject_config;
     std::string time_sync = decodeClock(msg);
     std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
@@ -22,7 +22,11 @@ void InboundMsgListener::inboundClockCallback( const rosgraph_msgs::msg::Clock::
     Json::Reader reader;
     string errors{};
     reader.parse(configJsonString.c_str(), jsonObject_config);
-    UdpSocket decoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageDecoder"].asInt())); 
+    UdpSocket decoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageDecoder"].asInt()));
+    RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "InboundMsgListener::inboundClockCallback time_sync: %s to %s:%d", 
+        time_sync.c_str(), 
+        jsonObject_config["HostIp"].asString().c_str(), 
+        jsonObject_config["TimeSyncPort"]["PriorityRequestGenerator"].asInt());
     decoderSocket.sendData(jsonObject_config["HostIp"].asString(),static_cast<short unsigned int>(jsonObject_config["TimeSyncPort"]["PriorityRequestGenerator"].asInt()),time_sync);
     decoderSocket.closeSocket();
 }
