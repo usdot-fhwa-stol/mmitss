@@ -11,12 +11,10 @@ apt-get update && apt-get install -y \
     python3-dev \
     build-essential \
     carma-clock-1 \
-    udp-socket-1 
+    udp-socket-1  \
+    udp-time-sync-1 
 
 
-# Install udp-time-sync TODO: remove this when the package is available in the apt repository after https://github.com/usdot-fhwa-stol/udp-time-sync/pull/4 closes
-cd /tmp
-apt install ./udp-time-sync-1_0.0.1-dev_focal_amd64.deb
 echo " ------> Install rapidjson..."
 cd /tmp
 git clone https://github.com/Tencent/rapidjson
