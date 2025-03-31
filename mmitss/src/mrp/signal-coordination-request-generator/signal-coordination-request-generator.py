@@ -34,6 +34,12 @@ import atexit
 from Logger import Logger
 from CoordinationPlanManager import CoordinationPlanManager
 from CoordinationRequestManager import CoordinationRequestManager
+import importlib
+import sys
+
+sys.path.append('/opt/carma/lib/')
+libTimeSync = importlib.import_module("libudp_time_sync")
+
 
 def readConfigfile():
     # Read the Coordination config file into a json object:
@@ -61,10 +67,13 @@ def main():
     coordinationSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     mrpIp = config["HostIp"]
     port = config["PortNumber"]["SignalCoordination"]
+    
     signalCoordination_commInfo = (mrpIp, port)
     coordinationSocket.bind(signalCoordination_commInfo)
     coordinationSocket.settimeout(0)
-    
+     # initialize time sync
+    timeSync = libTimeSync.TimeSync(mrpIp,config["TimeSyncPort"]["SignalCoordination"]) # set True to log and test
+    timeSync.start()
     # Get the PRS and PRSolver communication address
     prioritySolverAddress = (mrpIp, config["PortNumber"]["PrioritySolver"])
     priorityRequestServerAddress = (mrpIp, config["PortNumber"]["PriorityRequestServer"])

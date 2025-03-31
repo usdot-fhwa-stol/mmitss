@@ -38,6 +38,11 @@ import time
 import json
 from CoordinatedPhase import CoordinatedPhase
 from Logger import Logger
+import importlib
+import sys
+
+sys.path.append('/opt/carma/lib/')
+libTimeSync = importlib.import_module("libudp_time_sync")
 
 HOUR_DAY_CONVERSION = 24
 MINUTE_HOUR_CONVERSION = 60
@@ -318,7 +323,7 @@ class CoordinationRequestManager:
         """
         Compute the current time based on current hour, minute and second of a day in the unit of second
         """
-        timeNow = datetime.datetime.now()
+        timeNow = datetime.datetime.fromtimestamp(libTimeSync.nowInMilliseconds() / 1000.0)
         currentTime = timeNow.hour * \
             float(HOUR_SECOND_CONVERSION) + \
             timeNow.minute * 60.0 + timeNow.second
@@ -329,7 +334,7 @@ class CoordinationRequestManager:
         """
         Method for obtaining minute of a year based on current time
         """
-        timeNow = datetime.datetime.now()
+        timeNow = datetime.datetime.fromtimestamp(libTimeSync.nowInMilliseconds() / 1000.0)
         dayOfYear = int(timeNow.strftime("%j"))
         currentHour = timeNow.hour
         currentMinute = timeNow.minute
@@ -341,7 +346,7 @@ class CoordinationRequestManager:
         """
         Method for obtaining millisecond of a minute based on current time
         """
-        timeNow = datetime.datetime.now()
+        timeNow = datetime.datetime.fromtimestamp(libTimeSync.nowInMilliseconds() / 1000.0)
         currentSecond = timeNow.second
         msOfMinute = currentSecond * SECOND_MILISECOND_CONVERSION
 
