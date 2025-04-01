@@ -24,6 +24,7 @@ COPY lib/x86/libmmitss-common.so /usr/local/lib/mmitss/
 COPY 3rdparty/mapengine/lib/x86/liblocAware.so.1.0 /usr/local/lib/mmitss/
 COPY 3rdparty/asn1j2735/lib/x86/libasn.so.1.0 /usr/local/lib/mmitss/
 COPY 3rdparty/asn1j2735/lib/x86/libdsrc.so.1.0 /usr/local/lib/mmitss/
+COPY 3rdparty/udp-time-sync-1_0.0.1-dev_focal_amd64.deb /tmp/
 COPY lib/mmitss.conf /etc/ld.so.conf.d/
 # Create the symbolic links for the copied libraries."
 RUN ln -s /usr/local/lib/mmitss/libnetsnmp.so.35.0.0 /usr/local/lib/mmitss/libnetsnmp.so.35 && ln -s /usr/local/lib/mmitss/libglpk.so.35.1.0 /usr/local/lib/mmitss/libglpk.so.35 

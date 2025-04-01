@@ -9,24 +9,24 @@ SHELL ["/bin/bash", "-c"]
 WORKDIR /root/dev_ws/src
 
 WORKDIR /mmitss/script
-COPY mmitss/build/dockerfiles/x86/scripts/install_carma_msgs.sh /mmitss/script
+COPY build/dockerfiles/x86/scripts/install_carma_msgs.sh /mmitss/script
 
 RUN chmod 777 install_carma_msgs.sh
 RUN ./install_carma_msgs.sh
 
 WORKDIR /mmitss/tmp
-COPY mmitss /mmitss/tmp
+COPY . /mmitss/tmp
 RUN ls
 
 WORKDIR /mmitss/script
 
-COPY mmitss/build/dockerfiles/x86/scripts/build_vsp_ros2_transceivers.sh /mmitss/script
+COPY build/dockerfiles/x86/scripts/build_vsp_ros2_transceivers.sh /mmitss/script
 RUN chmod 777 build_vsp_ros2_transceivers.sh
 RUN ./build_vsp_ros2_transceivers.sh
 
-COPY mmitss/build/dockerfiles/x86/scripts/runCarmaDecoder.sh /mmitss/script
+COPY build/dockerfiles/x86/scripts/runCarmaDecoder.sh /mmitss/script
 RUN chmod 777 runCarmaDecoder.sh
-COPY mmitss/build/dockerfiles/x86/scripts/runCarmaEncoder.sh /mmitss/script
+COPY build/dockerfiles/x86/scripts/runCarmaEncoder.sh /mmitss/script
 RUN chmod 777 runCarmaEncoder.sh
 
 ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
@@ -35,11 +35,11 @@ ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
 # COPY build/bin/CarmaDecoderRos2/x86/M_CarmaMsgDecoder /mmitss
 # COPY build/bin/CarmaEncoderRos2/x86/M_CarmaMsgEncoder /mmitss
-COPY mmitss/build/bin/PriorityRequestGenerator/x86/M_PriorityRequestGenerator /mmitss
-COPY mmitss/build/bin/LightSirenStatusManager/x86/M_LightSirenStatusManager /mmitss
-COPY mmitss/build/bin/LightSirenStatusManager/images /mmitss
-COPY mmitss/build/bin/SystemInterface/x86/M_SystemInterface /mmitss
-COPY mmitss/build/bin/V2XDataCollector/x86/M_V2XDataCollector /mmitss
-COPY mmitss/build/bin/DataCompressor/x86/M_DataCompressor /mmitss
+COPY build/bin/PriorityRequestGenerator/x86/M_PriorityRequestGenerator /mmitss
+COPY build/bin/LightSirenStatusManager/x86/M_LightSirenStatusManager /mmitss
+COPY build/bin/LightSirenStatusManager/images /mmitss
+COPY build/bin/SystemInterface/x86/M_SystemInterface /mmitss
+COPY build/bin/V2XDataCollector/x86/M_V2XDataCollector /mmitss
+COPY build/bin/DataCompressor/x86/M_DataCompressor /mmitss
 
 ENTRYPOINT ["/usr/bin/supervisord", "--configuration=/nojournal/bin/supervisord.conf"]
