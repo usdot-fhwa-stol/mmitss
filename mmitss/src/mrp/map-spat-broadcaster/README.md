@@ -200,6 +200,8 @@ Map-Spat-Broadcaster component does not generate any log files. The console outp
     - `config["SignalController"]["IpAddress"]`: IPv4 address of the signal controller (string)
     - `config["SignalController"]["NtcipPort"]`: NTCIP port of the signal controller (integer)
     - `config["PortNumber"]["MapSPaTBroadcaster"]`:  UDP port number on the host (integer) where the signal controller pushes the raw SPaT blob. Note: Change only if the default (6053) port number is already occupied on the host machine. In case of a change, corresponding change in the signal controller needs to be ensured.
+    - `config["TimeSyncPort"]["MapSPaTBroadcaster"]`:  UDP port number (integer) to listen for Time Sync Messages (CDA Sim Integration)
+- `config["TimeSyncDebug"]`:  Bool flag to enable TimeSync debug logging (CDA Sim Integration)
     - `config["PortNumber"]["TrafficControllerCurrPhaseListener"]`: UDP port where the MMITSS component Traffic-Controller_interface listens for the CurrentPhaseStatus.
     - `config["SignalController"]["Vendor"]`: vendor of the signal-controller (string).   
     NOTE: This software is tested to work on Econolite (ASC3 and Cobalt) and Intellight (MaxTime) made signal controllers. For Econolite signal controllers, use "Econolite" in this key.

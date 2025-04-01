@@ -169,6 +169,8 @@ In the `mmitss-phase3-master-config.json` (config) file following keys need to b
 - `config["PortNumber"]["PriorityRequestServer"]`:  UDP port number (integer). 
 - `config["SRMTimedOutTime"]`: time-out period to delete priority request from Active Request Table if Infrustracture doesn't receive srm. 
 - `config["SystemPerformanceTimeInterval"]`: time interval to log the cumulative system performance data
+- `config["TimeSyncPort"]["PriorityRequestServer"]`:  UDP port number (integer) to listen for Time Sync Messages (CDA Sim Integration)
+- `config["TimeSyncDebug"]`:  Bool flag to enable TimeSync debug logging (CDA Sim Integration)
 
 ## Test
 A basic test of the PRS software can be done by using a tool (msgSender.py script) reside on mmitss/src/mrp/priority-request-server/Test directory. The msgSender.py can send SRM JSON string to the PRS over the UDP socket. The PRS will populate the ART and sent SSM. 

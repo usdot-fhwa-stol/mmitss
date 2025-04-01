@@ -134,6 +134,10 @@ The Signal-Coordination-Request-Generator can store important information like- 
 In the `mmitss-phase3-master-config.json` (config) file following keys need to be assigned with appropriate values:
 - `config["PortNumber"]["SignalCoordination"]`:  UDP port number (integer) 
 - `config["CoordinationPlanCheckingTimeInterval"]`: time interval to check if there is any update in the active coordination plan
+- `config["TimeSyncPort"]["SignalCoordination"]`:  UDP port number (integer) to listen for Time Sync Messages (CDA Sim Integration)
+- `config["TimeSyncDebug"]`:  Bool flag to enable TimeSync debug logging (CDA Sim Integration)
+
+
 
 ## Known issues/limitations
 - None
