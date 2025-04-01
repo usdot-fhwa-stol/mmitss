@@ -63,7 +63,7 @@ def main():
     # Read IP and port to receive time info 
     
     # initialize time sync
-    timeSync = libTimeSync.TimeSync(mrpIp,config["TimeSyncPort"]["MapSPaTBroadcaster"]) # set True to log and test
+    timeSync = libTimeSync.TimeSync(mrpIp,config["TimeSyncPort"]["MapSPaTBroadcaster"],config["TimeSyncDebug"]) # set True to log and test
     timeSync.start()
 
     # Read controllerIp from the config file and store it.

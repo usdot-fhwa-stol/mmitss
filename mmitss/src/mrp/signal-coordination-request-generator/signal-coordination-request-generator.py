@@ -72,7 +72,7 @@ def main():
     coordinationSocket.bind(signalCoordination_commInfo)
     coordinationSocket.settimeout(0)
      # initialize time sync
-    timeSync = libTimeSync.TimeSync(mrpIp,config["TimeSyncPort"]["SignalCoordination"]) # set True to log and test
+    timeSync = libTimeSync.TimeSync(mrpIp,config["TimeSyncPort"]["SignalCoordination"], config["TimeSyncDebug"]) # set True to log and test
     timeSync.start()
     # Get the PRS and PRSolver communication address
     prioritySolverAddress = (mrpIp, config["PortNumber"]["PrioritySolver"])
@@ -151,8 +151,9 @@ def main():
                     coordinationClearRequestJsonString = coordinationRequestManager.getCoordinationClearRequestDictionary()
                     coordinationSocket.sendto(coordinationClearRequestJsonString.encode(), priorityRequestServerAddress)
                     logger.loggingAndConsoleDisplay("Sent coordination clear request list to PRS since active coordination plan is timed-out")
-                    print("Coordination request is following:\n", coordinationPriorityRequestJsonString)                
-            time.sleep(1)
+                    print("Coordination request is following:\n", coordinationPriorityRequestJsonString)
+            # Sleep for 1000 ms                
+            libTimeSync.sleep_for(time_to_sleep=1000)
     coordinationSocket.close()
     
     

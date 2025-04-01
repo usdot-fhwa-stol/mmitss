@@ -72,7 +72,7 @@ class CoordinationRequestManager:
         self.ETA_Update_Time = 1.0
         self.Minimum_ETA = 0.0
         self.Request_Delete_Time = 0.0
-        self.requestSentTime = time.time()
+        self.requestSentTime = libTimeSync.nowInMilliseconds() / 1000.0
         self.msgCount = 0
         self.ETAOfFirstCycleCoordinatedPhase = 0.0
         self.ETAOfSecondCycleCoordinatedPhase = 0.0
@@ -139,7 +139,7 @@ class CoordinationRequestManager:
                 SECOND_MINUTE_CONVERSION * SECOND_MILISECOND_CONVERSION)
             temporaryCoordinationRequest.coordinationSplit = int(coordinationSplit * SECOND_MILISECOND_CONVERSION)
             temporaryCoordinationRequest.priorityRequestType = self.priorityRequest
-            temporaryCoordinationRequest.requestUpdateTime = time.time()
+            temporaryCoordinationRequest.requestUpdateTime = libTimeSync.nowInMilliseconds() / 1000.0
             coordinationRequestList.append(temporaryCoordinationRequest)
 
         coordinationRequestDict = [dict()
@@ -157,7 +157,7 @@ class CoordinationRequestManager:
             "CoordinationRequestList": {"requestorInfo": coordinationRequestDict}
         }
 
-        self.requestSentTime = time.time()
+        self.requestSentTime = libTimeSync.nowInMilliseconds() / 1000.0
         coordinationPriorityRequestJsonString = json.dumps(
             self.coordinationPriorityRequestDictionary)
         self.logger.looging(coordinationPriorityRequestJsonString)
@@ -169,7 +169,7 @@ class CoordinationRequestManager:
         A boolean function to check whether coordination priority requests is required to send to avoid PRS timed-out
         """
         sendRequest = False
-        currentTime_UTC = time.time()
+        currentTime_UTC = libTimeSync.nowInMilliseconds() / 1000.0
         if bool(self.coordinationPriorityRequestDictionary):
             noOfCoordinationRequest = self.coordinationPriorityRequestDictionary[
                 'noOfCoordinationRequest']
@@ -192,7 +192,7 @@ class CoordinationRequestManager:
         )
         self.updateETAInCoordinationRequestTable()
         self.deleteTimeOutRequestFromCoordinationRequestTable
-        self.requestSentTime = time.time()
+        self.requestSentTime = libTimeSync.nowInMilliseconds() / 1000.0
         coordinationPriorityRequestJsonString = json.dumps(
             self.coordinationPriorityRequestDictionary)
         self.logger.looging(coordinationPriorityRequestJsonString)
@@ -208,7 +208,7 @@ class CoordinationRequestManager:
         """
         relativeETAInMiliSecond = 0
         if bool(self.coordinationPriorityRequestDictionary):
-            currentTime_UTC = time.time()
+            currentTime_UTC = libTimeSync.nowInMilliseconds() / 1000.0
             noOfCoordinationRequest = self.coordinationPriorityRequestDictionary[
                 'noOfCoordinationRequest']
             for i in range(noOfCoordinationRequest):
@@ -236,7 +236,7 @@ class CoordinationRequestManager:
                         SECOND_MINUTE_CONVERSION * SECOND_MILISECOND_CONVERSION)
 
                     self.coordinationPriorityRequestDictionary['CoordinationRequestList'][
-                        'requestorInfo'][i]['requestUpdateTime'] = time.time()
+                        'requestorInfo'][i]['requestUpdateTime'] = libTimeSync.nowInMilliseconds() / 1000.0
 
     def deleteTimeOutRequestFromCoordinationRequestTable(self):
         """
@@ -278,8 +278,8 @@ class CoordinationRequestManager:
                 self.coordinationPriorityRequestDictionary['CoordinationRequestList'][
                     'requestorInfo'][i]['priorityRequestType'] = self.requestUpdate
                 self.coordinationPriorityRequestDictionary['CoordinationRequestList'][
-                    'requestorInfo'][i]['requestUpdateTime'] = time.time()
-            self.requestSentTime = time.time()
+                    'requestorInfo'][i]['requestUpdateTime'] = libTimeSync.nowInMilliseconds() / 1000.0
+            self.requestSentTime = libTimeSync.nowInMilliseconds() / 1000.0
 
         else:
             self.coordinationPriorityRequestDictionary = {}
