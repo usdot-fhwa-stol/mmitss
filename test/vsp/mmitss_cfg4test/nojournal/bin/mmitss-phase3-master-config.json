@@ -19,6 +19,10 @@
 	"CoordinationPlanCheckingTimeInterval": 300,
 	"PeerDataDecoding": false,
 	"OffmapBsmFiltering": true,
+	"TimeSyncDebug" : false,
+	"TimeSyncPort":{
+		"PriorityRequestGenerator": 30007	
+	},
 	"PortNumber": {
 		"MessageTransceiver": {
 			"MessageSender": 10003,
