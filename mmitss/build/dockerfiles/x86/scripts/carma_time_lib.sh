@@ -11,9 +11,8 @@ apt-get update && apt-get install -y \
     python3-dev \
     build-essential \
     carma-clock-1 \
-    udp-socket-1 \
-    udp-time-sync-1
-
+    udp-socket-1  \
+    udp-time-sync-1 
 
 
 echo " ------> Install rapidjson..."
@@ -27,14 +26,5 @@ cmake --install build
 cd .. 
 rm -r rapidjson
 
-#Install spdlog
-echo " ------> Install spdlog... "
-cd /tmp
-git clone https://github.com/gabime/spdlog.git -b v1.12.0
-cd spdlog 
-cmake -Bbuild -DCMAKE_POSITION_INDEPENDENT_CODE=ON 
-cmake --build build
-cmake --install build
-cd .. 
-rm -r spdlog
+
 

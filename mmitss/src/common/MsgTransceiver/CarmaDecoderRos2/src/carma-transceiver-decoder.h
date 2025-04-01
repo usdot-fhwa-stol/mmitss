@@ -4,6 +4,7 @@
 #include <chrono>
 #include <string>
 #include <vector>
+#include <rosgraph_msgs/msg/clock.hpp>
 
 using std::cout;
 using std::endl;
@@ -45,6 +46,7 @@ class TransceiverDecoder
         string srmDecoder(std::vector<uint8_t> srmPayload);
         string ssmDecoder(std::vector<uint8_t> ssmPayload);
         string spatDecoder(std::vector<uint8_t> spatPayload);
+        string decodeClock(const rosgraph_msgs::msg::Clock::SharedPtr msg);
         string createJsonStringForSystemPerformanceDataLog(string msgCountType);
         string getApplicationPlatform();
         bool sendSystemPerformanceDataLog();

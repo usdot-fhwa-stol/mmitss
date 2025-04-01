@@ -16,8 +16,8 @@
 #include "SignalStatus.h"
 #include "ActiveRequest.h"
 #include "carma-transceiver-decoder.h"
-#include "Timestamp.h"
-
+#include <rosgraph_msgs/msg/clock.hpp>
+#include <ctime> // Required for std::time_t
 const double KPH_TO_MPS_CONVERSION = 0.277778;
 const int RED = 3;
 const int YELLOW = 8;
@@ -180,6 +180,16 @@ string TransceiverDecoder::srmDecoder(std::vector<uint8_t> srmPayload)
     return jsonString;
 }
 
+string TransceiverDecoder::decodeClock(const rosgraph_msgs::msg::Clock::SharedPtr msg)
+{
+    Json::Value jsonObject;
+    jsonObject["timestep"] = int(msg->clock.sec*1000 + msg->clock.nanosec * 1e-6);
+    jsonObject["seq"] = 0;
+    Json::StreamWriterBuilder builder;
+    string jsonString = Json::writeString(builder, jsonObject);
+    return jsonString;
+}
+
 string TransceiverDecoder::ssmDecoder(std::vector<uint8_t> ssmPayload)
 {
     SignalStatus signalStatus;
@@ -251,10 +261,13 @@ string TransceiverDecoder::spatDecoder(std::vector<uint8_t> spatPayload)
         builder["indentation"] = "";
         int currVehPhaseState{};
         int currPedPhaseState{};
-
+        // Timestamp_pox and Timestamp_verbose are not used by PriorityRequestGenerator and are meant to
+        // indicate received time of message so using real time is fine. Avoid using Timestamp::posixTimestamp 
+        // or Timestamp::verboseTimestamp since these depend on TimeSync which is not included in transceiver
+        std::time_t currentTime = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
         jsonObject["MsgType"] = "SPaT";
-        jsonObject["Timestamp_verbose"] = getVerboseTimestamp();
-        jsonObject["Timestamp_posix"] = getVerboseTimestamp();
+        jsonObject["Timestamp_posix"] = currentTime/1000.0;
+        jsonObject["Timestamp_verbose"] = currentTime/1000.0;
         jsonObject["Spat"]["IntersectionState"]["regionalID"] = spatOut.regionalId;
         jsonObject["Spat"]["IntersectionState"]["intersectionID"] = spatOut.id;
         jsonObject["Spat"]["msgCnt"] = static_cast<unsigned int>(spatOut.msgCnt);
@@ -360,12 +373,14 @@ string TransceiverDecoder::createJsonStringForSystemPerformanceDataLog(string ms
 	Json::StreamWriterBuilder builder;
 	builder["commentStyle"] = "None";
 	builder["indentation"] = "";
-    auto currentTime = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-
+    // Timestamp_pox and Timestamp_verbose are not used by PriorityRequestGenerator and are meant to
+    // indicate received time of message so using real time is fine. Avoid using Timestamp::posixTimestamp 
+    // or Timestamp::verboseTimestamp since these depend on TimeSync which is not included in transceiver
+    std::time_t currentTime = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
     jsonObject["MsgType"] = "MsgCount";
     jsonObject["MsgInformation"]["TimeInterval"] = timeInterval;
-    jsonObject["MsgInformation"]["Timestamp_posix"] = getPosixTimestamp();
-    jsonObject["MsgInformation"]["Timestamp_verbose"] = getVerboseTimestamp();
+    jsonObject["MsgInformation"]["Timestamp_posix"] = currentTime/1000.0;
+    jsonObject["MsgInformation"]["Timestamp_verbose"] = currentTime/1000.0;
     jsonObject["MsgInformation"]["MsgCountType"] = msgCountType;
     
     if (applicationPlatform == "roadside")
