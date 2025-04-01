@@ -19,7 +19,6 @@
 	"CoordinationPlanCheckingTimeInterval": 300,
 	"PeerDataDecoding": false,
 	"OffmapBsmFiltering": true,
-	"TimeSyncDebug" : false,
 	"TimeSyncPort" : {
 		"PriorityRequestGenerator": 10010 
 	},
