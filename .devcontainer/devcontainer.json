@@ -3,7 +3,7 @@
 {
 	"name": "carma_ros_containers_dev",
 	"build": {
-		"dockerfile": "../mmitss/build/dockerfiles/x86/Dockerfile.carma_vsp_ros2",
+		"dockerfile": "../mmitss/build/dockerfiles/x86/Dockerfile.kafka_mrp",
 		"context": "../mmitss/"
 
 	},

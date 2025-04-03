@@ -171,6 +171,8 @@ The PRG can store important information like- SRMs, SSMs etc. in the time-stampe
 In the `mmitss-phase3-master-config.json` (config) file following keys need to be assigned with appropriate values:
 - `config["PortNumber"]["PriorityRequestGenerator"]`:  UDP port number (integer) 
 - `config["PortNumber"]["HMIController"]`:  UDP port number (integer)
+- `config["TimeSyncPort"]["PriorityRequestGenerator"]`:  UDP port number (integer) to listen for Time Sync Messages (CDA Sim Integration)
+- `config["TimeSyncDebug"]`:  Bool flag to enable TimeSync debug logging (CDA Sim Integration)
 - `config["SRMTimedOutTime"]`: time-out period to delete priority request from the Active Request Table, if infrastructure doesn't receive SRM.
 
 ## Test

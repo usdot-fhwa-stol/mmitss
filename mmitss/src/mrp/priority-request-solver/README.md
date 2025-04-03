@@ -167,7 +167,8 @@ The PRSolver can store important information like- priority request list, curren
 In the `mmitss-phase3-master-config.json` (config) file following keys need to be assigned with appropriate values:
 - `config["PortNumber"]["PrioritySolver"]`: UDP port number (integer).
 - `config["PortNumber"]["PrioritySolverToTCIInterface"] `: UDP port number (integer). This port is used for obtaining current signal status message from the TCI.
-
+- `config["TimeSyncPort"]["PrioritySolver"]`:  UDP port number (integer) to listen for Time Sync Messages (CDA Sim Integration)
+- `config["TimeSyncDebug"]`:  Bool flag to enable TimeSync debug logging (CDA Sim Integration)
 ## Test
 A basic test of the PRSolver software can be done by using tools reside on mmitss/src/mrp/priority-request-solver/test directory. The priorityRequestSender.py can send priority request list as a JSON string to the PRSolver over the UDP socket. The tciMsgSender.py can send current signal timing plan, and current signal status. It can also receive the optimal schedule. The splitDataSender.py can send split data to the PRSolver. The PRSolver can formulate the optimization model and generate optimal schedule.
 

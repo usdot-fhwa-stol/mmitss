@@ -29,7 +29,7 @@ int main()
     reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject, &errors);
     delete reader;
     const string LOCALHOST = jsonObject["HostIp"].asString();
-    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestServer"].asInt()),true);
+    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestServer"].asInt()),jsonObject["TimeSyncDebug"].asBool());
     sync.start();
     
     PriorityRequestServer PRS;

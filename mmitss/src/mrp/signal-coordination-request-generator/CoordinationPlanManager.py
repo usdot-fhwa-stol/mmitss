@@ -38,7 +38,11 @@ import time
 import calendar
 from datetime import date
 from Logger import Logger
+import importlib
+import sys
 
+sys.path.append('/opt/carma/lib/')
+libTimeSync = importlib.import_module("libudp_time_sync")
 SECOND_MINUTE_CONVERSION = 60.0
 HOUR_SECOND_CONVERSION = 3600.0
 
@@ -69,15 +73,15 @@ class CoordinationPlanManager:
         check the time gap between the current time and last time when active coordination plan is checked
         """
         activePlanCheckingRequirement = False
-        currentTime_UTC = time.time()
+        currentTime_UTC = libTimeSync.nowInMilliseconds() / 1000.0
 
         if not bool(self.coordinationParametersDictionary):
             activePlanCheckingRequirement = True
-            self.activePlanCheckingTime = time.time()
+            self.activePlanCheckingTime = libTimeSync.nowInMilliseconds() / 1000.0
 
         elif currentTime_UTC - self.activePlanCheckingTime >= self.timeGapBetweenActivePlanChecking:
             activePlanCheckingRequirement = True
-            self.activePlanCheckingTime = time.time()
+            self.activePlanCheckingTime = libTimeSync.nowInMilliseconds() / 1000.0
 
         return activePlanCheckingRequirement
 
@@ -239,7 +243,7 @@ class CoordinationPlanManager:
         """
         Compute the today's day of the week
         """
-        date_Today = date.today()
+        date_Today = date.fromtimestamp(libTimeSync.nowInMilliseconds() / 1000.0)
         dayOfWeek = calendar.day_name[date_Today.weekday()]
 
         return dayOfWeek
@@ -248,7 +252,7 @@ class CoordinationPlanManager:
         """
         Compute the current time based on current hour, minute and second of a day in the unit of second
         """
-        timeNow = datetime.datetime.now()
+        timeNow = datetime.datetime.fromtimestamp( libTimeSync.nowInMilliseconds() / 1000.0)
         currentTime = timeNow.hour * 3600.0 + timeNow.minute * 60.0 + timeNow.second
 
         return currentTime

@@ -32,7 +32,7 @@ int main()
     delete reader;
 
     const string LOCALHOST = jsonObject["HostIp"].asString();
-    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestSolver"].asInt()), true);
+    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject["TimeSyncPort"]["PriorityRequestSolver"].asInt()), jsonObject["TimeSyncDebug"].asBool());
     sync.start();
     
     PriorityRequestSolver priorityRequestSolver;

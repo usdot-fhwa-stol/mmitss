@@ -34,6 +34,12 @@ import atexit
 from Logger import Logger
 from CoordinationPlanManager import CoordinationPlanManager
 from CoordinationRequestManager import CoordinationRequestManager
+import importlib
+import sys
+
+sys.path.append('/opt/carma/lib/')
+libTimeSync = importlib.import_module("libudp_time_sync")
+
 
 def readConfigfile():
     # Read the Coordination config file into a json object:
@@ -61,10 +67,13 @@ def main():
     coordinationSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     mrpIp = config["HostIp"]
     port = config["PortNumber"]["SignalCoordination"]
+    
     signalCoordination_commInfo = (mrpIp, port)
     coordinationSocket.bind(signalCoordination_commInfo)
     coordinationSocket.settimeout(0)
-    
+     # initialize time sync
+    timeSync = libTimeSync.TimeSync(mrpIp,config["TimeSyncPort"]["SignalCoordination"], config["TimeSyncDebug"]) # set True to log and test
+    timeSync.start()
     # Get the PRS and PRSolver communication address
     prioritySolverAddress = (mrpIp, config["PortNumber"]["PrioritySolver"])
     priorityRequestServerAddress = (mrpIp, config["PortNumber"]["PriorityRequestServer"])
@@ -142,8 +151,9 @@ def main():
                     coordinationClearRequestJsonString = coordinationRequestManager.getCoordinationClearRequestDictionary()
                     coordinationSocket.sendto(coordinationClearRequestJsonString.encode(), priorityRequestServerAddress)
                     logger.loggingAndConsoleDisplay("Sent coordination clear request list to PRS since active coordination plan is timed-out")
-                    print("Coordination request is following:\n", coordinationPriorityRequestJsonString)                
-            time.sleep(1)
+                    print("Coordination request is following:\n", coordinationPriorityRequestJsonString)
+            # Sleep for 1000 ms                
+            libTimeSync.sleep_for(time_to_sleep=1000)
     coordinationSocket.close()
     
     

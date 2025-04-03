@@ -59,13 +59,13 @@
 		"PeerToPeerPriority": 20026,
 		"TimePhaseDiagramTool": 20027
 	},
+	"TimeSyncDebug" : false,
 	"TimeSyncPort":{
 		"PriorityRequestServer": 30001,
 		"PriorityRequestSolver": 30002,
 		"MapSPaTBroadcaster": 30003,
 		"TrafficControllerInterface": 30004,
-		"SignalCoordination": 30006,
-		"PriorityRequestGenerator":3007
+		"SignalCoordination": 30006	
 	},
 	"psid": {
 		"map": "8002",
