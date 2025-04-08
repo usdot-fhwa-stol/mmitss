@@ -29,6 +29,8 @@ in the target SNMP device.
 # include "json/json.h"
 # include "UdpSocket.h"
 # include "SnmpEngine.h"
+#include <udp_time_sync/TimeSync.hpp>
+
 
 int main()
 {
@@ -44,7 +46,9 @@ int main()
     reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);        
     delete reader;
     configJson.close();
-
+    const string LOCALHOST = jsonObject_config["HostIp"].asString();
+    time_sync::TimeSync sync(LOCALHOST, static_cast<short unsigned int>(jsonObject_config["TimeSyncPort"]["SnmpEngine"].asInt()), jsonObject_config["TimeSyncDebug"].asBool());
+    sync.start();
     // Read the network config for the SnmpEngine applciation    
     std::string ascIp = jsonObject_config["SignalController"]["IpAddress"].asString();
     int ascNtcipPort = jsonObject_config["SignalController"]["NtcipPort"].asUInt();
