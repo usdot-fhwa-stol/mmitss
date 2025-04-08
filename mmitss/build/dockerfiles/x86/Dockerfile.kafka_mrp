@@ -20,6 +20,8 @@ RUN ./install_env_mrp.sh
 
 WORKDIR /mmitss/tmp
 COPY . /mmitss/repo
+
+WORKDIR /mmitss
 # RUN ls
 
 # COPY build/bin/WirelessMsgDecoder/x86/M_WirelessMsgDecoder /mmitss
