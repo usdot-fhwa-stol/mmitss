@@ -65,7 +65,8 @@
 		"PriorityRequestSolver": 30002,
 		"MapSPaTBroadcaster": 30003,
 		"TrafficControllerInterface": 30004,
-		"SignalCoordination": 30006	
+		"SignalCoordination": 30006,
+		"SnmpEngine": 30007	
 	},
 	"psid": {
 		"map": "8002",
