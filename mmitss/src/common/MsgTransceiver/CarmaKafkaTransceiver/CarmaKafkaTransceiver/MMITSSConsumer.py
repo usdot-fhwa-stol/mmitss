@@ -89,6 +89,8 @@ class MMITSSConsumer(Consumer):
             time_sync_ports.append(self.config["TimeSyncPort"]["MapSPaTBroadcaster"])
             time_sync_ports.append(self.config["TimeSyncPort"]["TrafficControllerInterface"])
             time_sync_ports.append(self.config["TimeSyncPort"]["SignalCoordination"])
+            time_sync_ports.append(self.config["TimeSyncPort"]["SnmpEngine"])
+
             msg = self.decodeTimeSync(msg)
             for port in time_sync_ports:
                 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
