@@ -18,7 +18,7 @@ jobs:
       - name: Build MMITSS Common
         run: |
           cd /home/runner/work/mmitss/mmitss/mmitss
-          ./build/dockerfiles/x86/scripts/carma_time_lib.sh
+          sudo ./build/dockerfiles/x86/scripts/carma_time_lib.sh
           ls -l
           cd src/common/
           make linux
