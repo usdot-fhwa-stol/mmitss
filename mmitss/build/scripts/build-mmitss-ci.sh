@@ -23,6 +23,9 @@
 #############################################################################################
 set +e
 
+apt update 
+apt install -y python3-pip
+python3 -m pip install pyinstaller
 # Define colors:
 red='\033[0;31m'
 green='\033[0;32m'
