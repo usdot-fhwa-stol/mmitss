@@ -28,25 +28,23 @@ green='\033[0;32m'
 nocolor='\033[0m'
 
 ######################################################################################
-
-read -p "Has setup-build-environment.sh script already been executed? (y or n): " buildSetup
+buildSetup="y"
 
 if [ "$buildSetup" = "n" ]; then
 echo "Please run setup-build-environment.sh script first and then run this script. Exiting now!"
 exit 0
 
 else
-
-    read -p "Build all applications? (y or n): " all
+	all="n"
     if [ "$all" = "n" ]; then
 
-    read -p "Build common applications? (y or n): " common
-    read -p "Build roadside applications? (y or n): " mrp
-    read -p "Build vehicle applications? (y or n): " vsp
-    read -p "Build simulation_server-tools applications? (y or n): " server
-    read -p "Build CARMA-ROS1 transceivers? (y or n)" carma
-	read -p "Build CARMA-ROS2 transceivers? (y or n)" carma2
-    read -p "Build Kafka Transceivers? (y or n)" kafka
+	common="y"
+	mrp="y"
+	vsp="y"
+	server="n"
+	carma="n"
+	carma2="y"
+	kafka="y"
 
     else
     common=y
@@ -687,13 +685,11 @@ else
     echo "------------------------------------------"
 	echo "Successfully built required applications!"
     echo "------------------------------------------"
-
-    read -p "Build docker images? (y or n): " docker
+	docker="y"
     if [ "$docker" = "y" ]; then
-		
-		read -p "Build Base image? (y or n): " baseImage
+		baseImage="y"
 		if [ "$baseImage" = "y" ]; then
-			read -p "Provide version tag for the base image: " baseVersionTag
+			baseVersionTag="3.0"
 			# Go to the mmitss directory
 			cd ../..
 			echo "----------------------------------"
@@ -710,13 +706,13 @@ else
 		read -p "Build container images? (y or n): " containerImages
 	    
 		if [ "$containerImages" = "y" ]; then
-			read -p "Provide version tag for container images: " versionTag
-			read -p "Build MRP image? Needs common and roadside applications. (y or n): " mrpFieldImage
-			read -p "Build VSP image? Needs common and vehicle applications. (y or n): " vspImage
-			read -p "Build simulation_server-tools image? Needs simulation_server-tools applications. (y or n): " serverImage
-            		read -p "Build CARMA-ROS 1 applications. (y or n): " carma1Image
-			read -p "Build CARMA-ROS 2 applications. (y or n): " carma2Image
-			read -p "Build kafka transceiver. (y or n): " kafkaImage
+			versionTag="CDASim"
+			mrpFieldImage="n"
+			vspImage="n"
+			serverImage="n"
+			carma1Image="n"
+			carma2Image="y"
+			kafkaImage="y"
 
 			if [ "$mrpFieldImage" = "y" ]; then
 				echo "---------------------------------------"
