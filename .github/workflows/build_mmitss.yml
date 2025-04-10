@@ -24,7 +24,7 @@ jobs:
           make linux
       - name: Run Build Script
         run: |
-          cd home/runner/work/mmitss/mmitss/mmitss/build/scripts
+          cd /home/runner/work/mmitss/mmitss/mmitss/build/scripts
           ./setup-build-environment-ci.sh
           ./build-mmitss-ci.sh
       
