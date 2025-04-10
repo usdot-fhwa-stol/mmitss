@@ -47,7 +47,7 @@ else
 	vsp="y"
 	server="n"
 	carma="n"
-	carma2="y"
+	carma2="n"
 	kafka="y"
 
     else
@@ -696,10 +696,11 @@ else
 			baseVersionTag="3.0"
 			# Go to the mmitss directory
 			cd ../..
+			pwd
 			echo "----------------------------------"
 			echo "Building Base image for $PROCESSOR"
 			echo "---------------------------------------"
-				docker build -t mmitssuarizona/mmitss-$PROCESSOR-base:$baseVersionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.base .
+			docker build -t mmitssuarizona/mmitss-$PROCESSOR-base:$baseVersionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.base .
 			echo "Successfully built the base image with tag: $baseVersionTag" 
 			echo "Please note that this new base image will not be used for building other container images unless Dockerfiles for building container images are updated!"
 	    else
