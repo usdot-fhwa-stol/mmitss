@@ -2,7 +2,7 @@
 #    Dockerfile to build an arm platform image for the carma vsp              #
 #    Image name: mmitssuarizona/mmitss-carma-vsp-x86                          #
 #-----------------------------------------------------------------------------#
-FROM mmitssuarizona/mmitss-x86-base:3.0
+FROM usdotfhwastoldev/mmitss-base:develop
 # MAINTAINER Yilin Wang (wang4517@purdue.edu)
 SHELL ["/bin/bash", "-c"]
 

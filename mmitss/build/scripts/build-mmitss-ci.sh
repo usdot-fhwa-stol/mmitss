@@ -637,7 +637,7 @@ else
     echo "------------------------------------------"
 	echo "Successfully built required applications!"
     echo "------------------------------------------"
-	docker="y"
+	docker="n"
     if [ "$docker" = "y" ]; then
 		baseImage="y"
 		if [ "$baseImage" = "y" ]; then
