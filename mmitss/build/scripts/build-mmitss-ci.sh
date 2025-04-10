@@ -694,6 +694,7 @@ else
 		baseImage="y"
 		if [ "$baseImage" = "y" ]; then
 			baseVersionTag="3.0"
+			PROCESSOR="x86"
 			# Go to the mmitss directory
 			cd ../..
 			pwd
