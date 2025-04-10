@@ -21,6 +21,7 @@
 # This script builds all mmitss applications (vehicle, intersection, and common), 
 # and different types of docker images.
 #############################################################################################
+set +e
 
 # Define colors:
 red='\033[0;31m'
