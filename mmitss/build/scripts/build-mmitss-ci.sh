@@ -702,7 +702,7 @@ else
 			# Anyhow, go the mmitss directory
 			cd ../..
 		fi	
-
+		containerImages="n"
 		read -p "Build container images? (y or n): " containerImages
 	    
 		if [ "$containerImages" = "y" ]; then
@@ -711,8 +711,8 @@ else
 			vspImage="n"
 			serverImage="n"
 			carma1Image="n"
-			carma2Image="y"
-			kafkaImage="y"
+			carma2Image="n"
+			kafkaImage="n"
 
 			if [ "$mrpFieldImage" = "y" ]; then
 				echo "---------------------------------------"

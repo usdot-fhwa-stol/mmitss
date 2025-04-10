@@ -25,6 +25,6 @@ jobs:
       - name: Run Build Script
         run: |
           cd /home/runner/work/mmitss/mmitss/mmitss/build/scripts
-          ./setup-build-environment-ci.sh
-          ./build-mmitss-ci.sh
+          sudo ./setup-build-environment-ci.sh
+          sudo ./build-mmitss-ci.sh
       
