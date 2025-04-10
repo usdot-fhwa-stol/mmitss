@@ -17,7 +17,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Build MMITSS Common
         run: |
-          cd mmitss/mmitss/src/common
+          cd /home/runner/work/mmitss/mmitss
+          ls -l
+          cd src/common/
           make linux
       - name: Run Build Script
         run: |
