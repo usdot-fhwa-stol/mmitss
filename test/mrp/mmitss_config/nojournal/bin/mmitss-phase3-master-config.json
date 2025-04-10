@@ -105,6 +105,7 @@
 	"SignalController": {
                 "IpAddress": "10.12.6.5",
                 "NtcipPort": 501,
+				"SNMPCommunity": "administrator", 
                 "TimingPlanUpdateInterval_sec": 600,
                 "NtcipBackupTime_sec": 300,
                 "Vendor": "standardmib",
