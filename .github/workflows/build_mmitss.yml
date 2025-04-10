@@ -1,0 +1,27 @@
+name: Build MRP and VSP 
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+      - 'release/**'
+      - 'feature/**'
+    tags:
+      - '*'
+jobs: 
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Build MMITSS Common
+        run: |
+          cd mmitss/mmitss/src/common
+          make linux
+      - name: Run Build Script
+        run: |
+          cd mmitss/mmitss/build/scripts
+          ./setup-build-environment-ci.sh
+          ./build-mmitss-ci.sh
+      
