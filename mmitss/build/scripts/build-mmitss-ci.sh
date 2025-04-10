@@ -33,6 +33,7 @@ nocolor='\033[0m'
 
 ######################################################################################
 buildSetup="y"
+PROCESSOR="x86"
 
 if [ "$buildSetup" = "n" ]; then
 echo "Please run setup-build-environment.sh script first and then run this script. Exiting now!"
