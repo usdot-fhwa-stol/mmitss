@@ -387,6 +387,33 @@ else
 	    echo "--------------------"
 	    echo "VEHICLE APPLICATIONS"
 	    echo "--------------------"
+		#######################################################################################
+
+	    #######################################################################################
+	    echo "Building Priority Request Generator..."
+	    cd ../../src/vsp/priority-request-generator
+	    # Clean the folder and build for linux.
+	    make clean &> /dev/null
+
+	    if [ "$PROCESSOR" = "arm" ]; then
+		    make linux ARM=1 &> /dev/null
+	    else
+		    make linux &> /dev/null
+	    fi
+
+	    # Indicate Success/Failure of the build
+	    if [ "$?" -eq "0" ]; then
+		    mv M_PriorityRequestGenerator ../../../build/bin/PriorityRequestGenerator/$PROCESSOR/M_PriorityRequestGenerator
+		    echo -e "${green}Successful${nocolor}"
+	    else
+		    echo -e "${red}Failed${nocolor}"
+	    fi
+	    # Remove the .o files to keep the folders clean
+	    rm ./*.o &> /dev/null
+	    # Return back to original directory to go over the process again for another one
+	    cd - &> /dev/null
+	    sleep 1s
+	    #######################################################################################
 
 	    #######################################################################################
 	    echo "Building Light Siren Status Manager..."
