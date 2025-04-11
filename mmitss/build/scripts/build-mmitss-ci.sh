@@ -297,6 +297,7 @@ else
 	    echo "Building Map Spat Broadcaster..."
 	    cd ../../src/mrp/map-spat-broadcaster
 	    # Clean the folder and build for linux.
+      	    python3 -m pip install psutil
 	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed map-spat-broadcaster.py  &> /dev/null
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
