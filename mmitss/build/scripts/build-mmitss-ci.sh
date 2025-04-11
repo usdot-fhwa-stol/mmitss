@@ -22,9 +22,9 @@
 # and different types of docker images.
 #############################################################################################
 set +e
-
+apt update
 apt install -y python3-pip
-python3 -m pip install pyinstaller bistring apscheduler
+python3 -m pip install pyinstaller 
 # Define colors:
 red='\033[0;31m'
 green='\033[0;32m'
@@ -275,6 +275,7 @@ else
 	    #######################################################################################
 	    echo "Building Traffic Controller Interface..."
 	    cd ../../src/mrp/traffic-controller-interface
+     	    python3 -m pip install bitstring apscheduler
 	    # Clean the folder and build for linux.
 	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed traffic-controller-interface.py  &> /dev/null
 	    # Indicate Success/Failure of the build
