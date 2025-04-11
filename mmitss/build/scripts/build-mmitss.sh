@@ -699,7 +699,7 @@ else
 			echo "----------------------------------"
 			echo "Building Base image for $PROCESSOR"
 			echo "---------------------------------------"
-				docker build -t mmitssuarizona/mmitss-$PROCESSOR-base:$baseVersionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.base .
+				docker build -t usdotfhwastoldev/mmitss-base:$baseVersionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.base .
 			echo "Successfully built the base image with tag: $baseVersionTag" 
 			echo "Please note that this new base image will not be used for building other container images unless Dockerfiles for building container images are updated!"
 	    else
@@ -751,15 +751,14 @@ else
 				echo "-----------------------------------------------------"
 				echo "Building CARMA-ROS2 image for $PROCESSOR"
 				echo "-----------------------------------------------------"
-				docker build -t mmitssuarizona/mmitss-carma-mrp-ros2-$PROCESSOR:$versionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.carma_mrp_ros2 .
-                docker build -t mmitssuarizona/mmitss-carma-vsp-ros2-$PROCESSOR:$versionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.carma_vsp_ros2 .
+                docker build -t usdotfhwastoldev/mmitss-vsp:$versionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.carma_vsp_ros2 .
 			fi
 			
 			if [ "$kafkaImage" = "y" ]; then
 				echo "-----------------------------------------------------"
 				echo "Building Kafka-MRP image for $PROCESSOR"
 				echo "-----------------------------------------------------"
-				docker build -t mmitssuarizona/mmitss-carma-mrp-kafka-$PROCESSOR:$versionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.kafka_mrp .
+				docker build -t musdotfhwastoldev/mmitss-mrp:$versionTag -f build/dockerfiles/$PROCESSOR/Dockerfile.kafka_mrp .
 			fi
 
 

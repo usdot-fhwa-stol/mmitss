@@ -1,0 +1,100 @@
+name: Build MRP and VSP 
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+      - 'release/**'
+      - 'feature/**'
+    tags:
+      - '*'
+jobs: 
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Build MMITSS Common
+        run: |
+          cd /home/runner/work/mmitss/mmitss/mmitss
+          sudo ./build/dockerfiles/x86/scripts/carma_time_lib.sh
+          ls -l
+          cd src/common/
+          make linux
+      - name: Run Build Script
+        run: |
+          cd /home/runner/work/mmitss/mmitss/mmitss/build/scripts
+          sudo ./setup-build-environment-ci.sh
+          sudo ./build-mmitss-ci.sh
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+  
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: usdotfhwastoldev/mmitss-base
+          tags: |
+            type=schedule
+            type=ref,event=branch
+            type=ref,event=tag
+            type=ref,event=pr
+            # set latest tag for default branch
+            type=raw,value=latest,enable={{is_default_branch}}
+        
+      - name: Build & push Base
+        uses: docker/build-push-action@v5
+        with:
+          context: /home/runner/work/mmitss/mmitss/mmitss/
+          file: /home/runner/work/mmitss/mmitss/mmitss/build/dockerfiles/x86/Dockerfile.base
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta-mrp
+        uses: docker/metadata-action@v5
+        with:
+          images: usdotfhwastoldev/mmitss-mrp
+          tags: |
+            type=schedule
+            type=ref,event=branch
+            type=ref,event=tag
+            type=ref,event=pr
+            # set latest tag for default branch
+            type=raw,value=latest,enable={{is_default_branch}}
+      
+      - name: Build & push MRP
+        uses: docker/build-push-action@v5
+        with:
+          context: /home/runner/work/mmitss/mmitss/mmitss/
+          file: /home/runner/work/mmitss/mmitss/mmitss/build/dockerfiles/x86/Dockerfile.kafka_mrp
+          push: true
+          tags: ${{ steps.meta-mrp.outputs.tags }}
+          labels: ${{ steps.meta-mrp.outputs.labels }}
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta-vsp
+        uses: docker/metadata-action@v5
+        with:
+          images: usdotfhwastoldev/mmitss-vsp
+          tags: |
+            type=schedule
+            type=ref,event=branch
+            type=ref,event=tag
+            type=ref,event=pr
+            # set latest tag for default branch
+            type=raw,value=latest,enable={{is_default_branch}}
+      - name: Build & push VSP
+        uses: docker/build-push-action@v5
+        with:
+          context: /home/runner/work/mmitss/mmitss/mmitss/
+          file: /home/runner/work/mmitss/mmitss/mmitss/build/dockerfiles/x86/Dockerfile.carma_vsp_ros2
+          push: true
+          tags: ${{ steps.meta-vsp.outputs.tags }}
+          labels: ${{ steps.meta-vsp.outputs.labels }}
+      

@@ -22,7 +22,9 @@
 #include <iostream>
 #include <BasicVehicle.h>
 #include <json/json.h>
-#include "Timestamp.h"
+#include <chrono>
+#include <ctime> // Required for std::time_t
+
 
 using std::cout;
 using std::endl;
@@ -141,9 +143,12 @@ string BasicVehicle::basicVehicle2Json()
     builder["commentStyle"] = "None";
     builder["indentation"] = "";
     std::string jsonString{};
-
-    jsonObject["Timestamp_verbose"] = getVerboseTimestamp();
-    jsonObject["Timestamp_posix"] = getPosixTimestamp();
+    // Timestamp_verbose and Timestamp_posix are not read in json2BasicVehicle.This method
+    // is only called by MsgDecoder. MsgDecoder is not time aware so avoid using Timestamp::posixTimestamp 
+    // or Timestamp::verboseTimestamp since these depend on TimeSync which is not included in transceiver
+    std::time_t currentTime = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+    jsonObject["Timestamp_verbose"] =  static_cast<double>(currentTime)/1000.0;
+    jsonObject["Timestamp_posix"] =  static_cast<double>(currentTime)/1000.0;
     jsonObject["MsgType"] = "BSM";
     jsonObject["BasicVehicle"]["temporaryID"] = temporaryID;
     jsonObject["BasicVehicle"]["secMark_Second"] = secMark_Second;
