@@ -25,7 +25,7 @@ set +e
 
 apt update 
 apt install -y python3-pip
-python3 -m pip install pyinstaller
+python3 -m pip install pyinstaller bistring apscheduler
 # Define colors:
 red='\033[0;31m'
 green='\033[0;32m'
