@@ -275,7 +275,7 @@ else
 	    #######################################################################################
 	    echo "Building Traffic Controller Interface..."
 	    cd ../../src/mrp/traffic-controller-interface
-     	    python3 -m pip install bitstring apscheduler
+     	    python3 -m pip install bitstring apscheduler numpy
 	    # Clean the folder and build for linux.
 	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed traffic-controller-interface.py  &> /dev/null
 	    # Indicate Success/Failure of the build
