@@ -22,6 +22,12 @@ jobs:
           ls -l
           cd src/common/
           make linux
+          cd /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/3rdparty/openssl/
+          tar -xfz /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/3rdparty/openssl/openssl-1.1.1.tar.gz
+          cd openssl-1.1.1/
+          ./configure
+          make
+          make install
       - name: Run Build Script
         run: |
           cd /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/build/scripts
