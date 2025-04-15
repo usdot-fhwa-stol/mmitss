@@ -15,9 +15,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - name: Build MMITSS Common
         run: |
-        
           cd /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss
           sudo ./build/dockerfiles/x86/scripts/carma_time_lib.sh
           ls -l
