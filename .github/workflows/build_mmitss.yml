@@ -23,7 +23,8 @@ jobs:
           cd src/common/
           make linux
           cd /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/3rdparty/openssl/
-          tar -xfz /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/3rdparty/openssl/openssl-1.1.1.tar.gz
+          ls
+          tar -xfz openssl-1.1.1.tar.gz
           cd openssl-1.1.1/
           ./configure
           make
