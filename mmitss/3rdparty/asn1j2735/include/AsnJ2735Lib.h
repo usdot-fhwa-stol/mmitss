@@ -18,6 +18,6 @@ namespace AsnJ2735Lib
 	size_t encode_msgFrame(const Frame_element_t& dsrcFrameIn, uint8_t* buf, size_t size);
 	/// UPER decoding functions
 	size_t decode_msgFrame(const uint8_t* buf, size_t size, Frame_element_t& dsrcFrameOut);
-};
+}
 
 #endif

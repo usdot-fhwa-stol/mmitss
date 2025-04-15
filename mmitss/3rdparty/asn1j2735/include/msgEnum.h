@@ -1,6 +1,6 @@
 //*************************************************************************************************************
 //
-// © 2016-2019 Regents of the University of California on behalf of the University of California at Berkeley
+// ï¿½ 2016-2019 Regents of the University of California on behalf of the University of California at Berkeley
 //       with rights granted for USDOT OSADP distribution with the ECL-2.0 open source license.
 //
 //*************************************************************************************************************
@@ -68,7 +68,7 @@ namespace MsgEnum
 		if ((state == MsgEnum::phaseState::permissiveYellow) || (state == MsgEnum::phaseState::protectedYellow) || (state == MsgEnum::phaseState::flashingYellow))
 			return(MsgEnum::phaseColor::yellow);
 		return(MsgEnum::phaseColor::dark);
-	};
+	}
 }
 
 #endif

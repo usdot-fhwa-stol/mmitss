@@ -25,18 +25,17 @@ class Publisher : public rclcpp::Node
     {
         Json::Value jsonObject_config;
         std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
-        string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
+        std::string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
         Json::CharReaderBuilder builder;
-        Json::Reader reader;
-        reader.parse(configJsonString.c_str(), jsonObject_config);
+        JSONCPP_STRING err;
+        const std::unique_ptr<Json::CharReader> reader(builder.newCharReader());
+        reader->parse(configJsonString.c_str(), configJsonString.c_str()+configJsonString.length(),  &jsonObject_config, &err);
         UdpSocket encoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt()));
         TransceiverEncoder encoder;
         
         char receiveBuffer[5120];
         const string LOCALHOST = jsonObject_config["HostIp"].asString();
-        const int sourceDsrcDevicePort = jsonObject_config["PortNumber"]["DsrcImmediateForwarder"].asInt();
         const int dataCollectorPortNo = static_cast<short unsigned int>(jsonObject_config["PortNumber"]["DataCollector"].asInt());
-        int mapMsgCount{};
         string applicationPlatform = encoder.getApplicationPlatform();
         int msgType{};
         carma_driver_msgs::msg::ByteArray msg;

@@ -6,6 +6,27 @@
 
 InboundMsgListener::InboundMsgListener()
 {
+    Json::Value jsonObject_config;
+    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
+    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
+    Json::CharReaderBuilder builder;
+    JSONCPP_STRING err;
+    const std::unique_ptr<Json::CharReader> reader(builder.newCharReader());
+    reader->parse(configJsonString.c_str(), configJsonString.c_str()+configJsonString.length(),  &jsonObject_config, &err);
+    hostIp = jsonObject_config["HostIp"].asString();
+    prgTimeSyncPort = jsonObject_config["TimeSyncPort"]["PriorityRequestGenerator"].asInt();
+    mtPort = jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageDecoder"].asInt();
+    hmiControllerIp = jsonObject_config["HMIControllerIP"].asString();
+    mdIp = jsonObject_config["MessageDistributorIP"].asString();
+    dcPort = jsonObject_config["PortNumber"]["DataCollector"].asInt();
+    prgPort = jsonObject_config["PortNumber"]["PriorityRequestGenerator"].asInt();
+    peerDecoding = jsonObject_config["PeerDataDecoding"].asBool();
+    RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "InboundMsgListener::InboundMsgListener hostIp: %s, prgTimeSyncPort: %d, mtPort: %d, hmiControllerIp: %s, mdIp: %s", 
+        hostIp.c_str(), 
+        prgTimeSyncPort,
+        mtPort,
+        hmiControllerIp.c_str(),
+        mdIp.c_str());
 }
 
 InboundMsgListener::~InboundMsgListener()
@@ -14,99 +35,81 @@ InboundMsgListener::~InboundMsgListener()
 
 void InboundMsgListener::inboundClockCallback( const rosgraph_msgs::msg::Clock::SharedPtr msg )
 {
-    RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "InboundMsgListener::inboundClockCallback msg: %d.%d", msg->clock.sec, msg->clock.nanosec);
-    Json::Value jsonObject_config;
+    RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "InboundMsgListener::inboundClockCallback msg: %d.%d", 
+        msg->clock.sec, 
+        msg->clock.nanosec);
     std::string time_sync = decodeClock(msg);
-    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
-    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
-    Json::Reader reader;
-    string errors{};
-    reader.parse(configJsonString.c_str(), jsonObject_config);
-    UdpSocket decoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageDecoder"].asInt()));
+    
+    UdpSocket decoderSocket(static_cast<unsigned short>(mtPort));
     RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "InboundMsgListener::inboundClockCallback time_sync: %s to %s:%d", 
         time_sync.c_str(), 
-        jsonObject_config["HostIp"].asString().c_str(), 
-        jsonObject_config["TimeSyncPort"]["PriorityRequestGenerator"].asInt());
-    decoderSocket.sendData(jsonObject_config["HostIp"].asString(),static_cast<short unsigned int>(jsonObject_config["TimeSyncPort"]["PriorityRequestGenerator"].asInt()),time_sync);
+        hostIp.c_str(), 
+        prgTimeSyncPort);
+    decoderSocket.sendData(hostIp,static_cast<unsigned short>(prgTimeSyncPort),time_sync);
     decoderSocket.closeSocket();
 }
 void InboundMsgListener::inboundMsgCallback(const carma_driver_msgs::msg::ByteArray::SharedPtr msg)
 {
     
-    Json::Value jsonObject_config;
-    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
-    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
-    Json::Reader reader;
-    string errors{};
-    reader.parse(configJsonString.c_str(), jsonObject_config);
-    UdpSocket decoderSocket(static_cast<short unsigned int>(jsonObject_config["PortNumber"]["MessageTransceiver"]["MessageDecoder"].asInt())); 
-
+    RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "InboundMsgListener::inboundMsgCallback msgType: %s", 
+        msg->message_type.c_str());
     std::string msgType = msg->message_type;
-    string receiverIP = getIP(msgType); 
-    short unsigned int receivingPort = getPort(msgType);
-    string messageString = decodeType(msg->content,msgType);
-    decoderSocket.sendData(receiverIP,receivingPort,messageString);
-    decoderSocket.closeSocket();
+
+    if (msgType == "MAP" || msgType=="SRM" || msgType == "SSM" || msgType == "BSM") {
+        UdpSocket decoderSocket(static_cast<unsigned short>(mtPort)); 
+
+        string receiverIP = getIP(msgType); 
+        short unsigned int receivingPort = getPort(msgType);
+        string messageString = decodeType(msg->content,msgType);
+        decoderSocket.sendData(receiverIP,receivingPort,messageString);
+        decoderSocket.closeSocket();
+    }
+    else {
+        RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "InboundMsgListener::inboundMsgCallback msgType: %s not supported", 
+            msg->message_type.c_str());
+    }
 }
-std::string InboundMsgListener::getIP(std::string msgType)
+std::string InboundMsgListener::getIP(const std::string &msgType)
 
 {
-    Json::Value jsonObject_config;
-    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
-    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
-    Json::Reader reader;
-    string errors{};
-    reader.parse(configJsonString.c_str(), jsonObject_config);
-    const string LOCALHOST = jsonObject_config["HostIp"].asString();
-    const string HMIControllerIP = jsonObject_config["HMIControllerIP"].asString();
-    const string messageDistributorIP = jsonObject_config["MessageDistributorIP"].asString();
-
     if (msgType == "MAP"||msgType=="SRM"||msgType == "SSM")
     { 
-        return LOCALHOST;
+        return hostIp;
     }
-    else if (msgType =="BSM")
+    else if (msgType == "BSM")
     {
-        return HMIControllerIP;
+        // For BSM and SPaT messages, send to HMIControllerIP
+        return hmiControllerIp;
+    }
+    else {
+        throw std::invalid_argument("Invalid message type " + msgType);
     }
     
 }
 
 
 
-short unsigned int InboundMsgListener::getPort(std::string msgType)
+unsigned short InboundMsgListener::getPort(const std::string &msgType)
 {
-    Json::Value jsonObject_config;
-    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
-    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
-    Json::Reader reader;
-    string errors{};
-    reader.parse(configJsonString.c_str(), jsonObject_config);
-    const int dataCollectorPortNo = (jsonObject_config["PortNumber"]["DataCollector"]).asInt();
-    const int priorityReqGenPortNo = (jsonObject_config["PortNumber"]["PriorityRequestGenerator"]).asInt();
-    const int vehicleHmiPortNo = (jsonObject_config["PortNumber"]["HMIController"]).asInt();
-    const int messageDistributorPort = (jsonObject_config["PortNumber"]["MessageDistributor"]).asInt();
     
-    if (msgType == "MAP")
+    
+    if (msgType =="BSM"||msgType=="SRM"||msgType == "SSM")
+    {
+        return static_cast<unsigned short>(dcPort);
+    }
+    else if (msgType == "MAP")
     { 
-        return static_cast<short unsigned int>(priorityReqGenPortNo);
+        // For MAP messages, send to the priority request generator
+        return static_cast<unsigned short>(prgPort);
     }
-    else if (msgType =="BSM"||msgType=="SRM"||msgType == "SSM")
-    {
-        return static_cast<short unsigned int>(dataCollectorPortNo);
+    else {
+        throw std::invalid_argument("Invalid message type " + msgType);
     }
     
 }
 
-std::string InboundMsgListener::decodeType(std::vector<uint8_t> msgContent,std::string msgType)
+std::string InboundMsgListener::decodeType(const std::vector<uint8_t> &msgContent,const std::string &msgType)
 {
-    Json::Value jsonObject_config;
-    std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
-    string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
-    Json::Reader reader;
-    string errors{};
-    reader.parse(configJsonString.c_str(), jsonObject_config);
-    const bool peerDataDecoding = jsonObject_config["PeerDataDecoding"].asBool();
     TransceiverDecoder decoder;
     if (msgType == "MAP")
     {
@@ -122,7 +125,7 @@ std::string InboundMsgListener::decodeType(std::vector<uint8_t> msgContent,std::
     }
     else if (msgType == "SRM")
     {
-        if (peerDataDecoding)
+        if (peerDecoding)
         {
             string srmJsonString = decoder.srmDecoder(msgContent);
             return srmJsonString;
@@ -130,12 +133,18 @@ std::string InboundMsgListener::decodeType(std::vector<uint8_t> msgContent,std::
     }
     else if (msgType == "SSM")
     {
-        if (peerDataDecoding)
+        if (peerDecoding)
         {
             string ssmJsonString = decoder.ssmDecoder(msgContent);
             return ssmJsonString;
         } 
     }
+    else {
+        throw std::invalid_argument("Invalid message type " + msgType);
+    }
+    // If message type is SSM or SRM but peerDecoding is false, return empty string
+    return "";
+    
 }
 
 std::string InboundMsgListener::decodeClock(const rosgraph_msgs::msg::Clock::SharedPtr msg)

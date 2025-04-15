@@ -2,11 +2,12 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
 	"name": "carma_ros_containers_dev",
-	"build": {
-		"dockerfile": "../mmitss/build/dockerfiles/x86/Dockerfile.kafka_mrp",
-		"context": "../mmitss/"
+	"image": "usdotfhwastoldev/mmitss-vsp:develop",
+	// "build": {
+	// 	"dockerfile": "../mmitss/build/dockerfiles/x86/Dockerfile.kafka_mrp",
+	// 	"context": "../mmitss/"
 
-	},
+	// },
 	"workspaceMount": "source=${localWorkspaceFolder}/mmitss/,target=/mmitss/tmp,type=bind",
 	"workspaceFolder": "/mmitss/tmp"
 

@@ -34,10 +34,9 @@ TransceiverDecoder::TransceiverDecoder()
     std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
     string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
     Json::CharReaderBuilder builder;
-    Json::CharReader * reader = builder.newCharReader();
-    string errors{};
-    reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject, &errors);        
-    delete reader;
+    JSONCPP_STRING err;
+    const std::unique_ptr<Json::CharReader> reader(builder.newCharReader());
+    reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject, &err);        
 
     applicationPlatform = (jsonObject["ApplicationPlatform"]).asString();
     intersectionName = jsonObject["IntersectionName"].asString();
@@ -78,10 +77,9 @@ string TransceiverDecoder::createJsonStringOfMapPayload(string mapPayload)
     std::ifstream configJson("/nojournal/bin/mmitss-phase3-master-config.json");
     string configJsonString((std::istreambuf_iterator<char>(configJson)), std::istreambuf_iterator<char>());
     Json::CharReaderBuilder builder;
-    Json::CharReader * reader = builder.newCharReader();
-    string errors{};
-    reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &errors);        
-    delete reader;
+    JSONCPP_STRING err;
+    const std::unique_ptr<Json::CharReader> reader(builder.newCharReader());
+    reader->parse(configJsonString.c_str(), configJsonString.c_str() + configJsonString.size(), &jsonObject_config, &err);        
 
     Json::Value jsonObject;
 	Json::StreamWriterBuilder writeBuilder;
@@ -99,8 +97,8 @@ string TransceiverDecoder::createJsonStringOfMapPayload(string mapPayload)
     intersection_Name = "Map";
 
     /// instance class LocAware (Map Engine)
-    LocAware *plocAwareLib = new LocAware(fmap, singleFrame);
-    intersectionID = plocAwareLib->getIntersectionIdByName(intersection_Name);
+    LocAware plocAwareLib(fmap, singleFrame);
+    intersectionID = plocAwareLib.getIntersectionIdByName(intersection_Name);
     mapName = "Map" + std::to_string(intersectionID);
     jsonObject["MsgType"] = "MAP";
     jsonObject["IntersectionName"] = mapName;
@@ -109,7 +107,6 @@ string TransceiverDecoder::createJsonStringOfMapPayload(string mapPayload)
     jsonString = Json::writeString(writeBuilder, jsonObject);
 
     remove(deleteFileName.c_str());
-    delete plocAwareLib;
 
     mapMsgCount = mapMsgCount + 1;
 

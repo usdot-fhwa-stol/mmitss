@@ -1,6 +1,6 @@
 //*************************************************************************************************************
 //
-// © 2016-2019 Regents of the University of California on behalf of the University of California at Berkeley
+// ï¿½ 2016-2019 Regents of the University of California on behalf of the University of California at Berkeley
 //       with rights granted for USDOT OSADP distribution with the ECL-2.0 open source license.
 //
 //*************************************************************************************************************
@@ -13,7 +13,7 @@
 namespace DsrcConstants
 {
 	static const size_t   maxMsgSize  = 2000;
-	static const double   ellipsoid_r = 6371008.7714;       //earth’s mean radius in meter
+	static const double   ellipsoid_r = 6371008.7714;       //earth's mean radius in meter
 	static const double   ellipsoid_a = 6378137.0;          //Semi-major axis, in meters (WGS84)
 	static const double   ellipsoid_e = 0.0818191908426215; //First eccentricity (WGS84)
 	static const double   rad2degree  = 57.2957795;
@@ -27,21 +27,21 @@ namespace DsrcConstants
 	static const double   unitYawrate = 0.01;
 
 	static inline double deg2rad(const double& d)
-		{return(d / rad2degree);};
+		{return(d / rad2degree);}
 	static inline double rad2deg(const double& d)
-		{return(d * rad2degree);};
+		{return(d * rad2degree);}
 	template<class T>
 	static inline double damega2unit(const T& d)
-		{return(static_cast<double>(d) / damega);};
+		{return(static_cast<double>(d) / damega);}
 	template<class T>
 	static inline T unit2damega(const double& d)
-		{return(static_cast<T>(round(d * damega)));};
+		{return(static_cast<T>(round(d * damega)));}
 	template<class T>
 	static inline double hecto2unit(const T& d)
-		{return(static_cast<double>(d) / hecto);};
+		{return(static_cast<double>(d) / hecto);}
 	template<class T>
 	static inline T unit2hecto(const double& d)
-		{return(static_cast<T>(round(d * hecto)));};
+		{return(static_cast<T>(round(d * hecto)));}
 	template<class T>
 	static inline double deca2unit(const T& d)
 		{return(static_cast<double>(d) / deca);}
@@ -75,6 +75,6 @@ namespace DsrcConstants
 	template<class T>
 	static inline double unit2yawrate(const T& d)
 		{return(static_cast<double>(d) * unitYawrate);}
-};
+}
 
 #endif
