@@ -27,8 +27,8 @@ jobs:
           tar -xzf openssl-1.1.1.tar.gz
           cd openssl-1.1.1/
           ./config
-          make
-          make install
+          sudo make
+          sudo make install
       - name: Run Build Script
         run: |
           cd /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/build/scripts
