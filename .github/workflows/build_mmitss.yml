@@ -11,7 +11,7 @@ on:
       - '*'
 jobs: 
   build:
-    runs-on: [selfhosted,ubuntu-20.04,tim-tsp-runner]
+    runs-on: [self-hosted, Linux, X64]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
