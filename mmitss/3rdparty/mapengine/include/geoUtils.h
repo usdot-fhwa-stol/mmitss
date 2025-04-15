@@ -1,6 +1,6 @@
 //*************************************************************************************************************
 //
-// © 2016-2019 Regents of the University of California on behalf of the University of California at Berkeley
+// ï¿½ 2016-2019 Regents of the University of California on behalf of the University of California at Berkeley
 //       with rights granted for USDOT OSADP distribution with the ECL-2.0 open source license.
 //
 //*************************************************************************************************************
@@ -282,6 +282,6 @@ namespace GeoUtils
 	int isLeft(const GeoUtils::point2D_t& p0,const GeoUtils::point2D_t& p1,const GeoUtils::point2D_t& p2);
 	std::vector<GeoUtils::point2D_t> convexHullAndrew(std::vector<GeoUtils::point2D_t>& P);
 	uint16_t getTime2Go(const double& dist2go, const double& speed_1, const double speed_2, const double& alpha);
-};
+}
 
 #endif

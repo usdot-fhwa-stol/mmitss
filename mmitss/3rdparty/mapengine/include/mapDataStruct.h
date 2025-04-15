@@ -1,6 +1,6 @@
 //*************************************************************************************************************
 //
-// © 2016-2019 Regents of the University of California on behalf of the University of California at Berkeley
+// ï¿½ 2016-2019 Regents of the University of California on behalf of the University of California at Berkeley
 //       with rights granted for USDOT OSADP distribution with the ECL-2.0 open source license.
 //
 //*************************************************************************************************************
@@ -124,6 +124,6 @@ namespace NmapData
 		std::vector<uint8_t>  mapPayload;
 		std::vector<uint32_t> mpConnIntersections;
 	};
-};
+}
 
 #endif
