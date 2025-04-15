@@ -31,6 +31,7 @@ void OutboundMsgListener::outboundMsgCallback(const carma_driver_msgs::msg::Byte
     
     // UdpSocket decoderSocket(jsonObject_config["PortNumber"]["HostBsmDecoder"].asUInt());
     std::string msgType = msg->message_type;
+    std::cout << "msg type is " << msgType << std::endl;
     string receiverIP = getIP(msgType); 
     short unsigned int receivingPort = getPort(msgType);
     string messageString = decodeType(msg->content,msgType);
@@ -51,7 +52,7 @@ std::string OutboundMsgListener::getIP(std::string msgType)
     const string HMIControllerIP = jsonObject_config["HMIControllerIP"].asString();
     const string messageDistributorIP = jsonObject_config["MessageDistributorIP"].asString();
 
-    if (msgType == "MAP"||msgType=="SRM"||msgType == "SSM"||msgType =="BSM")
+    if (msgType == "MAP"||msgType=="SRM"||msgType == "SSM"||msgType =="BSM"||msgType =="SPAT")
     { 
         return LOCALHOST;
     }
@@ -83,6 +84,10 @@ short unsigned int OutboundMsgListener::getPort(std::string msgType)
     else if (msgType=="SRM"||msgType == "SSM")
     {
         return static_cast<short unsigned int>(dataCollectorPortNo);
+    }
+    else if (msgType=="SPAT")
+    {
+        return static_cast<short unsigned int>(vehicleHmiPortNo);
     }   
 }
 
@@ -123,6 +128,13 @@ std::string OutboundMsgListener::decodeType(std::vector<uint8_t> msgContent,std:
             string ssmJsonString = decoder.ssmDecoder(msgContent);
             return ssmJsonString;
         } 
+    }
+    else if (msgType == "SPAT")
+    {
+        {
+            string spatJsonString = decoder.spatDecoder(msgContent);
+            return spatJsonString;
+        }
     }
 }
 //     if (msgType == "BSM")
