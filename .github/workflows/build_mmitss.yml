@@ -17,14 +17,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Build MMITSS Common
         run: |
-          cd /home/runner/work/mmitss/mmitss/mmitss
+        
+          cd /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss
           sudo ./build/dockerfiles/x86/scripts/carma_time_lib.sh
           ls -l
           cd src/common/
           make linux
       - name: Run Build Script
         run: |
-          cd /home/runner/work/mmitss/mmitss/mmitss/build/scripts
+          cd /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/build/scripts
           sudo ./setup-build-environment-ci.sh
           sudo ./build-mmitss-ci.sh
       - name: Set up Docker Buildx
@@ -51,8 +52,8 @@ jobs:
       - name: Build & push Base
         uses: docker/build-push-action@v5
         with:
-          context: /home/runner/work/mmitss/mmitss/mmitss/
-          file: /home/runner/work/mmitss/mmitss/mmitss/build/dockerfiles/x86/Dockerfile.base
+          context: /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/
+          file: /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/build/dockerfiles/x86/Dockerfile.base
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -72,8 +73,8 @@ jobs:
       - name: Build & push MRP
         uses: docker/build-push-action@v5
         with:
-          context: /home/runner/work/mmitss/mmitss/mmitss/
-          file: /home/runner/work/mmitss/mmitss/mmitss/build/dockerfiles/x86/Dockerfile.kafka_mrp
+          context: /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/
+          file: /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/build/dockerfiles/x86/Dockerfile.kafka_mrp
           push: true
           tags: ${{ steps.meta-mrp.outputs.tags }}
           labels: ${{ steps.meta-mrp.outputs.labels }}
@@ -92,8 +93,8 @@ jobs:
       - name: Build & push VSP
         uses: docker/build-push-action@v5
         with:
-          context: /home/runner/work/mmitss/mmitss/mmitss/
-          file: /home/runner/work/mmitss/mmitss/mmitss/build/dockerfiles/x86/Dockerfile.carma_vsp_ros2
+          context: /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/
+          file: /home/ubuntu/actions-runner/_work/mmitss/mmitss/mmitss/build/dockerfiles/x86/Dockerfile.carma_vsp_ros2
           push: true
           tags: ${{ steps.meta-vsp.outputs.tags }}
           labels: ${{ steps.meta-vsp.outputs.labels }}
