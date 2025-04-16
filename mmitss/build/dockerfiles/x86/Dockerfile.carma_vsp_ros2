@@ -18,6 +18,8 @@ WORKDIR /mmitss/tmp
 COPY . /mmitss/tmp
 RUN ls
 
+WORKDIR /mmitss/map
+
 WORKDIR /mmitss/script
 
 COPY build/dockerfiles/x86/scripts/build_vsp_ros2_transceivers.sh /mmitss/script
