@@ -55,6 +55,7 @@ SnmpEngine::SnmpEngine(std::string ip, int port)
 
     logging = jsonObject_config["Logging"].asBool();
     consoleOutput = jsonObject_config["ConsoleOutput"].asBool();
+    std::string community = jsonObject_config["SignalController"]["SNMPCommunity"].asString();
 
     if(logging==true)
     {
@@ -106,9 +107,8 @@ SnmpEngine::SnmpEngine(std::string ip, int port)
     session.version = SNMP_VERSION_1;
    
     // Establish the session parameters.
-    unsigned char comm[] = "public";
-    session.community = comm;
-    session.community_len = strlen((const char *)session.community);  
+    session.community = (unsigned char *)community.c_str();
+    session.community_len = community.length();  
 
     // After we have established the session, we then need to open it. 
     // Opening it returns a pointer to another session that we should use for all our future calls: 
