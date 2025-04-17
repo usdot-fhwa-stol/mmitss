@@ -94,14 +94,20 @@ class MMITSSProducer(Producer):
   
     def encodeSPaT(self,msg):
         moy = msg["Spat"]["minuteOfYear"]
+        # Encode SPaT following J2735
         jsonObject = {"time_stamp":moy,"name":"","intersections":[]}
         id = msg["Spat"]["IntersectionState"]["intersectionID"]
         revision = msg["Spat"]["msgCnt"]
         status = msg["Spat"]["status"]
-        states = [{"signal_group":signal["phaseNo"],"state_time_speed":[{"event_state":signal["currState"],"timing":{"start_time":signal["startTime"],\
-                                                                                                                     "min_end_time":signal["minEndTime"]}}]} for signal in msg["Spat"]["phaseState"]]
+        states = [{"movement_name":"",
+                    "signal_group":signal["phaseNo"],
+                    "state_time_speed":[{"event_state":signal["currState"],\
+                                            "timing":{"start_time":signal["startTime"],\
+                                            "min_end_time":signal["minEndTime"],\
+                                            "confidence":0}}]} for signal in msg["Spat"]["phaseState"]]
         jsonObject["intersections"].append(\
-            [{"id":id,"revision":revision,"status":status,"states":states}]
+            [{"name":"","id":id,"revision":revision,"status":status,
+            "moy":moy,"time_stamp":"","states":states}]
         )
         
         jsonObject= json.dumps(jsonObject)
