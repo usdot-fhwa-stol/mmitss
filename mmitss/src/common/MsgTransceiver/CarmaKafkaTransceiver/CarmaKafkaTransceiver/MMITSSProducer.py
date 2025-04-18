@@ -101,7 +101,7 @@ class MMITSSProducer(Producer):
         status = msg["Spat"]["status"]
         states = [{"movement_name":"",
                     "signal_group":signal["phaseNo"],
-                    "state_time_speed":[{"event_state":signal["currState"],\
+                    "state_time_speed":[{"event_state":self.event_state_convert(signal["currState"]),\
                                             "timing":{"start_time":signal["startTime"],\
                                             "min_end_time":signal["minEndTime"],\
                                             "confidence":0}}]} for signal in msg["Spat"]["phaseState"]]
@@ -115,6 +115,19 @@ class MMITSSProducer(Producer):
         
         return msg 
     
+    def event_state_convert(self, currState):
+        Mapping = {'red':3,
+                    'yellow':8,
+                    'green':6,
+                    'permissive_yellow':7,
+                    'do_not_walk':3,
+                    'ped_clear':8,
+                    'walk':6}
+        if currState in Mapping.keys():
+            return Mapping[currState]
+        else:
+            raise ValueError('currState in SPaT can not find matched value. @CarmaKafkaTransceiver.') 
+
     def encodeSSM(self,msg):
         msg = json.dumps(msg)
         return msg 
