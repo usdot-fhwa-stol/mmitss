@@ -107,7 +107,7 @@ class MMITSSProducer(Producer):
                                             "confidence":0}}]} for signal in msg["Spat"]["phaseState"]]
         jsonObject["intersections"].append(\
             {"name":"","id":id,"revision":revision,"status":status,
-            "moy":moy,"time_stamp":"","states":states}
+            "moy":moy,"time_stamp":moy,"states":states}
         )
         
         jsonObject= json.dumps(jsonObject)
