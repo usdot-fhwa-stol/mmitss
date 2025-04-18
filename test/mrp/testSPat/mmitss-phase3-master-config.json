@@ -27,10 +27,6 @@
 			"MessageEncoder": 10003,
 			"MessageDecoder": 10002
 		},
-		"CarmaKafkaTransceiver": {
-			"MapSpatProducer": 10004,
-			"SSMProducer": 10003
-		},
 		"MessageDistributor": 5000,
 		"RsmDecoder": 10006,
 		"OBUBSMReceiver": 10005,
@@ -58,15 +54,6 @@
 		"LightSirenStatusManager": 20025,
 		"PeerToPeerPriority": 20026,
 		"TimePhaseDiagramTool": 20027
-	},
-	"TimeSyncDebug" : false,
-	"TimeSyncPort":{
-		"PriorityRequestServer": 30001,
-		"PriorityRequestSolver": 30002,
-		"MapSPaTBroadcaster": 30003,
-		"TrafficControllerInterface": 30004,
-		"SignalCoordination": 30006,
-		"SnmpEngine": 30007	
 	},
 	"psid": {
 		"map": "8002",
@@ -103,21 +90,20 @@
 		"bsm": "CONT"
 	},
 	"SignalController": {
-                "IpAddress": "10.12.6.5",
-                "NtcipPort": 501,
-				"SNMPCommunity": "administrator", 
-                "TimingPlanUpdateInterval_sec": 600,
-                "NtcipBackupTime_sec": 300,
-                "Vendor": "standardmib",
-                "TimingPlanMib": "/nojournal/bin/StandardMib_Siemens.py",
-                "InactiveVehPhases": [],
-                "InactivePedPhases": [],
-                "SplitPhases": {
-                        "1": 6,
-                        "3": 8,
-                        "5": 2,
-                        "7": 4
-                },
+		"IpAddress": "10.12.6.104",
+		"NtcipPort": 502,
+		"TimingPlanUpdateInterval_sec": 600,
+		"NtcipBackupTime_sec": 300,
+		"Vendor": "Econolite",
+		"TimingPlanMib": "/nojournal/bin/EconoliteMib.py",
+		"InactiveVehPhases": [],
+		"InactivePedPhases": [],
+		"SplitPhases": {
+			"1": 6,
+			"3": 8,
+			"5": 2,
+			"7": 4
+		},
 		"PermissiveEnabled": {
 			"1": true,
 			"3": true,
