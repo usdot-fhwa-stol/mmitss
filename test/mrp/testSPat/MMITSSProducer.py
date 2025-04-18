@@ -1,6 +1,8 @@
 from confluent_kafka import Producer,KafkaException
 import json
 import socket
+import logging
+import time
 
 
 class MMITSSProducer(Producer):
@@ -37,6 +39,12 @@ class MMITSSProducer(Producer):
         broker = config["BOOTSTRAP_SERVER"]
         producerConfig = {
             'bootstrap.servers': broker
+            # 'socket.timeout.ms': 500,       # Socket operation timeout (e.g., connection)
+            # 'request.timeout.ms': 500,      # Request timeout
+            # 'message.timeout.ms': 500,     # Message timeout (5 minutes)
+            # 'transaction.timeout.ms': 1500,  # Transaction timeout
+            # 'reconnect.backoff.max.ms': 500, # Maximum reconnect backoff
+            # 'delivery.timeout.ms': 500
           
         }   
         return producerConfig,topics
@@ -46,7 +54,10 @@ class MMITSSProducer(Producer):
        
         # Configure socket:
         hostIp = self.config["HostIp"]
-        receivingPort = self.config["PortNumber"]["MessageTransceiver"]["MessageEncoder"]
+        if self.kind == "SPaT":
+            receivingPort = self.config["PortNumber"]["CarmaKafkaTransceiver"]["MapSpatProducer"]
+        elif self.kind == "SSM":
+            receivingPort = self.config["PortNumber"]["CarmaKafkaTransceiver"]["SSMProducer"]
         
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.bind((hostIp,receivingPort))
@@ -63,7 +74,10 @@ class MMITSSProducer(Producer):
                 elif msg["MessageType"] == "SSM":
                     msg = self.encodeSSM(msg)
                 try:
-                    self.produce(self.topics, msg)
+                    logging.info(msg)
+            
+                    tmp = self.produce(self.topics, msg)
+                    logging.info("msg produced")
                     self.flush()
                     messageCount+=1
                     if debug == True:
@@ -72,22 +86,28 @@ class MMITSSProducer(Producer):
                     print(f"Error producing message: {e}")
             except:
                 pass
-            if KeyboardInterrupt:
-                break
-        
-        s.close()
+            time.sleep(0.1)
+            
+        print("here")
+        # s.close()
         
   
     def encodeSPaT(self,msg):
         moy = msg["Spat"]["minuteOfYear"]
+        # Encode SPaT following J2735
         jsonObject = {"time_stamp":moy,"name":"","intersections":[]}
         id = msg["Spat"]["IntersectionState"]["intersectionID"]
         revision = msg["Spat"]["msgCnt"]
         status = msg["Spat"]["status"]
-        states = [{"signal_group":signal["phaseNo"],"state_time_speed":[{"event_state":signal["currState"],"timing":{"start_time":signal["startTime"],\
-                                                                                                                     "min_end_time":signal["minEndTime"]}}]} for signal in msg["Spat"]["phaseState"]]
+        states = [{"movement_name":"",
+                    "signal_group":signal["phaseNo"],
+                    "state_time_speed":[{"event_state":self.event_state_convert(signal["currState"]),\
+                                            "timing":{"start_time":signal["startTime"],\
+                                            "min_end_time":signal["minEndTime"],\
+                                            "confidence":0}}]} for signal in msg["Spat"]["phaseState"]]
         jsonObject["intersections"].append(\
-            [{"id":id,"revision":revision,"status":status,"states":states}]
+            [{"name":"","id":id,"revision":revision,"status":status,
+            "moy":moy,"time_stamp":"","states":states}]
         )
         
         jsonObject= json.dumps(jsonObject)
@@ -95,6 +115,19 @@ class MMITSSProducer(Producer):
         
         return msg 
     
+    def event_state_convert(self, currState):
+        Mapping = {'red':3,
+                    'yellow':8,
+                    'green':6,
+                    'permissive_yellow':7,
+                    'do_not_walk':3,
+                    'ped_clear':8,
+                    'walk':6}
+        if currState in Mapping.keys():
+            return Mapping[currState]
+        else:
+            raise ValueError('currState in SPaT can not find matched value. @CarmaKafkaTransceiver.') 
+
     def encodeSSM(self,msg):
         msg = json.dumps(msg)
         return msg 
