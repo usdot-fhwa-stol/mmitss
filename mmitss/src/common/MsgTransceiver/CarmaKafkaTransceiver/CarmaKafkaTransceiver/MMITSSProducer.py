@@ -94,8 +94,9 @@ class MMITSSProducer(Producer):
   
     def encodeSPaT(self,msg):
         moy = msg["Spat"]["minuteOfYear"]
+        msMin = msg["Spat"]["msOfMinute"]
         # Encode SPaT following J2735
-        jsonObject = {"time_stamp":moy,"name":"","intersections":[]}
+        jsonObject = {"time_stamp":msMin,"name":"","intersections":[]}
         id = msg["Spat"]["IntersectionState"]["intersectionID"]
         revision = msg["Spat"]["msgCnt"]
         status = int(msg["Spat"]["status"],2) # convert a binary string into integer 
@@ -107,7 +108,7 @@ class MMITSSProducer(Producer):
                                             "confidence":0}}]} for signal in msg["Spat"]["phaseState"]]
         jsonObject["intersections"].append(\
             {"name":"","id":id,"revision":revision,"status":status,
-            "moy":moy,"time_stamp":moy,"states":states}
+            "moy":moy,"time_stamp":msMin,"states":states}
         )
         
         jsonObject= json.dumps(jsonObject)
