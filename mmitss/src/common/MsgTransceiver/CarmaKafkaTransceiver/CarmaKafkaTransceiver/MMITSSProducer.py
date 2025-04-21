@@ -96,7 +96,7 @@ class MMITSSProducer(Producer):
         moy = msg["Spat"]["minuteOfYear"]
         msMin = msg["Spat"]["msOfMinute"]
         # Encode SPaT following J2735
-        jsonObject = {"time_stamp":msMin,"name":"","intersections":[]}
+        jsonObject = {"time_stamp":moy,"name":"","intersections":[]}
         id = msg["Spat"]["IntersectionState"]["intersectionID"]
         revision = msg["Spat"]["msgCnt"]
         status = int(msg["Spat"]["status"],2) # convert a binary string into integer 
