@@ -77,12 +77,12 @@ else
 	    	echo "Building Message Encoder..."
 	    	cd ../../src/common/MsgTransceiver/MsgEncoder
 	    	# Clean the folder and build for linux.
-	    	make clean &> /dev/null
+	    	make clean  
 
 	    	if [ "$PROCESSOR" = "arm" ]; then
-		    	make linux ARM=1 &> /dev/null
+		    	make linux ARM=1  
 	    	else
-		    	make linux &> /dev/null
+		    	make linux  
 	    	fi
 
 	    	# Indicate Success/Failure of the build
@@ -93,9 +93,9 @@ else
 		    	echo -e "${red}Failed${nocolor}"
 	    	fi
 	    	# Remove the .o files to keep the folders clean
-	    	rm ./*.o &> /dev/null
+	    	rm ./*.o  
 	    	# Return back to original directory to go over the process again for another one
-	    	cd - &> /dev/null
+	    	cd -  
 	    	sleep 1s
 	    	#######################################################################################
 
@@ -103,12 +103,12 @@ else
 	    	echo "Building Wireless Message Decoder..."
 	    	cd ../../src/common/MsgTransceiver/MsgDecoder/WirelessMsgDecoder
 	    	# Clean the folder and build for linux.
-	    	make clean &> /dev/null
+	    	make clean  
 
 	    	if [ "$PROCESSOR" = "arm" ]; then
-		    	make linux ARM=1 &> /dev/null
+		    	make linux ARM=1  
 	    	else
-		    	make linux &> /dev/null
+		    	make linux  
 	    	fi
 
 	    	# Indicate Success/Failure of the build
@@ -119,9 +119,9 @@ else
 		    	echo -e "${red}Failed${nocolor}"
 	    	fi
 	    	# Remove the .o files to keep the folders clean
-	    	rm ./*.o &> /dev/null
+	    	rm ./*.o  
 	    	# Return back to original directory to go over the process again for another one
-	    	cd - &> /dev/null
+	    	cd -  
 	    	sleep 1s
 		fi
 	    #######################################################################################
@@ -130,7 +130,7 @@ else
 	    echo "Building V2X Data Collector..."
 	    cd ../../src/common/v2x-data-collector
 	    # Clean the folder and build for linux.
-	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed v2x-data-collector-main.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed v2x-data-collector-main.py   
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/v2x-data-collector-main  ../../../build/bin/V2XDataCollector/$PROCESSOR/M_V2XDataCollector
@@ -139,10 +139,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm -r build dist *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -150,7 +150,7 @@ else
 	    echo "Building V2X Data Transfer..."
 	    cd ../../src/common/v2x-data-transfer
 	    # Clean the folder and build for linux.
-	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed v2x-data-transfer-main.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed v2x-data-transfer-main.py   
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/v2x-data-transfer-main  ../../../build/bin/V2XDataTransfer/$PROCESSOR/M_V2XDataTransfer
@@ -159,10 +159,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm -r build dist *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -170,7 +170,7 @@ else
 	    echo "Building System Interface..."
 	    cd ../../src/system-interface
 	    # Clean the folder and build for linux.
-	    python3 -m PyInstaller --add-data "templates:templates" --add-data "static:static" --additional-hooks-dir=. --onefile --windowed system-interface.py &> /dev/null
+	    python3 -m PyInstaller --add-data "templates:templates" --add-data "static:static" --additional-hooks-dir=. --onefile --windowed system-interface.py  
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/system-interface  ../../build/bin/SystemInterface/$PROCESSOR/M_SystemInterface
@@ -179,10 +179,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the files to keep the folders clean
-	    rm -r build dist *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
     fi
@@ -198,12 +198,12 @@ else
 	    echo "Building Priority Request Server..."
 	    cd ../../src/mrp/priority-request-server
 	    # Clean the folder and build for linux.
-	    make clean &> /dev/null
+	    make clean  
 
 	    if [ "$PROCESSOR" = "arm" ]; then
-		    make linux ARM=1 &> /dev/null
+		    make linux ARM=1  
 	    else
-		    make linux &> /dev/null
+		    make linux  
 	    fi
 
 	    # Indicate Success/Failure of the build
@@ -214,9 +214,9 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm ./*.o &> /dev/null
+	    rm ./*.o  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -224,12 +224,12 @@ else
 	    echo "Building Priority Solver..."
 	    cd ../../src/mrp/priority-request-solver
 	    # Clean the folder and build for linux.
-	    make clean &> /dev/null
+	    make clean  
 
 	    if [ "$PROCESSOR" = "arm" ]; then
-		    make linux ARM=1 &> /dev/null
+		    make linux ARM=1  
 	    else
-		    make linux &> /dev/null
+		    make linux  
 	    fi
 
 	    # Indicate Success/Failure of the build
@@ -240,9 +240,9 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm ./*.o &> /dev/null
+	    rm ./*.o  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    ######################################################################################
 
@@ -250,12 +250,12 @@ else
 	    echo "Building Snmp Engine..."
 	    cd ../../src/mrp/snmp-engine
 	    # Clean the folder and build for linux.
-	    make clean &> /dev/null
+	    make clean  
 
 	    if [ "$PROCESSOR" = "arm" ]; then
-		    make linux ARM=1 &> /dev/null
+		    make linux ARM=1  
 	    else
-		    make linux &> /dev/null
+		    make linux  
 	    fi
 
 	    # Indicate Success/Failure of the build
@@ -266,9 +266,9 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm ./*.o &> /dev/null
+	    rm ./*.o  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    ######################################################################################
 
@@ -277,7 +277,7 @@ else
 	    cd ../../src/mrp/traffic-controller-interface
      	    python3 -m pip install bitstring apscheduler numpy
 	    # Clean the folder and build for linux.
-	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed traffic-controller-interface.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed traffic-controller-interface.py   
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/traffic-controller-interface  ../../../build/bin/TrafficControllerInterface/$PROCESSOR/M_TrafficControllerInterface
@@ -286,10 +286,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm -r build dist __pychache__ *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist __pychache__ *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -298,7 +298,7 @@ else
 	    cd ../../src/mrp/map-spat-broadcaster
 	    # Clean the folder and build for linux.
       	    python3 -m pip install psutil
-	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed map-spat-broadcaster.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed map-spat-broadcaster.py   
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/map-spat-broadcaster  ../../../build/bin/MapSpatBroadcaster/$PROCESSOR/M_MapSpatBroadcaster
@@ -307,10 +307,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm -r build dist *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -318,7 +318,7 @@ else
 	    echo "Building Time Phase Diagram Tool..."
 	    cd ../../src/mrp/time-phase-diagram-tool
 	    # Clean the folder and build for linux.
-	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed time-phase-diagram-tool.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed time-phase-diagram-tool.py   
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/time-phase-diagram-tool  ../../../build/bin/TimePhaseDiagramTool/$PROCESSOR/M_TimePhaseDiagramTool
@@ -327,10 +327,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm -r build dist *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -338,7 +338,7 @@ else
 	    echo "Building Signal Coordination Request Generator..."
 	    cd ../../src/mrp/signal-coordination-request-generator
 	    # Clean the folder and build for linux.
-	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed signal-coordination-request-generator.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed signal-coordination-request-generator.py   
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/signal-coordination-request-generator  ../../../build/bin/SignalCoordinationRequestGenerator/$PROCESSOR/M_SignalCoordinationRequestGenerator
@@ -347,10 +347,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm -r build dist *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -358,12 +358,12 @@ else
 	    echo "Building Trajectory Aware..."
 	    cd ../../src/mrp/trajectory-aware
 	    # Clean the folder and build for linux.
-	    make clean &> /dev/null
+	    make clean  
 
 	    if [ "$PROCESSOR" = "arm" ]; then
-		    make linux ARM=1 &> /dev/null
+		    make linux ARM=1  
 	    else
-		    make linux &> /dev/null
+		    make linux  
 	    fi
 
 	    # Indicate Success/Failure of the build
@@ -374,9 +374,9 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm ./*.o &> /dev/null
+	    rm ./*.o  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    ######################################################################################
     fi
@@ -394,12 +394,12 @@ else
 	    echo "Building Priority Request Generator..."
 	    cd ../../src/vsp/priority-request-generator
 	    # Clean the folder and build for linux.
-	    make clean &> /dev/null
+	    make clean  
 
 	    if [ "$PROCESSOR" = "arm" ]; then
-		    make linux ARM=1 &> /dev/null
+		    make linux ARM=1  
 	    else
-		    make linux &> /dev/null
+		    make linux  
 	    fi
 
 	    # Indicate Success/Failure of the build
@@ -410,9 +410,9 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm ./*.o &> /dev/null
+	    rm ./*.o  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -420,7 +420,7 @@ else
 	    echo "Building Light Siren Status Manager..."
 	    cd ../../src/vsp/light-siren-status-manager
 	    # Clean the folder and build for linux.
-	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed light-siren-status-manager.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed light-siren-status-manager.py   
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/light-siren-status-manager  ../../../build/bin/LightSirenStatusManager/$PROCESSOR/M_LightSirenStatusManager
@@ -429,10 +429,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm -r build dist *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -440,7 +440,7 @@ else
 	    echo "Building Data Compressor..."
 	    cd ../../src/vsp/data-compressor
 	    # Clean the folder and build for linux.
-	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed data-compressor.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed data-compressor.py   
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/data-compressor  ../../../build/bin/DataCompressor/$PROCESSOR/M_DataCompressor
@@ -449,10 +449,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm -r build dist *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
     fi
@@ -469,12 +469,12 @@ else
 	    echo "Building Priority Request Generator Server..."
 	    cd ../../src/server/priority-request-generator-server
 	    # Clean the folder and build for linux.
-	    make clean &> /dev/null
+	    make clean  
 
 	    if [ "$PROCESSOR" = "arm" ]; then
-		    make linux ARM=1 &> /dev/null
+		    make linux ARM=1  
 	    else
-		    make linux &> /dev/null
+		    make linux  
 	    fi
 
 	    # Indicate Success/Failure of the build
@@ -485,9 +485,9 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm ./*.o &> /dev/null
+	    rm ./*.o  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -495,7 +495,7 @@ else
 	    echo "Building Message Distributor..."
 	    cd ../../src/server/message-distributor
 	    # Clean the folder and build for linux.
-	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed message-distributor.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed message-distributor.py   
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/message-distributor  ../../../build/bin/MessageDistributor/$PROCESSOR/M_MessageDistributor
@@ -504,10 +504,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm -r build dist *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 	    #######################################################################################
 
@@ -515,7 +515,7 @@ else
 	    echo "Building Simulated BSM Blob Processor..."
 	    cd ../../src/simulation/simulated-bsm-blob-processor
 	    # Clean the folder and build for linux.
-	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed simulated-bsm-blob-processor.py  &> /dev/null
+	    python3 -m PyInstaller --hidden-import=pkg_resources.py2_warn --onefile --windowed simulated-bsm-blob-processor.py   
 	    # Indicate Success/Failure of the build
 	    if [ "$?" -eq "0" ]; then
 		    mv dist/simulated-bsm-blob-processor  ../../../build/bin/SimulatedBsmBlobProcessor/$PROCESSOR/M_SimulatedBsmBlobProcessor
@@ -524,10 +524,10 @@ else
 		    echo -e "${red}Failed${nocolor}"
 	    fi
 	    # Remove the .o files to keep the folders clean
-	    rm -r build dist *.spec &> /dev/null
-	    rm -r __pycache__ &> /dev/null
+	    rm -r build dist *.spec  
+	    rm -r __pycache__  
 	    # Return back to original directory to go over the process again for another one
-	    cd - &> /dev/null
+	    cd -  
 	    sleep 1s
 
 	    #######################################################################################
@@ -554,12 +554,12 @@ else
 			echo "Building CARMA-ROS Message Encoder..."
 			cd ../../src/common/MsgTransceiver/CarmaEncoder
 			# Clean the folder and build for linux.
-			make clean &> /dev/null
+			make clean  
 
 			if [ "$PROCESSOR" = "arm" ]; then
-				make linux ARM=1 &> /dev/null
+				make linux ARM=1  
 			else
-				make linux &> /dev/null
+				make linux  
 			fi
 
 			# Indicate Success/Failure of the build
@@ -570,9 +570,9 @@ else
 				echo -e "${red}Failed${nocolor}"
 			fi
 			# Remove the .o files to keep the folders clean
-			rm ./*.o &> /dev/null
+			rm ./*.o  
 			# Return back to original directory to go over the process again for another one
-			cd - &> /dev/null
+			cd -  
 			sleep 1s
 			#######################################################################################
 
@@ -580,12 +580,12 @@ else
 			echo "Building CARMA-ROS Message Decoder..."
 			cd ../../src/common/MsgTransceiver/CarmaDecoder
 			# Clean the folder and build for linux.
-			make clean &> /dev/null
+			make clean  
 
 			if [ "$PROCESSOR" = "arm" ]; then
-				make linux ARM=1 &> /dev/null
+				make linux ARM=1  
 			else
-				make linux &> /dev/null
+				make linux  
 			fi
 
 			# Indicate Success/Failure of the build
@@ -596,9 +596,9 @@ else
 				echo -e "${red}Failed${nocolor}"
 			fi
 			# Remove the .o files to keep the folders clean
-			rm ./*.o &> /dev/null
+			rm ./*.o  
 			# Return back to original directory to go over the process again for another one
-			cd - &> /dev/null
+			cd -  
 			sleep 1s
 		fi
 
@@ -611,12 +611,12 @@ else
 			
 			cd ../../src/common/MsgTransceiver/CarmaEncoderRos2/src
 			# Clean the folder and build for linux.
-			make clean &> /dev/null
+			make clean  
 
 			if [ "$PROCESSOR" = "arm" ]; then
-				make linux ARM=1 &> /dev/null
+				make linux ARM=1  
 			else
-				make linux &> /dev/null
+				make linux  
 			fi
 
 			# Indicate Success/Failure of the build
@@ -627,9 +627,9 @@ else
 				echo -e "${red}Failed${nocolor}"
 			fi
 			# Remove the .o files to keep the folders clean
-			rm ./*.o &> /dev/null
+			rm ./*.o  
 			# Return back to original directory to go over the process again for another one
-			cd - &> /dev/null
+			cd -  
 			sleep 1s
 			#######################################################################################
 
@@ -637,12 +637,12 @@ else
 			echo "Building CARMA-ROS Message Decoder..."
 			cd ../../src/common/MsgTransceiver/CarmaDecoderRos2/src
 			# Clean the folder and build for linux.
-			make clean &> /dev/null
+			make clean  
 
 			if [ "$PROCESSOR" = "arm" ]; then
-				make linux ARM=1 &> /dev/null
+				make linux ARM=1  
 			else
-				make linux &> /dev/null
+				make linux  
 			fi
 
 			# Indicate Success/Failure of the build
@@ -653,9 +653,9 @@ else
 				echo -e "${red}Failed${nocolor}"
 			fi
 			# Remove the .o files to keep the folders clean
-			rm ./*.o &> /dev/null
+			rm ./*.o  
 			# Return back to original directory to go over the process again for another one
-			cd - &> /dev/null
+			cd -  
 			sleep 1s
 		fi
 	fi
