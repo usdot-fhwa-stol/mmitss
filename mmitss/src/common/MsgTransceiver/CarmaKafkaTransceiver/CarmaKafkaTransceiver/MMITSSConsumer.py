@@ -66,9 +66,14 @@ class MMITSSConsumer(Consumer):
                 self.callback(msg)
                 if debug==True:
                     break
-        
+        except Exception as e:
+            # Handle the exception (e.g., log it, print an error message)
+            logging.error(f"Error in thread: {e}")
         finally:
+            logging.error(f"Closing thread")
             self.close()
+            // If one thread stops, the whole service should stop and restart
+            sys.exit(1)
         return messageCount
     def callback(self,msg):
         hostIp = self.config["HostIp"]
