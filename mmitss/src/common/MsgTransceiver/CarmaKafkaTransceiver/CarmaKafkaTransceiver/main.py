@@ -5,7 +5,10 @@ import threading
 import logging
 import time
 
-logging.basicConfig(level=logging.INFO, format="%(threadName)s: %(message)s")
+logging.basicConfig(
+    level=logging.DEBUG,    
+    datefmt="%Y-%m-%d %H:%M:%S", 
+    format="%(threadName)s: %(message)s")
 
 
 
