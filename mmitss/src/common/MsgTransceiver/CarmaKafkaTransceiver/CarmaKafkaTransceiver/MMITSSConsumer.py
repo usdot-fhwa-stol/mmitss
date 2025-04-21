@@ -72,7 +72,7 @@ class MMITSSConsumer(Consumer):
         finally:
             logging.error(f"Closing thread")
             self.close()
-            // If one thread stops, the whole service should stop and restart
+            # If one thread stops, the whole service should stop and restart
             sys.exit(1)
         return messageCount
     def callback(self,msg):
