@@ -5,7 +5,11 @@ import threading
 import logging
 import time
 
+now = datetime.datetime.now()
+timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
+log_filename = f"app_{timestamp}.log"
 logging.basicConfig(
+    filename=log_filename,
     level=logging.DEBUG,    
     datefmt="%Y-%m-%d %H:%M:%S", 
     format="%(threadName)s: %(message)s")
