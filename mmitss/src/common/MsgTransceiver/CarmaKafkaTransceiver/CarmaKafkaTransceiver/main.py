@@ -9,7 +9,7 @@ import datetime
 
 now = datetime.datetime.now()
 timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
-log_filename = f"app_{timestamp}.log"
+log_filename = f"CarmaKafkaTransceiver_{timestamp}.log"
 logging.basicConfig(
     filename="/nojournal/bin/log/" + log_filename,
     level=logging.DEBUG,    
