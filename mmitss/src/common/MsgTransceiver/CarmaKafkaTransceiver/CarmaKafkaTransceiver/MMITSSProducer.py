@@ -94,14 +94,20 @@ class MMITSSProducer(Producer):
   
     def encodeSPaT(self,msg):
         moy = msg["Spat"]["minuteOfYear"]
+        # Encode SPaT following J2735
         jsonObject = {"time_stamp":moy,"name":"","intersections":[]}
         id = msg["Spat"]["IntersectionState"]["intersectionID"]
         revision = msg["Spat"]["msgCnt"]
-        status = msg["Spat"]["status"]
-        states = [{"signal_group":signal["phaseNo"],"state_time_speed":[{"event_state":signal["currState"],"timing":{"start_time":signal["startTime"],\
-                                                                                                                     "min_end_time":signal["minEndTime"]}}]} for signal in msg["Spat"]["phaseState"]]
+        status = int(msg["Spat"]["status"],2) # convert a binary string into integer 
+        states = [{"movement_name":"",
+                    "signal_group":signal["phaseNo"],
+                    "state_time_speed":[{"event_state":self.event_state_convert(signal["currState"]),\
+                                            "timing":{"start_time":signal["startTime"],\
+                                            "min_end_time":signal["minEndTime"],\
+                                            "confidence":0}}]} for signal in msg["Spat"]["phaseState"]]
         jsonObject["intersections"].append(\
-            [{"id":id,"revision":revision,"status":status,"states":states}]
+            {"name":"","id":id,"revision":revision,"status":status,
+            "moy":moy,"time_stamp":moy,"states":states}
         )
         
         jsonObject= json.dumps(jsonObject)
@@ -109,6 +115,19 @@ class MMITSSProducer(Producer):
         
         return msg 
     
+    def event_state_convert(self, currState):
+        Mapping = {'red':3,
+                    'yellow':8,
+                    'green':6,
+                    'permissive_yellow':7,
+                    'do_not_walk':3,
+                    'ped_clear':8,
+                    'walk':6}
+        if currState in Mapping.keys():
+            return Mapping[currState]
+        else:
+            raise ValueError('currState in SPaT can not find matched value. @CarmaKafkaTransceiver.') 
+
     def encodeSSM(self,msg):
         msg = json.dumps(msg)
         return msg 
