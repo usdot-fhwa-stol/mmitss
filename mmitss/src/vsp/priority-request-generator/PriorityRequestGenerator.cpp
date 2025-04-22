@@ -771,7 +771,8 @@ void PriorityRequestGenerator::getVehicleInformationFromMAP(MapManager mapManage
 		double vehicle_Longitude = basicVehicle.getLongitude_DecimalDegree();
 		double vehicle_Elevation = basicVehicle.getElevation_Meter();
 		setVehicleSpeed(basicVehicle);
-		double vehicle_Heading = basicVehicle.getHeading_Degree();
+		// Heading fix test
+		double vehicle_Heading = 90;
 		//initialize all the struct require to locate vehicle in Map.
 		struct geoPoint_t geoPoint_t_1 = {vehicle_Latitude, vehicle_Longitude, vehicle_Elevation};
 		struct motion_t motion_t_1 = {vehicleSpeed, vehicle_Heading};

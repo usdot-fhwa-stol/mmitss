@@ -292,7 +292,8 @@ void MapManager::createActiveMapList(BasicVehicle basicVehicle)
             double vehicle_Longitude = basicVehicle.getLongitude_DecimalDegree();
             double vehicle_Elevation = basicVehicle.getLongitude_DecimalDegree();
             double vehicle_Speed = basicVehicle.getSpeed_MeterPerSecond();
-            double vehicle_Heading = basicVehicle.getHeading_Degree();
+            // Testing Heading Fix
+            double vehicle_Heading = 90.0;
             //Initialize all struct require to locate vehicle in map by mapengine library.
             struct geoPoint_t geoPoint_t_1 = {vehicle_Latitude, vehicle_Longitude, vehicle_Elevation};
             struct motion_t motion_t_1 = {vehicle_Speed, vehicle_Heading};
