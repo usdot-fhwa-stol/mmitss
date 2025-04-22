@@ -51,7 +51,6 @@ class MMITSSConsumer(Consumer):
         """
         Start consuming messages and invoke the callback for each message.
         """
-        messageCount = 0
         try:
             while True:
                 msg = self.poll(1.0)  # Poll for messages, with a timeout of 1 second
@@ -65,13 +64,16 @@ class MMITSSConsumer(Consumer):
                 
                 msg = json.loads(msg.value().decode("utf-8"))
                 self.callback(msg)
-                messageCount+=1
-                print(messageCount)
                 if debug==True:
                     break
-        
+        except Exception as e:
+            # Handle the exception (e.g., log it, print an error message)
+            logging.error(f"Error in thread: {e}")
         finally:
+            logging.error(f"Closing thread")
             self.close()
+            # If one thread stops, the whole service should stop and restart
+            sys.exit(1)
         return messageCount
     def callback(self,msg):
         hostIp = self.config["HostIp"]
@@ -92,11 +94,11 @@ class MMITSSConsumer(Consumer):
             time_sync_ports.append(self.config["TimeSyncPort"]["SnmpEngine"])
 
             msg = self.decodeTimeSync(msg)
-            for port in time_sync_ports:
+            for receivingPort in time_sync_ports:
                 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                logging.debug(f"Sending TimeSync message to port {port}")
+                logging.debug(f"Sending TimeSync message to port {receivingPort}")
                 s.bind((hostIp,port))
-                communicationInfo = (hostIp, port)
+                communicationInfo = (hostIp, receivingPort)
                 s.sendto(msg.encode(),communicationInfo)
                 s.close()
 

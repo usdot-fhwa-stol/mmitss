@@ -4,8 +4,16 @@ import threading
 
 import logging
 import time
+import datetime
 
-logging.basicConfig(level=logging.INFO, format="%(threadName)s: %(message)s")
+
+now = datetime.datetime.now()
+timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
+log_filename = f"CarmaKafkaTransceiver_{timestamp}.log"
+logging.basicConfig(
+    filename="/nojournal/bin/log/" + log_filename,
+    level=logging.DEBUG,    
+    format="%(threadName)s: %(message)s")
 
 
 
