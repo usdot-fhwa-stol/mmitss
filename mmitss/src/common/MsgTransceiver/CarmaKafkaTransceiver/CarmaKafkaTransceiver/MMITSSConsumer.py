@@ -95,7 +95,6 @@ class MMITSSConsumer(Consumer):
             msg = self.decodeTimeSync(msg)
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             logging.debug("Opening socket for TimeSync")
-            s.bind((hostIp,port))
             for receivingPort in time_sync_ports:
                 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
                 logging.debug(f"Sending TimeSync message to port {receivingPort}")
@@ -107,7 +106,6 @@ class MMITSSConsumer(Consumer):
 
         if self.kind != "TimeSync":    
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            s.bind((hostIp,port))
             communicationInfo = (hostIp, receivingPort)
             s.sendto(msg.encode(),communicationInfo)
             s.close()
