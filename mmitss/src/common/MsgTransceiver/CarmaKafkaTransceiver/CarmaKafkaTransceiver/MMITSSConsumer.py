@@ -14,7 +14,6 @@ class MMITSSConsumer(Consumer):
         super().__init__(consumerConf)
         self.config = self.readSocketConfig(socketConfigFilename)
         self.subscribe(topics)
-        logging.basicConfig(level=logging.DEBUG)
 
     def readSocketConfig(self,filename=None):
         # Read a config file into a json object:
@@ -94,13 +93,17 @@ class MMITSSConsumer(Consumer):
             time_sync_ports.append(self.config["TimeSyncPort"]["SnmpEngine"])
 
             msg = self.decodeTimeSync(msg)
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            logging.debug("Opening socket for TimeSync")
+            s.bind((hostIp,port))
             for receivingPort in time_sync_ports:
                 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
                 logging.debug(f"Sending TimeSync message to port {receivingPort}")
-                s.bind((hostIp,port))
                 communicationInfo = (hostIp, receivingPort)
                 s.sendto(msg.encode(),communicationInfo)
-                s.close()
+            s.close()
+            logging.debug("Closed socket for TimeSync")
+
 
         if self.kind != "TimeSync":    
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
