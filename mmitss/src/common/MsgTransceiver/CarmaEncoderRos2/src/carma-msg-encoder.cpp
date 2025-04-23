@@ -43,8 +43,22 @@ class Publisher : public rclcpp::Node
         string receivedMsgString(receiveBuffer);
         msgType = evalMessageType(receivedMsgString,msgType);
         msg = encodeMsg(receivedMsgString,msgType,msg);
+
+        // ROS logging part
+        RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "msg type is %d", msgType);
+        std::ostringstream hexStream;
+        for (uint8_t byte : msg.content) {
+            hexStream << std::hex << std::uppercase << std::setfill('0') << std::setw(2) << (int)byte;
+        }
+        std::string hexString = hexStream.str();
+        RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "message hex is %s", hexString.c_str());
+
+
         publisher_->publish(msg);
-        
+
+        RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "publish message after publisher");
+
+    
         if (encoder.sendSystemPerformanceDataLog()== true)
         {
         
@@ -63,13 +77,13 @@ class Publisher : public rclcpp::Node
         msgType = encoder.getMessageType(receivedMsgString);
         return msgType;
     }
+
     carma_driver_msgs::msg::ByteArray encodeMsg(std::string receivedMsgString,int msgType,carma_driver_msgs::msg::ByteArray msg)
     {
         std::vector<uint8_t> encodedMsg;
         TransceiverEncoder encoder;
         if (msgType == MsgEnum::DSRCmsgID_srm)
         {
-
             encodedMsg = encoder.SRMEncoder(receivedMsgString);
             msg.message_type = "SRM";
             msg.content = encodedMsg;
@@ -110,6 +124,11 @@ int main(int argc, char **argv)
    
 
     rclcpp::init(argc, argv);
+    if (rcutils_logging_set_logger_level ("rclcpp", RCUTILS_LOG_SEVERITY_DEBUG) != RCUTILS_RET_OK)
+    {
+        std::cerr << "Failed to set logger level" << std::endl;
+        return 1;
+    }
     rclcpp::spin(std::make_shared<Publisher>());
     rclcpp::shutdown();
    

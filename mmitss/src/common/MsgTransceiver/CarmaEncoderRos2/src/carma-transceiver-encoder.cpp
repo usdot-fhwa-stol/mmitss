@@ -110,14 +110,14 @@ std::vector<uint8_t> TransceiverEncoder::TransceiverEncoder::SRMEncoder(std::str
     srmIn.reqType = static_cast<MsgEnum::requestType>(signalRequest.getPriorityRequestType());
     srmIn.vehRole = static_cast<MsgEnum::basicRole>(signalRequest.getBasicVehicleRole());
     // srmIn.vehType = static_cast<MsgEnum::vehicleType>(signalRequest.getVehicleType());
-    /// encode SRM payload
-    // size_t payload_size = AsnJ2735Lib::encode_msgFrame(dsrcFrameIn, &buf[0], bufSize);
-/*    if (payload_size > 0)
+    // / encode SRM payload
+    size_t payload_size = AsnJ2735Lib::encode_msgFrame(dsrcFrameIn, &buf[0], bufSize);
+    if (payload_size > 0)
     {
         for (size_t i = 0; i < payload_size; i++)
             payloadstream << std::uppercase << std::setw(2) << std::setfill('0') << std::hex << static_cast<unsigned int>(buf[i]);
     }
-*/
+    
     srmMessagePayload = payloadstream.str();
     srmMsgCount = srmMsgCount + 1;
 
