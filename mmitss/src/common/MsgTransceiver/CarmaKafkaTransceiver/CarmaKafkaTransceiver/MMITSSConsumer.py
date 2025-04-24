@@ -60,7 +60,7 @@ class MMITSSConsumer(Consumer):
                     continue
 
                 # Invoke the callback for each message
-                logging.debug(f"Received kafka message: {msg.value().decode('utf-8')}")
+                logging.info(f"Received kafka message: {msg.value().decode('utf-8')}")
 
                 msg = json.loads(msg.value().decode("utf-8"))
                 self.callback(msg)
@@ -93,9 +93,9 @@ class MMITSSConsumer(Consumer):
 
             msg = self.decodeTimeSync(msg)
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            logging.info(f"Sending TimeSync message {msg} to ports {time_sync_ports}")
             for receivingPort in time_sync_ports:
                 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                logging.debug(f"Sending TimeSync message {msg} to port {receivingPort}")
                 communicationInfo = (hostIp, receivingPort)
                 s.sendto(msg.encode(),communicationInfo)
             s.close()
@@ -104,7 +104,7 @@ class MMITSSConsumer(Consumer):
         if self.kind != "TimeSync":    
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             communicationInfo = (hostIp, receivingPort)
-            logging.debug(f"Sending message {msg} to port {receivingPort}")
+            logging.info(f"Sending {self.kind} message {msg} to port {receivingPort}")
             s.sendto(msg.encode(),communicationInfo)
             s.close()
     def decodeSRM(self, msg):
