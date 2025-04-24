@@ -3,7 +3,7 @@ set -ex
 
 echo "deb [trusted=yes] http://s3.amazonaws.com/stol-apt-repository develop focal" > /etc/apt/sources.list.d/stol-apt-repository.list
 
-apt-get update && apt-get install -y \
+apt-get update && apt-get install --no-install-recommends -y \
     curl \
     lsb-release \
     cmake \
