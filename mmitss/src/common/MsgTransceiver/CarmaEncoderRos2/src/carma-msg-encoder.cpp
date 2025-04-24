@@ -16,7 +16,7 @@ class Publisher : public rclcpp::Node
     public:
     Publisher(): Node("mmitss_carma_publisher")
     {
-      publisher_ = this->create_publisher<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/outbound_binary_message", 1000);
+      publisher_ = this->create_publisher<carma_driver_msgs::msg::ByteArray>("/hardware_interface/comms/outbound_binary_msg", 1000);
       timer_ = this->create_wall_timer(std::chrono::milliseconds(100), std::bind(&Publisher::timer_callback,this));
       
     }
