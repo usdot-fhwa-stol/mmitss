@@ -38,6 +38,8 @@ void InboundMsgListener::inboundClockCallback( const rosgraph_msgs::msg::Clock::
     RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "InboundMsgListener::inboundClockCallback msg: %d.%d", 
         msg->clock.sec, 
         msg->clock.nanosec);
+    std::lock_guard<std::mutex> lock(time_mutex_);
+    time_msg = msg;
     std::string time_sync = decodeClock(msg);
     
     UdpSocket decoderSocket(static_cast<unsigned short>(mtPort));
@@ -48,6 +50,8 @@ void InboundMsgListener::inboundClockCallback( const rosgraph_msgs::msg::Clock::
     decoderSocket.sendData(hostIp,static_cast<unsigned short>(prgTimeSyncPort),time_sync);
     decoderSocket.closeSocket();
 }
+
+
 void InboundMsgListener::inboundMsgCallback(const carma_driver_msgs::msg::ByteArray::SharedPtr msg)
 {
     
@@ -120,7 +124,25 @@ std::string InboundMsgListener::decodeType(const std::vector<uint8_t> &msgConten
     else if (msgType == "BSM")
     {
         string bsmJsonString = decoder.bsmDecoder(msgContent);
-        std::cout<<bsmJsonString<<std::endl;
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Original BSM -- %s",
+            bsmJsonString.c_str()); 
+        Json::Value json_bsm;
+        Json::CharReaderBuilder builder;
+        JSONCPP_STRING err;
+        const std::unique_ptr<Json::CharReader> reader(builder.newCharReader());
+        reader->parse(bsmJsonString.c_str(), bsmJsonString.c_str()+bsmJsonString.length(),  &json_bsm, &err);
+        // Correct SecMark_Seconds to account for the time offset
+        if (time_msg != nullptr)
+        {
+            // Overwrite the SecMark_Seconds value in the json object
+            std::lock_guard<std::mutex> lock(time_mutex_);
+            json_bsm["SecMark_Seconds"] =  double(time_msg->clock.sec) + double(time_msg->clock.nanosec/1000000000.0);
+        }
+        // Convert the json object back to string
+        Json::StreamWriterBuilder writer;
+        std::string bsmJsonString = Json::writeString(writer, json_bsm);
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Updated BSM -- %s",
+            bsmJsonString.c_str());
         return bsmJsonString;
     }
     else if (msgType == "SRM")

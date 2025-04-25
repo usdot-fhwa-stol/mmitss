@@ -26,6 +26,7 @@ class Subscriber : public rclcpp::Node
     rclcpp::Subscription<carma_driver_msgs::msg::ByteArray>::SharedPtr subscriptionInbound;
     rclcpp::Subscription<carma_driver_msgs::msg::ByteArray>::SharedPtr subscriptionOutbound;
     rclcpp::Subscription<rosgraph_msgs::msg::Clock>::SharedPtr subscriptionClock;
+
 };
 
 
