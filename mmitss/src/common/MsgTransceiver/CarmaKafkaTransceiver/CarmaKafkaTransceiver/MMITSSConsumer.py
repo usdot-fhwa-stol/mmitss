@@ -56,7 +56,7 @@ class MMITSSConsumer(Consumer):
                 if msg is None:
                     continue
                 if msg.error():
-                    print(f"Error: {msg.error()}")
+                    logging.error(f"Error: {msg.error()}")
                     continue
 
                 # Invoke the callback for each message

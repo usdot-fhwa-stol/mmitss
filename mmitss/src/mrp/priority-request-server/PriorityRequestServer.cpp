@@ -964,7 +964,7 @@ int PriorityRequestServer::getMinuteOfYear()
 	int currentHour = timePtr->tm_hour;
 	int currentMinute = timePtr->tm_min;
 
-	minuteOfYear = (dayOfYear - 1) * HOURS_IN_A_DAY * MINUTES_IN_A_HOUR + currentHour * MINUTES_IN_A_HOUR + currentMinute;
+	minuteOfYear = (dayOfYear) * HOURS_IN_A_DAY * MINUTES_IN_A_HOUR + currentHour * MINUTES_IN_A_HOUR + currentMinute;
 
 	return minuteOfYear;
 }
