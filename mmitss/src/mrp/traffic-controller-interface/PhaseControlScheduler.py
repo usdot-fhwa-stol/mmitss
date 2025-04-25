@@ -69,7 +69,11 @@ class PhaseControlScheduler(Scheduler):
         # get env variable
         sim_mode = os.environ.get("SIMULATION_MODE")
         if sim_mode:
-            self.scale_factor = config["Scale_factor"] # int
+            if "Scale_factor" in config.keys():
+                self.scale_factor = config["Scale_factor"] # int
+            else:
+                self.logger.write("ERROR: No scale_factor available!!! Use default 4 instead.")
+                self.scale_factor = 4
         else:
             self.scale_factor = 1
 
