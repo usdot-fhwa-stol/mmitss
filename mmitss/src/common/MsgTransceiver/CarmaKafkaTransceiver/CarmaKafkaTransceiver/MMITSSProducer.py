@@ -69,27 +69,26 @@ class MMITSSProducer(Producer):
                 data, address = s.recvfrom(10240)
                 data = data.decode()
                 msg = json.loads(data)
+                logging.info(f"Received {self.kind} message {msg} to port {receivingPort}")
                 if msg["MsgType"] == "SPaT":
                     msg = self.encodeSPaT(msg)
                 elif msg["MessageType"] == "SSM":
                     msg = self.encodeSSM(msg)
                 try:
-                    logging.info(msg)
             
-                    tmp = self.produce(self.topics, msg)
-                    logging.info("msg produced")
+                    self.produce(self.topics, msg)
+                    logging.info(f"Produced {self.kind} message {msg} to topic {self.topics}")
                     self.flush()
                     messageCount+=1
                     if debug == True:
                         break
                 except KafkaException as e:
-                    print(f"Error producing message: {e}")
+                    logging.error(f"Error producing message: {e}")
             except:
                 pass
             time.sleep(0.1)
             
-        print("here")
-        # s.close()
+        s.close()
         
   
     def encodeSPaT(self,msg):
