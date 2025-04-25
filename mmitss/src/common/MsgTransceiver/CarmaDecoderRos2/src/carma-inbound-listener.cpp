@@ -140,7 +140,7 @@ std::string InboundMsgListener::decodeType(const std::vector<uint8_t> &msgConten
         }
         // Convert the json object back to string
         Json::StreamWriterBuilder writer;
-        std::string bsmJsonString = Json::writeString(writer, json_bsm);
+        bsmJsonString = Json::writeString(writer, json_bsm);
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Updated BSM -- %s",
             bsmJsonString.c_str());
         return bsmJsonString;
