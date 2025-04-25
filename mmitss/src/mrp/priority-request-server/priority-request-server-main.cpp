@@ -37,7 +37,7 @@ int main()
     SignalStatus signalStatus;
 
     UdpSocket PRSSocket(static_cast<short unsigned int>(jsonObject["PortNumber"]["PriorityRequestServer"].asInt()), 1, 0);
-    const int ssmReceiverPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["MessageTransceiver"]["MessageEncoder"].asInt());
+    const int ssmReceiverPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["CarmaKafkaTransceiver"]["SSMProducer"].asInt());
     const int solverPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["PrioritySolver"].asInt());
     const int messageDistributorPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["MessageDistributor"].asInt());
     const int dataCollectorPortNo = static_cast<short unsigned int>(jsonObject["PortNumber"]["DataCollector"].asInt());
