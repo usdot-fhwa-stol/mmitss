@@ -38,7 +38,6 @@ void InboundMsgListener::inboundClockCallback( const rosgraph_msgs::msg::Clock::
     RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "InboundMsgListener::inboundClockCallback msg: %d.%d", 
         msg->clock.sec, 
         msg->clock.nanosec);
-    std::lock_guard<std::mutex> lock(time_mutex_);
     time_msg = msg;
     std::string time_sync = decodeClock(msg);
     
@@ -135,7 +134,6 @@ std::string InboundMsgListener::decodeType(const std::vector<uint8_t> &msgConten
         if (time_msg != nullptr)
         {
             // Overwrite the SecMark_Seconds value in the json object
-            std::lock_guard<std::mutex> lock(time_mutex_);
             json_bsm["SecMark_Seconds"] =  double(time_msg->clock.sec) + double(time_msg->clock.nanosec/1000000000.0);
         }
         // Convert the json object back to string

@@ -35,7 +35,6 @@ class InboundMsgListener
         int dcPort = 0;
         int prgPort = 0;
         bool peerDecoding = false;
-        std::mutex time_mutex_;
         rosgraph_msgs::msg::Clock::SharedPtr time_msg;
 
 
