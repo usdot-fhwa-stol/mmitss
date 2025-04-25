@@ -45,7 +45,7 @@ class MMITSSConsumer(Consumer):
         return consumerConfig,[topics]
         
         
-    def broadcastMsg(self,debug=False):
+    def broadcastMsg(self):
 
         """
         Start consuming messages and invoke the callback for each message.
@@ -60,11 +60,10 @@ class MMITSSConsumer(Consumer):
                     continue
 
                 # Invoke the callback for each message
-                
+                logging.info(f"Received kafka message: {msg.value().decode('utf-8')}")
+
                 msg = json.loads(msg.value().decode("utf-8"))
                 self.callback(msg)
-                if debug==True:
-                    break
         except Exception as e:
             # Handle the exception (e.g., log it, print an error message)
             logging.error(f"Error in thread: {e}")
@@ -94,19 +93,18 @@ class MMITSSConsumer(Consumer):
 
             msg = self.decodeTimeSync(msg)
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            logging.debug("Opening socket for TimeSync")
+            logging.info(f"Sending TimeSync message {msg} to ports {time_sync_ports}")
             for receivingPort in time_sync_ports:
                 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                logging.debug(f"Sending TimeSync message to port {receivingPort}")
                 communicationInfo = (hostIp, receivingPort)
                 s.sendto(msg.encode(),communicationInfo)
             s.close()
-            logging.debug("Closed socket for TimeSync")
 
 
         if self.kind != "TimeSync":    
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             communicationInfo = (hostIp, receivingPort)
+            logging.info(f"Sending {self.kind} message {msg} to port {receivingPort}")
             s.sendto(msg.encode(),communicationInfo)
             s.close()
     def decodeSRM(self, msg):
