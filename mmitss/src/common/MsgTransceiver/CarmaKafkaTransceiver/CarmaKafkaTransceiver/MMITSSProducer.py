@@ -84,8 +84,8 @@ class MMITSSProducer(Producer):
                         break
                 except KafkaException as e:
                     logging.error(f"Error producing message: {e}")
-            except:
-                pass
+            except Exception as ex:
+                logging.error(f"Encountered error {e}")
             time.sleep(0.1)
             
         s.close()
