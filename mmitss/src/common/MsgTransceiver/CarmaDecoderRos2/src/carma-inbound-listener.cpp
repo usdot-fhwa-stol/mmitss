@@ -123,7 +123,7 @@ std::string InboundMsgListener::decodeType(const std::vector<uint8_t> &msgConten
     else if (msgType == "BSM")
     {
         string bsmJsonString = decoder.bsmDecoder(msgContent);
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Original BSM -- %s",
+        RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "Original BSM -- %s",
             bsmJsonString.c_str()); 
         Json::Value json_bsm;
         Json::CharReaderBuilder builder;
@@ -139,7 +139,7 @@ std::string InboundMsgListener::decodeType(const std::vector<uint8_t> &msgConten
         // Convert the json object back to string
         Json::StreamWriterBuilder writer;
         bsmJsonString = Json::writeString(writer, json_bsm);
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Updated BSM -- %s",
+        RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "Updated BSM -- %s",
             bsmJsonString.c_str());
         return bsmJsonString;
     }
