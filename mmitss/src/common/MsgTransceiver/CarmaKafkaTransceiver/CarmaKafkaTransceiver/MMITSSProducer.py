@@ -72,7 +72,7 @@ class MMITSSProducer(Producer):
                 logging.info(f"Received {self.kind} message {msg} to port {receivingPort}")
                 if msg["MsgType"] == "SPaT":
                     msg = self.encodeSPaT(msg)
-                elif msg["MessageType"] == "SSM":
+                elif msg["MsgType"] == "SSM":
                     msg = self.encodeSSM(msg)
                 try:
             
@@ -85,7 +85,7 @@ class MMITSSProducer(Producer):
                 except KafkaException as e:
                     logging.error(f"Error producing message: {e}")
             except Exception as ex:
-                logging.error(f"Encountered error {e}")
+                logging.error(f"Encountered error {ex}")
             time.sleep(0.1)
             
         s.close()
