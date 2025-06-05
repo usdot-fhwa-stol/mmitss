@@ -1,31 +1,44 @@
-#! /bin/bash
+#!/bin/bash
 set -e
-# install ros
 
-apt update && apt install locales
+# Set ROS distribution
+export ROS_DISTRO=foxy
+
+# Set up locale
+apt update && apt install -y locales
 locale-gen en_US en_US.UTF-8
 update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-apt update && apt install -y curl gnupg2 lsb-release python3-pip
-curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg
+# Install prerequisites
+apt update && apt install -y curl gnupg2 lsb-release python3-pip software-properties-common
 
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
+# Add universe repository
+add-apt-repository universe
 
+# Install ROS 2 APT source package
 apt update
-DEBIAN_FRONTEND=noninteractive apt install -y ros-foxy-desktop git python3-rosdep python3-colcon-common-extensions ros-foxy-rmw-cyclonedds-cpp
+export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F'"' '{print $4}')
+curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo $VERSION_CODENAME)_all.deb"
+apt install -y /tmp/ros2-apt-source.deb
+rm /tmp/ros2-apt-source.deb
 
+# Install ROS 2 packages
+apt update
+DEBIAN_FRONTEND=noninteractive apt install -y ros-${ROS_DISTRO}-desktop git python3-rosdep python3-colcon-common-extensions ros-${ROS_DISTRO}-rmw-cyclonedx-cpp
+
+# Clone and build ros_tutorials
 cd /root/dev_ws/src
-git clone https://github.com/ros/ros_tutorials.git -b foxy-devel
+git clone https://github.com/ros/ros_tutorials.git -b ${ROS_DISTRO}-devel
 cd /root/dev_ws
 
+# Initialize rosdep
 rosdep init
 rosdep update
-rosdep install --from-paths src --ignore-src -r -y --rosdistro foxy
+rosdep install --from-paths src --ignore-src -r -y --rosdistro ${ROS_DISTRO}
 
-# install carma-msg
+# Install carma-msgs
 cd /root/dev_ws/src
 git clone https://github.com/usdot-fhwa-stol/carma-msgs.git
 cd carma-msgs
-source /opt/ros/foxy/setup.bash && colcon build --packages-up-to carma_driver_msgs
-
+source /opt/ros/${ROS_DISTRO}/setup.bash && colcon build --packages-up-to carma_driver_msgs
