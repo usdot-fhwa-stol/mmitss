@@ -25,7 +25,7 @@ rm /tmp/ros2-apt-source.deb
 
 # Install ROS 2 packages
 apt update
-DEBIAN_FRONTEND=noninteractive apt install -y ros-${ROS_DISTRO}-desktop git python3-rosdep python3-colcon-common-extensions ros-${ROS_DISTRO}-rmw-cyclonedx-cpp
+DEBIAN_FRONTEND=noninteractive apt install -y ros-${ROS_DISTRO}-desktop git python3-rosdep python3-colcon-common-extensions ros-${ROS_DISTRO}-rmw-cyclonedds-cpp
 
 # Clone and build ros_tutorials
 cd /root/dev_ws/src
