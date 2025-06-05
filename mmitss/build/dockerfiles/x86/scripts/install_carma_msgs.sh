@@ -11,7 +11,7 @@ update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Install prerequisites
-apt update && apt install -y curl gnupg2 lsb-release python3-pip software-properties-common
+apt update && apt install -y curl python3-pip software-properties-common
 
 # Add universe repository
 add-apt-repository universe
